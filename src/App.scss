@@ -1,0 +1,9 @@
+@import "@/style/main.scss";
+
+.app {
+  font-family: $smoo-default-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  padding: 20px;
+}

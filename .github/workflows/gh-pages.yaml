@@ -1,0 +1,67 @@
+name: gh-pages
+
+
+on:
+  push:
+    branches: [ public ]
+  pull_request:
+    branches: [ public ]
+  workflow_dispatch: # or manual
+
+
+permissions:
+  contents : read
+  pages    : write
+  id-token : write
+
+
+concurrency:
+  group              : ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress : true
+
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    -
+      name : Checkout
+      uses : actions/checkout@v3
+    -
+      name : Install node 16
+      uses : actions/setup-node@v3
+      with :
+        node-version : 16
+    -
+      name : Install node_modules
+      run  : npm ci --legacy-peer-deps
+    -
+      name : Build static files
+      run  : npm run build
+    -
+      name : Build artifacts
+      run  : |
+        cd ./dist/
+        tar -cvf ../artifact.tar ./
+    -
+      name : Upload artifacts
+      uses : actions/upload-artifact@v3
+      with :
+        name              : github-pages
+        path              : artifact.tar
+        if-no-files-found : error
+
+  deploy:
+    needs:
+    - build
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'pull_request' }}
+    environment:
+      name : github-pages
+      url  : ${{ steps.deployment.outputs.page_url }}
+    steps:
+    -
+      name : Deploy artifacts to github pages
+      uses : actions/deploy-pages@v1
+      id   : deployment
