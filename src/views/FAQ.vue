@@ -67,16 +67,17 @@ export default class FAQ extends Vue {
         <p>
           In-game:
           <ul>
-            <li><smoo-btn ZL/> + <smoo-btn DLeft/> - Enable/disable Hide &amp; Seek [H&amp;S]</li>
+            <li><smoo-btn L/> + <smoo-btn DLeft/> - Enable/disable Hide &amp; Seek [H&amp;S]</li>
             <li>[H&amp;S] <smoo-btn DUp/> - Switch between hider and seeker</li>
             <li>[H&amp;S] [Hider] <smoo-btn DLeft/> - Decrease hiding time</li>
             <li>[H&amp;S] [Hider] <smoo-btn DRight/> - Increase hiding time</li>
-            <li>[H&amp;S] [Hider] <smoo-btn ZL/> + <smoo-btn DDown/> - Reset hiding time</li>
-            <li style="margin-top: 0.75em;"><smoo-btn R/> + <smoo-btn DUp/> - Open/close [Debug] menu</li>
-            <li>[Debug] <smoo-btn R/> + <smoo-btn DLeft/> - Previous page</li>
-            <li>[Debug] <smoo-btn R/> + <smoo-btn DRight/> - Next page</li>
-            <li>[Debug] <smoo-btn L/> + <smoo-btn DLeft/> - Previous player</li>
-            <li>[Debug] <smoo-btn L/> + <smoo-btn DRight/> - Next player</li>
+            <li>[H&amp;S] [Hider] <smoo-btn L/> + <smoo-btn DDown/> - Reset hiding time</li>
+            <li>[H&amp;S] [Gravity] <smoo-btn L/> + <smoo-btn DRight/> - Toggle gravity camera</li>
+            <li style="margin-top: 0.75em;"><smoo-btn ZR/> + <smoo-btn DUp/> - Open/close [Debug] menu</li>
+            <li>[Debug] <smoo-btn ZR/> + <smoo-btn DLeft/> - Previous page</li>
+            <li>[Debug] <smoo-btn ZR/> + <smoo-btn DRight/> - Next page</li>
+            <li>[Debug] <smoo-btn ZL/> + <smoo-btn DLeft/> - Previous player</li>
+            <li>[Debug] <smoo-btn ZL/> + <smoo-btn DRight/> - Next player</li>
           </ul>
         </p>
       `,
