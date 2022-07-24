@@ -39,7 +39,7 @@ export default class Servers extends Vue {
 
   private get title () : string {
     if (this.custom) { return this.btn }
-    return 'D-Pad ' + this.icon.split(1)
+    return 'D-Pad ' + this.btn.substr(1)
   }
 
   @Prop({ required: false, type: Boolean, default: false })
