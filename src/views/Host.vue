@@ -25,9 +25,4 @@
   </b-card-group>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator'
-
-@Component({})
-export default class Host extends Vue {}
-</script>
+<script lang="ts" src="./Host.ts"/>

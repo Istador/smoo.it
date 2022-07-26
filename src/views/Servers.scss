@@ -1,0 +1,59 @@
+.servers-view {
+  table {
+    width: auto;
+    display: inline-block;
+    thead {
+      th {
+        position: sticky !important;
+        top: 0;
+        background-color: white;
+        z-index: 999;
+      }
+    }
+    tbody {
+      td { vertical-align: middle; }
+
+      .td-server {
+        .host, .ip { font-family: monospace; }
+        @media (min-width: 800px) {
+          .host::before { content: 'Host: '; font-family: $smoo-default-font; font-weight: bold; }
+          .ip::before { content: 'IPv4: '; font-family: $smoo-default-font; font-weight: bold; }
+        }
+        .host + br + .ip { opacity: 0.5; }
+      }
+
+      .td-port {
+        font-family: monospace;
+        &.default { opacity: 0.5; }
+      }
+
+      .td-location {
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          > .flag-icon { margin-right: 0.5em; margin-top: -0.2em; }
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      td.td-location span.name { display: none; }
+    }
+
+    @media (max-width: 700px) {
+      th.th-name { display: none; }
+      td.td-name { display: none; }
+    }
+
+    @media (max-width: 550px) {
+      th.th-version { display: none; }
+      td.td-version { display: none; }
+    }
+
+    @media (max-width: 450px) {
+      th.th-state { display: none; }
+      td.td-state { display: none; }
+    }
+  }
+}

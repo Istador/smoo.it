@@ -1,0 +1,29 @@
+.smoo-btn {
+  .ZL, .L, .ZR, .R, .A, .B {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 0.25em;
+    width: 2.5em;
+    font-size: 0.65em;
+    letter-spacing: 0.2em;
+    line-hieght: 1em;
+    vertical-align: middle;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+    background-color: #eee;
+  }
+
+  .ZL, .L { border-top-left-radius: 1.2em; }
+  .ZR, .R { border-top-right-radius: 1.2em; }
+
+  .A, .B {
+    border-radius:
+    1em; width: 2em;
+  }
+
+  svg {
+    background-color: #eee;
+    border-radius: 1em;
+  }
+}

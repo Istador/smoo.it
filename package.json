@@ -1,34 +1,13 @@
 {
   "name": "smoo.it",
   "version": "0.1.0",
-  "main": "src/main.ts",
+  "author": "Robin C. Ladiges",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Istador/smoo.it.git"
-  },
-  "keywords": [
-    "html",
-    "js",
-    "css",
-    "vuejs"
-  ],
-  "author": "Robin C. Ladiges",
-  "license": "MPL-2.0",
-  "licenses": [
-    {
-      "type": "MPL-2.0",
-      "url": "https://github.com/Istador/smoo.it/raw/public/LICENSE.md"
-    }
-  ],
-  "bugs": {
-    "url": "https://github.com/Istador/smoo.it/issues"
-  },
-  "homepage": "https://www.smoo.it/",
+  "main": "src/main.ts",
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
     "bootstrap": "^4.5.2",
@@ -63,5 +42,26 @@
     "typescript": "~4.5.5",
     "vue-cli-plugin-bootstrap-vue": "~0.8.2",
     "vue-template-compiler": "^2.6.14"
+  },
+  "bugs": {
+    "url": "https://github.com/Istador/smoo.it/issues"
+  },
+  "homepage": "https://www.smoo.it/",
+  "keywords": [
+    "html",
+    "js",
+    "css",
+    "vuejs"
+  ],
+  "license": "MPL-2.0",
+  "licenses": [
+    {
+      "type": "MPL-2.0",
+      "url": "https://github.com/Istador/smoo.it/raw/public/LICENSE.md"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Istador/smoo.it.git"
   }
 }
