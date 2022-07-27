@@ -32,6 +32,7 @@
     .card-header {
       &.not-collapsed {
         background-color: #e7f5f7;
+        margin-bottom: 0;
       }
       &::after {
         content: '';
