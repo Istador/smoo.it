@@ -32,7 +32,7 @@ const routes: Array<RouteConfig> = [
   },
   {
     name      : 'faq',
-    path      : '/faq',
+    path      : '/faq/:id?',
     component : FAQ,
   },
 ]

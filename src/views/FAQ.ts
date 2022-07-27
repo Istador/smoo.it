@@ -1,9 +1,36 @@
 import { Vue, Component } from 'vue-property-decorator'
 
+interface IQuestion {
+  id       : number
+  question : string
+  answer   : string
+}
+
 @Component({})
 export default class FAQ extends Vue {
-  questions = [
+  get id () : number {
+    return Number(this.$route.params.id || 0)
+  }
+
+  show (id: number) {
+    if (id === this.id) { return }
+    this.$router.replace({ name: 'faq', params: { id: id.toString() } })
+  }
+
+  hidden (id: number) {
+    if (id !== this.id) { return }
+    this.$router.replace({ name: 'faq' })
+  }
+
+  mounted () {
+    if (this.id === 0) {
+      this.show(this.questions[0].id)
+    }
+  }
+
+  questions : IQuestion[] = [
     {
+      id       : 101,
       question : 'How do I control the mod?',
       answer   : `
         <p>
@@ -37,6 +64,7 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 102,
       question : 'How do I change the server I\'m connected to?',
       answer   : `
         By one of these methods:
@@ -51,6 +79,7 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 103,
       question : 'How do I hack my Switch?',
       answer   : `
         <p>
@@ -66,12 +95,14 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 104,
       question : 'How do I obtain a SMO ROM for emulators?',
       answer   : `
         <p>The only <i>legal</i> way to obtain a ROM is by dumping it from your hacked Switch onto the SD card.</p>
       `,
     },
     {
+      id       : 105,
       question : 'Am I on SMO version <code>1.0.0</code>?',
       answer   : `
         <p>
@@ -87,10 +118,12 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 106,
       question : 'Will the mod work for SMO version <code>1.3.0</code> in the future?',
       answer   : 'No, it\'s too much effort to develop, test, build, release and support different versions of the mod.',
     },
     {
+      id       : 107,
       question : 'What is a public/private IPv4 address?',
       answer   : `
         <p>
@@ -117,6 +150,7 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 108,
       question : 'Does this mod work with IPv6?',
       answer   : `
         <p>
@@ -127,6 +161,7 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 109,
       question : 'How do I port forward?',
       answer   : `
         <p>This depends on your specific router model.</p>

@@ -1,19 +1,21 @@
 <template>
   <div class="faq-view accordion">
     <b-card
-      v-for="(item, i) in questions"
+      v-for="item in questions"
       :key="item.question"
       no-body
     >
       <b-card-header
         header-tag="header"
-        v-b-toggle="'accordion-' + i"
+        v-b-toggle="'accordion-' + item.id"
         v-html="item.question"
       />
       <b-collapse
-        :id="'accordion-' + i"
-        :visible="i === 0"
+        :id="'accordion-' + item.id"
+        :visible="item.id === id"
         accordion="questions"
+        @show="show(item.id)"
+        @hidden="hidden(item.id)"
       >
         <b-card-body><component :is="{ template: '<div>' + item.answer + '</div>' }"/></b-card-body>
       </b-collapse>
@@ -24,7 +26,13 @@
 <style lang="scss">
   .faq-view {
     text-align: left;
+    .card .collapse.show {
+      background-color: #fdfdff;
+    }
     .card-header {
+      &.not-collapsed {
+        background-color: #e7f5f7;
+      }
       &::after {
         content: '';
         position: absolute;
