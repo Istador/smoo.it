@@ -5,9 +5,10 @@ import CountryFlag from 'vue-country-flag'
 import { IServer } from '@/types'
 import SmooServerState from '@/components/SmooServerState.vue'
 
-const linkTree = (branch: string, label?: string): string => '<a href="https://github.com/Sanae6/SmoOnlineServer/commits/' + branch + '" class="extern" target="_blank">' + (label || branch) + '</a>'
-const packetFixes = linkTree('packet-fixes')
-const latest = linkTree('master', 'latest')
+const github = 'https://github.com/Sanae6/SmoOnlineServer/'
+const externLink = (href: string, text: string) => '<a href="' + href + '" class="extern" target="_blank">' + text + '</a>'
+const linkRelease = (tag: string, label?: string) => externLink(github + 'releases/tag/' + tag, (label || tag))
+const linkTree = (branch: string, label?: string) => externLink(github + 'commits/' + branch, (label || branch))
 
 @Component({
   components: {
@@ -71,7 +72,7 @@ export default class Servers extends Vue {
       name     : 'Piplup (Temp)',
       server   : { host: 'piplup.smoo.it', ip: '51.178.136.142', port: 1806 },
       location : { flag: 'fr', name: 'France' },
-      version  : packetFixes,
+      version  : linkTree('packet-fixes'),
     },
     {
       name     : 'Sanae',
@@ -102,13 +103,13 @@ export default class Servers extends Vue {
       name     : 'RCL',
       server   : { host: 'rcl.smoo.it' },
       location : { flag: 'de', name: 'Germany' },
-      version  : latest,
+      version  : linkRelease('1.0.2', '1.1.0'),
     },
     {
       name     : 'RCL',
       server   : { host: 'rcl.smoo.it', port: 1028 },
       location : { flag: 'de', name: 'Germany' },
-      version  : packetFixes,
+      version  : linkTree('packet-fixes'),
     },
   ]
 }
