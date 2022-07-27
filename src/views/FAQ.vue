@@ -10,7 +10,11 @@
         v-b-toggle="'accordion-' + i"
         v-html="item.question"
       />
-      <b-collapse :id="'accordion-' + i" visible accordion="questions">
+      <b-collapse
+        :id="'accordion-' + i"
+        :visible="i === 0"
+        accordion="questions"
+      >
         <b-card-body><component :is="{ template: '<div>' + item.answer + '</div>' }"/></b-card-body>
       </b-collapse>
     </b-card>
