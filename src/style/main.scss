@@ -52,17 +52,4 @@ a {
     background-image: url(@/assets/extern.png);
     filter: saturate(0);
   }
-
-  nav & {
-    text-decoration: none;
-    outline: unset;
-
-    &.router-link-exact-active {
-      font-weight: bold;
-    }
-
-    &:focus, &:hover {
-      text-decoration: underline;
-    }
-  }
 }
