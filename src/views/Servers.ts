@@ -7,6 +7,14 @@ import SmooServerState from '@/components/SmooServerState.vue'
 
 import { servers } from '@/store/servers'
 
+const stateFormatter = (_v: null, _k: string, i: IServer): number => {
+  switch (i.server.state || '') {
+  case 'online': return 0
+  case 'unknown': return 1
+  case 'offline': default: return 2
+  }
+}
+
 @Component({
   components: {
     CountryFlag,
@@ -18,9 +26,13 @@ export default class Servers extends Vue {
   servers = servers
   fields = [
     {
-      key     : 'state',
-      tdClass : 'td-state',
-      thClass : 'th-state',
+      key             : 'state',
+      tdClass         : 'td-state',
+      thClass         : 'th-state',
+      sortable        : true,
+      sortByFormatted : true,
+      sortDirection   : 'asc',
+      formatter       : stateFormatter,
     },
     {
       key           : 'name',
@@ -30,9 +42,13 @@ export default class Servers extends Vue {
       sortDirection : 'asc',
     },
     {
-      key     : 'server',
-      tdClass : 'td-server',
-      thClass : 'th-server',
+      key             : 'server',
+      tdClass         : 'td-server',
+      thClass         : 'th-server',
+      sortable        : true,
+      sortByFormatted : true,
+      sortDirection   : 'asc',
+      formatter       : (_v: null, _k: string, i: IServer) => i.server.host || i.server.ip || '',
     },
     {
       key             : 'port',

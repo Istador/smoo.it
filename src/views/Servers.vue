@@ -3,11 +3,12 @@
     <b-table
       :items="servers"
       :fields="fields"
+      sort-by="state"
       striped
     >
 
       <template #cell(state)="{ item: { server } }">
-        <smoo-server-state :server="server"/>
+        <smoo-server-state :server="server" @state="server.state = $event"/>
       </template>
 
       <template #cell(server)="{ item: { server: { host, ip } } }">
