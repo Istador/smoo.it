@@ -18,7 +18,7 @@ interface Result {
   name          : 'servers',
   store         : store,
   dynamic       : true,
-  preserveState : true,
+  preserveState : localStorage.getItem('vuex') !== null,
 })
 class XServers extends VuexModule {
   loading = false
