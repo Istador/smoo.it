@@ -1,15 +1,19 @@
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 
-import { IHost, TState } from '@/types'
+import moment from 'moment'
+
+import { IHost } from '@/types'
+import XServers, { getState } from '@/store/XServers'
 
 @Component({})
 export default class SmooServerState extends Vue {
-  private state : TState = 'loading'
+  @Prop({ required: true, type: Object })
+  server! : IHost
 
-  @Prop({ required: true })
-  private server! : IHost
+  get state () { return getState(this.server) }
+  get stamp () { return XServers.stamp }
 
-  private get icon () : string {
+  get icon () : string {
     switch (this.state) {
     case 'loading': return 'arrow-clockwise'
     case 'unknown': return 'circle'
@@ -17,7 +21,7 @@ export default class SmooServerState extends Vue {
     }
   }
 
-  private get animation () : string {
+  get animation () : string {
     return (this.state === 'loading' ? 'spin' : '')
   }
 
@@ -28,13 +32,11 @@ export default class SmooServerState extends Vue {
     }
   }
 
+  title () {
+    return this.state + (this.stamp ? ' - ' + moment(this.stamp).fromNow() : '')
+  }
+
   mounted () {
-    this.state = 'unknown'
-    // TODO: check servers / get data from a backend
-    // const states = ['unknown', 'online', 'offline']
-    // window.setTimeout(function () {
-    //   this.state = states[Math.floor(Math.random() * states.length)]
-    // }.bind(this), 1000 + Math.floor(Math.random() * 2000))
     this.onStateChange()
   }
 }

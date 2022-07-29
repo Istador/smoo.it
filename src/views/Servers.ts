@@ -1,4 +1,5 @@
 import { Vue, Component } from 'vue-property-decorator'
+import { Next } from 'vue-router'
 
 import CountryFlag from 'vue-country-flag'
 
@@ -6,6 +7,7 @@ import { IServer } from '@/types'
 import SmooServerState from '@/components/SmooServerState.vue'
 
 import { servers } from '@/store/servers'
+import XServers from '@/store/XServers'
 
 const stateFormatter = (_v: null, _k: string, i: IServer): number => {
   switch (i.server.state || '') {
@@ -20,10 +22,24 @@ const stateFormatter = (_v: null, _k: string, i: IServer): number => {
     CountryFlag,
     SmooServerState,
   },
+  beforeRouteEnter (_to, _from, next: Next<Servers>) {
+    next((self) => {
+      XServers.refetch()
+      self.interval = setInterval(
+        () => XServers.refetch(),
+        30000, // 30s
+      )
+    })
+  },
+  beforeRouteLeave (this: Servers, _to, _from, next) {
+    clearInterval(this.interval)
+    next()
+  },
 })
 export default class Servers extends Vue {
   defaultPort = 1027
   servers = servers
+  interval = 0
   fields = [
     {
       key             : 'state',

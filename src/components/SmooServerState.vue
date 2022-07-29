@@ -3,7 +3,7 @@
     :icon="icon"
     :animation="animation"
     :class="{ 'state-component': true, [ state ]: true }"
-    :title="state"
+    v-b-tooltip.topright="() => title()"
   />
 </template>
 
