@@ -14,15 +14,19 @@ export default class SmooServerState extends Vue {
   get stamp () { return XServers.stamp }
 
   get icon () : string {
-    switch (this.state) {
-    case 'loading': return 'arrow-clockwise'
-    case 'unknown': return 'circle'
-    default: return 'circle-fill'
-    }
+    if (this.state === 'loading') { return 'arrow-clockwise' }
+    if (this.state === 'unknown') { return 'circle' }
+    if (this.tooOld) { return 'circle' }
+    return 'circle-fill'
   }
 
   get animation () : string {
     return (this.state === 'loading' ? 'spin' : '')
+  }
+
+  get tooOld () : boolean {
+    if (!XServers.date) { return true }
+    return moment().diff(XServers.stamp, 'minutes') > 60
   }
 
   @Watch('state')
@@ -33,7 +37,8 @@ export default class SmooServerState extends Vue {
   }
 
   title () {
-    return this.state + (this.stamp ? ' - ' + moment(this.stamp).fromNow() : '')
+    return this.state +
+      (this.state !== 'loading' && this.stamp ? ' - ' + moment(this.stamp).fromNow() : '')
   }
 
   mounted () {
