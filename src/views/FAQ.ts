@@ -6,7 +6,7 @@ interface IQuestion {
   answer   : string
 }
 
-@Component({})
+@Component
 export default class FAQ extends Vue {
   get id () : number {
     return Number(this.$route.params.id || 0)

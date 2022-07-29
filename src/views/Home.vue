@@ -1,5 +1,10 @@
 <template>
-  <b-card-group columns class="home-view">
+  <b-card-group
+    columns
+    class="home-view"
+    v-if="initialized"
+    v-show="visible"
+  >
     <div style="">
       <div class="yt-embed">
         <iframe
@@ -8,6 +13,7 @@
           frameborder="0"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
+          v-show="$route.name === 'home'"
         />
       </div>
     </div>

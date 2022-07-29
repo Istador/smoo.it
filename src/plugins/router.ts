@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 
-import Home from '@/views/Home.vue'
 import Play from '@/views/Play.vue'
 import Host from '@/views/Host.vue'
 import Servers from '@/views/Servers.vue'
@@ -11,9 +10,8 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    name      : 'home',
-    path      : '/',
-    component : Home,
+    name : 'home',
+    path : '/',
   },
   {
     name      : 'play',
