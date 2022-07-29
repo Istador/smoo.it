@@ -1,13 +1,13 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
 
-import { TServer, TState } from '@/types'
+import { IHost, TState } from '@/types'
 
 @Component({})
 export default class SmooServerState extends Vue {
   private state : TState = 'loading'
 
   @Prop({ required: true })
-  private server! : TServer
+  private server! : IHost
 
   private get icon () : string {
     switch (this.state) {
