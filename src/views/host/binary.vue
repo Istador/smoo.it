@@ -24,7 +24,7 @@
 <pre class="code">
 <b>git  clone</b>  <a href="https://github.com/Sanae6/SmoOnlineServer" target="_blank">https://github.com/Sanae6/SmoOnlineServer</a>
 <b>cd</b>  <i>SmoOnlineServer</i>
-<b>dotnet  build</b>  --project <i>./Server/Server.csproj</i>  -c <a>Release</a>  --self-contained
+<b>dotnet  build</b>  <i>./Server/Server.csproj</i>  -c <a>Release</a>
 </pre>
 </code>
 <br/>
