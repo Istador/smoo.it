@@ -1,0 +1,34 @@
+code:not(.style), pre:not(.code) {
+  color: #576afd !important;
+}
+
+code.style {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  color: #c9d1d9;
+  background-color: #161b22;
+  pre {
+    color: #c9d1d9;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    del, .com { color: #8b949e; text-decoration: none; }
+    i,   .val { color: #58a6ff; font-style: normal; }
+    a,   .str { color: #a5d6ff !important; }
+    b,   .key { color: #7ee787; font-weight: normal; }
+  }
+  label {
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    padding: 0.1rem 0.3rem;
+    border-bottom-left-radius: 0.5rem;
+    background-color: #434a56;
+    a {
+      color: #c9d1d9 !important;
+    }
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}

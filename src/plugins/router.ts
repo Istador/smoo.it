@@ -15,12 +15,12 @@ const routes: Array<RouteConfig> = [
   },
   {
     name      : 'play',
-    path      : '/play',
+    path      : '/play/:id?',
     component : Play,
   },
   {
     name      : 'host',
-    path      : '/host',
+    path      : '/host/:id?',
     component : Host,
   },
   {

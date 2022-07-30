@@ -1,55 +1,15 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap-vue/src/index";
 
-.card-body {
-  text-align: left;
-  text-align: justify;
-
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-
-  :last-child { margin-bottom: 0; }
-}
+@import "./cards";
+@import "./code";
+@import "./links";
 
 ul {
   padding-left: 1em;
   margin-bottom: 0;
 }
 
-code {
-  color: #576afd;
-}
-
-a {
-  cursor: pointer;
-  color: #007700;
-  text-decoration: underline;
-
-  &:focus, &:hover, &:not([href]) {
-    text-decoration: none;
-  }
-
-  &.extern[href]:not(.btn) {
-    color: #cc20dd;
-    padding-right: 1.1em;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: 1em 1em;
-    background-image: url(@/assets/extern.png);
-  }
-
-  &.extern[href].btn::after {
-    content: '';
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    margin-left: 0.1em;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: 1em 1em;
-    background-image: url(@/assets/extern.png);
-    filter: saturate(0);
-  }
+.b-tooltip > .tooltip-inner {
+  text-align: left;
 }
