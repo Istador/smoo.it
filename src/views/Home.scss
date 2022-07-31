@@ -10,20 +10,26 @@
 
   .yt-embed {
     margin-bottom: 15px;
-    iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-    }
-    @supports not (aspect-ratio: 1) {
-      position: relative;
-      padding-bottom: 56.25%;
+    position: relative;
+    padding-bottom: 56.25%;
 
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+    @supports (aspect-ratio: 1) {
+      position: unset;
+      padding-bottom: unset;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @supports (aspect-ratio: 1) {
+        position: unset;
+        top: unset;
+        left: unset;
+        height: unset;
+        aspect-ratio: 16 / 9;
       }
     }
   }

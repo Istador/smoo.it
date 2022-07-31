@@ -1,5 +1,15 @@
 module.exports = {
   presets: [
-    '@vue/cli-plugin-babel/preset',
+    [
+      '@vue/cli-plugin-babel/preset',
+      {
+        useBuiltIns : 'usage',
+        targets: {
+          ie      : 11,
+          chrome  : 60,
+          firefox : 56,
+        },
+      },
+    ],
   ],
 }
