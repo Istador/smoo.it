@@ -4,7 +4,7 @@
       <img
         alt="Super Mario Odyssey: Online Logo"
         title="Super Mario Odyssey: Online"
-        src="@/assets/logo.png"
+        src="/img/logo.png"
         width="144"
         height="128"
       />
