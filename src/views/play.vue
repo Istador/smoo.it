@@ -41,4 +41,4 @@
   </div>
 </template>
 
-<script lang="ts" src="./Play.ts"/>
+<script lang="ts" src="./play.ts"/>

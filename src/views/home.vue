@@ -45,6 +45,6 @@
   </b-card-group>
 </template>
 
-<style lang="scss" src="./Home.scss"/>
+<style lang="scss" src="./home.scss"/>
 
-<script lang="ts" src="./Home.ts"/>
+<script lang="ts" src="./home.ts"/>

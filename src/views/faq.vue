@@ -29,4 +29,4 @@
   }
 </style>
 
-<script lang="ts" src="./FAQ.ts"/>
+<script lang="ts" src="./faq.ts"/>

@@ -44,4 +44,4 @@
   </div>
 </template>
 
-<script lang="ts" src="./Host.ts"/>
+<script lang="ts" src="./host.ts"/>

@@ -3,7 +3,7 @@ import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 import moment from 'moment'
 
 import { IHost } from '@/types'
-import XServers, { getState } from '@/store/XServers'
+import XServers, { getState } from '@/store/xservers'
 
 @Component({})
 export default class SmooServerState extends Vue {

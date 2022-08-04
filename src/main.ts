@@ -3,7 +3,7 @@ import Vue from 'vue'
 import '@babel/polyfill'
 import 'mutationobserver-shim'
 
-import App from '@/App.vue'
+import App from '@/app.vue'
 import { store } from '@/store'
 import { router } from '@/plugins'
 

@@ -7,5 +7,5 @@
   </div>
 </template>
 
-<style lang="scss" src="./App.scss" />
-<script lang="ts" src="./App.ts"/>
+<style lang="scss" src="./app.scss" />
+<script lang="ts" src="./app.ts"/>

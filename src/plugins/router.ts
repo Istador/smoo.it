@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 
-import Play from '@/views/Play.vue'
-import Host from '@/views/Host.vue'
-import Servers from '@/views/Servers.vue'
-import FAQ from '@/views/FAQ.vue'
+import Play from '@/views/play.vue'
+import Host from '@/views/host.vue'
+import Servers from '@/views/servers.vue'
+import FAQ from '@/views/faq.vue'
 
 Vue.use(VueRouter)
 

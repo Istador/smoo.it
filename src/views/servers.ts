@@ -7,7 +7,7 @@ import { IServer } from '@/types'
 import SmooServerState from '@/components/SmooServerState.vue'
 
 import { servers } from '@/store/servers'
-import XServers from '@/store/XServers'
+import XServers from '@/store/xservers'
 
 const stateFormatter = (_v: null, _k: string, i: IServer): number => {
   switch (i.server.state || '') {

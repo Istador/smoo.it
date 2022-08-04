@@ -2,7 +2,7 @@ import { Vue, Component } from 'vue-property-decorator'
 import SmooHeader from './components/SmooHeader.vue'
 import SmooFooter from './components/SmooFooter.vue'
 
-import Home from './views/Home.vue'
+import Home from './views/home.vue'
 
 @Component({
   components: {

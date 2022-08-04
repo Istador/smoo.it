@@ -43,6 +43,6 @@
   </div>
 </template>
 
-<style lang="scss" src="./Servers.scss"/>
+<style lang="scss" src="./servers.scss"/>
 
-<script lang="ts" src="./Servers.ts"/>
+<script lang="ts" src="./servers.ts"/>
