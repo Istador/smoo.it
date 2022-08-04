@@ -49,7 +49,7 @@
             <sup id="server-address"><b-icon icon="info-circle-fill"/></sup>
             <b-tooltip target="server-address" triggers="hover" style="text-align: justified;">
               <p>One possible example:</p>
-              <p>
+              <p class="mb-0">
                 You're connected to your home network and a VPN, and therefore have two network interfaces.
                 But you don't want other VPN clients to access the server.
                 Then you could enter the IPv4 address your server has on the home network, to only listen to that interface.

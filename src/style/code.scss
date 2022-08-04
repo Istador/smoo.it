@@ -16,6 +16,9 @@ code.style {
     i,   .val { color: #58a6ff; font-style: normal; }
     a,   .str { color: #a5d6ff !important; }
     b,   .key { color: #7ee787; font-weight: normal; }
+    a:not([href]) {
+      cursor: default;
+    }
   }
   label {
     position: absolute;
