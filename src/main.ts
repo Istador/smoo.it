@@ -1,6 +1,5 @@
 import Vue from 'vue'
 
-import '@babel/polyfill'
 import 'mutationobserver-shim'
 
 import App from '@/app.vue'
