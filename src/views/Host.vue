@@ -21,7 +21,13 @@
             variant="outline-secondary"
             href="https://github.com/Sanae6/SmoOnlineServer"
             target="_blank"
-          >Server GitHub repository</b-btn>
+          >C# Server GitHub [Official]</b-btn>
+          <b-btn
+            class="extern"
+            variant="outline-secondary"
+            href="https://github.com/JulesGuesnon/smo-online-server"
+            target="_blank"
+          >Rust Server GitHub</b-btn>
         </b-btn-group>
       </b-card>
 

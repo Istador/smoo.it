@@ -21,7 +21,7 @@
             variant="outline-secondary"
             href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline"
             target="_blank"
-          >Mod GitHub repository</b-btn>
+          >Mod GitHub [Official]</b-btn>
 
           <b-btn
             class="extern"
