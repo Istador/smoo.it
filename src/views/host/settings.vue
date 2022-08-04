@@ -119,15 +119,17 @@
         <ul>
           <li>
             <b>Token</b>:
-            Secret credential string with that the server can login to the discord bot.
+            Secret credential string with that the server can login to as the discord bot.
           </li>
           <li>
             <b>Prefix</b>:
-            Messages that start with this prefix string are interpreted by the bot as <router-link :to="{ name: 'host', params: { id: 'commands' } }">commands</router-link>.
+            Messages that start with this prefix string are interpreted by the bot as
+            <router-link :to="{ name: 'host', params: { id: 'commands' } }">commands</router-link>
+            to it.
           </li>
           <li>
             <b>LogChannel</b>:
-            You can enter the unique integer ID of the Discord channel the bot should write all logs to.
+            You can enter the unique ID of the Discord channel the bot should write log messages to.
           </li>
         </ul>
       </li>
