@@ -1,7 +1,10 @@
 <template>
   <smoo-card
     :visible="$attrs.visible"
-    :link="{ name: 'host', params: { id: 'router' } }"
+    accordion="host"
+    key="router"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <template #header>[TODO] Hosting behind a router</template>
     TODO

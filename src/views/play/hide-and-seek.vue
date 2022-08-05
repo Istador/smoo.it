@@ -1,7 +1,10 @@
 <template>
   <smoo-card
     :visible="$attrs.visible"
-    :link="{ name: 'play', params: { id: 'hide-and-seek' } }"
+    accordion="play"
+    key="hide-and-seek"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <template #header>[TODO] Common Hide &amp; Seek rules</template>
     TODO

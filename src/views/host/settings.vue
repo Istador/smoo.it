@@ -1,7 +1,10 @@
 <template>
   <smoo-card
     :visible="$attrs.visible"
-    :link="{ name: 'host', params: { id: 'settings' } }"
+    accordion="host"
+    key="settings"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <template #header>Configuring the server with the <code>settings.json</code> file</template>
 <code class="style ml-3 mb-3 float-right">

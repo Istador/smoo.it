@@ -1,7 +1,10 @@
 <template>
   <smoo-card
     :visible="$attrs.visible"
-    :link="{ name: 'play', params: { id: 'switch' } }"
+    accordion="play"
+    key="switch"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <template #header>[TODO] Play on a hacked <code>Nintendo Switch</code> console</template>
     TODO

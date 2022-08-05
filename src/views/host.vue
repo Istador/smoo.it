@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="host-view">
 
-    <b-card-group columns deck class="host-view">
+    <b-card-group columns deck>
 
       <b-card header="Requirements">
         <ul>
@@ -33,14 +33,14 @@
 
     </b-card-group>
 
-    <host-binary   class="mt-4" :visible="id === 'binary'"/>
-    <host-docker   class="mt-4" :visible="id === 'docker'"/>
-    <host-settings class="mt-4" :visible="id === 'settings'"/>
-    <host-commands class="mt-4" :visible="id === 'commands'"/>
-    <host-discord  class="mt-4" :visible="id === 'discord'"/>
-    <host-router   class="mt-4" :visible="id === 'router'"/>
-    <host-vpn      class="mt-4" :visible="id === 'vpn'"/>
-    <host-remote   class="mt-4" :visible="id === 'remote'"/>
+    <host-binary   class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'binary'"/>
+    <host-docker   class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'docker'"/>
+    <host-settings class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'settings'"/>
+    <host-commands class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'commands'"/>
+    <host-discord  class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'discord'"/>
+    <host-router   class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'router'"/>
+    <host-vpn      class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'vpn'"/>
+    <host-remote   class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'remote'"/>
   </div>
 </template>
 

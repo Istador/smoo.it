@@ -19,6 +19,7 @@ export default class FAQ extends Vue {
 
   hidden (id: number) {
     if (id !== this.id) { return }
+    if (!this.$route.params.id) { return }
     this.$router.replace({ name: 'faq' })
   }
 

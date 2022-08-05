@@ -2,7 +2,7 @@
   <div class="faq-view accordion">
     <smoo-card
       v-for="item in questions"
-      :key="item.question"
+      :key="item.id"
       :visible="item.id === id"
       @show="show(item.id)"
       @hidden="hidden(item.id)"

@@ -2,7 +2,10 @@
   <smoo-card
     header="Using binary files to run the server"
     :visible="$attrs.visible"
-    :link="{ name: 'host', params: { id: 'binary' } }"
+    accordion="host"
+    key="binary"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <p>
       You'll find binary files of recent server versions attached on its

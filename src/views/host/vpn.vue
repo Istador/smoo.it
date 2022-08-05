@@ -1,7 +1,10 @@
 <template>
   <smoo-card
     :visible="$attrs.visible"
-    :link="{ name: 'host', params: { id: 'vpn' } }"
+    accordion="host"
+    key="vpn"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <template #header>[TODO] Hosting with a virtual private network</template>
     TODO

@@ -2,7 +2,10 @@
   <smoo-card
     class="smoo-view-host-docker"
     :visible="$attrs.visible"
-    :link="{ name: 'host', params: { id: 'docker' } }"
+    accordion="host"
+    key="docker"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <template #header>Using pre-build docker images with <code>docker-compose</code> to run the server</template>
     <p>

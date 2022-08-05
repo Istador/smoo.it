@@ -1,7 +1,10 @@
 <template>
   <smoo-card
     :visible="$attrs.visible"
-    :link="{ name: 'play', params: { id: 'yuzu' } }"
+    accordion="play"
+    key="yuzu"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <template #header>[TODO] Play with the <code>Yuzu</code> emulator</template>
     TODO

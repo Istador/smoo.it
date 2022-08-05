@@ -1,7 +1,10 @@
 <template>
   <smoo-card
     :visible="$attrs.visible"
-    :link="{ name: 'host', params: { id: 'remote' } }"
+    accordion="host"
+    key="remote"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <template #header>[TODO] Hosting on remote server(s)</template>
     TODO

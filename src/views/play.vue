@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="play-view">
 
-    <b-card-group columns deck class="play-view">
+    <b-card-group columns deck>
 
       <b-card header="Requirements">
         <ul>
@@ -34,10 +34,10 @@
 
     </b-card-group>
 
-    <play-hide-and-seek class="mt-4" :visible="id === 'hide-and-seek'"/>
-    <play-switch        class="mt-4" :visible="id === 'switch'"/>
-    <play-ryujinx       class="mt-4" :visible="id === 'ryujinx'"/>
-    <play-yuzu          class="mt-4" :visible="id === 'yuzu'"/>
+    <play-hide-and-seek class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'hide-and-seek'"/>
+    <play-switch        class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'switch'"/>
+    <play-ryujinx       class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'ryujinx'"/>
+    <play-yuzu          class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'yuzu'"/>
   </div>
 </template>
 

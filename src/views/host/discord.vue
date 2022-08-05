@@ -1,7 +1,10 @@
 <template>
   <smoo-card
     :visible="$attrs.visible"
-    :link="{ name: 'host', params: { id: 'discord' } }"
+    accordion="host"
+    key="discord"
+    @show="$emit('show', $event)"
+    @hidden="$emit('hidden', $event)"
   >
     <template #header>Setting up a Discord bot</template>
     <p>

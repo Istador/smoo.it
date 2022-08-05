@@ -23,6 +23,17 @@ import HostRemote from './host/remote.vue'
 })
 export default class Host extends Vue {
   get id () : string {
-    return this.$route.params.id || 'binary'
+    return this.$route.params.id || ''
+  }
+
+  show (id: string) {
+    if (id === this.id) { return }
+    this.$router.replace({ name: 'host', params: { id } })
+  }
+
+  hidden (id: string) {
+    if (id !== this.id) { return }
+    if (!this.$route.params.id) { return }
+    this.$router.replace({ name: 'host' })
   }
 }
