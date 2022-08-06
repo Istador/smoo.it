@@ -270,7 +270,8 @@
           <tr> <th><kbd>lake</kbd></th>    <td>Lake Kingdom</td> </tr>
           <tr> <th><kbd>wooded</kbd></th>  <td>Wooded Kingdom</td> </tr>
           <tr> <th><kbd>cloud</kbd></th>   <td>Cloud Kingdom</td> </tr>
-          <tr> <th><kbd>metro</kbd></th>   <td>Lost Kingdom</td> </tr>
+          <tr> <th><kbd>lost</kbd></th>    <td>Lost Kingdom</td> </tr>
+          <tr> <th><kbd>metro</kbd></th>   <td>Metro Kingdom</td> </tr>
           <tr> <th><kbd>sea</kbd></th>     <td>Sea Kingdom</td> </tr>
           <tr> <th><kbd>snow</kbd></th>    <td>Snow Kingdom</td> </tr>
           <tr> <th><kbd>lunch</kbd></th>   <td>Luncheon Kingdom</td> </tr>
