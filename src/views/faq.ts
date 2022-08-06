@@ -81,7 +81,7 @@ export default class FAQ extends Vue {
           Might not work with older versions of the mod.
         </b-tooltip>
         <b-tooltip target="faq-save-dir" triggers="hover" style="text-align: justified;">
-          <p>On the Switch that is on the internal storage and not on the SD card. You could use a save file backup app, to export, modify and then restore the directory.</p>
+          <p>On the Nintendo Switch that is on the internal storage and not on the SD card. You could use a save file backup app, to export, modify and then restore the directory.</p>
           <p class="mb-0">Inside the Yuzu or Ryujinx emulator you can right click on the game to get to its save directory.</p>
         </b-tooltip>
       `,
@@ -100,13 +100,43 @@ export default class FAQ extends Vue {
           Follow this <a href="https://nh-server.github.io/switch-guide/" class="extern" target="_blank">guide</a>
           or alternatively/additionally <a href="https://switch.homebrew.guide/" class="extern" target="_blank">this one</a>.
         </p>
+        <hr/>
+        <p>
+          The SD card should be formatted with <code>FAT32</code> and not with <code>exFAT</code>.
+          Because <code>exFAT</code> is known for having issues with the Nintendo Switch causing corrupted files and crashes.
+        </p>
+        <p>
+          For the purpose of downgrading the game to version <code>1.0.0</code> and/or to
+          <router-link :to="{ name: 'faq', params: { id: 104 } }">dump</router-link>
+          the game ROM to be used for emulators,
+          make sure that you follow the guides regarding backing up the
+          <a href="https://nh-server.github.io/switch-guide/user_guide/emummc/making_emummc/#getting-your-consoles-unique-keys" class="extern" target="_blank">console</a>
+          and
+          <a href="https://nh-server.github.io/switch-guide/extras/dumping_title_keys/" class="extern" target="_blank">title keys</a>
+          using <a href="https://github.com/shchmue/Lockpick_RCM/releases" class="extern" target="_blank">Lockpick_RCM</a>.
+        </p>
+        <p>
+          Because you need to connect the Nintendo Switch to the internet to play online, make sure that you properly
+          <a href="https://nh-server.github.io/switch-guide/extras/blocking_nintendo/" class="extern" target="_blank">block Nintendo servers</a>
+          to
+          <a href="https://nh-server.github.io/switch-guide/faq/#is-it-safe-to-use-homebrew-will-i-get-banned" class="extern" target="_blank">not</a>
+          get
+          <a href="https://switch.homebrew.guide/faq.html#what-actions-can-get-me-banned" class="extern" target="_blank">banned</a>.
+        </p>
       `,
     },
     {
       id       : 104,
       question : 'How do I obtain a SMO ROM for emulators?',
       answer   : `
-        <p>The only <i>legal</i> way to obtain a ROM is by dumping it from your hacked Switch onto the SD card.</p>
+        <p>
+          The only <i>legal</i> way to obtain a ROM is by dumping it from your
+          <router-link :to="{ name: 'faq', params: { id: 103 } }">hacked</router-link>
+          Nintendo Switch onto the SD card.
+        </p>
+        <p>
+          <code>@todo: add a section on how to dump the game.</code>
+        </p>
       `,
     },
     {
@@ -114,21 +144,26 @@ export default class FAQ extends Vue {
       question : 'Am I on SMO version <code>1.0.0</code>?',
       answer   : `
         <p>
-          When the game is downgraded on the Switch, the system and the main menu will still show <code>1.3.0</code>, which is correct.
+          When the game is downgraded on the Nintendo Switch, the system and the main menu will still show <code>1.3.0</code>, which is correct.
         </p>
         <p>
           A good indicator if the game is on version <code>1.3.0</code> or lower is the <code>Play in VR</code> button in the main menu.
           When the button is visible that means the downgrade didn't work and the game is still on version <code>1.3.0</code>.
         </p>
         <p>
-          For emulators a real <code>1.0.0</code> ROM is needed, which can be dumped from the Switch.
+          For emulators a real <code>1.0.0</code> ROM is needed, which can be
+          <router-link :to="{ name: 'faq', params: { id: 104 } }">dumped</router-link>
+          from the Nintendo Switch.
         </p>
       `,
     },
     {
       id       : 106,
       question : 'Will the mod work for SMO version <code>1.3.0</code> in the future?',
-      answer   : 'No, it\'s too much effort to develop, test, build, release and support different versions of the mod.',
+      answer   : `
+        No, it's too much effort to develop, test, build, release and support different versions of the mod.
+        Also apparently version <code>1.3.0</code> is more difficult to mod than version <code>1.0.0</code> of the game.
+      `,
     },
     {
       id       : 107,
