@@ -29,7 +29,7 @@ export const servers : IServer[] = [
   },
   {
     name     : 'Fruityloops',
-    server   : { host: 'fruityloops.smoo.it', ip: '62.226.142.89' },
+    server   : { host: 'fruityloops.smoo.it', ip: '80.138.130.217' },
     location : { flag: 'de', name: 'Germany' },
   },
   {
