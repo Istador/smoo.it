@@ -33,6 +33,10 @@
     <b>"Token"</b>: <i>null</i>,
     <b>"Prefix"</b>: <a>"$"</a>,
     <b>"LogChannel"</b>: <i>null</i>
+  },
+  <b>"PersistShines"</b>: {
+    <b>"Enabled"</b>: <i>false</i>,
+    <b>"Filename"</b>: <a>"./moons.json"</a>
   }
 }
 </pre>
@@ -133,6 +137,18 @@
           <li>
             <b>LogChannel</b>:
             You can enter the unique ID of the Discord channel the bot should write log messages to.
+          </li>
+        </ul>
+      </li>
+      <li><b>PersistShines</b>: An option to save shines (moons) collected into a file, to survive server restarts and crashes.
+        <ul>
+          <li>
+            <b>Enabled</b>:
+            <code>true</code> or <code>false</code>.
+          </li>
+          <li>
+            <b>Filename</b>:
+            In which file to save the shines into.
           </li>
         </ul>
       </li>
