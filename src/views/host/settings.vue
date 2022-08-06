@@ -136,7 +136,7 @@
           </li>
           <li>
             <b>LogChannel</b>:
-            You can enter the unique ID of the Discord channel the bot should write log messages to.
+            You can enter the unique ID of the Discord channel the bot should write log messages to (as a string).
           </li>
         </ul>
       </li>

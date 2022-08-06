@@ -63,7 +63,7 @@
 <b>"Discord"</b>: {
   <b>"Token"</b>: <a>"MTAwND...TI0c"</a>,
   <b>"Prefix"</b>: <a>"$"</a>,
-  <b>"LogChannel"</b>: <i>993864963574140000</i>
+  <b>"LogChannel"</b>: <a>"993864963574140000"</a>
 }
 </pre>
 </code>
