@@ -25,6 +25,7 @@
             <b-dd-item :to="{ name: 'play', params: { id: 'switch'} }" disabled>Play on Switch</b-dd-item>
             <b-dd-item :to="{ name: 'play', params: { id: 'ryujinx'} }" disabled>Play with Ryujinx</b-dd-item>
             <b-dd-item :to="{ name: 'play', params: { id: 'yuzu'} }" disabled>Play with Yuzu</b-dd-item>
+            <b-dd-item :to="{ name: 'play', params: { id: 'build'} }" disabled>Build the mod</b-dd-item>
           </b-nav-dd>
           <b-nav-dd right>
             <template #button-content>

@@ -37,7 +37,8 @@
     <play-hide-and-seek class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'hide-and-seek'"/>
     <play-switch        class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'switch'"/>
     <play-ryujinx       class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'ryujinx'"/>
-    <play-yuzu                       @show="show($event)" @hidden="hidden($event)" :visible="id === 'yuzu'"/>
+    <play-yuzu          class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'yuzu'"/>
+    <play-build                      @show="show($event)" @hidden="hidden($event)" :visible="id === 'build'"/>
   </div>
 </template>
 
