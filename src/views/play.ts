@@ -28,10 +28,4 @@ export default class Play extends Vue {
     if (!this.$route.params.id) { return }
     this.$router.replace({ name: 'play' })
   }
-
-  mounted () {
-    if (this.id === '') {
-      this.show('hide-and-seek')
-    }
-  }
 }

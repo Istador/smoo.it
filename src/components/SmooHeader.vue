@@ -21,7 +21,7 @@
                 <router-link class="nav-split-link" :to="{ name: 'play' }">Play</router-link>
               </span>
             </template>
-            <b-dd-item :to="{ name: 'play', params: { id: 'hide-and-seek'} }" disabled>Hide &amp; Seek Rules</b-dd-item>
+            <b-dd-item :to="{ name: 'play', params: { id: 'hide-and-seek'} }">Hide &amp; Seek rules</b-dd-item>
             <b-dd-item :to="{ name: 'play', params: { id: 'switch'} }" disabled>Play on Switch</b-dd-item>
             <b-dd-item :to="{ name: 'play', params: { id: 'ryujinx'} }" disabled>Play with Ryujinx</b-dd-item>
             <b-dd-item :to="{ name: 'play', params: { id: 'yuzu'} }" disabled>Play with Yuzu</b-dd-item>
