@@ -3,7 +3,7 @@
 
     <b-card-group columns deck>
 
-      <b-card header="Requirements">
+      <b-card header="Requirements" class="mb-4">
         <ul>
           <li>Hacked Nintendo Switch</li>
           <li>Super Mario Odyssey version 1.0.0</li>
@@ -11,7 +11,7 @@
         </ul>
       </b-card>
 
-      <b-card header="Links">
+      <b-card header="Links" class="mb-4">
         <b-btn-group
           vertical
           style="width: 100%;"
@@ -34,10 +34,10 @@
 
     </b-card-group>
 
-    <play-hide-and-seek class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'hide-and-seek'"/>
-    <play-switch        class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'switch'"/>
-    <play-ryujinx       class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'ryujinx'"/>
-    <play-yuzu          class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'yuzu'"/>
+    <play-hide-and-seek class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'hide-and-seek'"/>
+    <play-switch        class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'switch'"/>
+    <play-ryujinx       class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'ryujinx'"/>
+    <play-yuzu                       @show="show($event)" @hidden="hidden($event)" :visible="id === 'yuzu'"/>
   </div>
 </template>
 

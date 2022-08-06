@@ -3,7 +3,7 @@
 
     <b-card-group columns deck>
 
-      <b-card header="Requirements">
+      <b-card header="Requirements" class="mb-4">
         <ul>
           <li>Public IPv4 address</li>
           <li>Open port</li>
@@ -11,7 +11,7 @@
         </ul>
       </b-card>
 
-      <b-card header="Links">
+      <b-card header="Links" class="mb-4">
         <b-btn-group
           vertical
           style="width: 100%;"
@@ -33,14 +33,14 @@
 
     </b-card-group>
 
-    <host-binary   class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'binary'"/>
-    <host-docker   class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'docker'"/>
-    <host-settings class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'settings'"/>
-    <host-commands class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'commands'"/>
-    <host-discord  class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'discord'"/>
-    <host-router   class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'router'"/>
-    <host-vpn      class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'vpn'"/>
-    <host-remote   class="mt-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'remote'"/>
+    <host-binary   class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'binary'"/>
+    <host-docker   class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'docker'"/>
+    <host-settings class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'settings'"/>
+    <host-commands class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'commands'"/>
+    <host-discord  class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'discord'"/>
+    <host-router   class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'router'"/>
+    <host-vpn      class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'vpn'"/>
+    <host-remote                @show="show($event)" @hidden="hidden($event)" :visible="id === 'remote'"/>
   </div>
 </template>
 
