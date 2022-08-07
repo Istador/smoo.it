@@ -1,5 +1,20 @@
+$text-variants: (
+  '.text-primary',
+  '.text-secondary',
+  '.text-success',
+  '.text-danger',
+  '.text-warning',
+  '.text-info',
+  '.text-light',
+  '.text-dark',
+  '.text-muted',
+  '.text-white',
+);
+
 code:not(.style), pre:not(.code) {
-  color: #576afd !important;
+  &:not(#{$text-variants}),  {
+    color: #576afd !important;
+  }
 }
 
 code.style {

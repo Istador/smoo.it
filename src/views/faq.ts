@@ -144,11 +144,17 @@ export default class FAQ extends Vue {
       question : 'Am I on SMO version <code>1.0.0</code>?',
       answer   : `
         <p>
-          When the game is downgraded on the Nintendo Switch, the system and the main menu will still show <code>1.3.0</code>, which is correct.
+          When the game is downgraded using the
+          <a href="https://github.com/Istador/odyssey-downgrade/releases" class="extern" target="_blank">Odyssey Downgrade</a>
+          tool on the Nintendo Switch, the system and the main menu will show the game as being on version <code>1.3.0</code>.
+          This is correct, because technically that is still the installed version.
         </p>
         <p>
-          A good indicator if the game is on version <code>1.3.0</code> or lower is the <code>Play in VR</code> button in the main menu.
-          When the button is visible that means the downgrade didn't work and the game is still on version <code>1.3.0</code>.
+          A good indicator if the game is really downgraded to <code>1.0.0</code>
+          and is not running version <code>1.3.0</code> anymore
+          is the <code>"Playing in VR"</code> option in the main menu.
+          When the option is visible that means that the downgrade didn't work correctly
+          and the game is still on version <code>1.3.0</code>.
         </p>
         <p>
           For emulators a real <code>1.0.0</code> ROM is needed, which can be
