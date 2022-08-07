@@ -6,9 +6,18 @@
       sort-by="state"
       striped
     >
-
       <template #cell(state)="{ item: { server } }">
         <smoo-server-state :server="server" @state="server.state = $event"/>
+      </template>
+
+      <template #head(server)>
+        Server
+        <sup id="servers-hostname" @click.stop.prevent><b-icon icon="info-circle-fill"/></sup>
+        <b-tooltip target="servers-hostname" triggers="hover" style="text-align: justified;">
+          The <code>Host</code> entry is a convenient alternative to the IPv4 address.
+          But this <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/pull/20">feature</a-ext>
+          isn't part of the latest mod release yet.
+        </b-tooltip>
       </template>
 
       <template #cell(server)="{ item: { server: { host, ip } } }">
