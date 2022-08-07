@@ -1,9 +1,9 @@
 <template>
   <footer>
     <nav>
-      <a href="https://github.com/Istador/smoo.it" class="extern" target="_blank">GitHub</a> |
       <a href="https://discord.gg/jYCueK2BqD" class="extern" target="_blank">Discord</a> |
-      <a href="https://rcl.smoo.it/contact" class="extern" target="_blank">Contact</a>
+      <a href="https://github.com/Istador/smoo.it" class="extern" target="_blank">GitHub</a> |
+      <a href="https://rcl.smoo.it/legal" class="extern" target="_blank">Legal notice</a>
     </nav>
   </footer>
 </template>
