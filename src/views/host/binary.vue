@@ -9,7 +9,7 @@
   >
     <p>
       You'll find binary files of recent server versions attached on its
-      <a href="https://github.com/Sanae6/SmoOnlineServer/releases" class="extern" target="_blank">releases</a> page.
+      <a-ext href="https://github.com/Sanae6/SmoOnlineServer/releases">releases</a-ext> page.
       <ul>
         <li><code>Server</code> is for Linux x64</li>
         <li><code>Server.arm</code> is for Linux ARM</li>
@@ -32,13 +32,13 @@
 </pre>
 </code>
 <br/>
-      Building it requires the <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0" class="extern" target="_blank">.NET 6.0 SDK</a>.
+      Building it requires the <a-ext href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.NET 6.0 SDK</a-ext>.
       The builded binary files for your system will be located at <code>./Server/bin/Release/net6.0/</code>, you can change this path by using the <kbd>-o</kbd> parameter.
       To run your own builds you'll also need the <code>.NET Runtime</code> installed.
     </p>
     <p>
       Alternatively you can build with <kbd>--self-contained</kbd> which allows you to run the binary on systems without the <code>.NET Runtime</code>.
-      But that requires you to specify the <a href="https://docs.microsoft.com/en-us/dotnet/core/rid-catalog" class="extern" target="_blank">runtime</a>
+      But that requires you to specify the <a-ext href="https://docs.microsoft.com/en-us/dotnet/core/rid-catalog">runtime</a-ext>
       for which to build for (e.g. <kbd>-r linux-x64</kbd>, <kbd>-r linux-arm</kbd>, <kbd>-r linux-arm64</kbd> or <kbd>-r win-x64</kbd>).
       If you're providing the runtime anyway consider also using <kbd>-p:publishSingleFile=true</kbd> to bundle everything into one single binary file.
     </p>

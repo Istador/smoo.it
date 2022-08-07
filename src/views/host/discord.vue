@@ -10,13 +10,13 @@
     <p>
       The aim of this is that the SMOO server connects to your private Discord server as a bot.
       It can then send logs to a dedicated logs channel and receive
-      <router-link :to="{ name: 'host', params: { id: 'commands' } }">commands</router-link>
+      <a-int name="host" id="commands">commands</a-int>
       from you or someone else.
       (This might be way easier to use in remote scenarios than to SSH to the server and attach the CLI to the server process.)
     </p>
     <h5>Create an application</h5>
     <p>
-      Go to <a href="https://discord.com/developers/applications/" class="extern" target="_blank">discord.com/developers/applications/</a>,
+      Go to <a-ext href="https://discord.com/developers/applications">discord.com/developers/applications</a-ext>,
       create a <code>New Application</code> and give it a name (e.g. <code>SMOO Server</code>).
     </p>
     <h5>Create a bot</h5>
@@ -29,7 +29,7 @@
     <p>
       More importantly is that we call <code>Reset Token</code> for the bot.
       This will generate a new secret token that we need to connect the bot to our SMOO server.
-      Copy the displayed token and paste it into the <router-link :to="{ name: 'host', params: { id: 'settings' } }">settings.json</router-link>
+      Copy the displayed token and paste it into the <a-int name="host" id="settings">settings.json</a-int>
       of the server (it goes to <code>Discord &gt; Token</code> and needs to be surrounded by double quotes).
       The token is only displayed once, if you forgot to copy it or lose it later,
       you can always get back here and use <code>Reset Token</code> to generate a new token (the old one will become invalid by doing this).
@@ -46,7 +46,7 @@
     <p>
       Only servers that you have the <code>Manage Server</code> permission for are shown.
       You should select your own private Discord server for this, that only you have access to
-      (otherwise others can send <router-link :to="{ name: 'host', params: { id: 'commands' } }">commands</router-link> to the SMOO server).
+      (otherwise others can send <a-int name="host" id="commands">commands</a-int> to the SMOO server).
       If you don't have one yet, just create one, it is free: simply click on the green plus button at the end of your server list.
     </p>
     <h5>Create a log channel</h5>
@@ -69,16 +69,16 @@
 </code>
     <p>
       Now that we have set everything else up and have the bot token and the channel ID we need to enter both into the
-      <router-link :to="{ name: 'host', params: { id: 'settings' } }">settings.json</router-link>.
+      <a-int name="host" id="settings">settings.json</a-int>.
       After changing the <code>settings.json</code> we either need to restart the SMOO server or send it the
-      <kbd>loadsettings</kbd> <router-link :to="{ name: 'host', params: { id: 'commands' } }">command</router-link>.
+      <kbd>loadsettings</kbd> <a-int name="host" id="commands">command</a-int>.
     </p>
     <p>
       If everything is set up correctly, the Discord bot should now be shown as online on the Discord server.
-      You can send the bot <router-link :to="{ name: 'host', params: { id: 'commands' } }">commands</router-link>
+      You can send the bot <a-int name="host" id="commands">commands</a-int>
       via direct messages or write them into channels the bot can read.
       The commands need to start with the prefix that is configured in the
-      <router-link :to="{ name: 'host', params: { id: 'settings' } }">settings.json</router-link>.
+      <a-int name="host" id="settings">settings.json</a-int>.
       For example <kbd>list</kbd> becomes <kbd>$list</kbd> with the default <code>"$"</code> prefix.
     </p>
   </smoo-card>

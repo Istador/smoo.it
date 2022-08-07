@@ -12,7 +12,7 @@
     <h5>Hack the Nintendo Switch</h5>
     <p>
       In order to install any custom software on the Nintendo Switch, it first needs to be
-      <router-link :to="{ name: 'faq', params: { id: 103 } }">hacked</router-link>.
+      <a-int name="faq" id="103">hacked</a-int>.
       If you have already done this in the past,
       make sure to check out the instructions anyway,
       so you don't miss out on anything important.
@@ -37,7 +37,7 @@
     <p>
       <ul>
         <li>
-          Go to the <a href="https://github.com/Istador/odyssey-downgrade/releases" class="extern" target="_blank">releases page</a>
+          Go to the <a-ext href="https://github.com/Istador/odyssey-downgrade/releases">releases page</a-ext>
           and download the latest <code>odyssey_downgrade.nso</code> file.
         </li>
         <li>
@@ -59,7 +59,7 @@
           If you're using a cartridge, then you'll need to remove and reinsert the cartridge now before you can start the game.
         </li>
         <li>
-          <router-link :to="{ name: 'faq', params: { id: 105 } }">Now go check</router-link> that the game is on version <code>1.0.0</code>.
+          <a-int name="faq" id="105">Now go check</a-int> that the game is on version <code>1.0.0</code>.
         </li>
       </ul>
     </p>
@@ -73,9 +73,9 @@
     <h5>Install the Super Mario Odyssey Online mod</h5>
     <p>
       Download the latest
-      <a href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases" class="extern" target="_target">release build</a>
+      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases">release build</a-ext>
       of the mod (not the source code, unless you want to
-      <router-link :to="{ name: 'play', params: { id: 'build' } }">build it yourself</router-link>).
+      <a-int name="play" id="build">build it yourself</a-int>).
       Extract the downloaded <code>.zip</code> file to receive an <code>atmosphere</code> folder,
       which you need to copy to the root directory of the SD card. That's it, the mod is installed.
     </p>
@@ -101,11 +101,11 @@
     <h5>Test that it works</h5>
     <p>
       When starting the game with the mod for the first time a keyboard dialog should pop up before the main menu asking for a server IP.
-      Choose one of the <router-link :to="{ name: 'servers' }">public servers</router-link> and type in its IPv4 address.
+      Choose one of the <a-int name="servers">public servers</a-int> and type in its IPv4 address.
       <sup id="play-switch-hostname"><b-icon icon="info-circle-fill"/></sup>
       <b-tooltip target="play-switch-hostname" triggers="hover" style="text-align: justified;">
         The <code>Host</code> entry in the server list is a convenient alternative to the IPv4 address.
-        But this <a href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/pull/20" class="extern" target="_blank">feature</a>
+        But this <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/pull/20">feature</a-ext>
         isn't part of the latest mod release yet.
       </b-tooltip>
       On newer versions of the mod the game will also ask for the port.
@@ -114,7 +114,7 @@
       If it can't connect to the server it'll briefly show the text <code>Failed to Connect!</code> before it continues to the main menu.
       Verify that the server is online and that the Nintendo Switch is connected to the internet.
       Try out other public servers to rule out a (temporary) problem with a specific server:
-      <router-link :to="{ name: 'faq', params: { id: 102 } }">change the sever IP</router-link>,
+      <a-int name="faq" id="102">change the sever IP</a-int>,
       save the game manually and restart the game to retry.
       <sup id="play-switch-restart"><b-icon icon="info-circle-fill"/></sup>
       <b-tooltip target="play-switch-restart" triggers="hover" style="text-align: justified;">
@@ -124,7 +124,7 @@
     </p>
     <p>
       When there is no immediate error, then <code>Start</code> a new game or <code>Resume</code> an existing save.
-      Check out the in-game <router-link :to="{ name: 'faq', params: { id: 101 } }">debug menu</router-link> for the
+      Check out the in-game <a-int name="faq" id="101">debug menu</a-int> for the
       <code>Client Socket Connection Status: Socket Connected</code>.
       If there are other players connected to the server, the <code>Total Connected Players</code> count should be above <code>1</code>
       and the other players should appear in the player list.

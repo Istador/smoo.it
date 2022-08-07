@@ -1,6 +1,6 @@
 <template>
   <header>
-    <router-link class="logo" :to="{ name: 'home' }">
+    <a-int name="home" class="logo">
       <img
         alt="Super Mario Odyssey: Online Logo"
         title="Super Mario Odyssey: Online"
@@ -8,7 +8,7 @@
         width="144"
         height="128"
       />
-    </router-link>
+    </a-int>
     <b-navbar toggleable="sm">
       <b-navbar-toggle target="navigation"/>
       <b-collapse is-nav id="navigation" ref="collapse" class="justify-content-center">
@@ -18,7 +18,7 @@
           <b-nav-dd right>
             <template #button-content>
               <span @click.stop.prevent="blur">
-                <router-link class="nav-split-link" :to="{ name: 'play' }">Play</router-link>
+                <a-int name="play" class="nav-split-link">Play</a-int>
               </span>
             </template>
             <b-dd-item :to="{ name: 'play', params: { id: 'hide-and-seek'} }">Hide &amp; Seek rules</b-dd-item>
@@ -30,7 +30,7 @@
           <b-nav-dd right>
             <template #button-content>
               <span @click.stop.prevent="blur">
-                <router-link class="nav-split-link" :to="{ name: 'host' }" @click.stop.prevent>Host</router-link>
+                <a-int name="host" class="nav-split-link">Host</a-int>
               </span>
             </template>
             <b-dd-item :to="{ name: 'host', params: { id: 'binary'} }">Run with binary files</b-dd-item>
@@ -42,7 +42,7 @@
             <b-dd-item :to="{ name: 'host', params: { id: 'vpn'} }" disabled>Virtual Private Network</b-dd-item>
             <b-dd-item :to="{ name: 'host', params: { id: 'remote'} }" disabled>Remote server</b-dd-item>
           </b-nav-dd>
-          <b-nav-item :to="{ name: 'faq'     }">FAQ</b-nav-item>
+          <b-nav-item :to="{ name: 'faq' }">FAQ</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

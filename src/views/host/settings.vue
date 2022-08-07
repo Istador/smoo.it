@@ -67,7 +67,7 @@
             <b>Port</b>:
             The TCP port clients use to connect to the server.
             You need to change this for example, if you're running multiple servers on the same computer or want to avoid firewalls blocking this port.
-            When using <router-link :to="{ name: 'host', params: { id: 'docker' } }">docker</router-link> you should not edit the port here, but inside the <code>docker-compose.yml</code>.
+            When using <a-int name="host" id="docker">docker</a-int> you should not edit the port here, but inside the <code>docker-compose.yml</code>.
           </li>
           <li>
             <b>MaxPlayers</b>:
@@ -89,7 +89,9 @@
           <li>
             <b>Pov</b>:
             Who sees the characters being flipped.
-            Possible values: <code>"both"</code> (everyone), <code>"self"</code> (only the player being flipped), or <code>"others"</code> (everyone but the player being flipped).
+            Possible values: <code>"both"</code> (everyone),
+            <code>"self"</code> (only the player being flipped),
+            or <code>"others"</code> (everyone but the player being flipped).
           </li>
         </ul>
       </li>
@@ -113,7 +115,7 @@
             <b>Players</b>:
             An array of unique profile IDs (not their names) that are prevented from joining the server.
             For example you could enter <code>"00000001-00000-0000-0000-000000000000"</code> to prevent
-            <router-link :to="{ name: 'play', params: { id: 'ryujinx' } }">Ryujinx</router-link> players to
+            <a-int name="play" id="ryujinx">Ryujinx</a-int> players to
             connect, that haven't changed their default profile yet.
           </li>
           <li>
@@ -131,7 +133,7 @@
           <li>
             <b>Prefix</b>:
             Messages that start with this prefix string are interpreted by the bot as
-            <router-link :to="{ name: 'host', params: { id: 'commands' } }">commands</router-link>
+            <a-int name="host" id="commands">commands</a-int>
             to it.
           </li>
           <li>

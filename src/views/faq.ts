@@ -91,14 +91,14 @@ export default class FAQ extends Vue {
       question : 'How do I hack my Switch?',
       answer   : `
         <p>
-          You need an <a href="https://ismyswitchpatched.com/" class="extern" target="_blank">unpatched</a>
+          You need an <a-ext href="https://ismyswitchpatched.com/">unpatched</a-ext>
           older revision of the Nintendo Switch, a microSDXC card, a USB-C connection cable,
           and a computer (PC/Laptop/Smartphone) or a specific payload injecting device.
           To make the RCM exploit safer and easier, it's advised to use a RCM jig.
         </p>
         <p>
-          Follow this <a href="https://nh-server.github.io/switch-guide/" class="extern" target="_blank">guide</a>
-          or alternatively/additionally <a href="https://switch.homebrew.guide/" class="extern" target="_blank">this one</a>.
+          Follow this <a-ext href="https://nh-server.github.io/switch-guide/">guide</a-ext>
+          or alternatively/additionally <a-ext href="https://switch.homebrew.guide/">this one</a-ext>.
         </p>
         <hr/>
         <p>
@@ -107,21 +107,21 @@ export default class FAQ extends Vue {
         </p>
         <p>
           For the purpose of downgrading the game to version <code>1.0.0</code> and/or to
-          <router-link :to="{ name: 'faq', params: { id: 104 } }">dump</router-link>
+          <a-int name="faq" id="104">dump</a-int>
           the game ROM to be used for emulators,
           make sure that you follow the guides regarding backing up the
-          <a href="https://nh-server.github.io/switch-guide/user_guide/emummc/making_emummc/#getting-your-consoles-unique-keys" class="extern" target="_blank">console</a>
+          <a-ext href="https://nh-server.github.io/switch-guide/user_guide/emummc/making_emummc/#getting-your-consoles-unique-keys">console</a-ext>
           and
-          <a href="https://nh-server.github.io/switch-guide/extras/dumping_title_keys/" class="extern" target="_blank">title keys</a>
-          using <a href="https://github.com/shchmue/Lockpick_RCM/releases" class="extern" target="_blank">Lockpick_RCM</a>.
+          <a-ext href="https://nh-server.github.io/switch-guide/extras/dumping_title_keys/">title keys</a-ext>
+          using <a-ext href="https://github.com/shchmue/Lockpick_RCM/releases">Lockpick_RCM</a-ext>.
         </p>
         <p>
           Because you need to connect the Nintendo Switch to the internet to play online, make sure that you properly
-          <a href="https://nh-server.github.io/switch-guide/extras/blocking_nintendo/" class="extern" target="_blank">block Nintendo servers</a>
+          <a-ext href="https://nh-server.github.io/switch-guide/extras/blocking_nintendo/">block Nintendo servers</a-ext>
           to
-          <a href="https://nh-server.github.io/switch-guide/faq/#is-it-safe-to-use-homebrew-will-i-get-banned" class="extern" target="_blank">not</a>
+          <a-ext href="https://nh-server.github.io/switch-guide/faq/#is-it-safe-to-use-homebrew-will-i-get-banned">not</a-ext>
           get
-          <a href="https://switch.homebrew.guide/faq.html#what-actions-can-get-me-banned" class="extern" target="_blank">banned</a>.
+          <a-ext href="https://switch.homebrew.guide/faq.html#what-actions-can-get-me-banned">banned</a-ext>.
         </p>
       `,
     },
@@ -131,7 +131,7 @@ export default class FAQ extends Vue {
       answer   : `
         <p>
           The only <i>legal</i> way to obtain a ROM is by dumping it from your
-          <router-link :to="{ name: 'faq', params: { id: 103 } }">hacked</router-link>
+          <a-int name="faq" id="103">hacked</a-int>
           Nintendo Switch onto the SD card.
         </p>
         <p>
@@ -145,7 +145,7 @@ export default class FAQ extends Vue {
       answer   : `
         <p>
           When the game is downgraded using the
-          <a href="https://github.com/Istador/odyssey-downgrade/releases" class="extern" target="_blank">Odyssey Downgrade</a>
+          <a-ext href="https://github.com/Istador/odyssey-downgrade/releases">Odyssey Downgrade</a-ext>
           tool on the Nintendo Switch, the system and the main menu will show the game as being on version <code>1.3.0</code>.
           This is correct, because technically that is still the installed version.
         </p>
@@ -158,7 +158,7 @@ export default class FAQ extends Vue {
         </p>
         <p>
           For emulators a real <code>1.0.0</code> ROM is needed, which can be
-          <router-link :to="{ name: 'faq', params: { id: 104 } }">dumped</router-link>
+          <a-int name="faq" id="104">dumped</a-int>
           from the Nintendo Switch.
         </p>
       `,
@@ -187,12 +187,12 @@ export default class FAQ extends Vue {
         </p>
         <p>
           Additionally <code>127.x.x.x</code> is reserved for the local computer.
-          You can input <code>127.0.0.1</code> as the server IP in the <router-link :to="{ name: 'play' }">mod</router-link>,
-          if you're playing with an emulator on the same computer that runs the <router-link :to="{ name: 'host' }">server</router-link>.
+          You can input <code>127.0.0.1</code> as the server IP in the <a-int name="play">mod</a-int>,
+          if you're playing with an emulator on the same computer that runs the <a-int name="host">server</a-int>.
         </p>
         <p>
           <code>0.0.0.0</code> usually stands for an invalid IPv4 address.
-          It is only valid in context of hosting a <router-link :to="{ name: 'host' }">server</router-link>
+          It is only valid in context of hosting a <a-int name="host">server</a-int>
           inside the <code>settings.json</code> file to denote listening to connections from all networks.
           (On some systems it's a workable alias for <code>127.0.0.1</code>, but you should avoid using it.)
         </p>
@@ -218,8 +218,8 @@ export default class FAQ extends Vue {
           Usually you open the web interface of your router, login there, and search for an option that let you configure port forwarding.
           Common router addresses are:
           <ul>
-            <li><a href="http://192.168.0.1/" class="extern" target="_blank">192.168.0.1</a></li>
-            <li><a href="http://192.168.1.1/" class="extern" target="_blank">192.168.1.1</a></li>
+            <li><a-ext href="http://192.168.0.1/">192.168.0.1</a-ext></li>
+            <li><a-ext href="http://192.168.1.1/">192.168.1.1</a-ext></li>
           </ul>
           If you can't figure it out, check the outside of your router (usually there's a sticker on it),
           consult its manual, or check the default gateway of your network adapter.
@@ -231,7 +231,7 @@ export default class FAQ extends Vue {
             <li>Protocol: <code>TCP</code></li>
           </ul>
           Additionally you also need to say to which computer inside your network the port shall be forwarded to.
-          You want to forward the port to the computer that runs the <router-link :to="{ name: 'host' }">server</router-link>.
+          You want to forward the port to the computer that runs the <a-int name="host">server</a-int>.
           Most routers will give you the option to select one of the currently connected devices.
           (Or you have already selected it to reach the port forwarding settings.)
           But sometimes you need to provide its private IP address manually.

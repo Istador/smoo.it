@@ -10,9 +10,9 @@
     <template #header>Commands to control or interact with a running server</template>
 
     <div>
-      When running the server with the <router-link :to="{ name: 'host', params: { id: 'binary' } }">binary</router-link>,
-      attaching to the <router-link :to="{ name: 'host', params: { id: 'docker' } }">docker</router-link> container,
-      or using the <router-link :to="{ name: 'host', params: { id: 'discord' } }">Discord</router-link> integration,
+      When running the server with the <a-int name="host" id="binary">binary</a-int>,
+      attaching to the <a-int name="host" id="docker">docker</a-int> container,
+      or using the <a-int name="host" id="discord">Discord</a-int> integration,
       you can send it commands to control and interact with it.
       Following are all the commands that the server version <code>1.0.2</code> understands.
     </div>
@@ -29,7 +29,7 @@
 
     <div>
       <kbd>loadsettings</kbd>
-      Reloads the modified <router-link :to="{ name: 'host', params: { id: 'settings' } }">settings.json</router-link>
+      Reloads the modified <a-int name="host" id="settings">settings.json</a-int>
       in without restarting the server.
     </div>
 
@@ -41,7 +41,7 @@
     <div>
       <kbd>scenario {true|false}</kbd>
       Enables or disables the scenario merging.
-      See the <router-link :to="{ name: 'host', params: { id: 'settings' } }">settings</router-link> section for details.
+      See the <a-int name="host" id="settings">settings</a-int> section for details.
     </div>
 
     <div>
@@ -104,7 +104,7 @@
     <div>
       <kbd>ban &lt;player-name&gt;...</kbd>
       Sends the player(s) to an invalid stage that will crash the game,
-      adds their profile IDs and IPv4 addresses to the <code>banlist</code> (see <router-link :to="{ name: 'host', params: { id: 'settings' } }">settings</router-link>),
+      adds their profile IDs and IPv4 addresses to the <code>banlist</code> (see <a-int name="host" id="settings">settings</a-int>),
       and then closes the connection to the client of the player(s).
       <br/>
       <ul>
@@ -157,7 +157,7 @@
 
     <div>
       <kbd>flip ...</kbd>
-      Commands to control the <code>flip</code> feature (see <router-link :to="{ name: 'host', params: { id: 'settings' } }">settings</router-link>).
+      Commands to control the <code>flip</code> feature (see <a-int name="host" id="settings">settings</a-int>).
       <div class="sub-commands">
 
         <div>
@@ -242,13 +242,13 @@
 
     <div>
       <kbd>dscrestart</kbd>
-      Restarts the <router-link :to="{ name: 'host', params: { id: 'discord' } }">Discord</router-link> bot.
+      Restarts the <a-int name="host" id="discord">Discord</a-int> bot.
     </div>
 
     <div>
       <kbd>restartserver</kbd>
       Stops the server and restarts it again in a new process.
-      This doesn't work well with <router-link :to="{ name: 'host', params: { id: 'docker' } }">docker</router-link>,
+      This doesn't work well with <a-int name="host" id="docker">docker</a-int>,
       because when its main process stops, the whole docker container will be stopped.
     </div>
 
