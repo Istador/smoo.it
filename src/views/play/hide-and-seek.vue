@@ -8,8 +8,8 @@
   >
     <template #header>Common Hide &amp; Seek rules</template>
     <p>
-      A kingdom that hasn't been played in is choosen randomly for a new round.
-      Some of the players that haven't started a round as a seeker before are choosen randomly to be seekers for this round.
+      A kingdom that hasn't been played in is chosen randomly for a new round.
+      Some of the players that haven't started a round as a seeker before are chosen randomly to be seekers for this round.
       (For fairness reasons the amount of seekers should be the same in all rounds or might be adjusted to the size of the kingdom.)
     </p>
     <p>
@@ -22,7 +22,7 @@
     <p>
       If a seeker touches a hider, the hider dies.
       When a hider dies their timer pauses and they become seekers.
-      Dieing within the first few minutes of a round is forgivable, unless while being chased by a seeker.
+      Dying within the first few minutes of a round is forgivable, unless while being chased by a seeker.
       Once everyone has become a seeker, the round is over.
       When everyone has started a round as a seeker, the game is over and the player with the highest time wins.
     </p>
@@ -51,7 +51,7 @@
         <li>Inside captures (using static captures like power lines temporarily to move somewhere is fine).</li>
         <li>Inside something without collision that occludes the player completely (e.g. trees).</li>
         <li>At a position where an object was located at before interacting with it (e.g. crates or chests).</li>
-        <li>In areas inaccessible by others (e.g. rooms only acessible by wearing specific costumes).</li>
+        <li>In areas inaccessible by others (e.g. rooms only accessible by wearing specific costumes).</li>
         <li>In special areas (e.g. the boss fight paintings in <code>Mushroom Kingdom</code> or race events like Koopa Freerunning).</li>
         <li>Out of bounds.</li>
       </ul>
@@ -61,7 +61,7 @@
       <ul>
         <li>
           <code>Deep Woods</code> is not considered to be a part of <code>Wooded Kingdom</code>.
-          Accidentially falling into it counts as dieing.
+          Accidentally falling into it counts as dying.
           It might be used as its own kingdom to play a round in.
         </li>
         <li>

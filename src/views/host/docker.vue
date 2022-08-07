@@ -51,7 +51,7 @@
       But once it downloaded it, it will stick to the version.
       If you want to update in the future you should call <kbd>docker-compose pull && docker-compose up -d</kbd> to update to newer versions.
       Alternatively in the <code>docker-compose.yml</code> after the image name,
-      you can specify what version exacly you want to run, e.g. <code>image: ghcr.io/sanae6/smo-online-server:1.0.2</code>.
+      you can specify what version exactly you want to run, e.g. <code>image: ghcr.io/sanae6/smo-online-server:1.0.2</code>.
       Check out the GitHub repository for all available
       <a href="https://github.com/Sanae6/SmoOnlineServer/pkgs/container/smo-online-server" class="extern" target="_blank">docker tags</a>.
     </p>

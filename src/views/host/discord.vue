@@ -39,7 +39,7 @@
       Navigate to the <code>OAuth2 &gt; URL Generator</code> section of the application and select the <code>bot</code> scope and nothing else.
       At the bottom there will now be a generated URL.
       Copy the generated URL and paste it into your address bar.
-      On the openned site you need to authorize your Discord application to access your Discord account.
+      On the opened site you need to authorize your Discord application to access your Discord account.
       To do so you'll have to to select a Discord server that it shall be granted access to.
       To confirm the authorization click on <code>Authorize</code>.
     </p>

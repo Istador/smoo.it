@@ -12,7 +12,7 @@
     <div>
       When running the server with the <router-link :to="{ name: 'host', params: { id: 'binary' } }">binary</router-link>,
       attaching to the <router-link :to="{ name: 'host', params: { id: 'docker' } }">docker</router-link> container,
-      or using the <router-link :to="{ name: 'host', params: { id: 'discord' } }">Discord</router-link> integeration,
+      or using the <router-link :to="{ name: 'host', params: { id: 'discord' } }">Discord</router-link> integration,
       you can send it commands to control and interact with it.
       Following are all the commands that the server version <code>1.0.2</code> understands.
     </div>
@@ -215,7 +215,7 @@
         <div>
           <kbd>shine sync</kbd>
           Manually syncs all saved shines to all connected players.
-          Only those shines that are missing for the player from the point of view of the server are transfered.
+          Only those shines that are missing for the player from the point of view of the server are transferred.
           This will not remove shines in-game from connected players.
           This should normally happen automatically when entering the game, when there's a change to the shines and every two minutes.
         </div>

@@ -7,7 +7,7 @@ module.exports = defineConfig({
     index: {
       entry : 'src/main.ts',
       title : 'Super Mario Odyssey: Online',
-      description : 'SMOO is an inofficial multiplayer mod for Super Mario Odyssey on the Nintendo Switch.',
+      description : 'SMOO is an unofficial multiplayer mod for Super Mario Odyssey on the Nintendo Switch.',
     },
   },
   css: {

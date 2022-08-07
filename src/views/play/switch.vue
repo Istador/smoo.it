@@ -127,7 +127,7 @@
       Check out the in-game <router-link :to="{ name: 'faq', params: { id: 101 } }">debug menu</router-link> for the
       <code>Client Socket Connection Status: Socket Connected</code>.
       If there are other players connected to the server, the <code>Total Connected Players</code> count should be above <code>1</code>
-      and the other players should apear in the player list.
+      and the other players should appear in the player list.
     </p>
   </smoo-card>
 </template>

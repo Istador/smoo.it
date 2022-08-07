@@ -19,26 +19,26 @@
     </div>
 
     <b-card header="Super Mario Odyssey: Online">
-     <p>SMOO is an inofficial multiplayer mod for Super Mario Odyssey on the Nintendo Switch.</p>
+     <p>SMOO is an unofficial multiplayer mod for Super Mario Odyssey on the Nintendo Switch.</p>
 
       <p>
         Features:
         <br/>
         <ul>
-          <li>Explore Kingdoms together with up to 10 People</li>
+          <li>Explore kingdoms together with up to 10 people</li>
           <li>Almost every capture in the game is synced between players</li>
-          <li>Full 2D and Costume models syncing</li>
-          <li>Moon Collection is shared between all players</li>
-          <li>Custom Configuration Menu</li>
-          <li>Support for custom gamemodes (WIP)</li>
+          <li>Full 2D and costume models syncing</li>
+          <li>Moon collection is shared between all players</li>
+          <li>Custom configuration menu</li>
+          <li>Support for custom game modes (WIP)</li>
         </ul>
       </p>
 
       <p>
-        Available Gamemodes:
+        Available game modes:
         <br/>
         <ul>
-          <li>Hide and Seek</li>
+          <li>Hide &amp; Seek</li>
         </ul>
       </p>
     </b-card>

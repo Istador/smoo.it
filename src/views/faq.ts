@@ -93,7 +93,7 @@ export default class FAQ extends Vue {
         <p>
           You need an <a href="https://ismyswitchpatched.com/" class="extern" target="_blank">unpatched</a>
           older revision of the Nintendo Switch, a microSDXC card, a USB-C connection cable,
-          and a computer (PC/Laptop/Smartphone) or a specific paylod injecting device.
+          and a computer (PC/Laptop/Smartphone) or a specific payload injecting device.
           To make the RCM exploit safer and easier, it's advised to use a RCM jig.
         </p>
         <p>
@@ -193,7 +193,7 @@ export default class FAQ extends Vue {
         <p>
           <code>0.0.0.0</code> usually stands for an invalid IPv4 address.
           It is only valid in context of hosting a <router-link :to="{ name: 'host' }">server</router-link>
-          inside the <code>settings.json</code> file to denote listining to connections from all networks.
+          inside the <code>settings.json</code> file to denote listening to connections from all networks.
           (On some systems it's a workable alias for <code>127.0.0.1</code>, but you should avoid using it.)
         </p>
       `,
@@ -205,7 +205,7 @@ export default class FAQ extends Vue {
         <p>
           No.
           The Nintendo Switch doesn't support IPv6 natively.
-          As long as Nintendo doesn't change this, or there's a homebrew network stack that support it, this'll likely never change.
+          As long as Nintendo doesn't change this, or there's a homebrew network stack that support it, this will likely never change.
         </p>
       `,
     },
