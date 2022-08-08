@@ -1,11 +1,15 @@
 import { IServer } from '@/types'
 
-const github = 'https://github.com/Sanae6/SmoOnlineServer/'
-const externLink = (href: string, text: string) => '<a href="' + href + '" class="extern" target="_blank">' + text + '</a>'
-const linkRelease = (tag: string, label?: string) => externLink(github + 'releases/tag/' + tag, (label || tag))
-const linkTree = (branch: string, label?: string) => externLink(github + 'commits/' + branch, (label || branch))
+const github = (repo = 'Sanae6/SmoOnlineServer') =>
+  `https://github.com/${repo}/`
+const externLink = (href: string, text: string) =>
+  '<a href="' + href + '" class="extern" target="_blank">' + text + '</a>'
+const linkRelease = (tag: string, label?: string, repo?: string) =>
+  externLink(github(repo) + 'releases/tag/' + tag, label || tag)
+const linkTree = (branch: string, label?: string, repo?: string) =>
+  externLink(github(repo) + 'commits/' + branch, label || branch)
 
-export const servers : IServer[] = [
+export const servers: IServer[] = [
   {
     name     : 'Piplup',
     server   : { host: 'piplup.smoo.it', ip: '51.178.136.142' },
@@ -54,4 +58,13 @@ export const servers : IServer[] = [
     location : { flag: 'de', name: 'Germany' },
     version  : linkTree('packet-fixes'),
   },
-].map((s: IServer) => { s.server.state = null; return s })
+  {
+    name     : 'Krokilex',
+    server   : { host: 'krokilex.smoo.it', port: 1027, ip: '37.16.29.245' },
+    location : { flag: 'fr', name: 'France' },
+    version  : linkRelease('0.3.0', undefined, 'JulesGuesnon/smo-online-server'),
+  },
+].map((s: IServer) => {
+  s.server.state = null
+  return s
+})
