@@ -47,6 +47,12 @@ export const servers: IServer[] = [
     location : { flag: 'de', name: 'Germany' },
   },
   {
+    name     : 'Joe',
+    server   : { host: 'joe.smoo.it' },
+    location : { flag: 'ca', name: 'Canada' },
+    version  : linkRelease('1.0.2'),
+  },
+  {
     name     : 'RCL 1',
     server   : { host: 'rcl.smoo.it' },
     location : { flag: 'de', name: 'Germany' },
@@ -60,7 +66,7 @@ export const servers: IServer[] = [
   },
   {
     name     : 'Krokilex',
-    server   : { host: 'krokilex.smoo.it', port: 1027, ip: '37.16.29.245' },
+    server   : { host: 'krokilex.smoo.it', ip: '37.16.29.245' },
     location : { flag: 'fr', name: 'France' },
     version  : linkRelease('0.3.0', undefined, 'JulesGuesnon/smo-online-server'),
   },
