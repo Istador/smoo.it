@@ -104,9 +104,10 @@
       Choose one of the <a-int name="servers">public servers</a-int> and type in its IPv4 address.
       <sup id="play-switch-hostname"><b-icon icon="info-circle-fill"/></sup>
       <b-tooltip target="play-switch-hostname" triggers="hover" style="text-align: justified;">
-        The <code>Host</code> entry in the server list is a convenient alternative to the IPv4 address.
-        But this <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/pull/20">feature</a-ext>
-        isn't part of the latest mod release yet.
+        The <code>Host</code> entry in the server list is a convenient alternative to entering the IPv4 address.
+        But it is currently only possible with a
+        <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/actions/workflows/build.yml?query=branch%3Adev">dev build</a-ext>
+        of the mod.
       </b-tooltip>
       On newer versions of the mod the game will also ask for the port.
     </p>

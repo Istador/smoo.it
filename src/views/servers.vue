@@ -14,9 +14,20 @@
         Server
         <sup id="servers-hostname" @click.stop.prevent><b-icon icon="info-circle-fill"/></sup>
         <b-tooltip target="servers-hostname" triggers="hover" style="text-align: justified;">
-          The <code>Host</code> entry is a convenient alternative to the IPv4 address.
-          But this <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/pull/20">feature</a-ext>
-          isn't part of the latest mod release yet.
+          The <code>Host</code> entry is a convenient alternative to entering the IPv4 address.
+          But this is currently only possible with a
+          <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/actions/workflows/build.yml?query=branch%3Adev">dev build</a-ext>
+          of the mod.
+        </b-tooltip>
+      </template>
+
+      <template #head(port)>
+        Port
+        <sup id="servers-port" @click.stop.prevent><b-icon icon="info-circle-fill"/></sup>
+        <b-tooltip target="servers-port" triggers="hover" style="text-align: justified;">
+          Changing the port is currently only possible with a
+          <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/actions/workflows/build.yml?query=branch%3Adev">dev build</a-ext>
+          of the mod.
         </b-tooltip>
       </template>
 
