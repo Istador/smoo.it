@@ -7,19 +7,20 @@ const externLink = (href: string, text: string) =>
 const linkRelease = (tag: string, label?: string, repo?: string) =>
   externLink(github(repo) + 'releases/tag/' + tag, label || tag)
 const linkTree = (branch: string, label?: string, repo?: string) =>
-  externLink(github(repo) + 'commits/' + branch, label || branch)
+  externLink(github(repo) + 'tree/' + branch, label || branch)
 
 export const servers: IServer[] = [
   {
     name     : 'Piplup',
     server   : { host: 'piplup.smoo.it', ip: '51.178.136.142' },
     location : { flag: 'fr', name: 'France' },
+    version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
   },
   {
     name     : 'Piplup (Temp)',
     server   : { host: 'piplup.smoo.it', ip: '51.178.136.142', port: 1806 },
     location : { flag: 'fr', name: 'France' },
-    version  : linkTree('packet-fixes'),
+    version  : linkTree('packet-fixes', undefined, 'TeamPiplup/SmoOnlineServer'),
   },
   {
     name     : 'Sanae',
@@ -68,7 +69,7 @@ export const servers: IServer[] = [
     name     : 'Krokilex',
     server   : { host: 'krokilex.smoo.it', ip: '37.16.29.245' },
     location : { flag: 'fr', name: 'France' },
-    version  : linkRelease('0.3.0', undefined, 'JulesGuesnon/smo-online-server'),
+    version  : linkRelease('0.3.0', 'rust/0.3.0', 'JulesGuesnon/smo-online-server'),
   },
 ].map((s: IServer) => {
   s.server.state = null
