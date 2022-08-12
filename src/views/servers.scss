@@ -30,7 +30,8 @@
       .td-location {
         > div {
           display: flex;
-          justify-content: start;
+          text-align: left;
+          justify-content: flex-start;
           align-items: center;
           > .flag-icon { margin-right: 0.5em; margin-top: -0.2em; }
         }
