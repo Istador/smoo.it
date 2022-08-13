@@ -12,4 +12,7 @@ ul {
 
 .b-tooltip > .tooltip-inner {
   text-align: left;
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

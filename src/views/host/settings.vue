@@ -53,10 +53,10 @@
             The network interface the server listens on for incoming connections.
             Leave it at <code>"0.0.0.0"</code> to accept incoming connections from all networks.
             There are very few and rare use cases where you'd ever want to change this value.
-            <sup id="server-address"><b-icon icon="info-circle-fill"/></sup>
-            <b-tooltip target="server-address" triggers="hover" style="text-align: justified;">
+            <b-icon icon="info-circle-fill" id="server-address"/>
+            <b-tooltip target="server-address" triggers="hover">
               <p>One possible example:</p>
-              <p class="mb-0">
+              <p>
                 You're connected to your home network and a VPN, and therefore have two network interfaces.
                 But you don't want other VPN clients to access the server.
                 Then you could enter the IPv4 address your server has on the home network, to only listen to that interface.

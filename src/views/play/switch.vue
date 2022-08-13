@@ -86,8 +86,8 @@
     </p>
     <p>
       If you ever want to uninstall the mod (why?!) look at the file structure from the <code>.zip</code> file and remove all the files manually.
-      <sup id="play-switch-uninstall"><b-icon icon="info-circle-fill"/></sup>
-      <b-tooltip target="play-switch-uninstall" triggers="hover" style="text-align: justified;">
+      <b-icon icon="info-circle-fill" id="play-switch-uninstall"/>
+      <b-tooltip target="play-switch-uninstall" triggers="hover">
         At the time of writing, the following folders and file can be deleted:
         <ul>
           <li><code class="text-danger">/atmosphere/contents/0100000000010000/exefs/</code></li>
@@ -102,8 +102,8 @@
     <p>
       When starting the game with the mod for the first time a keyboard dialog should pop up before the main menu asking for a server IP.
       Choose one of the <a-int name="servers">public servers</a-int> and type in its IPv4 address.
-      <sup id="play-switch-hostname"><b-icon icon="info-circle-fill"/></sup>
-      <b-tooltip target="play-switch-hostname" triggers="hover" style="text-align: justified;">
+      <b-icon icon="info-circle-fill" id="play-switch-hostname"/>
+      <b-tooltip target="play-switch-hostname" triggers="hover">
         The <code>Host</code> entry in the server list is a convenient alternative to entering the IPv4 address.
         But it is currently only possible with a
         <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/actions/workflows/build.yml?query=branch%3Adev">dev build</a-ext>
@@ -117,10 +117,10 @@
       Try out other public servers to rule out a (temporary) problem with a specific server:
       <a-int name="faq" id="102">change the sever IP</a-int>,
       save the game manually and restart the game to retry.
-      <sup id="play-switch-restart"><b-icon icon="info-circle-fill"/></sup>
-      <b-tooltip target="play-switch-restart" triggers="hover" style="text-align: justified;">
+      <b-icon icon="info-circle-fill" id="play-switch-restart"/>
+      <b-tooltip target="play-switch-restart" triggers="hover">
         <p>Newer versions of the mod will automatically save the game after changing the IP or port.</p>
-        <p class="mb-0">In older versions of the mod, the <code>Reconnect to Server</code> feature is buggy and might crash the game.</p>
+        <p>In older versions of the mod, the <code>Reconnect to Server</code> feature is buggy and might crash the game.</p>
       </b-tooltip>
     </p>
     <p>

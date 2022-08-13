@@ -74,16 +74,27 @@ export default class FAQ extends Vue {
             In the main or pause menu hold <smoo-btn ZL/> and press <smoo-btn A/> to enter the hidden options menu
             where you can <code>Change Server IP</code>.
           </li>
-          <li>Hold/press <smoo-btn ZL/> while starting the game. This will prompt you for the IP. <sup id="faq-prompt-trigger"><b-icon icon="info-circle-fill"/></sup></li>
-          <li>Delete the <code>common.bin</code> file in the save directory. <sup id="faq-save-dir"><b-icon icon="info-circle-fill"/></sup></li>
+          <li>
+            Hold/press <smoo-btn ZL/> while starting the game. This will prompt you for the IP.
+            <b-icon icon="info-circle-fill" id="faq-prompt-trigger"/>
+            <b-tooltip target="faq-prompt-trigger" triggers="hover">
+              Might not work with older versions of the mod.
+            </b-tooltip>
+          </li>
+          <li>
+            Delete the <code>common.bin</code> file in the save directory.
+            <b-icon icon="info-circle-fill" id="faq-save-dir"/>
+            <b-tooltip target="faq-save-dir" triggers="hover">
+              <p>
+                On the Nintendo Switch that is on the internal storage and not on the SD card.
+                You could use a save file backup app, to export, modify and then restore the directory.
+              </p>
+              <p>
+                Inside the Yuzu or Ryujinx emulator you can right click on the game to get to its save directory.
+              </p>
+            </b-tooltip>
+          </li>
         </ul>
-        <b-tooltip target="faq-prompt-trigger" triggers="hover" style="text-align: justified;">
-          Might not work with older versions of the mod.
-        </b-tooltip>
-        <b-tooltip target="faq-save-dir" triggers="hover" style="text-align: justified;">
-          <p>On the Nintendo Switch that is on the internal storage and not on the SD card. You could use a save file backup app, to export, modify and then restore the directory.</p>
-          <p class="mb-0">Inside the Yuzu or Ryujinx emulator you can right click on the game to get to its save directory.</p>
-        </b-tooltip>
       `,
     },
     {

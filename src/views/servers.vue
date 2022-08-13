@@ -12,8 +12,8 @@
 
       <template #head(server)>
         Server
-        <sup id="servers-hostname" @click.stop.prevent><b-icon icon="info-circle-fill"/></sup>
-        <b-tooltip target="servers-hostname" triggers="hover" style="text-align: justified;">
+        <b-icon icon="info-circle-fill" id="servers-hostname" @click.stop.prevent/>
+        <b-tooltip target="servers-hostname" triggers="hover">
           The <code>Host</code> entry is a convenient alternative to entering the IPv4 address.
           But this is currently only possible with a
           <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/actions/workflows/build.yml?query=branch%3Adev">dev build</a-ext>
@@ -23,8 +23,8 @@
 
       <template #head(port)>
         Port
-        <sup id="servers-port" @click.stop.prevent><b-icon icon="info-circle-fill"/></sup>
-        <b-tooltip target="servers-port" triggers="hover" style="text-align: justified;">
+        <b-icon icon="info-circle-fill" id="servers-port" @click.stop.prevent/>
+        <b-tooltip target="servers-port" triggers="hover">
           Changing the port is currently only possible with a
           <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/actions/workflows/build.yml?query=branch%3Adev">dev build</a-ext>
           of the mod.

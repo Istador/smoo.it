@@ -47,8 +47,8 @@
     <div>
       <kbd>sendall &lt;stage&gt;</kbd>
       Shortcut that will send all connected players to the given stage.
-      <sup id="commands-sendall"><b-icon icon="info-circle-fill"/></sup>
-      <b-tooltip target="commands-sendall" triggers="hover" style="text-align: justified;">
+      <b-icon icon="info-circle-fill" id="commands-sendall"/>
+      <b-tooltip target="commands-sendall" triggers="hover">
         This is identical to:
         <br/>
         <kbd>send &lt;stage&gt; "" -1 *</kbd>
