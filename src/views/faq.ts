@@ -142,11 +142,58 @@ export default class FAQ extends Vue {
       answer   : `
         <p>
           The only <i>legal</i> way to obtain a ROM is by dumping it from your
-          <a-int name="faq" id="103">hacked</a-int>
-          Nintendo Switch onto the SD card.
+          <a-int name="faq" id="103">hacked Nintendo Switch</a-int>
+          onto the SD card.
+        </p>
+        <hr/>
+        <p>
+          The <a-ext href="https://yuzu-emu.org/help/quickstart/#dumping-cartridge-games">Yuzu Quickstart Guide</a-ext>
+          has a good section on how to do that.
         </p>
         <p>
-          <code>@todo: add a section on how to dump the game.</code>
+          The short summary of it is, that you download the latest
+          <a-ext href="https://github.com/DarkMatterCore/nxdumptool/releases">nxdumptool</a-ext>
+          <b-icon icon="info-circle-fill" id="faq-nxdumptool-keys"/>
+          <b-tooltip target="faq-nxdumptool-keys" triggers="hover">
+            Please keep in mind, that <code>nxdumptool</code> needs the
+            <a-int name="faq" id="103">console keys</a-int>
+            on the SD card in order to work.
+          </b-tooltip>
+          and put it onto your SD card. (If it isn't already there. Some guides include it by default.)
+          You then run it on the Nintendo Switch from the homebrew menu in the <code>title override mode</code>.
+          <b-icon icon="info-circle-fill" id="faq-override-mode"/>
+          <b-tooltip target="faq-override-mode" triggers="hover">
+            This means that you don't start the homebrew menu via the <code>Album</code>, but instead
+            you hold down <smoo-btn R/> while launching any game.
+          </b-tooltip>
+        </p>
+        <p>
+          Dump game from inserted gamecard:
+          <ul>
+            <li><code>Dump gamecard content</code></li>
+            <li><code>Nintendo Submission Package (NSP) dump</code></li>
+            <li><code>Split output dump (FAT32 support): Yes</code></li>
+            <li><code>Start NSP dump process</code></li>
+          </ul>
+        </p>
+        <p>
+          Dump installed game (eShop):
+          <ul>
+            <li><code>Dump installed SD card / eMMC content</code></li>
+            <li>Select SMO</li>
+            <li><code>Nintendo Submission Package (NSP) dump</code></li>
+            <li><code>Dump base application NSP</code></li>
+            <li><code>Split output dump (FAT32 support): Yes</code></li>
+            <li><code>Remove console specific data: Yes</code></li>
+            <li><code>Generate ticket-less dump: Yes</code></li>
+            <li><code>Start NSP dump process</code></li>
+          </ul>
+        </p>
+        <p>
+          The resulting ROM will be located on the SD card inside <code>/switch/nxdumptool/NSP/</code>.
+          Because the SMO game has a size of over 4 GB the dump will be splitted into two files.
+          On your computer (with a partition that isn't <code>FAT32</code>) you should merge the files together using the
+          <a-ext href="https://github.com/emiyl/nxDumpMerger/releases">nxDumpMerger</a-ext>.
         </p>
       `,
     },
