@@ -42,10 +42,24 @@
         </li>
         <li>
           Put the file onto your SD card into the <code>/switch/</code> directory.
+          <b-icon icon="info-circle-fill" id="play-downgrade-keys"/>
+          <b-tooltip target="play-downgrade-keys" triggers="hover">
+            <p>
+              Please keep in mind, that the <code>Osyssey Downgrade</code> needs the
+              <a-int name="faq" id="103">console keys</a-int>
+              on the SD card in order to work.
+            </p>
+            <p>
+              And again: it is highly recommended to use <code>FAT32</code> and not <code>extFAT</code>
+              for the SD card.
+              Otherwise the downgrade will likely be corrupted and doesn't work.
+            </p>
+          </b-tooltip>
         </li>
         <li>
           Launch the homebrew menu by opening the <code>Album</code>.
-          Select the <code>Odyssey Downgrade</code> app from the list and launch it by pressing <smoo-btn A/>.
+          Select the <code>Odyssey Downgrade</code> app
+          from the list and launch it by pressing <smoo-btn A/>.
         </li>
         <li>
           In the simple menu that opens choose <code>Add downgrade</code> and press <smoo-btn A/>.

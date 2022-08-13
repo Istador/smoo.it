@@ -117,13 +117,13 @@ export default class FAQ extends Vue {
           Because <code>exFAT</code> is known for having issues with the Nintendo Switch causing corrupted files and crashes.
         </p>
         <p>
-          For the purpose of downgrading the game to version <code>1.0.0</code> and/or to
+          For the purpose of
+          <a-int name="play" id="switch">downgrading</a-int>
+          the game to version <code>1.0.0</code> and/or to
           <a-int name="faq" id="104">dump</a-int>
           the game ROM to be used for emulators,
           make sure that you follow the guides regarding backing up the
-          <a-ext href="https://nh-server.github.io/switch-guide/user_guide/emummc/making_emummc/#getting-your-consoles-unique-keys">console</a-ext>
-          and
-          <a-ext href="https://nh-server.github.io/switch-guide/extras/dumping_title_keys/">title keys</a-ext>
+          <a-ext href="https://nh-server.github.io/switch-guide/user_guide/emummc/making_emummc/#getting-your-consoles-unique-keys">console keys</a-ext>
           using <a-ext href="https://github.com/shchmue/Lockpick_RCM/releases">Lockpick_RCM</a-ext>.
         </p>
         <p>
