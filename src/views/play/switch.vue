@@ -120,7 +120,7 @@
       <b-tooltip target="play-switch-hostname" triggers="hover">
         The <code>Host</code> entry in the server list is a convenient alternative to entering the IPv4 address.
         But it is currently only possible with a
-        <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/actions/workflows/build.yml?query=branch%3Adev">dev build</a-ext>
+        <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
         of the mod.
       </b-tooltip>
       On newer versions of the mod the game will also ask for the port.
