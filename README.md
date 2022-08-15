@@ -1,6 +1,6 @@
 # smoo.it
 
-[smoo.it](https://smoo.it/) is a website for the [Super Mario Odyssey Online mod](https://github.com/SuperMarioOdysseyOnline/).
+[smoo.it](https://smoo.it/) is a website for the [Super Mario Odyssey Online mod](https://github.com/CraftyBoss/SuperMarioOdysseyOnline/).
 
 ## Project setup
 Requires `Git` and [Node.js](https://nodejs.org/).
