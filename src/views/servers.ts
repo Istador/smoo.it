@@ -22,7 +22,7 @@ const stateFormatter = (_v: null, _k: string, i: IServer): number => {
     CountryFlag,
     SmooServerState,
   },
-  beforeRouteEnter (_to, _from, next: Next<Servers>) {
+  beforeRouteEnter (_to, _from, next: Next<Servers, void>) {
     next((self) => {
       XServers.refetch()
       self.interval = setInterval(

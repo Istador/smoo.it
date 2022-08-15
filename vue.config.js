@@ -1,12 +1,12 @@
 const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
-  transpileDependencies: true,
-  runtimeCompiler: true,
-  pages: {
+  transpileDependencies : true,
+  runtimeCompiler       : true,
+  pages                 : {
     index: {
-      entry : 'src/main.ts',
-      title : 'Super Mario Odyssey: Online',
+      entry       : 'src/main.ts',
+      title       : 'Super Mario Odyssey: Online',
       description : 'SMOO is an unofficial multiplayer mod for Super Mario Odyssey on the Nintendo Switch.',
     },
   },
@@ -19,7 +19,7 @@ module.exports = defineConfig({
   },
   devServer: {
     client: {
-      webSocketURL: 'ws://0.0.0.0:8080/ws'
+      webSocketURL: 'ws://0.0.0.0:8080/ws',
     },
   },
 })
