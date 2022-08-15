@@ -1,8 +1,14 @@
 # smoo.it
 
+[smoo.it](https://smoo.it/) is a website for the [Super Mario Odyssey Online mod](https://github.com/SuperMarioOdysseyOnline/).
+
 ## Project setup
+Requires `Git` and [Node.js](https://nodejs.org/).
+
 ```
-npm install
+git clone https://github.com/Istador/smoo.it
+cd smoo.it
+npm install --legacy-peer-deps
 ```
 
 ### Compiles and hot-reloads for development
@@ -19,6 +25,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
