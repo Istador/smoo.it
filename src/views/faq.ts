@@ -73,6 +73,17 @@ export default class FAQ extends Vue {
           <li>
             In the main or pause menu hold <smoo-btn ZL/> and press <smoo-btn A/> to enter the hidden options menu
             where you can <code>Change Server IP</code>.
+            <b-icon icon="info-circle-fill" id="faq-change-ip"/>
+            <b-tooltip target="faq-change-ip" triggers="hover">
+              <p>
+                Newer versions of the mod will automatically save the game after changing the IP or port.
+                In the <code>v1.0.0</code> release version you'll need to manually save.
+              </p>
+              <p>
+                The <code>Reconnect to Server</code> feature is buggy and might crash the game.
+                It's best to restart the game after changing the server.
+              </p>
+            </b-tooltip>
           </li>
           <li>
             Hold/press <smoo-btn ZL/> while starting the game. This will prompt you for the IP.
