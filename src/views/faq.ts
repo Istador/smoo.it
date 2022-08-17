@@ -296,5 +296,29 @@ export default class FAQ extends Vue {
         </p>
       `,
     },
+    {
+      id       : 110,
+      question : 'Something doesn\'t work / Where do I get help?',
+      answer   : `
+        <p>
+          Make sure that you read all instructions on this website thoroughly before bothering other people.
+        </p>
+        <p>
+          If you sill can't figure it out or have problems, head over to the
+          <a-ext href="https://discord.gg/w3TnB899ww">official Discord server</a-ext>.
+          It's an active community of people that might be able and willing to help you in one of the help channels.
+        </p>
+        <p>
+          The issues sections of the GitHub projects for the
+          <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/issues">mod</a-ext>
+          and the
+          <a-ext href="https://github.com/Sanae6/SmoOnlineServer/issues">server</a-ext>
+          are NOT for support,
+          but for submitting actual bugs and feature requests.
+          When submitting a bug, make sure that you describe it in detail
+          and that you provide log files and/or crash reports if available.
+        </p>
+      `,
+    },
   ]
 }
