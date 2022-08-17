@@ -6,7 +6,7 @@
     @show="$emit('show', $event)"
     @hidden="$emit('hidden', $event)"
   >
-    <template #header>Play with the <code>Yuzu</code> emulator</template>
+    <template #header>Play with the <code>yuzu</code> emulator</template>
 
     <!-- Warnings and Notices -->
     <h5>Warnings and Notices</h5>

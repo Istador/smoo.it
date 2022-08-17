@@ -101,7 +101,7 @@ export default class FAQ extends Vue {
                 You could use a save file backup app, to export, modify and then restore the directory.
               </p>
               <p>
-                Inside the Yuzu or Ryujinx emulator you can right click on the game to get to its save directory.
+                Inside the yuzu or Ryujinx emulator you can right click on the game to get to its save directory.
               </p>
             </b-tooltip>
           </li>
@@ -158,7 +158,7 @@ export default class FAQ extends Vue {
         </p>
         <hr/>
         <p>
-          The <a-ext href="https://yuzu-emu.org/help/quickstart/#dumping-cartridge-games">Yuzu Quickstart Guide</a-ext>
+          The yuzu <a-ext href="https://yuzu-emu.org/help/quickstart/#dumping-cartridge-games">Quickstart Guide</a-ext>
           has a good section on how to do that.
         </p>
         <p>
