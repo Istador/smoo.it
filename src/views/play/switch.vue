@@ -86,12 +86,16 @@
     <!-- Install the Super Mario Odyssey Online mod -->
     <h5>Install the Super Mario Odyssey Online mod</h5>
     <p>
+      <b>Step 1</b>:
       Download the latest
       <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases">release build</a-ext>
       of the mod (not the source code, unless you want to
       <a-int name="play" id="build">build it yourself</a-int>).
+    </p>
+    <p>
+      <b>Step 2</b>:
       Extract the downloaded <code>.zip</code> file to receive an <code>atmosphere</code> folder,
-      which you need to copy to the root directory of the SD card. That's it, the mod is installed.
+      which you need to copy to the root directory of the SD card.
     </p>
     <p>
       Please notice, that there should already be an <code>atmosphere</code> folder on the SD card.
