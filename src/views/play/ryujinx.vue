@@ -8,72 +8,78 @@
   >
     <template #header>Play with the <code>Ryujinx</code> emulator</template>
 
-    <!-- Warnings and Notices -->
-    <h5>Warnings and Notices</h5>
+    <!-- Introduction -->
+    <h5>Introduction</h5>
     <p>
-      This section of tutorial assumes that you have already hacked your switch and properly have installed and configured Ryujinx.
-      If you haven't, please check
-      <a-ext href="https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&-Configuration-Guide">Ryujinx's quick guide</a-ext>
-      to get started.
+      This guide assumes that you have already
+      <a-int name="faq" id="103">hacked your Nintendo Switch</a-int>
+      and have properly installed and set up the
+      <a-ext href="https://ryujinx.org/download">latest</a-ext>
+      Ryujinx version.
+      If you haven't, then please consult the
+      <a-ext href="https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&amp;-Configuration-Guide">Ryujinx setup &amp; Configuration Guide</a-ext>
+      first.
     </p>
     <p>
-      Only Release builds above 1.0.0 and the Dev builds are currently working on emulator.
-      Make sure you download the
-      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases">proper build</a-ext>
-      before installing the mod.
+      The currently latest release build <code>v1.0.0</code> of the mod doesn't work well with emulators.
+      Use the latest
+      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
+      instead.
     </p>
     <p>
-      Make sure you have the latest version of <a-ext href="https://ryujinx.org/download">Ryujinx</a-ext> installed.
+      The multiplayer mod does not work with SMO version <code>1.3.0</code>, but requires version <code>1.0.0</code>.
+      <br><a-int name="faq" id="104">FAQ: How do I obtain a SMO ROM for emulators?</a-int>
     </p>
-    <br>
 
-    <!-- Installing the mod -->
-    <h5>Installing the mod</h5>
+    <!-- Configure Ryujinx -->
+    <h5>Configure Ryujinx</h5>
     <p>
-      <ins>Step 1</ins>:
-      Download the mod from
-      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases">Github</a-ext>.
+      <ul>
+        <li>
+          Open the <code>Options &gt; Settings</code> in Ryujinx,
+          go to the <code>System</code> tab and check <code>Enable Guest Internet Access</code>
+          to allow outgoing connections to the internet by the emulator.
+        </li>
+        <li>
+          Ryujinx's default user profile should not be used with SMOO, because the
+          <a-int name="host">server</a-int> uses the profile ID to differentiate between players.
+          <b-icon icon="info-circle-fill" id="play-ryujinx-profile-id"/>
+          <b-tooltip target="play-ryujinx-profile-id" triggers="hover">
+            The ID of the default profile is always <code>00000000-0000-0001-0000-000000000000</code>.
+            This causes issues with people connected to the same server who also use Ryujinx with the default profile ID.
+            Public servers usually block this profile ID for that reason.
+          </b-tooltip>
+          Open the <code>Options &gt; Manage User Profiles</code> window in Ryujinx and click on the
+          <code>Add New Profile</code> button. It'll ask you for the name of the new profile, which will be shown to other players.
+          Once the profile is created, simply double-click on it to select it.
+        </li>
+      </ul>
+    </p>
+
+    <!-- Install the Super Mario Odyssey Online mod -->
+    <h5>Install the Super Mario Odyssey Online mod</h5>
+    <p>
+      <b>Step 1</b>:
+      Download the latest
+      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
+      of the mod (not the source code, unless you want to <a-int name="play" id="build">build it yourself</a-int>).
     </p>
     <p>
-      <ins>Step 2</ins>:
-      Enable the <code>Guess Internet Access</code> option on Ryujinx to allow connection to the internet.
-      To do so, do the following:
-      In Ryujinx, on the top left corner, click on <code>Options => Settings</code>.
-      Then from the new window, select the <code>System</code> tab and ensure that <code>Enable Guess Internet Access</code> is on.
-    </p>
-    <p>
-      <ins>Step 3</ins>:
-      Create a new Ryujinx User Profile so that your player ID is unique. Ryujinx's default User profile
-      <b-icon icon="info-circle-fill" id="PlayerID"/>
-      <b-tooltip target="PlayerID" triggers="hover">
-        Whose ID is 00000000-0000-0001-0000-000000000000.
+      <b>Step 2</b>:
+      Open Ryujinx and choose <code>File &gt; Open Ryujinx Folder</code>.
+      From the folder that opens, travel down into the <code>sdcard</code> folder.
+      <b-icon icon="info-circle-fill" id="play-ryujinx-sdcard-folder"/>
+      <b-tooltip target="play-ryujinx-sdcard-folder" triggers="hover">
+        On Windows it should be located at <code>%appdata%\Ryujinx\sdcard</code>.
       </b-tooltip>
-      is not recommanded to use in servers due to various connection issues caused by it.
-      To do so, do the following: In Ryujinx, on the top left corner, click on <code>Options => Manage User Profiles</code>.
-      In the new window that oppened, click on the <code>Add New Profile</code> button and follow the steps to create the new profile.
-      Once the profile is created, simply double-click on the new profile to select it.
     </p>
     <p>
-      <ins>Step 4</ins>:
-      Open Super Mario Odyssey's mod folder.
-      This can be done from Ryujinx by right-clicking on the game and then clicking on "Open Atmosphere Mods Directory".
-      From the folder that was openned, travel down to the <code>sdcard </code>
-      <b-icon icon="info-circle-fill" id="sdcard-folder"/>
-      <b-tooltip target="sdcard-folder" triggers="hover">
-        <code class="text-danger"><ins>sdcard</ins>\atmosphere\contents\0100000000010000</code>
-      </b-tooltip>
-      folder.
+      <b>Step 3</b>:
+      Extract the <code>atmosphere</code> folder from the <code>.zip</code> file that you downloaded in step 1
+      into the <code>sdcard</code> folder from step 2.
+      If there already is an <code>atmosphere</code> folder (e.g. from other mods),
+      then accept all popups asking you to overwrite the existing directories and files.
     </p>
-    <p>
-      <ins>Step 5</ins>:
-      From the <code>.zip<b-icon icon="file-zip-fill" id="zip"/></code>
-      file that you've obtained from Github, extract the <code>atmosphere</code> folder
-      into the <code>sdcard</code> folder and accept to overwrite the files if it is prompted to.
-    </p>
-    <p>
-      From there, the mod should be properly installed.
-    </p>
-    <br>
 
     <!-- Test that it works -->
     <play-test/>
