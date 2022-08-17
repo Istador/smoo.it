@@ -112,37 +112,17 @@
     </p>
 
     <!-- Test that it works -->
-    <h5>Test that it works</h5>
-    <p>
-      When starting the game with the mod for the first time a keyboard dialog should pop up before the main menu asking for a server IP.
-      Choose one of the <a-int name="servers">public servers</a-int> and type in its IPv4 address.
-      <b-icon icon="info-circle-fill" id="play-switch-hostname"/>
-      <b-tooltip target="play-switch-hostname" triggers="hover">
-        The <code>Host</code> entry in the server list is a convenient alternative to entering the IPv4 address.
-        But it is currently only possible with a
-        <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-        of the mod.
-      </b-tooltip>
-      On newer versions of the mod the game will also ask for the port.
-    </p>
-    <p>
-      If it can't connect to the server it'll briefly show the text <code>Failed to Connect!</code> before it continues to the main menu.
-      Verify that the server is online and that the Nintendo Switch is connected to the internet.
-      Try out other public servers to rule out a (temporary) problem with a specific server:
-      <a-int name="faq" id="102">change the sever IP</a-int>,
-      save the game manually and restart the game to retry.
-      <b-icon icon="info-circle-fill" id="play-switch-restart"/>
-      <b-tooltip target="play-switch-restart" triggers="hover">
-        <p>Newer versions of the mod will automatically save the game after changing the IP or port.</p>
-        <p>In older versions of the mod, the <code>Reconnect to Server</code> feature is buggy and might crash the game.</p>
-      </b-tooltip>
-    </p>
-    <p>
-      When there is no immediate error, then <code>Start</code> a new game or <code>Resume</code> an existing save.
-      Check out the in-game <a-int name="faq" id="101">debug menu</a-int> for the
-      <code>Client Socket Connection Status: Socket Connected</code>.
-      If there are other players connected to the server, the <code>Total Connected Players</code> count should be above <code>1</code>
-      and the other players should appear in the player list.
-    </p>
+    <play-test/>
   </smoo-card>
 </template>
+
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+import PlayTest from './test.vue'
+@Component({
+  components: {
+    PlayTest,
+  },
+})
+export default class PlaySwitch extends Vue {}
+</script>

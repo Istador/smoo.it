@@ -75,35 +75,18 @@
     </p>
     <br>
 
-    <!-- Testing the mod -->
-    <h5>Testing the mod</h5>
-    <p>
-      We now need to start the game. On the first launch of Super Mario Odyssey Online, it should ask you for an IP address.
-      If it does, then you have successfully installed the mod and are now ready to play,
-      otherwise, you will want to try again by removing entirely the mod and start from Step 4 again.
-      Choose one of the <a-int name="servers">public servers</a-int> and type in its IPv4 address
-      <b-icon icon="info-circle-fill" id="play-ryu-hostname"/>
-      <b-tooltip target="play-ryu-hostname" triggers="hover">
-        The <code>Host</code> entry in the server list is a convenient alternative to entering the IPv4 address,
-        but it is currently only possible with a
-        <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-        of the mod.
-      </b-tooltip>
-      or any other known addresses that you trust.
-      It may also ask for a port, make sure to enter the proper one
-      <b-icon icon="info-circle-fill" id="Port"/>
-      <b-tooltip target="Port" triggers="hover">
-        Under normal circumstances, the default port should be 1027.
-      </b-tooltip>.
-    </p>
-    <p>
-      If it can't connect to the server it'll briefly show the text <code>Failed to Connect!</code> before it continues to the main menu.
-      Verify that the server is online and that the address is correct.
-      You may try a different server to ensure that it's working properly.
-      If any issue arises, you may visit the <a-int name="faq" id="101">FAQ</a-int>
-      or inquire in the <code>#help</code> section of the
-      <a-ext href="https://discord.gg/w3TnB899ww">official Discord</a-ext>
-      server.
-    </p>
+    <!-- Test that it works -->
+    <play-test/>
   </smoo-card>
 </template>
+
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+import PlayTest from './test.vue'
+@Component({
+  components: {
+    PlayTest,
+  },
+})
+export default class PlayRyujinx extends Vue {}
+</script>
