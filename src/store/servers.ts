@@ -17,12 +17,6 @@ export const servers: IServer[] = [
     version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
   },
   {
-    name     : 'Piplup (Temp)',
-    server   : { host: 'piplup.smoo.it', ip: '51.178.136.142', port: 1806 },
-    location : { flag: 'fr', name: 'France' },
-    version  : linkTree('packet-fixes', undefined, 'TeamPiplup/SmoOnlineServer'),
-  },
-  {
     name     : 'Sanae',
     server   : { host: 'sanae.smoo.it', ip: '64.201.219.20' },
     location : { flag: 'ca', name: 'Canada' },
