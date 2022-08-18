@@ -79,6 +79,7 @@
         </li>
         <li>
           <kbd>&lt;scenario&gt;</kbd>
+          <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-commands-scenarios>show known values</b-btn>
           What scenario to send the players to. Has to be an integer between <kbd>-1</kbd> and <kbd>127</kbd>.
           Use <kbd>-1</kbd> to keep the scenario unchanged.
         </li>
@@ -290,6 +291,34 @@
           </tr>
         </tbody>
       </table>
+    </b-modal>
+
+    <b-modal id="host-commands-scenarios" hide-footer>
+      <template #modal-title><kbd>&lt;scenario&gt;</kbd> values for <kbd>send</kbd> and <kbd>sendall</kbd></template>
+
+      <div class="smoo-accordion accordion">
+        <smoo-card
+          v-for="(arr, k) in scenarios"
+          :key="k"
+          accordion="host-commands-scenarios"
+          :header="stages[k]"
+        >
+          <table class="table table-striped table-borderless table-sm mb-0">
+            <thead>
+              <tr>
+                <th>Scenario</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(v, i) in arr" :key="i">
+                <td><kbd>{{ i + 1 }}</kbd></td>
+                <td>{{ v || '?' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </smoo-card>
+      </div>
     </b-modal>
   </smoo-card>
 </template>
