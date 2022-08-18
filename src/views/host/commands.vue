@@ -294,7 +294,7 @@
     </b-modal>
 
     <b-modal id="host-commands-scenarios" hide-footer>
-      <template #modal-title><kbd>&lt;scenario&gt;</kbd> values for <kbd>send</kbd> and <kbd>sendall</kbd></template>
+      <template #modal-title><kbd>&lt;scenario&gt;</kbd> values for <kbd>send</kbd></template>
 
       <div class="smoo-accordion accordion">
         <smoo-card

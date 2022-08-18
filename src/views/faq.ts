@@ -253,7 +253,7 @@ export default class FAQ extends Vue {
               and give your public IP to other players (requires <a-int name="faq" id="109">port forwarding</a-int>).
             </li>
             <li>
-              In a emulator with the server running on the same PC: use <code>127.0.0.1</code> (only valid on your PC).
+              In an emulator with the server running on the same PC: use <code>127.0.0.1</code> (only valid on your PC).
             </li>
             <li>
               On a Nintendo Switch connecting to the server on your PC: use the private IP of your PC (only valid inside your network).
