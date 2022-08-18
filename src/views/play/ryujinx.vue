@@ -17,7 +17,7 @@
       <a-ext href="https://ryujinx.org/download">latest</a-ext>
       Ryujinx version.
       If you haven't, then please consult the
-      <a-ext href="https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&amp;-Configuration-Guide">Ryujinx setup &amp; Configuration Guide</a-ext>
+      <a-ext href="https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&amp;-Configuration-Guide">Ryujinx Setup &amp; Configuration Guide</a-ext>
       first.
     </p>
     <p>
