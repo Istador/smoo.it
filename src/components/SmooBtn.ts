@@ -1,6 +1,6 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
 
-const customBtns = ['ZL', 'L', 'ZR', 'R', 'A', 'B']
+const customBtns = [ 'ZL', 'L', 'ZR', 'R', 'A', 'B' ]
 type TBtn = 'ZL' | 'L' | 'ZR' | 'R' | 'A' | 'B' | 'DUp' | 'DDown' | 'DLeft' | 'DRight'
 
 @Component({})
