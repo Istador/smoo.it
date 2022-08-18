@@ -277,30 +277,17 @@
       Stops the server.
     </div>
 
-    <b-modal id="stages" hide-headerX hide-footer>
+    <b-modal id="host-commands-stages" hide-footer>
       <template #modal-title><kbd>&lt;stage&gt;</kbd> values for <kbd>send</kbd> and <kbd>sendall</kbd></template>
-      <table class="table table-borderless table-sm" style="width: auto;">
+      <table class="table table-striped table-borderless table-sm mb-0">
         <thead>
           <tr> <th>Stage</th> <th>Name</th> </tr>
         </thead>
         <tbody>
-          <tr> <th><kbd>cap</kbd></th>     <td>Cap Kingdom</td> </tr>
-          <tr> <th><kbd>cascade</kbd></th> <td>Cascade Kingdom</td> </tr>
-          <tr> <th><kbd>sand</kbd></th>    <td>Sand Kingdom</td> </tr>
-          <tr> <th><kbd>lake</kbd></th>    <td>Lake Kingdom</td> </tr>
-          <tr> <th><kbd>wooded</kbd></th>  <td>Wooded Kingdom</td> </tr>
-          <tr> <th><kbd>cloud</kbd></th>   <td>Cloud Kingdom</td> </tr>
-          <tr> <th><kbd>lost</kbd></th>    <td>Lost Kingdom</td> </tr>
-          <tr> <th><kbd>metro</kbd></th>   <td>Metro Kingdom</td> </tr>
-          <tr> <th><kbd>sea</kbd></th>     <td>Sea Kingdom</td> </tr>
-          <tr> <th><kbd>snow</kbd></th>    <td>Snow Kingdom</td> </tr>
-          <tr> <th><kbd>lunch</kbd></th>   <td>Luncheon Kingdom</td> </tr>
-          <tr> <th><kbd>ruined</kbd></th>  <td>Ruined Kingdom</td> </tr>
-          <tr> <th><kbd>bowser</kbd></th>  <td>Bowser's Kingdom</td> </tr>
-          <tr> <th><kbd>moon</kbd></th>    <td>Moon Kingdom</td> </tr>
-          <tr> <th><kbd>mush</kbd></th>    <td>Mushroom Kingdom</td> </tr>
-          <tr> <th><kbd>dark</kbd></th>    <td>Dark Side</td> </tr>
-          <tr> <th><kbd>darker</kbd></th>  <td>Darker Side</td> </tr>
+          <tr v-for="(v, k) in stages" :key="k">
+            <th><kbd>{{ k }}</kbd></th>
+            <td>{{ v }}</td>
+          </tr>
         </tbody>
       </table>
     </b-modal>
@@ -336,3 +323,5 @@
   }
 }
 </style>
+
+<script lang="ts" src="./commands.ts"/>
