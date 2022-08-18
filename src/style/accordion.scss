@@ -1,0 +1,12 @@
+.smoo-accordion.accordion {
+  text-align: left;
+  .card .collapse.show {
+    background-color: #fdfdff;
+  }
+  .card-header {
+    &.not-collapsed {
+      background-color: #e7f5f7;
+      margin-bottom: 0;
+    }
+  }
+}
