@@ -245,6 +245,26 @@ export default class FAQ extends Vue {
       question : 'What is a public/private IPv4 address?',
       answer   : `
         <p>
+          <b>TL;DR</b>
+          <ul>
+            <li>
+              When you're hosting a server, then
+              <a-ext href="https://www.google.com/search?q=What+is+my+IP">google "What is my IP"</a-ext>
+              and give your public IP to other players (requires <a-int name="faq" id="109">port forwarding</a-int>).
+            </li>
+            <li>
+              In a emulator with the server running on the same PC: use <code>127.0.0.1</code> (only valid on your PC).
+            </li>
+            <li>
+              On a Nintendo Switch connecting to the server on your PC: use the private IP of your PC (only valid inside your network).
+            </li>
+            <li>
+              Use <code>0.0.0.0</code> only in the <a-int name="host" id="settings">settings.json</a-int>.
+            </li>
+          </ul>
+        </p>
+        <hr/>
+        <p>
           A public IPv4 address is the address under which a computer is accessible on the internet by other computers.
           Usually your router receives a public IPv4 address from your ISP.
           But be aware that there are internet subscriptions that don't give you a public IPv4 address but only a IPv6 address (e.g. LTE, DS Lite).
@@ -262,7 +282,7 @@ export default class FAQ extends Vue {
         <p>
           <code>0.0.0.0</code> usually stands for an invalid IPv4 address.
           It is only valid in context of hosting a <a-int name="host">server</a-int>
-          inside the <code>settings.json</code> file to denote listening to connections from all networks.
+          inside the <a-int name="host" id="settings">settings.json</a-int> file to denote listening to connections from all networks.
           (On some systems it's a workable alias for <code>127.0.0.1</code>, but you should avoid using it.)
         </p>
       `,
