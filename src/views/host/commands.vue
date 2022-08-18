@@ -55,7 +55,10 @@
       </b-tooltip>
       <br/>
       <ul>
-        <li><kbd>&lt;stage&gt;</kbd> <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.stages>show possible values</b-btn></li>
+        <li>
+          <kbd>&lt;stage&gt;</kbd>
+          <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-commands-stages>show possible values</b-btn>
+        </li>
       </ul>
     </div>
 
@@ -64,10 +67,27 @@
       Sends individual player(s) to a specific stage.
       <br/>
       <ul>
-        <li><kbd>&lt;stage&gt;</kbd> <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.stages>show possible values</b-btn></li>
-        <li><kbd>&lt;warp-id&gt;</kbd> <code>change stage ID</code> for the warp. To specify exactly where to spawn inside the <code>stage</code>. Use <kbd>""</kbd> for the default spawn point (the Odyssey).</li>
-        <li><kbd>&lt;scenario&gt;</kbd> What scenario to send the players to. Has to be an integer between <kbd>-1</kbd> and <kbd>127</kbd>. Use <kbd>-1</kbd> to keep the scenario unchanged.</li>
-        <li><kbd>&lt;player&gt;...</kbd> A list of players to send (separated by spaces). Can be their player name or their profile ID. <kbd>*</kbd> is also a valid value to send all connected players.</li>
+        <li>
+          <kbd>&lt;stage&gt;</kbd>
+          <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-commands-stages>show possible values</b-btn>
+        </li>
+        <li>
+          <kbd>&lt;warp-id&gt;</kbd>
+          <code>change stage ID</code> for the warp.
+          To specify exactly where to spawn inside the <code>stage</code>.
+          Use <kbd>""</kbd> for the default spawn point (the Odyssey).
+        </li>
+        <li>
+          <kbd>&lt;scenario&gt;</kbd>
+          What scenario to send the players to. Has to be an integer between <kbd>-1</kbd> and <kbd>127</kbd>.
+          Use <kbd>-1</kbd> to keep the scenario unchanged.
+        </li>
+        <li>
+          <kbd>&lt;player&gt;...</kbd>
+          A list of players to send (separated by spaces).
+          Can be their player name or their profile ID.
+          <kbd>*</kbd> is also a valid value to send all connected players.
+        </li>
       </ul>
     </div>
 
