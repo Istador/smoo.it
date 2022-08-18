@@ -1,7 +1,7 @@
 <template>
   <footer>
     <nav>
-      <a-ext href="https://discord.gg/jYCueK2BqD">Discord</a-ext> |
+      <a-ext href="https://discord.gg/w3TnB899ww">Discord</a-ext> |
       <a-ext href="https://github.com/Istador/smoo.it">GitHub</a-ext> |
       <a-ext href="https://rcl.smoo.it/legal">Legal notice</a-ext>
     </nav>

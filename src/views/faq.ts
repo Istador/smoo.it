@@ -73,6 +73,17 @@ export default class FAQ extends Vue {
           <li>
             In the main or pause menu hold <smoo-btn ZL/> and press <smoo-btn A/> to enter the hidden options menu
             where you can <code>Change Server IP</code>.
+            <b-icon icon="info-circle-fill" id="faq-change-ip"/>
+            <b-tooltip target="faq-change-ip" triggers="hover">
+              <p>
+                Newer versions of the mod will automatically save the game after changing the IP or port.
+                In the <code>v1.0.0</code> release version you'll need to manually save.
+              </p>
+              <p>
+                The <code>Reconnect to Server</code> feature is buggy and might crash the game.
+                It's best to restart the game after changing the server.
+              </p>
+            </b-tooltip>
           </li>
           <li>
             Hold/press <smoo-btn ZL/> while starting the game. This will prompt you for the IP.
@@ -90,7 +101,7 @@ export default class FAQ extends Vue {
                 You could use a save file backup app, to export, modify and then restore the directory.
               </p>
               <p>
-                Inside the Yuzu or Ryujinx emulator you can right click on the game to get to its save directory.
+                Inside the yuzu or Ryujinx emulator you can right click on the game to get to its save directory.
               </p>
             </b-tooltip>
           </li>
@@ -147,7 +158,7 @@ export default class FAQ extends Vue {
         </p>
         <hr/>
         <p>
-          The <a-ext href="https://yuzu-emu.org/help/quickstart/#dumping-cartridge-games">Yuzu Quickstart Guide</a-ext>
+          The yuzu <a-ext href="https://yuzu-emu.org/help/quickstart/#dumping-cartridge-games">Quickstart Guide</a-ext>
           has a good section on how to do that.
         </p>
         <p>
@@ -234,6 +245,26 @@ export default class FAQ extends Vue {
       question : 'What is a public/private IPv4 address?',
       answer   : `
         <p>
+          <b>TL;DR</b>
+          <ul>
+            <li>
+              When you're hosting a server, then
+              <a-ext href="https://www.google.com/search?q=What+is+my+IP">google "What is my IP"</a-ext>
+              and give your public IP to other players (requires <a-int name="faq" id="109">port forwarding</a-int>).
+            </li>
+            <li>
+              In a emulator with the server running on the same PC: use <code>127.0.0.1</code> (only valid on your PC).
+            </li>
+            <li>
+              On a Nintendo Switch connecting to the server on your PC: use the private IP of your PC (only valid inside your network).
+            </li>
+            <li>
+              Use <code>0.0.0.0</code> only in the <a-int name="host" id="settings">settings.json</a-int>.
+            </li>
+          </ul>
+        </p>
+        <hr/>
+        <p>
           A public IPv4 address is the address under which a computer is accessible on the internet by other computers.
           Usually your router receives a public IPv4 address from your ISP.
           But be aware that there are internet subscriptions that don't give you a public IPv4 address but only a IPv6 address (e.g. LTE, DS Lite).
@@ -251,7 +282,7 @@ export default class FAQ extends Vue {
         <p>
           <code>0.0.0.0</code> usually stands for an invalid IPv4 address.
           It is only valid in context of hosting a <a-int name="host">server</a-int>
-          inside the <code>settings.json</code> file to denote listening to connections from all networks.
+          inside the <a-int name="host" id="settings">settings.json</a-int> file to denote listening to connections from all networks.
           (On some systems it's a workable alias for <code>127.0.0.1</code>, but you should avoid using it.)
         </p>
       `,
@@ -293,6 +324,30 @@ export default class FAQ extends Vue {
           Most routers will give you the option to select one of the currently connected devices.
           (Or you have already selected it to reach the port forwarding settings.)
           But sometimes you need to provide its private IP address manually.
+        </p>
+      `,
+    },
+    {
+      id       : 110,
+      question : 'Something doesn\'t work / Where do I get help?',
+      answer   : `
+        <p>
+          Make sure that you read all instructions on this website thoroughly before bothering other people.
+        </p>
+        <p>
+          If you sill can't figure it out or have problems, head over to the
+          <a-ext href="https://discord.gg/w3TnB899ww">official Discord server</a-ext>.
+          It's an active community of people that might be able and willing to help you in one of the help channels.
+        </p>
+        <p>
+          The issues sections of the GitHub projects for the
+          <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/issues">mod</a-ext>
+          and the
+          <a-ext href="https://github.com/Sanae6/SmoOnlineServer/issues">server</a-ext>
+          are NOT for support,
+          but for submitting actual bugs and feature requests.
+          When submitting a bug, make sure that you describe it in detail
+          and that you provide log files and/or crash reports if available.
         </p>
       `,
     },
