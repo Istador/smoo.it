@@ -1,0 +1,4 @@
+# entry for /etc/sudoers
+
+# Allow www-data to run nmap
+www-data ALL=(root:root) NOPASSWD: /usr/bin/nmap

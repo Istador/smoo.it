@@ -1,0 +1,11 @@
+<Files servers.json>
+  AddType application/x-httpd-php .json
+</Files>
+
+Options -Indexes
+
+<IfModule mod_headers.c>
+  SetEnvIf Origin "http(s)?://(smoo\.it|(localhost|(10\.[0-9]+|172\.(1[6-9]|2[0-9]|3[0-1])|192\.168)\.[0-9]+\.[0-9]+):8080)$" AccessControlAllowOrigin=$0
+  Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+  Header merge Vary Origin
+</IfModule>
