@@ -31,8 +31,11 @@
         </b-tooltip>
       </template>
 
-      <template #cell(server)="{ item: { server: { host, ip } } }">
-        <span class="host" v-if="host">{{ host }}</span>
+      <template #cell(server)="{ item: { server: { host, ip }, link } }">
+        <span class="host" v-if="host">
+          <a-ext v-if="link" :href="link">{{ host }}</a-ext>
+          <span v-else>{{ host }}</span>
+        </span>
         <br v-if="host && ip"/>
         <span class="ip" v-if="ip">{{ ip }}</span>
       </template>

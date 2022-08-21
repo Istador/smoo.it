@@ -21,7 +21,7 @@ module.exports = {
     'array-bracket-spacing'          : [ 'error', 'always' ],
     'key-spacing'                    : [ 'error', { align: { beforeColon: true, afterColon: true, mode: 'minimum', on: 'colon' } } ],
     'vue/multi-word-component-names' : 'off',
-    'no-console'                     : [ (process.env.NODE_ENV === 'production' ? 'error' : 'warn'), { allow: ['warn', 'error'] } ],
+    'no-console'                     : [ (process.env.NODE_ENV === 'production' ? 'error' : 'warn'), { allow: [ 'warn', 'error' ] } ],
     'no-debugger'                    : process.env.NODE_ENV === 'production' ? 'error' : 'warn',
   },
 

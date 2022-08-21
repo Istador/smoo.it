@@ -12,6 +12,7 @@ const linkTree = (branch: string, label?: string, repo?: string) =>
 export const servers: IServer[] = [
   {
     name     : 'Piplup',
+    link     : 'https://piplup.smoo.it',
     server   : { host: 'piplup.smoo.it', ip: '51.178.136.142' },
     location : { flag: 'fr', name: 'France' },
     version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
