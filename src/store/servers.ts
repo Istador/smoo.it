@@ -49,12 +49,6 @@ export const servers: IServer[] = [
     version  : linkRelease('1.0.2'),
   },
   {
-    name     : 'Jonah',
-    server   : { host: 'jonah.smoo.it', ip: '172.104.198.34' },
-    location : { flag: 'us', name: 'US-East' },
-    version  : linkRelease('1.0.2'),
-  },
-  {
     name     : 'RCL 1',
     server   : { host: 'rcl.smoo.it' },
     location : { flag: 'de', name: 'Germany' },
