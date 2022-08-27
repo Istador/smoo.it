@@ -37,8 +37,8 @@ export default class SmooServerState extends Vue {
   }
 
   title () {
-    return this.state +
-      (this.state !== 'loading' && this.stamp ? ' - ' + moment(this.stamp).fromNow() : '')
+    return this.state
+      + (this.state !== 'loading' && this.stamp ? ' - ' + moment(this.stamp).fromNow() : '')
   }
 
   mounted () {
