@@ -18,11 +18,16 @@ export interface ISettings {
   PersistShines? : boolean
 }
 
+export interface IVersion {
+  html     : string
+  details? : string
+}
+
 export interface IServer {
   name      : string
   link?     : string
   server    : IHost
-  version?  : string
+  version?  : IVersion | string
   location? : { flag?: string, name: string }
   settings? : ISettings
 }

@@ -55,7 +55,10 @@
       </template>
 
       <template #cell(version)="{ item: { version } }">
-        <span v-html="version"/>
+        <div v-show="typeof version === 'object' && version.details" class="details">
+          <b-icon icon="exclamation-triangle-fill" v-b-tooltip.html.bottomleft="((typeof version === 'object' && version.details) || '')"/>
+        </div>
+        <div v-html="(typeof version === 'object' ? version.html : version)"/>
       </template>
 
     </b-table>

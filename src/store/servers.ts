@@ -67,7 +67,16 @@ export const servers: IServer[] = [
     name     : 'Jeff',
     server   : { host: 'jeff.smoo.it', ip: '172.105.137.146' },
     location : { flag: 'us', name: 'US-East' },
-    version  : linkTree('master', 'proximity/1.0.1', 'TheUbMunster/SmoOnlineServer'),
+    version  : {
+      html    : linkTree('master', 'proximity/1.0.1', 'TheUbMunster/SmoOnlineServer'),
+      details : `
+        The Proximity Voice Chat (PVC) client requires additional settings:
+        <ul>
+          <li>PVC Port: <code>12000</code></li>
+          <li>Discord Application ID: <code>1011047390133899324</code></li>
+        </ul>
+      `,
+    },
   },
 ].map((s: IServer) => {
   s.server.state = null
