@@ -16,7 +16,6 @@ scan_all() {
     piplup.smoo.it
     sanae.smoo.it
     parknich.smoo.it
-    fruityloops.smoo.it
     f0c0s.smoo.it
     beni.smoo.it
     rcl.smoo.it
