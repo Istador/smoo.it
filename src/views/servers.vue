@@ -14,34 +14,25 @@
         Server
         <b-icon icon="info-circle-fill" id="servers-hostname" @click.stop.prevent/>
         <b-tooltip target="servers-hostname" triggers="hover">
-          The <code>Host</code> entry is a convenient alternative to entering the IPv4 address.
-          But this is currently only possible with a
+          Entering the hostname instead of an IPv4 address or changing the port is currently only possible with a
           <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
           of the mod.
         </b-tooltip>
       </template>
 
-      <template #head(port)>
-        Port
-        <b-icon icon="info-circle-fill" id="servers-port" @click.stop.prevent/>
-        <b-tooltip target="servers-port" triggers="hover">
-          Changing the port is currently only possible with a
-          <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-          of the mod.
-        </b-tooltip>
-      </template>
-
-      <template #cell(server)="{ item: { server: { host, ip }, link } }">
-        <span class="host" v-if="host">
+      <template #cell(server)="{ item: { name, server: { host, ip, port }, link } }">
+        <div class="name"><b>{{ name }}</b></div>
+        <div class="host" v-if="host">
           <a-ext v-if="link" :href="link">{{ host }}</a-ext>
           <span v-else>{{ host }}</span>
-        </span>
-        <br v-if="host && ip"/>
-        <span class="ip" v-if="ip">{{ ip }}</span>
+        </div>
+        <div class="ip" v-if="ip">{{ ip }}</div>
+        <div class="port" :class="{ 'default': (port || defaultPort) === defaultPort }">{{ port || defaultPort }}</div>
       </template>
 
-      <template #cell(port)="{ item: { server: { port } } }">
-        <span>{{ port || defaultPort }}</span>
+      <template #head(location)>
+        <span class="location-long">Location</span>
+        <span class="location-short" title="Location">Loc.</span>
       </template>
 
       <template #cell(location)="{ item }">

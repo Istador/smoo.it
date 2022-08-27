@@ -15,17 +15,15 @@
       td { vertical-align: middle; }
 
       .td-server {
-        .host, .ip { font-family: monospace; }
-        @media (min-width: 800px) {
-          .host::before { content: 'Host: '; font-family: $smoo-default-font; font-weight: bold; }
-          .ip::before { content: 'IPv4: '; font-family: $smoo-default-font; font-weight: bold; }
+        .host, .ip, .port { font-family: monospace; }
+        @media (min-width: 576px) {
+          .host::before { content: 'Host: '; font-family: $smoo-default-font; font-weight: bold; font-size: 0.75em; opacity: 0.25; }
+          .ip::before   { content: 'IPv4: '; font-family: $smoo-default-font; font-weight: bold; font-size: 0.75em; opacity: 0.25; }
+          .port.default { display: block !important; }
         }
-        .host + br + .ip { opacity: 0.5; }
-      }
-
-      .td-port {
-        font-family: monospace;
-        &.default { opacity: 0.5; }
+        .port::before { content: 'Port: '; font-family: $smoo-default-font; font-weight: bold; font-size: 0.75em; opacity: 0.25; }
+        .port.default { opacity: 0.5; display: none; &::before { opacity: 0.5; } }
+        .host + .ip { opacity: 0.5; &::before { opacity: 0.5; } }
       }
 
       .td-location {
@@ -39,23 +37,18 @@
       }
     }
 
-    @media (max-width: 800px) {
-      td.td-location span.name { display: none; }
-    }
-
     @media (max-width: 700px) {
-      th.th-name { display: none; }
-      td.td-name { display: none; }
+      td.td-location span.name { display: none; }
+
+      th, td { padding: 0.3rem; }
     }
 
-    @media (max-width: 550px) {
-      th.th-version { display: none; }
-      td.td-version { display: none; }
-    }
-
-    @media (max-width: 450px) {
-      th.th-state { display: none; }
-      td.td-state { display: none; }
+    th.th-location {
+      .location-short { display: none; }
+      @media (max-width: 700px) {
+        .location-long { display: none; }
+        .location-short { display: unset; }
+      }
     }
   }
 }
