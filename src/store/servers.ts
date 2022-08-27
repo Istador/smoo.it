@@ -58,6 +58,20 @@ export const servers: IServer[] = [
     settings : { MaxPlayers: 4, ScenarioMerge: false, PersistShines: false },
   },
   {
+    name     : 'RCL 3 (UDP)',
+    server   : { host: 'rcl.smoo.it', port: 1029 },
+    location : { flag: 'de', name: 'Germany' },
+    settings : { MaxPlayers: 6, ScenarioMerge: false, PersistShines: false },
+    version  : {
+      html    : linkTree('udp', 'rust/udp', 'speyejack/smo-multi-rs'),
+      details : `
+        <p>Connecting requires a special SMOO mod version that speaks UDP.</p>
+        <p>While this is being worked on you can run a proxy on your PC that splits the TCP stream for the mod.</p>
+        <p class="text-secondary">Or alternatively you can connect to a proxy on port <code>1026</code>, but then there won't be any benefits from using UDP.</p>
+      `,
+    },
+  },
+  {
     name     : 'Krokilex',
     server   : { host: 'krokilex.smoo.it', ip: '37.16.29.245' },
     location : { flag: 'fr', name: 'France' },
