@@ -3,10 +3,15 @@ import { VuexModule, Module, Action, Mutation, getModule } from 'vuex-module-dec
 import axios from 'axios'
 
 import { store } from './index'
-import { IHost, TState } from '@/types'
+import { IHost, TState, ISettings, IPlayer } from '@/types'
+
+export interface Details {
+  Settings : ISettings
+  Players  : IPlayer[]
+}
 
 export interface Servers {
-  [key: string]: boolean
+  [key: string]: Details | boolean
 }
 
 export interface Result {
@@ -85,7 +90,7 @@ class XServers extends VuexModule {
 const module = getModule(XServers)
 export default module
 
-export function getResult ({ ip = '', host = ip, port = 1027 }: IHost = {}) : boolean | null {
+export function getResult ({ ip = '', host = ip, port = 1027 }: IHost = {}) : Details | boolean | null {
   const { initialized, result } = module
   if (!initialized) { return null }
   if (!result) { return null }
@@ -101,6 +106,7 @@ export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}) : TSt
 
   const result = getResult({ ip, host, port })
   if (result === null) { return 'unknown' }
+  if (typeof result === 'object') { return 'online' }
   if (typeof result !== 'boolean') { return 'unknown' }
   return (result ? 'online' : 'offline')
 }

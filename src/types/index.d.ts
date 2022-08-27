@@ -7,6 +7,11 @@ export interface IHost {
   state? : TState | null
 }
 
+export interface IPlayer {
+  Name  : string
+  Stage : string
+}
+
 export interface ISettings {
   MaxPlayers?    : number
   ScenarioMerge? : boolean

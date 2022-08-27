@@ -2,23 +2,37 @@ import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 
 import moment from 'moment'
 
-import { IHost, ISettings } from '@/types'
+import { IHost, ISettings, IPlayer } from '@/types'
 import XServers, { getState, getResult } from '@/store/xservers'
+
+import { stages } from '@/views/host/commands'
 
 @Component({})
 export default class SmooServerState extends Vue {
+  @Prop({ required: true, type: String })
+  name! : string
+
   @Prop({ required: true, type: Object })
   server! : IHost
 
   @Prop({ required: false, type: Object, default: null })
   settings! : ISettings | null
 
+  stages = stages
+
   get state () { return getState(this.server) }
   get stamp () { return XServers.stamp }
   get result () { return getResult(this.server) }
 
   get currentSettings () : ISettings | null {
-    return this.settings
+    return (typeof this.result === 'object' && this.result?.Settings) || this.settings
+  }
+
+  get players () : IPlayer[] | null {
+    if (!this.result) { return null }
+    if (typeof this.result !== 'object') { return null }
+    if (!this.result.Players) { return null }
+    return this.result.Players
   }
 
   get icon () : string {
@@ -45,7 +59,7 @@ export default class SmooServerState extends Vue {
   }
 
   title () {
-    const { state, stamp, currentSettings } = this
+    const { state, stamp, currentSettings, players } = this
     const settings = []
     if (currentSettings) {
       const bool = (key: keyof ISettings) => {
@@ -55,7 +69,10 @@ export default class SmooServerState extends Vue {
         }
       }
       if ('MaxPlayers' in currentSettings) {
-        settings.push('MaxPlayers: <span class="text-info">' + currentSettings.MaxPlayers + '</span>')
+        const playersKey = (players ? 'Players' : 'MaxPlayers')
+        const playersColor = (players ? (players.length !== currentSettings.MaxPlayers ? 'text-success' : 'text-danger') : 'text-info')
+        const playersValue = (players ? players.length + ' / ' + currentSettings.MaxPlayers : currentSettings.MaxPlayers)
+        settings.push(playersKey + ': <span class="' + playersColor + '">' + playersValue + '</span>')
       }
       bool('ScenarioMerge')
       bool('PersistShines')
