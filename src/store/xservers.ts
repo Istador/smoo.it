@@ -5,11 +5,11 @@ import axios from 'axios'
 import { store } from './index'
 import { IHost, TState } from '@/types'
 
-interface Servers {
+export interface Servers {
   [key: string]: boolean
 }
 
-interface Result {
+export interface Result {
   stamp   : string
   servers : Servers
 }
@@ -85,15 +85,22 @@ class XServers extends VuexModule {
 const module = getModule(XServers)
 export default module
 
-export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}) : TState {
-  const { loading, initialized, result } = module
-  if (loading) { return 'loading' }
-  if (!initialized) { return 'unknown' }
-  if (!result) { return 'unknown' }
-  if (!result.servers) { return 'unknown' }
+export function getResult ({ ip = '', host = ip, port = 1027 }: IHost = {}) : boolean | null {
+  const { initialized, result } = module
+  if (!initialized) { return null }
+  if (!result) { return null }
+  if (!result.servers) { return null }
 
   const key = host + ':' + port
+  return result.servers[key] || null
+}
 
-  if (typeof result.servers[key] !== 'boolean') { return 'unknown' }
-  return (result.servers[key] ? 'online' : 'offline')
+export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}) : TState {
+  const { loading } = module
+  if (loading) { return 'loading' }
+
+  const result = getResult({ ip, host, port })
+  if (result === null) { return 'unknown' }
+  if (typeof result !== 'boolean') { return 'unknown' }
+  return (result ? 'online' : 'offline')
 }

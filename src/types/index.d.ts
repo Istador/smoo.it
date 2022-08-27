@@ -7,10 +7,17 @@ export interface IHost {
   state? : TState | null
 }
 
+export interface ISettings {
+  MaxPlayers?    : number
+  ScenarioMerge? : boolean
+  PersistShines? : boolean
+}
+
 export interface IServer {
   name      : string
   link?     : string
   server    : IHost
   version?  : string
   location? : { flag?: string, name: string }
+  settings? : ISettings
 }

@@ -6,8 +6,12 @@
       sort-by="state"
       striped
     >
-      <template #cell(state)="{ item: { server } }">
-        <smoo-server-state :server="server" @state="server.state = $event"/>
+      <template #cell(state)="{ item: { server, settings } }">
+        <smoo-server-state
+          :server="server"
+          :settings="settings"
+          @state="server.state = $event"
+        />
       </template>
 
       <template #head(server)>

@@ -48,12 +48,14 @@ export const servers: IServer[] = [
     server   : { host: 'rcl.smoo.it' },
     location : { flag: 'de', name: 'Germany' },
     version  : linkRelease('1.0.2'),
+    settings : { MaxPlayers: 6, ScenarioMerge: false, PersistShines: false },
   },
   {
     name     : 'RCL 2',
     server   : { host: 'rcl.smoo.it', port: 1028 },
     location : { flag: 'de', name: 'Germany' },
     version  : linkTree('packet-fixes'),
+    settings : { MaxPlayers: 4, ScenarioMerge: false, PersistShines: false },
   },
   {
     name     : 'Krokilex',

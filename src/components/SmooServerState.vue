@@ -1,10 +1,13 @@
 <template>
-  <b-icon
-    :icon="icon"
-    :animation="animation"
+  <span
+    v-b-tooltip.html.topright="() => title()"
     :class="{ 'state-component': true, [ state ]: true }"
-    v-b-tooltip.topright="() => title()"
-  />
+  >
+    <b-icon
+      :icon="icon"
+      :animation="animation"
+    />
+  </span>
 </template>
 
 <style lang="scss">
