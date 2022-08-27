@@ -80,7 +80,7 @@ export default class SmooServerState extends Vue {
     const stateColor = (state === 'online' ? 'text-success' : (state === 'offline' ? 'text-danger' : ''))
     return '<p>'
       + '<span class="' + stateColor + '">' + state + '</span>'
-      + (state !== 'loading' && stamp ? ' - ' + moment(stamp).fromNow() : '')
+      + (state !== 'loading' && stamp ? ' &bull; ' + moment(stamp).fromNow() : '')
       + '</p>'
       + (settings.length ? '<p>' + settings.join('<br/>') + '</p>' : '')
   }
