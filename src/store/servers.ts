@@ -66,6 +66,12 @@ export const servers: IServer[] = [
     location : { flag: 'fr', name: 'France' },
     version  : linkRelease('0.3.0', 'rust/0.3.0', 'JulesGuesnon/smo-online-server'),
   },
+  {
+    name     : 'Jeff',
+    server   : { host: 'jeff.smoo.it', ip: '172.105.137.146' },
+    location : { flag: 'us', name: 'US-East' },
+    version  : linkTree('master', 'proximity/1.0.1', 'TheUbMunster/SmoOnlineServer'),
+  },
 ].map((s: IServer) => {
   s.server.state = null
   return s
