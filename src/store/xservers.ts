@@ -97,7 +97,7 @@ export function getResult ({ ip = '', host = ip, port = 1027 }: IHost = {}) : De
   if (!result.servers) { return null }
 
   const key = host + ':' + port
-  return result.servers[key] || null
+  return result.servers[key] ?? null
 }
 
 export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}) : TState {
