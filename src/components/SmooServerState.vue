@@ -4,20 +4,20 @@
     :class="{ 'state-component': true, [ state ]: true }"
   >
     <b-icon
-      v-if="!result || typeof result !== 'object'"
+      v-if="!result || typeof result !== 'object' || !players"
       :icon="icon"
       :animation="animation"
     />
 
     <b-btn
-      v-if="result && typeof result === 'object'"
+      v-if="result && typeof result === 'object' && players"
       size="sm"
       :variant="(tooOld ? 'outline-success' : 'success')"
       v-b-modal="'smoo-server-state-players-' + _uid"
-      :disabled="!players.length"
+      :disabled="!playersVisible"
     >
       <b-icon icon="person-circle"/>
-      {{ players.length }} / {{ currentSettings.MaxPlayers }}
+      {{ players.length + (MaxPlayers ? ' / ' + MaxPlayers : '') }}
     </b-btn>
 
     <b-modal
@@ -30,17 +30,22 @@
         Players on <code>{{ name }}</code>
       </template>
 
-      <table class="table table-striped table-borderless table-sm mb-0">
+      <table class="table table-striped table-borderless table-sm mb-0 smoo-server-players">
         <thead>
           <tr>
             <th>Player</th>
             <th>Stage</th>
+            <th>Costume</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="(player, idx) of players" :key="name + ';' + idx + ';' + player.Name">
-            <td>{{ player.Name }}</td>
-            <td>{{ stages[player.Stage] || 'unknown' }}</td>
+            <td>{{ player.Name || '?' }}</td>
+            <td>{{ stages[player.Stage] || player.Stage || '' }}</td>
+            <td class="costume">
+              <div class="costume-cap"  v-if="player.Costume && player.Costume.Cap">{{ player.Costume.Cap }}</div>
+              <div class="costume-body" v-if="player.Costume && player.Costume.Body">{{ player.Costume.Body }}</div>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -55,6 +60,10 @@
   &.offline { color: red; }
   &.online { color: green; }
   &.unknown { color: black; }
+}
+.smoo-server-players {
+  .costume-cap::before { content: 'Cap: '; opacity: 0.5; }
+  .costume-body::before { content: 'Body: '; opacity: 0.5; }
 }
 </style>
 

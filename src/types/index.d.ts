@@ -7,15 +7,22 @@ export interface IHost {
   state? : TState | null
 }
 
+export interface ICostume {
+  Cap  : string
+  Body : string
+}
+
 export interface IPlayer {
-  Name  : string
-  Stage : string
+  Name?    : string
+  Stage?   : string
+  Costume? : ICostume
 }
 
 export interface ISettings {
-  MaxPlayers?    : number
-  ScenarioMerge? : boolean
-  PersistShines? : boolean
+  Server?        : { MaxPlayers?   : number }
+  Scenario?      : { MergeEnabled? : boolean }
+  Shines?        : { Enabled?      : boolean }
+  PersistShines? : { Enabled?      : boolean }
 }
 
 export interface IVersion {

@@ -28,11 +28,21 @@ export default class SmooServerState extends Vue {
     return (typeof this.result === 'object' && this.result?.Settings) || this.settings
   }
 
+  get MaxPlayers () : number | null {
+    return this.currentSettings?.Server?.MaxPlayers ?? null
+  }
+
   get players () : IPlayer[] | null {
     if (!this.result) { return null }
     if (typeof this.result !== 'object') { return null }
     if (!this.result.Players) { return null }
     return this.result.Players
+  }
+
+  get playersVisible () : boolean {
+    if (!this.players) { return false }
+    if (!this.players.length) { return false }
+    return this.players.some(x => Object.keys(x).length)
   }
 
   get icon () : string {
@@ -62,20 +72,25 @@ export default class SmooServerState extends Vue {
     const { state, stamp, currentSettings, players } = this
     const settings = []
     if (currentSettings) {
-      const bool = (key: keyof ISettings) => {
+      const bool = (name: string, key: keyof ISettings, field: string) => {
         if (key in currentSettings) {
-          const color = (currentSettings[key] ? 'text-success' : 'text-danger')
-          settings.push(key + ': <span class="' + color + '">' + currentSettings[key] + '</span>')
+          const sub : { [key: string]: number | boolean | undefined } = currentSettings[key] ?? {}
+          const value = sub[field] ?? null
+          if (value !== null) {
+            const color = (value ? 'text-success' : 'text-danger')
+            settings.push(name + ': <span class="' + color + '">' + value + '</span>')
+          }
         }
       }
-      if ('MaxPlayers' in currentSettings) {
+      if (!(players === null && this.MaxPlayers === null)) {
         const playersKey = (players ? 'Players' : 'MaxPlayers')
-        const playersColor = (players ? (players.length !== currentSettings.MaxPlayers ? 'text-success' : 'text-danger') : 'text-info')
-        const playersValue = (players ? players.length + ' / ' + currentSettings.MaxPlayers : currentSettings.MaxPlayers)
+        const playersColor = (players ? (players.length !== this.MaxPlayers ? 'text-success' : 'text-danger') : 'text-info')
+        const playersValue = (players ? players.length : '') + (players && this.MaxPlayers ? ' / ' : '') + (this.MaxPlayers ?? '')
         settings.push(playersKey + ': <span class="' + playersColor + '">' + playersValue + '</span>')
       }
-      bool('ScenarioMerge')
-      bool('PersistShines')
+      bool('ScenarioMerge', 'Scenario', 'MergeEnabled')
+      bool('ShineSync', 'Shines', 'Enabled')
+      bool('PersistShines', 'PersistShines', 'Enabled')
     }
     const stateColor = (state === 'online' ? 'text-success' : (state === 'offline' ? 'text-danger' : ''))
     return '<p>'
