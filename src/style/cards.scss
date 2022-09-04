@@ -1,13 +1,20 @@
-.card-body {
-  text-align: left;
-  text-align: justify;
+.card {
+  .card-header {
+    &.collapsed {
+      margin-bottom: -1px;
+    }
+  }
+  .card-body {
+    text-align: left;
+    text-align: justify;
 
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 
-  :last-child { margin-bottom: 0; }
+    :last-child { margin-bottom: 0; }
+  }
 }
 
 .smoo-card {
