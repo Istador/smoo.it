@@ -7,7 +7,6 @@
     width: 2.5em;
     font-size: 0.65em;
     letter-spacing: 0.2em;
-    line-hieght: 1em;
     vertical-align: middle;
     padding-top: 0.2em;
     padding-left: 0.2em;
@@ -19,12 +18,16 @@
   .ZR, .R { border-top-right-radius: 1.2em; }
 
   .A, .B {
-    border-radius:
-    1em; width: 2em;
+    border-radius: 1em;
+    width: 2em;
   }
 
   svg {
+    font-size: 1.231em;
     background-color: #eee;
     border-radius: 1em;
+    &.b-icon.bi {
+      vertical-align: -0.25em;
+    }
   }
 }
