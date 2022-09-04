@@ -59,10 +59,11 @@ export const servers: IServer[] = [
     name     : 'RCL 2',
     server   : { host: 'rcl.smoo.it', port: 1028 },
     location : { flag: 'de', name: 'Germany' },
-    version  : linkTree('packet-fixes-json-api', 'packet-fixes', 'Istador/SmoOnlineServer'),
+    version  : linkRelease('1.0.2-rcl.1', 'rcl/1.0.2', 'Istador/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 6 },
       Scenario      : { MergeEnabled: false },
+      PersistShines : { Enabled: false },
     },
   },
   {
