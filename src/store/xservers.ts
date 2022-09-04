@@ -2,7 +2,7 @@ import { VuexModule, Module, Action, Mutation, getModule } from 'vuex-module-dec
 
 import axios from 'axios'
 
-import { store } from './index'
+import { store, isset } from './index'
 import { IHost, TState, ISettings, IPlayer } from '@/types'
 
 export interface Details {
@@ -23,7 +23,7 @@ export interface Result {
   name          : 'servers',
   store         : store,
   dynamic       : true,
-  preserveState : localStorage.getItem('vuex') !== null,
+  preserveState : isset('servers'),
 })
 class XServers extends VuexModule {
   loading = false
@@ -87,11 +87,11 @@ class XServers extends VuexModule {
   }
 }
 
-const module = getModule(XServers)
-export default module
+const Servers = getModule(XServers)
+export default Servers
 
 export function getResult ({ ip = '', host = ip, port = 1027 }: IHost = {}) : Details | boolean | null {
-  const { initialized, result } = module
+  const { initialized, result } = Servers
   if (!initialized) { return null }
   if (!result) { return null }
   if (!result.servers) { return null }
@@ -101,7 +101,7 @@ export function getResult ({ ip = '', host = ip, port = 1027 }: IHost = {}) : De
 }
 
 export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}) : TState {
-  const { loading } = module
+  const { loading } = Servers
   if (loading) { return 'loading' }
 
   const result = getResult({ ip, host, port })
