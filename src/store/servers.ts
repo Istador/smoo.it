@@ -79,9 +79,9 @@ export const servers: IServer[] = [
     version: {
       html    : linkTree('udp', 'rust/udp', 'speyejack/smo-multi-rs'),
       details : `
-        <p>Connecting requires a special SMOO mod version that speaks UDP.</p>
-        <p>While this is being worked on you can run a proxy on your PC that splits the TCP stream for the mod.</p>
-        <p class="text-secondary">Or alternatively you can connect to a proxy on port <code>1026</code>, but then there won't be any benefits from using UDP.</p>
+        <p>Connecting requires a special SMOO ${linkTree('udp-client', 'mod version', 'speyejack/SuperMarioOdysseyOnline')} that speaks UDP.</p>
+        <p>Alternatively you can run a proxy on your PC that splits the TCP stream for the normal mod (build it from the server source code).</p>
+        <p class="text-secondary">Or you can connect to a proxy on port <code>1026</code>, but then there won't be any benefits from using UDP.</p>
       `,
     },
   },
