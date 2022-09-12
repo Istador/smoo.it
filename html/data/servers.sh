@@ -68,7 +68,6 @@ scan_all() {
     rcl.smoo.it:1028:${RCL_2:-}
     rcl.smoo.it:1029:${RCL_3:-}
     krokilex.smoo.it
-    joe.smoo.it
     jeff.smoo.it
   )
   local stamp=`date --iso-8601=seconds`
