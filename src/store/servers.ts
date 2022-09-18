@@ -66,12 +66,12 @@ export const servers: IServer[] = [
     server   : { host: 'rcl.smoo.it', port: 1029 },
     location : { flag: 'de', name: 'Germany' },
     settings : {
-      Server        : { MaxPlayers: 6 },
+      Server        : { MaxPlayers: 8 },
       Scenario      : { MergeEnabled: false },
       PersistShines : { Enabled: false },
     },
     version: {
-      html    : linkTree('udp', 'rust/udp', 'speyejack/smo-multi-rs'),
+      html    : linkTree('udp-json-api', 'rust/udp', 'Istador/smo-multi-rs'),
       details : `
         <p>Connecting requires a special SMOO ${linkTree('udp-client', 'mod version', 'speyejack/SuperMarioOdysseyOnline')} that speaks UDP.</p>
         <p>Alternatively you can run a proxy on your PC that splits the TCP stream for the normal mod (build it from the server source code).</p>
