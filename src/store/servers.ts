@@ -16,11 +16,17 @@ export const servers: IServer[] = [
     server   : { host: 'piplup.smoo.it', ip: '51.178.136.142' },
     location : { flag: 'fr', name: 'France' },
     version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
+    settings : {
+      Server: { MaxPlayers: 10 },
+    },
   },
   {
     name     : 'Sanae',
     server   : { host: 'sanae.smoo.it', ip: '64.201.219.20' },
     location : { flag: 'ca', name: 'Canada' },
+    settings : {
+      Server: { MaxPlayers: 13 },
+    },
   },
   {
     name     : 'Parknich',
@@ -84,6 +90,9 @@ export const servers: IServer[] = [
     server   : { host: 'krokilex.smoo.it', ip: '37.16.29.245' },
     location : { flag: 'fr', name: 'France' },
     version  : linkRelease('0.3.0', 'rust/0.3.0', 'JulesGuesnon/smo-online-server'),
+    settings : {
+      Server: { MaxPlayers: 8 },
+    },
   },
   {
     name     : 'Jeff',
@@ -98,6 +107,9 @@ export const servers: IServer[] = [
           <li>Discord Application ID: <code>1011047390133899324</code></li>
         </ul>
       `,
+    },
+    settings: {
+      Server: { MaxPlayers: 6 },
     },
   },
 ].map((s: IServer) => {
