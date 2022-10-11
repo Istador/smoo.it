@@ -13,7 +13,9 @@ const stateFormatter = (_v: null, _k: string, i: IServer): number => {
   switch (i.server.state || '') {
   case 'online': return 0
   case 'unknown': return 1
-  case 'offline': default: return 2
+  case 'offline': return 2
+  case 'dead': return 3
+  default: return 2
   }
 }
 

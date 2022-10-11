@@ -29,16 +29,19 @@ export const servers: IServer[] = [
     },
   },
   {
+    dead     : true,
     name     : 'F0C0S',
     server   : { host: 'f0c0s.smoo.it', ip: '94.130.25.137' },
     location : { flag: 'de', name: 'Germany' },
   },
   {
+    dead     : true,
     name     : 'Parknich',
     server   : { host: 'parknich.smoo.it', ip: '51.81.86.202' },
     location : { flag: 'us', name: 'US-East' },
   },
   {
+    dead     : true,
     name     : 'Yann',
     server   : { host: 'yann.smoo.it', ip: '141.145.216.231' },
     location : { flag: 'fr', name: 'France' },
@@ -99,6 +102,7 @@ export const servers: IServer[] = [
     },
   },
   {
+    dead     : true,
     name     : 'Jeff',
     server   : { host: 'jeff.smoo.it', ip: '172.105.137.146' },
     location : { flag: 'us', name: 'US-East' },
@@ -117,6 +121,7 @@ export const servers: IServer[] = [
     },
   },
   {
+    dead     : true,
     name     : 'Luis HideAndSeek',
     server   : { host: 'luis.smoo.it', ip: '45.134.39.117', port: 1021 },
     location : { flag: 'nl', name: 'Netherlands' },

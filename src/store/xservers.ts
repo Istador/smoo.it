@@ -101,7 +101,7 @@ export function getResult ({ ip = '', host = ip, port = 1027 }: IHost = {}) : De
   return result.servers[key] ?? null
 }
 
-export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}) : TState {
+export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}, canBeDead = false) : TState {
   const { loading } = Servers
   if (loading) { return 'loading' }
 
@@ -109,5 +109,6 @@ export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}) : TSt
   if (result === null) { return 'unknown' }
   if (typeof result === 'object') { return 'online' }
   if (typeof result !== 'boolean') { return 'unknown' }
+  if (!result && canBeDead) { return 'dead' }
   return (result ? 'online' : 'offline')
 }

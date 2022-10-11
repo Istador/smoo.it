@@ -17,6 +17,9 @@ export default class SmooServerState extends Vue {
   @Prop({ required: true, type: Object })
   server! : IHost
 
+  @Prop({ required: false, type: Boolean, default: false })
+  canBeDead! : boolean
+
   @Prop({ required: false, type: Object, default: null })
   settings! : ISettings | null
 
@@ -24,7 +27,7 @@ export default class SmooServerState extends Vue {
   stages = Stages
   costumes = costumes
 
-  get state () { return getState(this.server) }
+  get state () { return getState(this.server, this.canBeDead) }
   get stamp () { return XServers.stamp }
   get result () { return getResult(this.server) }
 
@@ -53,6 +56,7 @@ export default class SmooServerState extends Vue {
     if (this.state === 'loading') { return 'arrow-clockwise' }
     if (this.state === 'unknown') { return 'circle' }
     if (this.tooOld) { return 'circle' }
+    if (this.state === 'dead') { return 'skull' }
     return 'circle-fill'
   }
 

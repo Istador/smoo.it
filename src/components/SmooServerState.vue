@@ -4,10 +4,12 @@
     :class="{ 'state-component': true, [ state ]: true }"
   >
     <b-icon
-      v-if="!result || typeof result !== 'object' || !players || state != 'online'"
+      v-if="(!result || typeof result !== 'object' || !players || state != 'online') && icon != 'skull'"
       :icon="icon"
       :animation="animation"
     />
+
+    <font-awesome-icon v-if="(!result || typeof result !== 'object' || !players || state != 'online') && icon == 'skull'"  icon="fa-solid fa-skull"/>
 
     <b-btn
       v-if="result && typeof result === 'object' && players && state == 'online'"
@@ -88,6 +90,7 @@
   &.offline { color: red; }
   &.online { color: green; }
   &.unknown { color: black; }
+  &.dead { color: grey; }
 }
 .smoo-server-players {
   .costume-cap::before { content: 'Cap: '; opacity: 0.5; }

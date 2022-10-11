@@ -1,4 +1,4 @@
-export type TState = 'loading' | 'offline' | 'online' | 'unknown'
+export type TState = 'loading' | 'offline' | 'online' | 'unknown' | 'dead'
 
 export interface IHost {
   host?  : string
