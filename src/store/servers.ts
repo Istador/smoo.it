@@ -47,7 +47,7 @@ export const servers: IServer[] = [
     name     : 'RCL 1',
     server   : { host: 'rcl.smoo.it' },
     location : { flag: 'de', name: 'Germany' },
-    version  : linkRelease('1.0.4-rcl.1', 'rcl/1.0.4', 'Istador/SmoOnlineServer'),
+    version  : linkRelease('1.0.4-rcl.2', 'rcl/1.0.4', 'Istador/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 6 },
       Scenario      : { MergeEnabled: false },
