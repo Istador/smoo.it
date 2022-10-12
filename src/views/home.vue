@@ -8,7 +8,7 @@
     <div style="">
       <div class="yt-embed">
         <iframe
-          src="https://www.youtube.com/embed/nXxnhvP_LEI"
+          src="https://www.youtube-nocookie.com/embed/nXxnhvP_LEI"
           title="SMOO Trailer"
           frameborder="0"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
