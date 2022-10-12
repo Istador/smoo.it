@@ -11,6 +11,10 @@
 ul {
   padding-left: 1em;
   margin-bottom: 0;
+  &.ul-icons {
+    padding-left: 0;
+    list-style-type: none;
+  }
 }
 
 .b-tooltip > .tooltip-inner {

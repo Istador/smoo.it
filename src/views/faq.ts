@@ -32,7 +32,7 @@ export default class FAQ extends Vue {
   questions : IQuestion[] = [
     {
       id       : 101,
-      question : 'How do I control the mod?',
+      question : '<b-icon icon="controller"/> How do I control the mod?',
       answer   : `
         <p>
           Main menu:
@@ -66,7 +66,7 @@ export default class FAQ extends Vue {
     },
     {
       id       : 102,
-      question : 'How do I change the server I\'m connected to?',
+      question : '<b-icon icon="alt"/> How do I change the server I\'m connected to?',
       answer   : `
         By one of these methods:
         <ul>
@@ -110,7 +110,7 @@ export default class FAQ extends Vue {
     },
     {
       id       : 103,
-      question : 'How do I hack my Switch?',
+      question : '<b-icon icon="tools"/> How do I hack my Switch?',
       answer   : `
         <p>
           You need an <a-ext href="https://ismyswitchpatched.com/">unpatched</a-ext>
@@ -149,7 +149,7 @@ export default class FAQ extends Vue {
     },
     {
       id       : 104,
-      question : 'How do I obtain a SMO ROM for emulators?',
+      question : '<b-icon icon="download"/> How do I obtain a SMO ROM for emulators?',
       answer   : `
         <p>
           The only <i>legal</i> way to obtain a ROM is by dumping it from your
@@ -210,7 +210,7 @@ export default class FAQ extends Vue {
     },
     {
       id       : 105,
-      question : 'Am I on SMO version <code>1.0.0</code>?',
+      question : '<b-icon icon="arrow-down-up"/> Am I on SMO version <code>1.0.0</code>?',
       answer   : `
         <p>
           When the game is downgraded using the
@@ -234,7 +234,7 @@ export default class FAQ extends Vue {
     },
     {
       id       : 106,
-      question : 'Will the mod work for SMO version <code>1.3.0</code> in the future?',
+      question : '<b-icon icon="box-arrow-right"/> Will the mod work for SMO version <code>1.3.0</code> in the future?',
       answer   : `
         No, it's too much effort to develop, test, build, release and support different versions of the mod.
         Also apparently version <code>1.3.0</code> is more difficult to mod than version <code>1.0.0</code> of the game.
@@ -242,7 +242,7 @@ export default class FAQ extends Vue {
     },
     {
       id       : 107,
-      question : 'What is a public/private IPv4 address?',
+      question : '<b-icon icon="broadcast"/> What is a public/private IPv4 address?',
       answer   : `
         <p>
           <b>TL;DR</b>
@@ -289,7 +289,7 @@ export default class FAQ extends Vue {
     },
     {
       id       : 108,
-      question : 'Does this mod work with IPv6?',
+      question : '<b-icon icon="wifi-off"/> Does this mod work with IPv6?',
       answer   : `
         <p>
           No.
@@ -300,7 +300,7 @@ export default class FAQ extends Vue {
     },
     {
       id       : 109,
-      question : 'How do I port forward?',
+      question : '<b-icon icon="skip-forward"/> How do I port forward?',
       answer   : `
         <p>This depends on your specific router model.</p>
         <p>
@@ -329,7 +329,7 @@ export default class FAQ extends Vue {
     },
     {
       id       : 110,
-      question : 'Something doesn\'t work / Where do I get help?',
+      question : '<b-icon icon="question-circle"/> Something doesn\'t work / Where do I get help?',
       answer   : `
         <p>
           Make sure that you read all instructions on this website thoroughly before bothering other people.

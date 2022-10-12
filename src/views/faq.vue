@@ -8,7 +8,7 @@
       @hidden="hidden(item.id)"
       accordion="questions"
     >
-      <template #header><span v-html="item.question"/></template>
+      <template #header><component :is="{ template: '<span>' + item.question + '</span>' }"/></template>
       <component :is="{ template: '<div>' + item.answer + '</div>' }"/>
     </smoo-card>
   </div>

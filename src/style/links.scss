@@ -1,4 +1,4 @@
-a {
+a:not(.btn) {
   cursor: pointer;
   color: #007700;
   text-decoration: underline;
@@ -7,25 +7,12 @@ a {
     text-decoration: none;
   }
 
-  &.extern[href]:not(.btn) {
+  &.extern[href] {
     color: #cc20dd;
     padding-right: 1.1em;
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 1em 1em;
-    background-image: url(@/assets/extern.png);
-  }
-
-  &.extern[href].btn::after {
-    content: '';
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    margin-left: 0.1em;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: 1em 1em;
-    background-image: url(@/assets/extern.png);
-    filter: saturate(0);
+    background-image: url(@/assets/extern.svg);
   }
 }

@@ -4,10 +4,10 @@
     <b-card-group columns deck>
 
       <b-card header="Requirements" class="mb-4">
-        <ul>
-          <li>Hacked Nintendo Switch</li>
-          <li>Super Mario Odyssey version 1.0.0</li>
-          <li>Internet connection</li>
+        <ul class="ul-icons">
+          <li><b-icon icon="tools"/> Hacked Nintendo Switch</li>
+          <li><b-icon icon="sd-card"/> Super Mario Odyssey version 1.0.0</li>
+          <li><b-icon icon="wifi"/> Internet connection</li>
         </ul>
       </b-card>
 
@@ -17,18 +17,16 @@
           style="width: 100%;"
         >
           <b-btn
-            class="extern"
             variant="outline-secondary"
             href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline"
             target="_blank"
-          >Mod GitHub [Official]</b-btn>
+          ><b-icon icon="github"/> Mod GitHub [Official]</b-btn>
 
           <b-btn
-            class="extern"
             variant="outline-secondary"
             href="https://gamebanana.com/mods/384214"
             target="_blank"
-          >Gamebanana</b-btn>
+          ><b-icon icon="joystick"/> Gamebanana</b-btn>
         </b-btn-group>
       </b-card>
 

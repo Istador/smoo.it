@@ -4,10 +4,10 @@
     <b-card-group columns deck>
 
       <b-card header="Requirements" class="mb-4">
-        <ul>
-          <li>Public IPv4 address</li>
-          <li>Open port</li>
-          <li>Computer</li>
+        <ul class="ul-icons">
+          <li><b-icon icon="broadcast"/> Public IPv4 address</li>
+          <li><b-icon icon="door-open"/> Open port</li>
+          <li><b-icon icon="laptop"/> Computer</li>
         </ul>
       </b-card>
 
@@ -17,23 +17,20 @@
           style="width: 100%;"
         >
           <b-btn
-            class="extern"
             variant="outline-secondary"
             href="https://github.com/Sanae6/SmoOnlineServer"
             target="_blank"
-          >C# Server GitHub [Official]</b-btn>
+          ><b-icon icon="github"/> C# Server [Official]</b-btn>
           <b-btn
-            class="extern"
             variant="outline-secondary"
             href="https://github.com/JulesGuesnon/smo-online-server"
             target="_blank"
-          >Rust Server 1 GitHub</b-btn>
+          ><b-icon icon="github"/> Rust Server 1</b-btn>
           <b-btn
-            class="extern"
             variant="outline-secondary"
             href="https://github.com/speyejack/smo-multi-rs"
             target="_blank"
-          >Rust Server 2 GitHub</b-btn>
+          ><b-icon icon="github"/> Rust Server 2</b-btn>
         </b-btn-group>
       </b-card>
 
