@@ -11,8 +11,13 @@ $text-variants: (
   '.text-white',
 );
 
+$not-variants: '';
+@each $c in $text-variants {
+  $not-variants: $not-variants + ':not(#{$c})';
+}
+
 code:not(.style), pre:not(.code) {
-  &:not(#{$text-variants}),  {
+  &#{$not-variants} {
     color: #576afd !important;
   }
 }
