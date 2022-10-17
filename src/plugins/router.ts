@@ -17,21 +17,33 @@ const routes: Array<RouteConfig> = [
     name      : 'play',
     path      : '/play/:id?',
     component : Play,
+    meta      : {
+      title: 'Playing the SMOO Mod',
+    },
   },
   {
     name      : 'host',
     path      : '/host/:id?',
     component : Host,
+    meta      : {
+      title: 'Hosting a SMOO Server',
+    },
   },
   {
     name      : 'servers',
     path      : '/servers',
     component : Servers,
+    meta      : {
+      title: 'Public SMOO Servers',
+    },
   },
   {
     name      : 'faq',
     path      : '/faq/:id?',
     component : FAQ,
+    meta      : {
+      title: 'SMOO FAQ',
+    },
   },
 ]
 
@@ -69,6 +81,14 @@ const router = new VueRouter({
       setTimeout(() => resolve(scrollTo(to.params.id)), 500)
     })
   },
+})
+
+router.afterEach((to) => {
+  Vue.nextTick(() => {
+    document.title = to.meta?.title
+      || document.querySelector('meta[name="twitter:title"]')?.getAttribute('content')
+      || 'Super Mario Odyssey: Online'
+  })
 })
 
 export default router
