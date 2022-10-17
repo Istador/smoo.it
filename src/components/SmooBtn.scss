@@ -30,4 +30,11 @@
       vertical-align: -0.25em;
     }
   }
+
+  img.alt {
+    display: inline-block;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 }
