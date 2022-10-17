@@ -39,11 +39,6 @@ export const servers: IServer[] = [
     location : { flag: 'de', name: 'Germany' },
   },
   {
-    name     : 'Beni',
-    server   : { host: 'beni.smoo.it', ip: '51.68.173.172' },
-    location : { flag: 'de', name: 'Germany' },
-  },
-  {
     name     : 'RCL 1',
     server   : { host: 'rcl.smoo.it' },
     location : { flag: 'de', name: 'Germany' },
