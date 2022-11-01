@@ -29,14 +29,14 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : 'Parknich',
-    server   : { host: 'parknich.smoo.it', ip: '51.81.86.202' },
-    location : { flag: 'us', name: 'US-East' },
-  },
-  {
     name     : 'F0C0S',
     server   : { host: 'f0c0s.smoo.it', ip: '94.130.25.137' },
     location : { flag: 'de', name: 'Germany' },
+  },
+  {
+    name     : 'Parknich',
+    server   : { host: 'parknich.smoo.it', ip: '51.81.86.202' },
+    location : { flag: 'us', name: 'US-East' },
   },
   {
     name     : 'RCL 1',
