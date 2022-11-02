@@ -68,9 +68,12 @@
           </b-tooltip>
         </li>
         <li>
-          [Optional] While you are still in the <code>System</code> settings, head over to the <code>Profiles</code> tab
+          While you are still in the <code>System</code> settings, head over to the <code>Profiles</code> tab
           to create a new user with a name you like. The name of the profile will be shown to other players.
-          Once the profile is created, simply click on it once to select it as the current user. Otherwise you're displayed with the name <code>yuzu</code>.
+          Once the profile is created, simply click on it once to select it as the current user. Otherwise you're displayed with the name <code>yuzu</code>. <b-icon icon="info-circle-fill" id="common-uuid-errors"/>
+          <b-tooltip target="common-uuid-errors" triggers="hover">
+              this is solve some of the most common errors relating with uuid's on yuzu
+          </b-tooltip>
         </li>
       </ul>
     </p>
