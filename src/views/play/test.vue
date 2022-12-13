@@ -7,10 +7,15 @@
       Choose one of the <a-int name="servers">public servers</a-int> and type in its IPv4 address.
       <b-icon icon="info-circle-fill" :id="'play-test-hostname-' + _uid"/>
       <b-tooltip :target="'play-test-hostname-' + _uid" triggers="hover">
-        The <code>Host</code> entry in the server list is a convenient alternative to entering the IPv4 address.
-        But it is currently only possible with a
-        <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-        of the mod.
+        <p>
+          The <code>Host</code> entry in the server list is a convenient alternative to entering the IPv4 address.
+          But it is currently only possible with a
+          <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
+          of the mod.
+        </p>
+        <p>
+          Entering hostnames doesn't work with the <a-int name="play" id="yuzu">yuzu</a-int> emulator.
+        </p>
       </b-tooltip>
       On newer versions of the mod the game will also ask for the port.
     </p>
