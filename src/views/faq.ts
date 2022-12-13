@@ -209,6 +209,80 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 111,
+      question : '<b-icon icon="laptop"/> Which emulator should I use?',
+      answer   : `
+        <h5><a-int name="play" id="ryujinx">Ryujinx</a-int></h5>
+        <ul class="ul-icons">
+          <li>
+            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
+            Accurate emulation that technically behaves more like a real Switch (less bugs).
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
+            Easy copy-paste mod installation.
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
+            Build-in update process for the emulator itself.
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            Might run slightly worse on older hardware.
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            Requires a <a-int name="faq" id="104">SMO 1.0.0 ROM</a-int>.
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            Requires a <a-ext href="https://github.com/Ryujinx/Ryujinx/wiki/Firmware-Dumping-Guide-(TegraExplorer-or-hbmenu-&amp;-Goldleaf)">firmware dump</a-ext>.
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            You have to manually create a new user profile (and enable internet access).
+          </li>
+        </ul>
+        <hr/>
+        <h5><a-int name="play" id="yuzu">yuzu</a-int></h5>
+        <ul class="ul-icons">
+          <li>
+            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
+            Might run slightly smoother on older hardware.
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
+            Easy to remove a patch to downgrade SMO to <code>1.0.0</code>.
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            Inaccurate emulation might cause graphical glitches and bugs.
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            Using DNS hostnames instead of IPv4 addresses to connect to a SMOO server doesn't work.
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            You have to select a network adapter in the settings and might chose the wrong one.
+            <b-icon icon="info-circle-fill" id="faq-yuzu-network-adapter"/>
+            <b-tooltip target="faq-yuzu-network-adapter" triggers="hover">
+              <p>Or you need to switch between different adapters depending on which server you want to connect to.</p>
+              <p>E.g. a VPN network adapter for a private server and another adapter for the internet connection to public servers.</p>
+            </b-tooltip>
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            More complicated mod installation
+            (might become easier <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/pull/38">in the future</a-ext>).
+          </li>
+        </ul>
+        <hr/>
+        Opinion: <code>Ryujinx</code> is the better emulator and you should try it out first.
+        If it doesn't work or the performance is bad on your hardware, you can try out <code>yuzu</code> to see if it helps or not.
+      `,
+    },
+    {
       id       : 105,
       question : '<b-icon icon="arrow-down-up"/> Am I on SMO version <code>1.0.0</code>?',
       answer   : `
