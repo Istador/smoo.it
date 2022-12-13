@@ -29,11 +29,6 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : 'TooMuchDog',
-    server   : { host: 'tmdog.smoo.it', ip: '37.19.200.25' },
-    location : { flag: 'us', name: 'US-East' },
-  },
-  {
     name     : 'F0C0S',
     server   : { host: 'f0c0s.smoo.it', ip: '94.130.25.137' },
     location : { flag: 'de', name: 'Germany' },
