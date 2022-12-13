@@ -97,6 +97,14 @@ body.smoo-dark-mode {
     color: $text-2;
   }
 
+  .smoo-view-host-commands {
+    .card-body > div, .card-body .sub-commands > div {
+      &:not(:first-child) {
+        border-top: 1px solid rgba(white, 0.05);
+      }
+    }
+  }
+
 
   header {
     nav {
