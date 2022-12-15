@@ -232,6 +232,11 @@ export default class FAQ extends Vue {
           </li>
           <li>
             <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            Additional network lag and therefore potential packet loss.
+            (Might already be <a-ext href="https://github.com/Ryujinx/Ryujinx/pull/3647">fixed</a-ext>.)
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
             Requires a <a-int name="faq" id="104">SMO 1.0.0 ROM</a-int>.
           </li>
           <li>
@@ -275,6 +280,10 @@ export default class FAQ extends Vue {
             <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
             More complicated mod installation
             (might become easier <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/pull/38">in the future</a-ext>).
+          </li>
+          <li>
+            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
+            <a-ext href="https://github.com/yuzu-emu/yuzu/issues/8666">Might not work</a-ext> on GNU/Linux at all.
           </li>
         </ul>
         <hr/>
