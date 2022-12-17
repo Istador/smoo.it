@@ -98,7 +98,8 @@
       <b>Step 1</b>:
       Download the latest
       <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-      of the mod (not the source code, unless you want to <a-int name="play" id="build">build it yourself</a-int>).
+      of the mod whose filename ends with <code>_for_yuzu.zip</code>.
+      The last asset in the list is the newest.
     </p>
     <p>
       <b>Step 2</b>:
@@ -110,28 +111,8 @@
     </p>
     <p>
       <b>Step 3</b>:
-      Create a new folder for the mod named however you like to, e.g. name it <code>SMOO</code>.
-    </p>
-    <p>
-      <b>Step 4</b>:
-      The file structure of yuzu is a bit different than that of the
-      <a-int name="play" id="switch">Nintendo Switch</a-int>
-      and
-      <a-int name="play" id="ryujinx">Ryujinx</a-int>.
-      This means that we manually need to extract the contents from the <code>.zip</code>
-      file that was downloaded in step 1 to different locations:
-      <ul class="ml-2">
-        <li>
-          The <code>exefs</code> and <code>romfs</code> folders inside the
-          <code>/atmosphere/contents/0100000000010000</code> directory
-          go into the new folder that was created with step 3.
-        </li>
-        <li>
-          The <code>3CA12DFAAF9C82DA064D1698DF79CDA1.ips</code> file inside the
-          <code>/atmosphere/exefs_patches/StarlightBase</code> directory
-          goes into the <code>exefs</code> folder that was extracted before.
-        </li>
-      </ul>
+      Extract the <code>SMOO</code> folder from the <code>.zip</code> file that you downloaded in step 1
+      into the mod directory that was opened at step 2.
     </p>
 
     <!-- Test that it works -->

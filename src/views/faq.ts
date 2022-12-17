@@ -220,10 +220,6 @@ export default class FAQ extends Vue {
           </li>
           <li>
             <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
-            Easy copy-paste mod installation.
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
             Build-in update process for the emulator itself.
           </li>
           <li>
@@ -275,11 +271,6 @@ export default class FAQ extends Vue {
               <p>Or you need to switch between different adapters depending on which server you want to connect to.</p>
               <p>E.g. a VPN network adapter for a private server and another adapter for the internet connection to public servers.</p>
             </b-tooltip>
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            More complicated mod installation
-            (might become easier <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/pull/38">in the future</a-ext>).
           </li>
           <li>
             <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
