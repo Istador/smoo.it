@@ -62,7 +62,8 @@
       <b>Step 1</b>:
       Download the latest
       <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-      of the mod (not the source code, unless you want to <a-int name="play" id="build">build it yourself</a-int>).
+      of the mod whose filename ends with <code>_for_Ryujinx.zip</code>.
+      The last asset in the list is the newest.
     </p>
     <p>
       <b>Step 2</b>:
