@@ -68,7 +68,7 @@
           </b-tooltip>
         </li>
         <li>
-          <b-badge variant="info">Optional</b-badge>
+          <b-badge variant="primary">Optional</b-badge>
           While you are still in the <code>System</code> settings, head over to the <code>Profiles</code> tab
           to create a new user with a name you like. The name of the profile will be shown to other players.
           Once the profile is created, simply click on it once to select it as the current user. Otherwise you're displayed with the name <code>yuzu</code>.
