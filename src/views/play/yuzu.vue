@@ -68,12 +68,29 @@
           </b-tooltip>
         </li>
         <li>
-          [Optional] While you are still in the <code>System</code> settings, head over to the <code>Profiles</code> tab
+          <b-badge variant="info">Optional</b-badge>
+          While you are still in the <code>System</code> settings, head over to the <code>Profiles</code> tab
           to create a new user with a name you like. The name of the profile will be shown to other players.
           Once the profile is created, simply click on it once to select it as the current user. Otherwise you're displayed with the name <code>yuzu</code>.
         </li>
       </ul>
     </p>
+
+    <b-alert variant="warning" show>
+      <b-icon icon="exclamation-triangle" class="text-danger" font-scale="1.5"/>
+      If you share your yuzu directory with others, then the previous step is not optional for the other players.
+      <b-icon icon="info-circle-fill" id="play-yuzu-profile-id"/>
+      <b-tooltip target="play-yuzu-profile-id" triggers="hover">
+        <p>
+          Every player connected to the same server needs a unique profile ID.
+          Renaming the existing profile is not enough, because the profile ID needs to be different.
+        </p>
+        <p>
+          Yuzu automatically generates a random profile ID on the first start.
+          But by sharing the whole directory with others, the already generated profile ID is copied too.
+        </p>
+      </b-tooltip>
+    </b-alert>
 
     <!-- Install the Super Mario Odyssey Online mod -->
     <h5>Install the Super Mario Odyssey Online mod</h5>
