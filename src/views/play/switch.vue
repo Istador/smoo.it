@@ -37,7 +37,7 @@
     <b-alert variant="warning" show>
       <p>
         <b-icon icon="exclamation-triangle" class="text-danger" font-scale="1.5"/>
-        Using <code>extFAT</code> instead of <code>FAT32</code> for the SD card will likely result in a corrupted downgrade that will crash the game or console.
+        Using <code>exFAT</code> instead of <code>FAT32</code> for the SD card will likely result in a corrupted downgrade that will crash the game or console.
       </p>
       <p>
         A prerequisite for the downgrader is that you already
