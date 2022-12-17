@@ -34,6 +34,17 @@
       it makes a dump of the base game and applies it as a mod to the game.
       That way the installed game will stay on version <code>1.3.0</code> but it will launch as <code>1.0.0</code>.
     </p>
+    <b-alert variant="warning" show>
+      <p>
+        <b-icon icon="exclamation-triangle" class="text-danger" font-scale="1.5"/>
+        Using <code>extFAT</code> instead of <code>FAT32</code> for the SD card will likely result in a corrupted downgrade that will crash the game or console.
+      </p>
+      <p>
+        A prerequisite for the downgrader is that you already
+        backed up the <code>console keys</code> with <code>Lockpick_RCM</code>,
+        which you should have already done when <a-int name="faq" id="103">hacking the console</a-int> for safety reasons.
+      </p>
+    </b-alert>
     <p>
       <ul>
         <li>
@@ -42,19 +53,6 @@
         </li>
         <li>
           Put the file onto your SD card into the <code>/switch/</code> directory.
-          <b-icon icon="info-circle-fill" id="play-downgrade-keys"/>
-          <b-tooltip target="play-downgrade-keys" triggers="hover">
-            <p>
-              Please keep in mind, that the <code>Osyssey Downgrade</code> needs the
-              <a-int name="faq" id="103">console keys</a-int>
-              on the SD card in order to work.
-            </p>
-            <p>
-              And again: it is highly recommended to use <code>FAT32</code> and not <code>extFAT</code>
-              for the SD card.
-              Otherwise the downgrade will likely be corrupted and doesn't work.
-            </p>
-          </b-tooltip>
         </li>
         <li>
           Launch the homebrew menu by opening the <code>Album</code>.
