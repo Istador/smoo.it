@@ -56,6 +56,14 @@
       To achieve this, the <code>Developer Mode</code> needs to be enabled first in the Discord app settings (under <code>User Settings &gt; App Settings &gt; Advanced</code>).
       Once that is enabled, we can right click on the channel and choose <code>Copy ID</code>.
     </p>
+    <h5>Create a command channel</h5>
+    <p>
+      Create a new channel on the Discord Server where the bot shall receive commands from.
+      As with the log channel we need to give the channel ID to the SMOO server to link them.
+    </p>
+    <p>
+      Alternatively we can also use the same channel for the logs and commands or only create and configure one of them.
+    </p>
     <h5>Configure the server</h5>
 <code class="style float-right ml-3 mb-3">
 <label>settings.json</label>
@@ -63,12 +71,13 @@
 <b>"Discord"</b>: {
   <b>"Token"</b>: <a>"MTAwND...TI0c"</a>,
   <b>"Prefix"</b>: <a>"$"</a>,
+  <b>"CommandChannel"</b>: <a>"993864963574140000"</a>,
   <b>"LogChannel"</b>: <a>"993864963574140000"</a>
 }
 </pre>
 </code>
     <p>
-      Now that we have set everything else up and have the bot token and the channel ID we need to enter both into the
+      Now that we have set everything else up and have the bot token and the channel IDs we need to enter them into the
       <a-int name="host" id="settings">settings.json</a-int>.
       After changing the <code>settings.json</code> we either need to restart the SMOO server or send it the
       <kbd>loadsettings</kbd> <a-int name="host" id="commands">command</a-int>.
