@@ -56,10 +56,25 @@
       To achieve this, the <code>Developer Mode</code> needs to be enabled first in the Discord app settings (under <code>User Settings &gt; App Settings &gt; Advanced</code>).
       Once that is enabled, we can right click on the channel and choose <code>Copy ID</code>.
     </p>
+    <p>
+      The bot requires the following permissions for the log channel:
+      <ul>
+        <li><code>General Permissions &gt; View Channel</code></li>
+        <li><code>Text Persmissions &gt; Send Messages</code></li>
+      </ul>
+    </p>
     <h5>Create a command channel</h5>
     <p>
       Create a new channel on the Discord Server where the bot shall receive commands from.
       As with the log channel we need to give the channel ID to the SMOO server to link them.
+    </p>
+    <p>
+      The bot requires the following permissions for the command channel:
+      <ul>
+        <li><code>General Permissions &gt; View Channel</code></li>
+        <li><code>Text Persmissions &gt; Send Messages</code></li>
+        <li><code>Text Persmissions &gt; Read Message History</code></li>
+      </ul>
     </p>
     <p>
       Alternatively we can also use the same channel for the logs and commands or only create and configure one of them.
