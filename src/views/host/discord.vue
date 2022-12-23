@@ -24,6 +24,7 @@
       Navigate to the <code>Bot</code> section of the new application and <code>Add Bot</code>.
       Change its username to one you like and maybe add a nice avatar (you'll see this in Discord).
       Uncheck the <code>Public Bot</code> setting that is enabled by default.
+      Also make sure that <code>Message Content Intent</code> is enabled, if you want to send commands to the bot.
     </p>
     <h5>Generate a bot token</h5>
     <p>
