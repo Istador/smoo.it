@@ -409,7 +409,7 @@ export default class FAQ extends Vue {
           Make sure that you read all instructions on this website thoroughly before bothering other people.
         </p>
         <p>
-          If you sill can't figure it out or have problems, head over to the
+          If you still can't figure it out or have problems, head over to the
           <a-ext href="https://discord.gg/w3TnB899ww">official Discord server</a-ext>.
           It's an active community of people that might be able and willing to help you in one of the help channels.
         </p>
