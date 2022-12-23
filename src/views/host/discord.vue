@@ -61,7 +61,7 @@
       The bot requires the following permissions for the log channel:
       <ul>
         <li><code>General Permissions &gt; View Channel</code></li>
-        <li><code>Text Persmissions &gt; Send Messages</code></li>
+        <li><code>Text Permissions &gt; Send Messages</code></li>
       </ul>
     </p>
     <h5>Create a command channel</h5>
@@ -73,8 +73,8 @@
       The bot requires the following permissions for the command channel:
       <ul>
         <li><code>General Permissions &gt; View Channel</code></li>
-        <li><code>Text Persmissions &gt; Send Messages</code></li>
-        <li><code>Text Persmissions &gt; Read Message History</code></li>
+        <li><code>Text Permissions &gt; Send Messages</code></li>
+        <li><code>Text Permissions &gt; Read Message History</code></li>
       </ul>
     </p>
     <p>
