@@ -32,7 +32,11 @@
   <b>"Discord"</b>: {
     <b>"Token"</b>: <i>null</i>,
     <b>"Prefix"</b>: <a>"$"</a>,
+    <b>"CommandChannel"</b>: <i>null</i>,
     <b>"LogChannel"</b>: <i>null</i>
+  },
+  <b>"Shines"</b>: {
+    <b>"Enabled"</b>: <i>true</i>
   },
   <b>"PersistShines"</b>: {
     <b>"Enabled"</b>: <i>false</i>,
@@ -43,7 +47,7 @@
 </code>
     <p>
       The <code>settings.json</code> file is automatically created when the server starts.
-      At the right you can see the default values for server version <code>1.0.2</code>.
+      At the right or above you can see the default values for server version <code>1.0.3</code>.
     </p>
     <ul>
       <li><b>Server</b>:
@@ -137,12 +141,37 @@
             to it.
           </li>
           <li>
+            <b>CommandChannel</b>:
+            <b-badge variant="primary" v-b-tooltip.html="'This setting was added with server version <code>1.0.3</code>.'">1.0.3</b-badge>
+            You can enter the unique ID of the Discord channel (between double quotes <code>"</code>) the bot should receive commands from.
+          </li>
+          <li>
             <b>LogChannel</b>:
-            You can enter the unique ID of the Discord channel the bot should write log messages to (as a string).
+            You can enter the unique ID of the Discord channel (between double quotes <code>"</code>) the bot should write log messages to.
           </li>
         </ul>
       </li>
-      <li><b>PersistShines</b>: An option to save shines (moons) collected into a file, to survive server restarts and crashes.
+      <li>
+        <b>Shines</b>:
+        <b-badge variant="primary" v-b-tooltip.html="'This setting was added with server version <code>1.0.3</code>.'">1.0.3</b-badge>
+        <ul>
+          <li>
+            <b>Enabled</b>:
+            <code>true</code> or <code>false</code>.
+            Can be used to disable moon synchronization between players.
+            <b-icon icon="info-circle-fill" id="server-settings-shines"/>
+            <b-tooltip target="server-settings-shines" triggers="hover">
+              Disabling it might not work correctly with server version <code>1.0.3</code>.
+              It prevents the server from saving them, but the collected moons are still send to all connected players.
+              Ths should be fixed with later versions.
+            </b-tooltip>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>PersistShines</b>:
+        <b-badge variant="primary" v-b-tooltip.html="'These settings were added with server version <code>1.0.2</code>.'">1.0.2</b-badge>
+        An option to save shines (moons) collected into a file, to survive server restarts and crashes.
         <ul>
           <li>
             <b>Enabled</b>:
