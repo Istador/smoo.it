@@ -81,8 +81,8 @@
 <b>"Discord"</b>: {
   <b>"Token"</b>: <a>"MTAwND...TI0c"</a>,
   <b>"Prefix"</b>: <a>"$"</a>,
-  <b>"CommandChannel"</b>: <a>"993864963574140001"</a>,
-  <b>"LogChannel"</b>: <a>"993864963574140002"</a>
+  <b>"CommandChannel"</b>: <a>"993864963574140002"</a>,
+  <b>"LogChannel"</b>: <a>"993864963574140001"</a>
 }
 </pre>
 </code>
