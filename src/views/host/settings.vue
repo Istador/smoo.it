@@ -143,11 +143,11 @@
           <li>
             <b>CommandChannel</b>:
             <b-badge variant="primary" v-b-tooltip.html="'This setting was added with server version <code>1.0.3</code>.'">1.0.3</b-badge>
-            You can enter the unique ID of the Discord channel (between double quotes <code>"</code>) the bot should receive commands from.
+            You can enter the unique ID of the Discord channel (between double quotes <code>"</code>) the bot should receive commands from but not send log messages to.
           </li>
           <li>
             <b>LogChannel</b>:
-            You can enter the unique ID of the Discord channel (between double quotes <code>"</code>) the bot should write log messages to.
+            You can enter the unique ID of the Discord channel (between double quotes <code>"</code>) the bot should write log messages to and receive commands from.
           </li>
         </ul>
       </li>
