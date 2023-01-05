@@ -69,6 +69,7 @@ scan_all() {
     rcl.smoo.it:1029:${RCL_3:-}
     krokilex.smoo.it
     jeff.smoo.it
+    luis.smoo.it:1021
   )
   local stamp=`date --iso-8601=seconds`
   local output=(`parallel --colsep=:  -j 4  -k  --nice 19  scan_one  :::  "${servers[@]}"`)
