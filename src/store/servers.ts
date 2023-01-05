@@ -108,6 +108,18 @@ export const servers: IServer[] = [
       Server: { MaxPlayers: 6 },
     },
   },
+  {
+    name     : 'Luis HideAndSeek',
+    server   : { host: 'luis.smoo.it', ip: '45.134.39.117', port: 1021 },
+    location : { flag: 'nl', name: 'Netherlands' },
+    version  : linkRelease('1.0.3'),
+    settings : {
+      Server        : { MaxPlayers: 8 },
+      Scenario      : { MergeEnabled: false },
+      Shines        : { Enabled: false },
+      PersistShines : { Enabled: false },
+    },
+  },
 ].map((s: IServer) => {
   s.server.state = null
   return s
