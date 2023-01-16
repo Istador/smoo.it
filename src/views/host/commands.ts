@@ -1,5 +1,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 
+import { TKingdom, kingdom2name } from '@/store/kingdoms'
+
 const first = 'First Visit'
 const kfr = 'Koopa Freerunning'
 const revisit = 'Revisit/Peace'
@@ -9,31 +11,11 @@ const rock = 'Moon Rock'
 const balloon = 'Balloon World'
 const night = 'Night'
 
-export const stages = {
-  cap     : 'Cap Kingdom',
-  cascade : 'Cascade Kingdom',
-  sand    : 'Sand Kingdom',
-  lake    : 'Lake Kingdom',
-  wooded  : 'Wooded Kingdom',
-  cloud   : 'Cloud Kingdom',
-  lost    : 'Lost Kingdom',
-  metro   : 'Metro Kingdom',
-  sea     : 'Seaside Kingdom',
-  snow    : 'Snow Kingdom',
-  lunch   : 'Luncheon Kingdom',
-  ruined  : 'Ruined Kingdom',
-  bowser  : 'Bowser\'s Kingdom',
-  moon    : 'Moon Kingdom',
-  mush    : 'Mushroom Kingdom',
-  dark    : 'Dark Side',
-  darker  : 'Darker Side',
-}
-
 @Component
 export default class HostCommands extends Vue {
-  stages = stages
+  kingdoms = kingdom2name
 
-  scenarios = {
+  scenarios : { [key in TKingdom]: (string|undefined)[] } = {
     cap     : [ first,      revisit,           post,           rock,    balloon,        kfr,            'Trailer' ],
     cascade : [ first,      revisit,           post,           rock,    kfr,            balloon,        undefined,           'E3/Trailer' ],
     sand    : [ first,      night,             peace,          post,    rock,           balloon,        kfr,                 'Kiosk Demo' ],

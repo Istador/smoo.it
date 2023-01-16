@@ -5,7 +5,7 @@ import moment from 'moment'
 import { IHost, ISettings, IPlayer } from '@/types'
 import XServers, { getState, getResult } from '@/store/xservers'
 
-import { stages } from '@/views/host/commands'
+import { kingdom2name } from '@/store/kingdoms'
 
 @Component({})
 export default class SmooServerState extends Vue {
@@ -18,7 +18,7 @@ export default class SmooServerState extends Vue {
   @Prop({ required: false, type: Object, default: null })
   settings! : ISettings | null
 
-  stages = stages
+  kingdoms = kingdom2name
 
   get state () { return getState(this.server) }
   get stamp () { return XServers.stamp }

@@ -42,7 +42,7 @@
           <tbody>
             <tr v-for="(player, idx) of players" :key="name + ';' + idx + ';' + player.Name">
               <td>{{ player.Name || '?' }}</td>
-              <td>{{ stages[player.Stage] || player.Stage || '' }}</td>
+              <td>{{ kingdoms[player.Stage] || player.Stage || '' }}</td>
               <td class="costume">
                 <div class="costume-cap"  v-if="player.Costume && player.Costume.Cap">{{ player.Costume.Cap }}</div>
                 <div class="costume-body" v-if="player.Costume && player.Costume.Body">{{ player.Costume.Body }}</div>

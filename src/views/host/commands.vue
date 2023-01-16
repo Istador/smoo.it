@@ -285,7 +285,7 @@
           <tr> <th>Stage</th> <th>Name</th> </tr>
         </thead>
         <tbody>
-          <tr v-for="(v, k) in stages" :key="k">
+          <tr v-for="(v, k) in kingdoms" :key="k">
             <th><kbd>{{ k }}</kbd></th>
             <td>{{ v }}</td>
           </tr>
@@ -301,7 +301,7 @@
           v-for="(arr, k) in scenarios"
           :key="k"
           accordion="host-commands-scenarios"
-          :header="stages[k]"
+          :header="kingdoms[k]"
         >
           <table class="table table-striped table-borderless table-sm mb-0">
             <thead>
