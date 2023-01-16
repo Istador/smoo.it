@@ -57,7 +57,7 @@
       <ul>
         <li>
           <kbd>&lt;stage&gt;</kbd>
-          <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-commands-stages>show possible values</b-btn>
+          <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
         </li>
       </ul>
     </div>
@@ -69,7 +69,7 @@
       <ul>
         <li>
           <kbd>&lt;stage&gt;</kbd>
-          <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-commands-stages>show possible values</b-btn>
+          <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
         </li>
         <li>
           <kbd>&lt;warp-id&gt;</kbd>
@@ -278,11 +278,16 @@
       Stops the server.
     </div>
 
-    <b-modal id="host-commands-stages" hide-footer>
-      <template #modal-title><kbd>&lt;stage&gt;</kbd> values for <kbd>send</kbd> and <kbd>sendall</kbd></template>
+    <!-- Modal: stage alias values -->
+    <b-modal id="host-commands-stage-alias" hide-footer>
+      <template #modal-title><kbd>&lt;stage&gt;</kbd> alias values for <kbd>send</kbd> and <kbd>sendall</kbd></template>
+      <p>
+        These are short memorable alias values known by the server to quickly reference the overworld stage
+        of a kingdom for the <kbd>send</kbd> and <kbd>sendall</kbd> commands.
+      </p>
       <table class="table table-striped table-borderless table-sm mb-0">
         <thead>
-          <tr> <th>Stage</th> <th>Name</th> </tr>
+          <tr> <th>Alias</th> <th>Kingdom</th> </tr>
         </thead>
         <tbody>
           <tr v-for="(v, k) in kingdoms" :key="k">
@@ -293,6 +298,7 @@
       </table>
     </b-modal>
 
+    <!-- Modal: scenario values -->
     <b-modal id="host-commands-scenarios" hide-footer>
       <template #modal-title><kbd>&lt;scenario&gt;</kbd> values for <kbd>send</kbd></template>
 
@@ -320,6 +326,7 @@
         </smoo-card>
       </div>
     </b-modal>
+
   </smoo-card>
 </template>
 
