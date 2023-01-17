@@ -6,6 +6,7 @@ import { store, isset } from './index'
   name          : 'dark-mode',
   store         : store,
   dynamic       : true,
+  namespaced    : true,
   preserveState : isset('dark-mode'),
 })
 class XDarkMode extends VuexModule {

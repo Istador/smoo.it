@@ -1,6 +1,9 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 import { TKingdom, kingdom2name } from '@/store/kingdoms'
+import { Stages } from '@/store/xstages'
+
+import SmooHint from '@/components/SmooHint.vue'
 
 const first = 'First Visit'
 const kfr = 'Koopa Freerunning'
@@ -11,9 +14,14 @@ const rock = 'Moon Rock'
 const balloon = 'Balloon World'
 const night = 'Night'
 
-@Component
+@Component({
+  components: {
+    SmooHint,
+  },
+})
 export default class HostCommands extends Vue {
   kingdoms = kingdom2name
+  stages = Stages
 
   scenarios : { [key in TKingdom]: (string|undefined)[] } = {
     cap     : [ first,      revisit,           post,           rock,    balloon,        kfr,            'Trailer' ],

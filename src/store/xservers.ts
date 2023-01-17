@@ -23,6 +23,7 @@ export interface Result {
   name          : 'servers',
   store         : store,
   dynamic       : true,
+  namespaced    : true,
   preserveState : isset('servers'),
 })
 class XServers extends VuexModule {

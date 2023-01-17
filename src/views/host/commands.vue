@@ -57,7 +57,8 @@
       <ul>
         <li>
           <kbd>&lt;stage&gt;</kbd>
-          <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
+          <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
+          <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-known>show known values</b-btn>
         </li>
       </ul>
     </div>
@@ -69,7 +70,8 @@
       <ul>
         <li>
           <kbd>&lt;stage&gt;</kbd>
-          <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
+          <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
+          <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-known>show known values</b-btn>
         </li>
         <li>
           <kbd>&lt;warp-id&gt;</kbd>
@@ -296,6 +298,71 @@
           </tr>
         </tbody>
       </table>
+    </b-modal>
+
+    <!-- Modal: known stage values -->
+    <b-modal id="host-commands-stage-known" hide-footer size="lg" @show="stages.fetch">
+      <template #modal-title><kbd>&lt;stage&gt;</kbd> values for <kbd>send</kbd> and <kbd>sendall</kbd></template>
+
+      <b-overlay :show="stages.loading" variant="transparent" no-wrap />
+      <div v-if="stages.loading && !stages.initialized && !stages.error" style="min-height: 10rem;"/>
+
+      <b-alert show variant="danger" v-if="stages.error && !stages.initialized">
+        <b-icon icon="exclamation-triangle" scale="1.2" class="mr-2"/>
+        <b>Error:</b>
+        {{ stages.error }}
+      </b-alert>
+
+      <div class="smoo-accordion accordion">
+        <smoo-card
+          v-for="(ks, k) in stages.result || []"
+          :key="k"
+          accordion="host-commands-scenarios"
+          :header="(k === 'all' ? 'All' : kingdoms[k] || 'Unknown')"
+        >
+          <div class="table-responsive">
+            <table class="table table-striped table-borderless text-left table-sm mb-0">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th style="min-width: 150px;">Name</th>
+                  <th>Hints</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(stage, s) in ks" :key="s">
+                  <td><kbd>{{ s }}</kbd></td>
+                  <td>
+                    {{ stage.name || '?' }}
+                    <b-icon-box v-if="stage.extra" v-b-tooltip="'Moon Rock'" scale="1.1" style="color: #b79800;"/>
+                  </td>
+                  <td>
+                    <b-button-group size="sm">
+                      <!-- Subarea? -->
+                      <smoo-hint icon="globe"      v-if="(stage.subarea || false) === false" title="Overworld" />
+                      <smoo-hint icon="house-door" v-if="stage.subarea === true"             title="Subarea"   />
+                      <smoo-hint icon="snow"       v-if="stage.subarea === 'shiveria'"       title="Shiveria"  />
+                      <smoo-hint icon="tree-fill"  v-if="stage.subarea === 'deep'"           title="<b>Deep Woods</b><br/>Considered its own Kingdom in Hide &amp; Seek!" />
+                      <smoo-hint icon="x-circle"   v-if="stage.subarea === 'boss'"           title="<b>Boss Fight</b><br/>Forbidden in Hide &amp; Seek!" />
+
+                      <!-- Top/Bottom -->
+                      <smoo-hint icon="arrow-up"    v-if="stage.top  === true"  title="Top"    />
+                      <smoo-hint icon="arrow-down"  v-if="stage.top  === false" title="Bottom" />
+
+                      <!-- Left/Right -->
+                      <smoo-hint icon="arrow-left"  v-if="stage.left === true"  title="Left"   />
+                      <smoo-hint icon="arrow-right" v-if="stage.left === false" title="Right"  />
+
+                      <!-- Section -->
+                      <smoo-hint v-if="stage.cell" :title="'Section ' + stage.cell">{{stage.cell}}</smoo-hint>
+                    </b-button-group>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </smoo-card>
+      </div>
     </b-modal>
 
     <!-- Modal: scenario values -->
