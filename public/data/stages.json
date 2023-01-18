@@ -96,6 +96,7 @@
     "SnowWorldTownStage"         : { "name": "Shiveria Town",                       "subarea": "shiveria", "top": true,  "left": true,  "cell": "B3" },
     "SnowWorldShopStage"         : { "name": "Shop",                                "subarea": "shiveria", "top": true,  "left": true,  "cell": "B3" },
     "SnowWorldLobby000Stage"     : { "name": "Snowline Circuit",                    "subarea": "shiveria", "top": true,  "left": true,  "cell": "B3" },
+    "SnowWorldLobby001Stage"     : { "name": "Snowline Circuit",                    "subarea": "shiveria", "top": true,  "left": true,  "cell": "B3" },
     "SnowWorldRaceTutorialStage" : { "name": "Snowline Circuit Tutorial",           "subarea": "shiveria", "top": true,  "left": true,  "cell": "B3" },
     "SnowWorldRace000Stage"      : { "name": "Bound Bowl Grand Prix",               "subarea": "shiveria", "top": true,  "left": true,  "cell": "B3" },
     "SnowWorldRace001Stage"      : { "name": "Bound Bowl Grand Prix S",             "subarea": "shiveria", "top": true,  "left": true,  "cell": "B3" },
