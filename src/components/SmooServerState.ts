@@ -5,7 +5,8 @@ import moment from 'moment'
 import { IHost, ISettings, IPlayer } from '@/types'
 import XServers, { getState, getResult } from '@/store/xservers'
 
-import { kingdom2name } from '@/store/kingdoms'
+import { kingdom2name, TKingdom } from '@/store/kingdoms'
+import { Stages } from '@/store/xstages'
 
 @Component({})
 export default class SmooServerState extends Vue {
@@ -19,6 +20,7 @@ export default class SmooServerState extends Vue {
   settings! : ISettings | null
 
   kingdoms = kingdom2name
+  stages = Stages
 
   get state () { return getState(this.server) }
   get stamp () { return XServers.stamp }
@@ -98,6 +100,17 @@ export default class SmooServerState extends Vue {
       + (state !== 'loading' && stamp ? ' &bull; ' + moment(stamp).fromNow() : '')
       + '</p>'
       + (settings.length ? '<p>' + settings.join('<br/>') + '</p>' : '')
+  }
+
+  stage2kingdom (stage: string) : TKingdom | null {
+    const stages = this.stages.result
+    if (!stages) { return null }
+    for (const k of Object.keys(kingdom2name)) {
+      if (stage in stages[k as TKingdom]) {
+        return k as TKingdom
+      }
+    }
+    return null
   }
 
   mounted () {

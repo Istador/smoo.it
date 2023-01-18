@@ -25,24 +25,34 @@
       :id="'smoo-server-state-players-' + _uid"
       lazy
       hide-footer
+      @show="stages.fetch"
     >
       <template #modal-title>
         Players on <code>{{ name }}</code>
       </template>
 
-      <b-overlay :show="state == 'loading'">
+      <b-overlay :show="state == 'loading'" variant="transparent">
         <table class="table table-striped table-borderless table-sm mb-0 smoo-server-players">
           <thead>
             <tr>
               <th>Player</th>
-              <th>Stage</th>
+              <th>Location</th>
               <th>Costume</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(player, idx) of players" :key="name + ';' + idx + ';' + player.Name">
               <td>{{ player.Name || '?' }}</td>
-              <td>{{ kingdoms[player.Stage] || player.Stage || '' }}</td>
+              <td :data-kingdom="k = stages.initialized && stage2kingdom(player.Stage)">
+                <b-overlay :show="stages.loading" variant="transparent">
+                  <div class="location-kingdom" v-if="k">{{ kingdoms[k] }}</div>
+                  <div class="location-stage">
+                    <span v-b-tooltip="{boundary:'viewport',placement:'bottom'}" :title="player.Stage">
+                      {{ k ? stages.result[k][player.Stage].name : (player.Stage === 'HomeShipInsideStage' ? 'Odyssey' : 'Unknown Stage') }}
+                    </span>
+                  </div>
+                </b-overlay>
+              </td>
               <td class="costume">
                 <div class="costume-cap"  v-if="player.Costume && player.Costume.Cap">{{ player.Costume.Cap }}</div>
                 <div class="costume-body" v-if="player.Costume && player.Costume.Body">{{ player.Costume.Body }}</div>
@@ -66,6 +76,7 @@
 .smoo-server-players {
   .costume-cap::before { content: 'Cap: '; opacity: 0.5; }
   .costume-body::before { content: 'Body: '; opacity: 0.5; }
+  .location-kingdom + .location-stage { opacity: 0.5; }
 }
 </style>
 
