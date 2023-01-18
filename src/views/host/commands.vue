@@ -251,6 +251,7 @@
             <li>
               <kbd>&lt;shine-id&gt;</kbd>
               The unique ID for an individual shine (moon) in the game.
+              <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-shine-id>show known values</b-btn>
             </li>
             <li>
               <kbd>&lt;player-name&gt;...</kbd>
@@ -283,6 +284,7 @@
     <stages-alias-modal id="host-commands-stage-alias"/>
     <stages-known-modal id="host-commands-stage-known"/>
     <scenarios-modal id="host-commands-scenarios"/>
+    <moons-modal id="host-commands-shine-id"/>
   </smoo-card>
 </template>
 
