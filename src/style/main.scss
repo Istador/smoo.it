@@ -23,3 +23,11 @@ ul {
     margin-bottom: 0;
   }
 }
+
+// make fontawesome icons as big as bootstrap-vue icons
+.btn, .dropdown-item, .dropdown-toggle, .input-group-text, .nav-link {
+  .svg-inline--fa {
+    font-size: 125%;
+    vertical-align: text-bottom;
+  }
+}

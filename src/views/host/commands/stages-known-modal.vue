@@ -38,11 +38,11 @@
                 <td>
                   <b-button-group size="sm">
                     <!-- Subarea? -->
-                    <smoo-hint icon="globe"      v-if="(stage.subarea || false) === false" title="Overworld" />
-                    <smoo-hint icon="house-door" v-if="stage.subarea === true"             title="Subarea"   />
-                    <smoo-hint icon="snow"       v-if="stage.subarea === 'shiveria'"       title="Shiveria"  />
-                    <smoo-hint icon="tree-fill"  v-if="stage.subarea === 'deep'"           title="<b>Deep Woods</b><br/>Considered its own Kingdom in Hide &amp; Seek!" />
-                    <smoo-hint icon="x-circle"   v-if="stage.subarea === 'boss'"           title="<b>Boss Fight</b><br/>Forbidden in Hide &amp; Seek!" />
+                    <smoo-hint icon="globe"           v-if="(stage.subarea || false) === false" title="Overworld" />
+                    <smoo-hint icon="house-door"      v-if="stage.subarea === true"             title="Subarea"   />
+                    <smoo-hint icon="snow"            v-if="stage.subarea === 'shiveria'"       title="Shiveria"  />
+                    <smoo-hint icon="tree-fill"       v-if="stage.subarea === 'deep'"           title="<b>Deep Woods</b><br/>Considered its own Kingdom in Hide &amp; Seek!" />
+                    <smoo-hint fa="fa-solid fa-skull" v-if="stage.subarea === 'boss'"           title="<b>Boss Fight</b><br/>Forbidden in Hide &amp; Seek!" />
 
                     <!-- Top/Bottom -->
                     <smoo-hint icon="arrow-up"    v-if="stage.top  === true"  title="Top"    />
