@@ -67,6 +67,7 @@ body.smoo-dark-mode {
   }
 
   .table {
+    color: $text-2;
     color: unset;
     th, td {
       border-color: rgba($text-1, 0.1);
