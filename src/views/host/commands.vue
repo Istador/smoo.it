@@ -334,7 +334,7 @@
                   <td><kbd>{{ s }}</kbd></td>
                   <td>
                     {{ stage.name || '?' }}
-                    <b-icon-box v-if="stage.extra" v-b-tooltip="'Moon Rock'" scale="1.1" style="color: #b79800;"/>
+                    <span v-if="stage.extra" v-b-tooltip="{boundary:'viewport'}" title="Moon Rock" style="color: #b79800;"><b-icon-box scale="1.1"/></span>
                   </td>
                   <td>
                     <b-button-group size="sm">
