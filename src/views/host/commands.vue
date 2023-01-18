@@ -305,19 +305,20 @@
       <template #modal-title><kbd>&lt;stage&gt;</kbd> values for <kbd>send</kbd> and <kbd>sendall</kbd></template>
 
       <b-overlay :show="stages.loading" variant="transparent" no-wrap />
-      <div v-if="stages.loading && !stages.initialized && !stages.error" style="min-height: 10rem;"/>
+      <div v-if="!stages.initialized && !stages.error" style="min-height: 10rem;"/>
 
       <b-alert show variant="danger" v-if="stages.error && !stages.initialized">
+        <b-btn title="retry" size="sm" class="float-right" @click="stages.fetch"><b-icon icon="arrow-counterclockwise"/></b-btn>
         <b-icon icon="exclamation-triangle" scale="1.2" class="mr-2"/>
         <b>Error:</b>
-        {{ stages.error }}
+        <div>{{ stages.error }}</div>
       </b-alert>
 
-      <div class="smoo-accordion accordion">
+      <div class="smoo-accordion accordion" v-if="stages.initialized">
         <smoo-card
-          v-for="(ks, k) in stages.result || []"
+          v-for="(kstages, k) in stages.result || []"
           :key="k"
-          accordion="host-commands-scenarios"
+          accordion="host-commands-stage-known"
           :header="(k === 'all' ? 'All' : kingdoms[k] || 'Unknown')"
         >
           <div class="table-responsive">
@@ -330,7 +331,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="(stage, s) in ks" :key="s">
+                <tr v-for="(stage, s) in kstages" :key="s">
                   <td><kbd>{{ s }}</kbd></td>
                   <td>
                     {{ stage.name || '?' }}
