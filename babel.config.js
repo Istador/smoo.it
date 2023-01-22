@@ -1,5 +1,8 @@
 module.exports = {
   compact : true,
+  plugins : [
+    'transform-unicode-regexp-runtime',
+  ],
   presets : [
     [
       '@vue/cli-plugin-babel/preset',
