@@ -12,7 +12,7 @@ get_details() {
     | jq -c '{
         Settings: .Settings | {
           Server: .Server | {
-            MaxPlayers: .MaxPlayers | del(select(type |. != "number")),
+            MaxPlayers: .MaxPlayers | del(select(type | . != "number")),
           } | with_entries(select(.value != null)),
           Scenario: .Scenario | {
             MergeEnabled: .MergeEnabled | del(select(type | . != "boolean")),
@@ -22,6 +22,11 @@ get_details() {
           } | with_entries(select(.value != null)),
           PersistShines: .PersistShines | {
             Enabled: .Enabled | del(select(type | . != "boolean")),
+          } | with_entries(select(.value != null)),
+          Udp: .Udp | {
+            InitiateHandshake : .InitiateHandshake | del(select(type | . != "boolean")),
+            BasePort          : .BasePort          | del(select(type | . != "number")),
+            PortCount         : .PortCount         | del(select(type | . != "number")),
           } | with_entries(select(.value != null)),
         } | with_entries(select(.value != null and .value != {})),
         Players: (if .Players == null then null else .Players | map(. | {
