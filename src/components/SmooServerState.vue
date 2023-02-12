@@ -25,7 +25,7 @@
       :id="'smoo-server-state-players-' + _uid"
       lazy
       hide-footer
-      @show="stages.fetch"
+      @show="hasStages && stages.fetch()"
     >
       <template #modal-title>
         Players on <code>{{ name }}</code>
@@ -36,14 +36,14 @@
           <thead>
             <tr>
               <th>Player</th>
-              <th>Location</th>
-              <th>Costume</th>
+              <th v-if="hasLocations">Location</th>
+              <th v-if="hasCostumes">Costume</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(player, idx) of players" :key="name + ';' + idx + ';' + player.Name">
               <td>{{ player.Name || '?' }}</td>
-              <td :data-kingdom="k = stages.initialized && stage2kingdom(player.Stage)">
+              <td v-if="hasLocations" :data-kingdom="k = stages.initialized && stage2kingdom(player.Stage)">
                 <b-overlay :show="stages.loading" variant="transparent">
                   <div class="location-kingdom" v-if="k">{{ kingdoms[k] }}</div>
                   <div class="location-stage">
@@ -53,7 +53,7 @@
                   </div>
                 </b-overlay>
               </td>
-              <td class="costume">
+              <td v-if="hasCostumes" class="costume">
                 <div class="costume-cap"  v-if="player.Costume && player.Costume.Cap">{{ player.Costume.Cap }}</div>
                 <div class="costume-body" v-if="player.Costume && player.Costume.Body">{{ player.Costume.Body }}</div>
               </td>

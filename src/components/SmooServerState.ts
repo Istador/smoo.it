@@ -113,6 +113,18 @@ export default class SmooServerState extends Vue {
     return null
   }
 
+  get hasLocations () : boolean {
+    return !!(this.players && this.players.some(p => p.Stage))
+  }
+
+  get hasCostumes () : boolean {
+    return !!(this.players && this.players.some(p => p.Costume))
+  }
+
+  get hasStages () : boolean {
+    return !!(this.players && this.players.some(p => p.Stage))
+  }
+
   mounted () {
     this.onStateChange()
   }
