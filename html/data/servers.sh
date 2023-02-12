@@ -25,8 +25,9 @@ get_details() {
           } | with_entries(select(.value != null)),
         } | with_entries(select(.value != null and .value != {})),
         Players: (if .Players == null then null else .Players | map(. | {
-          Name    : .Name  | del(select(type | . != "string")),
-          Stage   : .Stage | del(select(type | . != "string")),
+          Name    : .Name    | del(select(type | . != "string")),
+          Kingdom : .Kingdom | del(select(type | . != "string")),
+          Stage   : .Stage   | del(select(type | . != "string")),
           Costume : .Costume | {
             Cap  : .Cap  | del(select(type | . != "string")),
             Body : .Body | del(select(type | . != "string")),
@@ -72,9 +73,19 @@ scan_all() {
     luis.smoo.it:1021
   )
   local stamp=`date --iso-8601=seconds`
+  local IFS=$'\n'
   local output=(`parallel --colsep=:  -j 4  -k  --nice 19  scan_one  :::  "${servers[@]}"`)
-  local IFS=','
-  echo "{\"stamp\":\"${stamp}\",\"servers\":{${output[*]}}}"
+  echo -n "{\"stamp\":\"${stamp}\",\"servers\":{"
+  local first=1
+  local line
+  for line in "${output[@]}" ; do
+    if [[ $first != 1 ]] ; then
+      echo -n ","
+    fi
+    echo -n "$line"
+    first=0
+  done
+  echo "}}"
 }
 
 DIR=`dirname "$0"`
