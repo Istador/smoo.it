@@ -42,7 +42,7 @@
           </thead>
           <tbody>
             <tr v-for="(player, idx) of players" :key="name + ';' + idx + ';' + player.Name">
-              <td>{{ player.Name || '?' }}</td>
+              <td>{{ player.Name || '#' + (idx + 1) }}</td>
               <td v-if="hasLocations">
                 <b-overlay :show="player.Stage && stages.loading" variant="transparent">
                   <div class="location-kingdom" v-if="player.Kingdom || (player.Stage && stages.initialized)">
