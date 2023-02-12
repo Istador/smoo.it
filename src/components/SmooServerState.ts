@@ -5,6 +5,7 @@ import moment from 'moment'
 import { IHost, ISettings, IPlayer } from '@/types'
 import XServers, { getState, getResult } from '@/store/xservers'
 
+import { costumes } from '@/store/costumes'
 import { kingdom2name, TKingdom } from '@/store/kingdoms'
 import { Stages } from '@/store/xstages'
 
@@ -21,6 +22,7 @@ export default class SmooServerState extends Vue {
 
   kingdoms = kingdom2name
   stages = Stages
+  costumes = costumes
 
   get state () { return getState(this.server) }
   get stamp () { return XServers.stamp }

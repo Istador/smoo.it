@@ -54,8 +54,22 @@
                 </b-overlay>
               </td>
               <td v-if="hasCostumes" class="costume">
-                <div class="costume-cap"  v-if="player.Costume && player.Costume.Cap">{{ player.Costume.Cap }}</div>
-                <div class="costume-body" v-if="player.Costume && player.Costume.Body">{{ player.Costume.Body }}</div>
+                <div
+                  v-if="player.Costume && player.Costume.Cap"
+                  class="costume-cap"
+                  :title="player.Costume.Cap"
+                  v-b-tooltip="{boundary:'viewport',placement:'top'}"
+                >
+                  {{ costumes.Cap[player.Costume.Cap] || 'Unknown'  }}
+                </div>
+                <div
+                  v-if="player.Costume && player.Costume.Body"
+                  class="costume-body"
+                  :title="player.Costume.Body"
+                  v-b-tooltip="{boundary:'viewport',placement:'bottom'}"
+                >
+                  {{ costumes.Body[player.Costume.Body] || 'Unknown' }}
+                </div>
               </td>
             </tr>
           </tbody>
