@@ -115,8 +115,24 @@ export default class SmooServerState extends Vue {
     return null
   }
 
+  player2kingdom (player: IPlayer) : string | null {
+    if (player.Kingdom) { return player.Kingdom }
+    if (!player.Stage) { return null }
+    const k = this.stage2kingdom(player.Stage)
+    if (!k) { return null }
+    return this.kingdoms[k]
+  }
+
+  player2stage (player: IPlayer) : string | null {
+    if (!player.Stage) { return null }
+    if (player.Stage === 'HomeShipInsideStage') { return 'Odyssey' }
+    if (!this.stages.result) { return null }
+    const k = this.stage2kingdom(player.Stage)
+    return (k ? this.stages.result[k][player.Stage].name || null : null)
+  }
+
   get hasLocations () : boolean {
-    return !!(this.players && this.players.some(p => p.Stage))
+    return !!(this.players && this.players.some(p => p.Kingdom || p.Stage))
   }
 
   get hasCostumes () : boolean {

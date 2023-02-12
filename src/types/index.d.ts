@@ -14,6 +14,7 @@ export interface ICostume {
 
 export interface IPlayer {
   Name?    : string
+  Kingdom? : string
   Stage?   : string
   Costume? : ICostume
 }

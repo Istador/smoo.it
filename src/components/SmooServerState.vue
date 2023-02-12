@@ -43,12 +43,14 @@
           <tbody>
             <tr v-for="(player, idx) of players" :key="name + ';' + idx + ';' + player.Name">
               <td>{{ player.Name || '?' }}</td>
-              <td v-if="hasLocations" :data-kingdom="k = stages.initialized && stage2kingdom(player.Stage)">
-                <b-overlay :show="stages.loading" variant="transparent">
-                  <div class="location-kingdom" v-if="k">{{ kingdoms[k] }}</div>
-                  <div class="location-stage">
+              <td v-if="hasLocations">
+                <b-overlay :show="player.Stage && stages.loading" variant="transparent">
+                  <div class="location-kingdom" v-if="player.Kingdom || (player.Stage && stages.initialized)">
+                    {{ player2kingdom(player) }}
+                  </div>
+                  <div class="location-stage" v-if="player.Stage">
                     <span v-b-tooltip="{boundary:'viewport',placement:'bottom'}" :title="player.Stage">
-                      {{ k ? stages.result[k][player.Stage].name : (player.Stage === 'HomeShipInsideStage' ? 'Odyssey' : 'Unknown Stage') }}
+                      {{ player2stage(player) || 'Unknown Stage' }}
                     </span>
                   </div>
                 </b-overlay>
