@@ -88,14 +88,16 @@
           </li>
           <li>
             <b>Players</b>:
-            An array of unique profile IDs (not their names) which are flipped.
+            An array of unique profile IDs (not their names) of players which are on the flip list and therefore affected by this setting.
           </li>
           <li>
             <b>Pov</b>:
-            Who sees the characters being flipped.
-            Possible values: <code>"both"</code> (everyone),
-            <code>"self"</code> (only the player being flipped),
-            or <code>"others"</code> (everyone but the player being flipped).
+            Affects who sees whom as flipped.
+            Possible values:
+            <code>"self"</code> (affected players will see unaffected players as flipped),
+            <code>"others"</code> (affected players will be seen as flipped by everyone),
+            or <code>"both"</code> (affected players will see everyone as flipped and everyone sees them as flipped).
+            <br/>Note: you'll never see yourself as flipped.
           </li>
         </ul>
       </li>

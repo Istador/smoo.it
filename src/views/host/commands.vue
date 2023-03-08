@@ -190,12 +190,12 @@
 
         <div>
           <kbd>flip set {true|false}</kbd>
-          Enables or disabled the <code>flip</code> feature for all players on the flip list.
+          Enables or disables the <code>flip</code> feature.
         </div>
 
         <div>
           <kbd>flip pov {both|self|others}</kbd>
-          Sets for all players on the flip list who is able to see that they are flipped.
+          Sets the <a-int name="host" id="settings">setting</a-int> for who sees whom as flipped.
         </div>
 
         <div>
