@@ -39,6 +39,14 @@ export const servers: IServer[] = [
     location : { flag: 'us', name: 'US-East' },
   },
   {
+    name     : 'Yann',
+    server   : { host: 'yann.smoo.it', ip: '141.145.216.231' },
+    location : { flag: 'fr', name: 'France' },
+    settings : {
+      Server: { MaxPlayers: 8 },
+    },
+  },
+  {
     name     : 'RCL 1',
     server   : { host: 'rcl.smoo.it' },
     location : { flag: 'de', name: 'Germany' },
