@@ -67,9 +67,10 @@ scan_all() {
   local servers=(
     piplup.smoo.it
     sanae.smoo.it
-    tmdog.smoo.it
+    #tmdog.smoo.it
     f0c0s.smoo.it
     parknich.smoo.it
+    yann.smoo.it
     rcl.smoo.it::${RCL_1:-}
     rcl.smoo.it:1028:${RCL_2:-}
     rcl.smoo.it:1029:${RCL_3:-}
