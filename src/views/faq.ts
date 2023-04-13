@@ -106,6 +106,12 @@ export default class FAQ extends Vue {
             </b-tooltip>
           </li>
         </ul>
+        <b-alert variant="warning" show class="mt-3">
+          <b-icon icon="exclamation-triangle" class="text-danger" font-scale="1.5"/>
+          <b>Don't use the reconnect feature under any circumstances.</b>
+          <br/>
+          It will likely corrupt your connection to the current server, not connect to the new one, and possibly even crash your game.
+        </b-alert>
       `,
     },
     {
