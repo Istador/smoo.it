@@ -28,7 +28,23 @@
     <p>
       When there is no immediate error, then <code>Start</code> a new game or <code>Resume</code> an existing save.
       Check out the in-game <a-int name="faq" id="101">debug menu</a-int> for the
-      <code>Client Socket Connection Status: Socket Connected</code>.
+      <code>Client Socket Connection Status: Socket Connected</code> <b-icon icon="info-circle-fill" :id="'play-test-socket-status-' + _uid"/>
+      at the top of the menu.
+      <b-tooltip :target="'play-test-socket-status-' + _uid" triggers="hover">
+        <p>
+          If you are not connected it should read
+          <code>Client Socket Connection Status: Socket unavailable</code>
+          instead.
+        </p>
+        <p>
+          Note that the
+          <code>Connection Status: Online</code>
+          or
+          <code>Connection Status: Offline</code>
+          further down in the menu is not your own connection status,
+          but the status of the selected puppet slot for other players.
+        </p>
+      </b-tooltip>
       If there are other players connected to the server, the <code>Total Connected Players</code> count should be above <code>1</code>
       and they should appear in the player list.
     </p>
