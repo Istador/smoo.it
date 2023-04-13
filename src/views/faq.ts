@@ -280,7 +280,7 @@ export default class FAQ extends Vue {
           </li>
           <li>
             <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            <a-ext href="https://github.com/yuzu-emu/yuzu/issues/8666">Might not work</a-ext> on GNU/Linux at all.
+            <a-ext href="https://github.com/yuzu-emu/yuzu/issues/8666">Might not work</a-ext> on <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux at all.
           </li>
         </ul>
         <hr/>

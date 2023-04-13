@@ -74,7 +74,8 @@
       <kbd>docker-compose logs --tail=20 --follow</kbd>.
     </p>
     <p>
-      For additional security on Linux it's advised to define which user should run the server (default: <code>root</code>).
+      For additional security on <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux
+      it's advised to define which user should run the server (default: <code>root</code>).
       Comment in the <code>user</code> line in the <code>docker-compose.yml</code> and provide the user ID and group ID to use
       (execute <kbd>echo $(id -u):$(id -g)</kbd> to get your own IDs).
       You'll also need to modify the permissions of the <code>data</code> sub-directory,

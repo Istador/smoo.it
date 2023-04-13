@@ -48,7 +48,7 @@
           <b-icon icon="info-circle-fill" id="play-yuzu-adapter-names"/>
           <b-tooltip target="play-yuzu-adapter-names" triggers="hover">
             <p>
-              On Windows it might be named
+              On <font-awesome-icon icon="fa-brands fa-windows"/> Windows it might be named
               <code>Ethernet</code>,
               <code>Wi-Fi</code>,
               <code>Wi-Fi network</code>,
@@ -58,7 +58,7 @@
               or something like that.
             </p>
             <p>
-              On Linux you might encounter
+              On <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux you might encounter
               <code>eth0</code>,
               <code>wlan0</code>,
               <code>ens6</code>,
@@ -106,7 +106,7 @@
       In yuzu right-click on Super Mario Odyssey and choose <code>Open Mod Data Location</code> to open the mod directory.
       <b-icon icon="info-circle-fill" id="play-yuzu-mod-folder"/>
       <b-tooltip target="play-yuzu-mod-folder" triggers="hover">
-        On Windows it should be located at <code>%appdata%\yuzu\load\0100000000010000</code>.
+        On <font-awesome-icon icon="fa-brands fa-windows"/> Windows it should be located at <code>%appdata%\yuzu\load\0100000000010000</code>.
       </b-tooltip>
     </p>
     <p>

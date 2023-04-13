@@ -11,13 +11,14 @@
       You'll find binary files of recent server versions attached on its
       <a-ext href="https://github.com/Sanae6/SmoOnlineServer/releases">releases</a-ext> page.
       <ul>
-        <li><code>Server</code> is for Linux x64</li>
-        <li><code>Server.arm</code> is for Linux ARM</li>
-        <li><code>Server.arm64</code> is for Linux ARM64</li>
-        <li><code>Server.exe</code> is for Windows</li>
+        <li><code>Server</code> is for <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux x64</li>
+        <li><code>Server.arm</code> is for <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux ARM</li>
+        <li><code>Server.arm64</code> is for <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux ARM64</li>
+        <li><code>Server.exe</code> is for <font-awesome-icon icon="fa-brands fa-windows"/> Windows</li>
       </ul>
       Just execute them (preferable in a CLI) and you're running the server.
-      On Linux you might need to install additional runtime dependencies (Debian/Ubuntu: <code>libicu67</code>).
+      On <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux you might need to install additional runtime dependencies
+      (Debian/Ubuntu: <code>libicu67</code>).
     </p>
     <hr/>
     <p>
