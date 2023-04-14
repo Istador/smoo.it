@@ -38,7 +38,7 @@
             <b-dd-item :to="{ name: 'host', params: { id: 'settings'} }">Edit <code>settings.json</code></b-dd-item>
             <b-dd-item :to="{ name: 'host', params: { id: 'commands'} }">Interactive commands</b-dd-item>
             <b-dd-item :to="{ name: 'host', params: { id: 'discord'} }">Discord bot</b-dd-item>
-            <b-dd-item :to="{ name: 'host', params: { id: 'router'} }" disabled>Behind a router</b-dd-item>
+            <b-dd-item :to="{ name: 'host', params: { id: 'router'} }">Behind a router</b-dd-item>
             <b-dd-item :to="{ name: 'host', params: { id: 'vpn'} }" disabled>Virtual Private Network</b-dd-item>
             <b-dd-item :to="{ name: 'host', params: { id: 'remote'} }" disabled>Remote server</b-dd-item>
           </b-nav-dd>
