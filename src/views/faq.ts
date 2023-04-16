@@ -374,7 +374,7 @@ export default class FAQ extends Vue {
         <p>
           No.
           The Nintendo Switch doesn't support IPv6 natively.
-          As long as Nintendo doesn't change this, or there's a homebrew network stack that support it, this will likely never change.
+          As long as Nintendo doesn't change this, or there's a homebrew network stack that supports it, this will likely never change.
         </p>
       `,
     },
