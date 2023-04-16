@@ -80,8 +80,7 @@ export default class FAQ extends Vue {
                 In the <code>v1.0.0</code> release version you'll need to manually save.
               </p>
               <p>
-                The <code>Reconnect to Server</code> feature is buggy and might crash the game.
-                It's best to restart the game after changing the server.
+                You have to restart the game after changing the server.
               </p>
             </b-tooltip>
           </li>
