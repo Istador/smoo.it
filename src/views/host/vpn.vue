@@ -73,7 +73,7 @@
       which will then port forward the connection to the server over the VPN.
     </p>
     <p>
-      Manually adding port forwarding rules using the command line
+      Manually port forward using the command line
       (replace <code style="color: #cc33cc !important;">${server_vpn_ip}</code>
       with the <a-int name="faq" id="107">private</a-int> VPN IPv4 address
       of the computer hosting the server):
