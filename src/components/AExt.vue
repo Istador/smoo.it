@@ -8,3 +8,4 @@
   class="mr-1"
 /><slot
 /></a></template>
+<script>export default { inheritAttrs: false }</script>

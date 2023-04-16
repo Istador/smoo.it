@@ -34,8 +34,9 @@ code.style {
     border-radius: 0.5rem;
     del, .com { color: #8b949e; text-decoration: none; }
     i,   .val { color: #58a6ff; font-style: normal; }
-    a,   .str { color: #a5d6ff !important; }
     b,   .key { color: #7ee787; font-weight: normal; }
+    u         { color: #cc33cc;  text-decoration: none; }
+    a:not(.intern), .str { color: #a5d6ff !important; }
     a:not([href]) {
       cursor: default;
     }
