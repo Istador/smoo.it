@@ -10,8 +10,13 @@ export interface Details {
   Players  : IPlayer[]
 }
 
+export interface Server {
+  stamp : string
+  state : Details | boolean
+}
+
 export interface Servers {
-  [key: string]: Details | boolean
+  [key: string]: Server | Details | boolean
 }
 
 export interface Result {
@@ -81,7 +86,7 @@ class XServers extends VuexModule {
     if (this.loading) { return }
     if (this.initialized && this.date) {
       const ms = Date.now() - this.date
-      if (ms < 3 * 60 * 1000) { return } // 3m
+      if (ms < 1 * 60 * 1000) { return } // 1m
     }
     this.load()
     return this
@@ -98,7 +103,23 @@ export function getResult ({ ip = '', host = ip, port = 1027 }: IHost = {}) : De
   if (!result.servers) { return null }
 
   const key = host + ':' + port
-  return result.servers[key] ?? null
+  const server = result.servers[key] ?? null
+  if (server === null) { return null }
+  if (typeof server === 'boolean') { return server }
+  return ('state' in server ? server.state : server)
+}
+
+export function getStamp ({ ip = '', host = ip, port = 1027 }: IHost = {}) : string | null {
+  const { initialized, result } = Servers
+  if (!initialized) { return null }
+  if (!result) { return null }
+  if (!result.servers) { return null }
+
+  const key = host + ':' + port
+  const server = result.servers[key] ?? null
+  if (server === null) { return null }
+  if (typeof server === 'boolean') { return result.stamp ?? null }
+  return ('stamp' in server ? server.stamp : result.stamp ?? null)
 }
 
 export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}, canBeDead = false) : TState {

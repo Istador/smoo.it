@@ -3,7 +3,7 @@ import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 import moment from 'moment'
 
 import { IHost, ISettings, IPlayer } from '@/types'
-import XServers, { getState, getResult } from '@/store/xservers'
+import { getResult, getStamp, getState } from '@/store/xservers'
 
 import { costumes } from '@/store/costumes'
 import { kingdom2name, TKingdom } from '@/store/kingdoms'
@@ -28,7 +28,7 @@ export default class SmooServerState extends Vue {
   costumes = costumes
 
   get state () { return getState(this.server, this.canBeDead) }
-  get stamp () { return XServers.stamp }
+  get stamp () { return getStamp(this.server) }
   get result () { return getResult(this.server) }
 
   get currentSettings () : ISettings | null {
@@ -65,8 +65,8 @@ export default class SmooServerState extends Vue {
   }
 
   get tooOld () : boolean {
-    if (!XServers.date) { return true }
-    return moment().diff(XServers.stamp, 'minutes') > 60
+    if (!this.stamp) { return true }
+    return moment().diff(this.stamp, 'minutes') > 60
   }
 
   @Watch('state')

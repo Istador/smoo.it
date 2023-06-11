@@ -29,7 +29,7 @@ const stateFormatter = (_v: null, _k: string, i: IServer): number => {
       XServers.refetch()
       self.interval = setInterval(
         () => XServers.refetch(),
-        30000, // 30s
+        15000, // 15s
       )
     })
   },
