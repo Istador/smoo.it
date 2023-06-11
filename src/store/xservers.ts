@@ -106,7 +106,7 @@ export function getState ({ ip = '', host = ip, port = 1027 }: IHost = {}, canBe
   if (loading) { return 'loading' }
 
   const result = getResult({ ip, host, port })
-  if (result === null) { return 'unknown' }
+  if (result === null) { return (canBeDead ? 'dead' : 'unknown') }
   if (typeof result === 'object') { return 'online' }
   if (typeof result !== 'boolean') { return 'unknown' }
   if (!result && canBeDead) { return 'dead' }
