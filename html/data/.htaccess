@@ -1,2 +1,5 @@
 Deny from all
 
+<Files servers.php>
+  Allow from all
+</Files>

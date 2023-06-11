@@ -1,8 +1,11 @@
-<Files servers.json>
-  AddType application/x-httpd-php .json
-</Files>
-
 Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine  On
+  RewriteRule  ^servers.json                              data/servers.php [L]
+  RewriteRule  ^servers/all\.json                         data/servers.php [L]
+  RewriteRule  ^servers/[a-z0-9]+\.smoo\.it:[0-9]+\.json  data/servers.php [L]
+</IfModule>
 
 <IfModule mod_headers.c>
   # public domain
@@ -17,3 +20,4 @@ Options -Indexes
   Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
   Header merge Vary Origin
 </IfModule>
+

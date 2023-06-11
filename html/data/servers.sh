@@ -1,6 +1,9 @@
 #!/bin/bash
 
+
 export LC_ALL="en_US.UTF-8"
+export DIR=$(realpath `dirname "$0"`)
+
 
 get_details() {
   local host="$1"
@@ -48,22 +51,78 @@ get_details() {
 }
 export -f get_details
 
-scan_one() {
+
+get_status() {
   local host="$1"
-  local port="${2:-1027}"
-  local token="${3:-}"
+  local port="$2"
+  local token=""
+
+  # environment variable names which contain the secret token
+  local auths
+  declare -A auths=(
+    ["rcl.smoo.it:1027"]="RCL_1"
+    ["rcl.smoo.it:1028"]="RCL_2"
+    ["rcl.smoo.it:1029"]="RCL_3"
+  )
+
+  # get secret token
+  if [[ "${auths[$host:$port]}" != "" ]]; then
+    [ -f "$DIR/secrets.env" ] && source "$DIR/secrets.env"
+    token="${!auths[$host:$port]}"
+  fi
+
+  # get state by stealth tcp check
   local state=`sudo nmap -sS -Pn -T2 -oG - $host -p $port | grep -oP '/[^/]+/tcp/' | grep -oP '^/[^/]+/' | grep -oP '[^/]+'`
   local online=`[ "$state" == 'open' ] && echo 'true' || echo 'false'`
   if [ "$token" != "" ] && [ "$online" == 'true' ] ; then
-    echo "\"${host}:${port}\":$(get_details ${host} ${port} ${token})"
+    # get more details via JSON-API
+    local details=`get_details ${host} ${port} ${token}`
+    local stamp=`date --iso-8601=seconds`
+    echo "\"${host}:${port}\":{\"stamp\":\"$stamp\",\"state\":${details}}"
   else
-    echo "\"${host}:${port}\":${online}"
+    local stamp=`date --iso-8601=seconds`
+    echo "\"${host}:${port}\":{\"stamp\":\"$stamp\",\"state\":${online}}"
   fi
+}
+export -f get_status
+
+
+scan_one() {
+  local host="$1"
+  local port="${2:-1027}"
+  local force="$3"
+
+  # custom status refresh rate per server
+  local times
+  declare -A times=(
+    # refresh servers with JSON API more often:
+    ["rcl.smoo.it:1027"]="1"
+    ["rcl.smoo.it:1028"]="1"
+    ["rcl.smoo.it:1029"]="1"
+    # refresh dead servers less often:
+    ["f0c0s.smoo.it:1027"]="30"
+    ["parknich.smoo.it:1027"]="30"
+    ["yann.smoo.it:1027"]="30"
+    ["jeff.smoo.it:1027"]="30"
+  )
+  local timex="${times[$host:$port]:-10}"
+
+  local file="$DIR/$host:$port.json"
+  local ftmp="$file.tmp"
+  local lock="$file.lock"
+  if ( [ "$force" == "force" ] || [ ! -f $file ] || [ $(find $file -cmin +$timex) ] ) ; then
+    (
+      flock -xn 332 || exit 1
+      get_status $host $port >$ftmp
+      cat $ftmp >$file
+    ) 332>$lock
+  fi
+  cat $file
 }
 export -f scan_one
 
+
 scan_all() {
-  [ -f "$DIR/secrets.env" ] && source "$DIR/secrets.env"
   local servers=(
     piplup.smoo.it
     sanae.smoo.it
@@ -71,16 +130,16 @@ scan_all() {
     f0c0s.smoo.it
     parknich.smoo.it
     yann.smoo.it
-    rcl.smoo.it::${RCL_1:-}
-    rcl.smoo.it:1028:${RCL_2:-}
-    rcl.smoo.it:1029:${RCL_3:-}
+    rcl.smoo.it
+    rcl.smoo.it:1028
+    rcl.smoo.it:1029
     krokilex.smoo.it
     jeff.smoo.it
     ninunity.smoo.it:62102
   )
-  local stamp=`date --iso-8601=seconds`
   local IFS=$'\n'
   local output=(`parallel --colsep=:  -j 4  -k  --nice 19  scan_one  :::  "${servers[@]}"`)
+  local stamp=`date --iso-8601=seconds`
   echo -n "{\"stamp\":\"${stamp}\",\"servers\":{"
   local first=1
   local line
@@ -94,16 +153,33 @@ scan_all() {
   echo "}}"
 }
 
-DIR=`dirname "$0"`
-FILE="$DIR/servers.json"
-LOCK="$DIR/servers.lock"
 
-if ( [ "$1" == "force" ] || [ ! -f $FILE ] || [ $(find $FILE -cmin +10) ] ) ; then
-  (
-    flock -xn 331 || exit 1
-    scan_all >$FILE.tmp
-    cat $FILE.tmp >$FILE
-  ) 331>$LOCK
+display_one() {
+  local server="$1"
+  local force="$2"
+  local output=`parallel --colsep=:  -j 4  -k  --nice 19  scan_one  :::  "$server:$force"`
+  echo "{$output}"
+}
+
+
+display_all() {
+  local file="$DIR/all.json"
+  local ftmp="$file.tmp"
+  local lock="$file.lock"
+  local force="$1"
+  if ( [ "$force" == "force" ] || [ ! -f $file ] || [ $(find $file -cmin +1) ] ) ; then
+    (
+      flock -xn 331 || exit 1
+      scan_all >$ftmp
+      cat $ftmp >$file
+    ) 331>$lock
+  fi
+  cat $file
+}
+
+
+if [[ "${1:-all}" == "all" ]] ; then
+  display_all "${2:-}"
+else
+  display_one "$1" "${2:-}"
 fi
-
-cat $FILE
