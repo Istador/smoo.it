@@ -121,16 +121,12 @@ export const servers: IServer[] = [
     },
   },
   {
-    dead     : true,
-    name     : 'Luis HideAndSeek',
-    server   : { host: 'luis.smoo.it', ip: '45.134.39.117', port: 1021 },
-    location : { flag: 'nl', name: 'Netherlands' },
+    name     : 'Ninunity Online',
+    server   : { host: 'ninunity.smoo.it', ip: '209.25.141.180', port: 62102 },
+    location : { flag: 'de', name: 'Germany' },
     version  : linkRelease('1.0.3'),
     settings : {
-      Server        : { MaxPlayers: 8 },
-      Scenario      : { MergeEnabled: false },
-      Shines        : { Enabled: false },
-      PersistShines : { Enabled: false },
+      Server: { MaxPlayers: 16 },
     },
   },
 ].map((s: IServer) => {
