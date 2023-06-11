@@ -76,7 +76,7 @@ scan_all() {
     rcl.smoo.it:1029:${RCL_3:-}
     krokilex.smoo.it
     jeff.smoo.it
-    luis.smoo.it:1021
+    ninunity.smoo.it:62102
   )
   local stamp=`date --iso-8601=seconds`
   local IFS=$'\n'
