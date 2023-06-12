@@ -12,6 +12,9 @@ export interface Details {
 
 export interface Server {
   stamp : string
+  host  : string
+  port  : number
+  ipv4  : string
   state : Details | boolean
 }
 
@@ -107,6 +110,19 @@ export function getResult ({ ip = '', host = ip, port = 1027 }: IHost = {}) : De
   if (server === null) { return null }
   if (typeof server === 'boolean') { return server }
   return ('state' in server ? server.state : server)
+}
+
+export function getIPv4 ({ ip = '', host = ip, port = 1027 }: IHost = {}) : string | null {
+  const { initialized, result } = Servers
+  if (!initialized) { return null }
+  if (!result) { return null }
+  if (!result.servers) { return null }
+
+  const key = host + ':' + port
+  const server = result.servers[key] ?? null
+  if (server === null) { return null }
+  if (typeof server === 'boolean') { return null }
+  return ('ipv4' in server ? server.ipv4 : null)
 }
 
 export function getStamp ({ ip = '', host = ip, port = 1027 }: IHost = {}) : string | null {

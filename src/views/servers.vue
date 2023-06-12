@@ -38,6 +38,21 @@
           <span v-else>{{ host }}</span>
         </div>
         <div class="ip" v-if="ip">{{ ip }}</div>
+        <div class="ip dynamic" v-if="!ip">
+          <b-badge
+            variant="secondary"
+            :id="'dynamic-ip-badge-' + host + '-' + port"
+          >
+            dynamic
+          </b-badge>
+          <b-tooltip
+            :target="'dynamic-ip-badge-' + host + '-' + port"
+            placement="top"
+            boundary="viewport"
+          >
+            <span v-html="getIPv4({ host, port })"/>
+          </b-tooltip>
+        </div>
         <div class="port" :class="{ 'default': (port || defaultPort) === defaultPort }">{{ port || defaultPort }}</div>
       </template>
 

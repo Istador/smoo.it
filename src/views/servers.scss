@@ -16,14 +16,24 @@
 
       .td-server {
         .host, .ip, .port { font-family: monospace; }
+
+        .host::before, .ip::before, .port::before {
+          font-family: $smoo-default-font;
+          font-weight: bold;
+          font-size: 0.75em;
+          opacity: 0.25;
+        }
         @media (min-width: 576px) {
-          .host::before { content: 'Host: '; font-family: $smoo-default-font; font-weight: bold; font-size: 0.75em; opacity: 0.25; }
-          .ip::before   { content: 'IPv4: '; font-family: $smoo-default-font; font-weight: bold; font-size: 0.75em; opacity: 0.25; }
+          .host::before { content: 'Host: '; }
+          .ip::before   { content: 'IPv4: '; }
           .port.default { display: block !important; }
         }
-        .port::before { content: 'Port: '; font-family: $smoo-default-font; font-weight: bold; font-size: 0.75em; opacity: 0.25; }
+        .port::before { content: 'Port: '; }
+        .ip.dynamic::before { content: 'IPv4: '; }
+
         .port.default { opacity: 0.5; display: none; &::before { opacity: 0.5; } }
         .host + .ip { opacity: 0.5; &::before { opacity: 0.5; } }
+        .ip.dynamic > span { user-select: none; cursor: help; }
       }
 
       .td-location {
