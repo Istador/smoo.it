@@ -81,7 +81,7 @@ get_status() {
     online=`get_details ${host} ${port} ${token}`
   fi
   local stamp=`date --iso-8601=seconds`
-  echo "\"${host}:${port}\":{\"stamp\":\"$stamp\",\"host\":\"${host}\",\"ipv4\":\"${ipv4}\",\"port\":${port},\"state\":${online}}"
+  echo "{\"stamp\":\"$stamp\",\"host\":\"${host}\",\"ipv4\":\"${ipv4}\",\"port\":${port},\"state\":${online}}"
 }
 export -f get_status
 
@@ -121,6 +121,17 @@ scan_one() {
 export -f scan_one
 
 
+scan_one_line() {
+  local host="$1"
+  local port="${2:-1027}"
+  local force="${3:-}"
+
+  local res=`scan_one "$host" "$port" "$force"`
+  echo "\"${host}:${port}\":${res}"
+}
+export -f scan_one_line
+
+
 scan_all() {
   local force="${1:-}"
   local servers=(
@@ -138,7 +149,7 @@ scan_all() {
     ninunity.smoo.it:62102
   )
   local IFS=$'\n'
-  local output=(`parallel --colsep=:  -j 4  -k  --nice 19  scan_one  :::  "${servers[@]}"  :::  "$force"`)
+  local output=(`parallel  --colsep=:  -j 4  -k  --nice 19  scan_one_line  :::  "${servers[@]}"  :::  "$force"`)
   local stamp=`date --iso-8601=seconds`
   echo -n "{\"stamp\":\"${stamp}\",\"servers\":{"
   local first=1
@@ -157,8 +168,7 @@ scan_all() {
 display_one() {
   local server="$1"
   local force="$2"
-  local output=`parallel --colsep=:  -j 4  -k  --nice 19  scan_one  :::  "$server:$force"`
-  echo "{$output}"
+  parallel  --colsep=:  -j 4  -k  --nice 19  scan_one  :::  "$server:$force"
 }
 
 
