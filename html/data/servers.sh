@@ -89,7 +89,7 @@ export -f get_status
 scan_one() {
   local host="$1"
   local port="${2:-1027}"
-  local force="$3"
+  local force="${3:-}"
 
   # custom status refresh rate per server
   local times
@@ -122,22 +122,23 @@ export -f scan_one
 
 
 scan_all() {
+  local force="${1:-}"
   local servers=(
-    piplup.smoo.it
-    sanae.smoo.it
-    #tmdog.smoo.it
-    f0c0s.smoo.it
-    parknich.smoo.it
-    yann.smoo.it
-    rcl.smoo.it
+    piplup.smoo.it:
+    sanae.smoo.it:
+    #tmdog.smoo.it:
+    f0c0s.smoo.it:
+    parknich.smoo.it:
+    yann.smoo.it:
+    rcl.smoo.it:
     rcl.smoo.it:1028
     rcl.smoo.it:1029
-    krokilex.smoo.it
-    jeff.smoo.it
+    krokilex.smoo.it:
+    jeff.smoo.it:
     ninunity.smoo.it:62102
   )
   local IFS=$'\n'
-  local output=(`parallel --colsep=:  -j 4  -k  --nice 19  scan_one  :::  "${servers[@]}"`)
+  local output=(`parallel --colsep=:  -j 4  -k  --nice 19  scan_one  :::  "${servers[@]}"  :::  "$force"`)
   local stamp=`date --iso-8601=seconds`
   echo -n "{\"stamp\":\"${stamp}\",\"servers\":{"
   local first=1
@@ -169,7 +170,7 @@ display_all() {
   if ( [ "$force" == "force" ] || [ ! -f $file ] || [ $(find $file -cmin +1) ] ) ; then
     (
       flock -xn 331 || exit 1
-      scan_all >$ftmp
+      scan_all "$force" >$ftmp
       cat $ftmp >$file
     ) 331>$lock
   fi
