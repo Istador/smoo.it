@@ -27,6 +27,8 @@ export interface Result {
   servers : Servers
 }
 
+let firstStart = true
+
 @Module({
   name          : 'servers',
   store         : store,
@@ -57,6 +59,7 @@ class XServers extends VuexModule {
     this.result = result
     this.initialized = true
     this.loading = false
+    this.error = null
     this.date = Date.now()
   }
 
@@ -86,6 +89,14 @@ class XServers extends VuexModule {
 
   @Action
   refetch () {
+    // don't get stuck in an infinite loading state, in cases where loading = true was saved to the local storage
+    if (firstStart) {
+      if (this.loading) {
+        this.failed(Error('loading = true was saved, reset loading state manually'))
+      }
+      firstStart = false
+    }
+
     if (this.loading) { return }
     if (this.initialized && this.date) {
       const ms = Date.now() - this.date
