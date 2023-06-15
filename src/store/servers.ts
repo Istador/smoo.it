@@ -129,7 +129,10 @@ export const servers: IServer[] = [
     location : { flag: 'de', name: 'Germany' },
     version  : linkRelease('1.0.3'),
     settings : {
-      Server: { MaxPlayers: 16 },
+      Server        : { MaxPlayers: 16 },
+      Scenario      : { MergeEnabled: false },
+      Shines        : { Enabled: false },
+      PersistShines : { Enabled: false },
     },
   },
 ].map((s: IServer) => {
