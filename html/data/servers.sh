@@ -60,6 +60,7 @@ get_status() {
   # environment variable names which contain the secret token
   local auths
   declare -A auths=(
+    ["piplup.smoo.it:1027"]="PIPLUP"
     ["rcl.smoo.it:1027"]="RCL_1"
     ["rcl.smoo.it:1028"]="RCL_2"
     ["rcl.smoo.it:1029"]="RCL_3"
@@ -95,6 +96,7 @@ scan_one() {
   local times
   declare -A times=(
     # refresh servers with JSON API more often:
+    ["piplup.smoo.it:1027"]="3"
     ["rcl.smoo.it:1027"]="1"
     ["rcl.smoo.it:1028"]="1"
     ["rcl.smoo.it:1029"]="1"
