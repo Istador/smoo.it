@@ -33,13 +33,26 @@ get_details() {
           } | with_entries(select(.value != null)),
         } | with_entries(select(.value != null and .value != {})),
         Players: (if .Players == null then null else .Players | map(. | {
-          Name    : .Name    | del(select(type | . != "string")),
-          Kingdom : .Kingdom | del(select(type | . != "string")),
-          Stage   : .Stage   | del(select(type | . != "string")),
+          Name     : .Name     | del(select(type | . != "string")),
+          Kingdom  : .Kingdom  | del(select(type | . != "string")),
+          Stage    : .Stage    | del(select(type | . != "string")),
+          Position : .Position | {
+            X : .X | del(select(type | . != "number")),
+            Y : .Y | del(select(type | . != "number")),
+            Z : .Z | del(select(type | . != "number")),
+          } | with_entries(select(.value != null)),
+          Rotation : .Rotation | {
+            W : .W | del(select(type | . != "number")),
+            X : .X | del(select(type | . != "number")),
+            Y : .Y | del(select(type | . != "number")),
+            Z : .Z | del(select(type | . != "number")),
+          } | with_entries(select(.value != null)),
           Costume : .Costume | {
             Cap  : .Cap  | del(select(type | . != "string")),
             Body : .Body | del(select(type | . != "string")),
           } | with_entries(select(.value != null)),
+          Tagged : .Tagged | del(select(type | . != "boolean")),
+          Is2D   : .Is2D   | del(select(type | . != "boolean")),
         } | with_entries(select(.value != null and .value != {})) ) end),
       }'  2>/dev/null
   )
