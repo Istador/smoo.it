@@ -73,14 +73,15 @@ export default class FAQ extends Vue {
           <li>
             In the main or pause menu hold <smoo-btn ZL/> and press <smoo-btn A/> to enter the hidden options menu
             where you can <code>Change Server IP</code>.
+            You have to restart the game after saving the game.
             <b-icon icon="info-circle-fill" id="faq-change-ip"/>
             <b-tooltip target="faq-change-ip" triggers="hover">
               <p>
                 Newer versions of the mod will automatically save the game after changing the IP or port.
-                In the <code>v1.0.0</code> release version you'll need to manually save.
+                Just wait a moment until you gain the control back before quitting.
               </p>
               <p>
-                You have to restart the game after changing the server.
+                In the <code>v1.0.0</code> release version you'll need to manually save the game.
               </p>
             </b-tooltip>
           </li>
@@ -96,11 +97,15 @@ export default class FAQ extends Vue {
             <b-icon icon="info-circle-fill" id="faq-save-dir"/>
             <b-tooltip target="faq-save-dir" triggers="hover">
               <p>
-                On the Nintendo Switch that is on the internal storage and not on the SD card.
-                You could use a save file backup app, to export, modify and then restore the directory.
+                Inside the <a-int name="play" id="yuzu">yuzu</a-int> or
+                <a-int name="play" id="ryujinx">Ryujinx</a-int> emulator you can
+                right click on the game to get to its save directory.
               </p>
               <p>
-                Inside the yuzu or Ryujinx emulator you can right click on the game to get to its save directory.
+                On the <a-int name="play" id="switch">Switch</a-int> this file
+                is on the internal storage and not on the SD card,
+                which makes it difficult to delete easily.
+                You could use a save file backup app, to export, modify and then restore the directory.
               </p>
             </b-tooltip>
           </li>
