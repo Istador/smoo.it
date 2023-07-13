@@ -412,6 +412,129 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 121,
+      question : '<b-icon icon="eye-slash"/> Capture sync isn\'t working.',
+      answer   : `
+        <p>
+        If the maxplayers is set to over 7 it doesn't work.
+        </p>
+      `,
+    },
+    {
+      id       : 112,
+      question : '<b-icon icon="list"/> Why do i see players who aren\'t Teammates in the Teammate list?',
+      answer   : `
+        <p>
+        The teammates list does not work very well.
+        </p>
+        <p>
+        In order to fix it you have to restart the server, 
+        but you can only do that if you can do server commands so for the most part just ignore it.
+        </p>
+      `,
+    },
+    {
+      id       : 113,
+      question : '<b-icon icon="aspect-ratio"/> The Debug Menu isn\'t showing the correct player amount',
+      answer   : `
+        <p>
+        The debug menu is bad at counting so the number of players is often wrong.
+        </p>
+      `,
+    },
+    {
+      id       : 114,
+      question : '<b-icon icon="eye-slash-fill"/> Some players are invisible',
+      answer   : `
+        <p>
+        Try reconnecting to the server.
+        If that doesn't work that means there's over 10 people on the server. 10 is the max amount of players you can see.
+        </p>
+      `,
+    },
+    {
+      id       : 122,
+      question : '<b-icon icon="eyeglasses"/> How do I fix incorrect costumes?',
+      answer   : `
+        <p>
+        Try reloading the area by dying or warping to a checkpoint flag. 
+        If that doesn't work, reconnect to the server or rejoin the game.
+        </p>
+      `,
+    },
+    {
+      id       : 124,
+      question : '<b-icon icon="reception0"/> Some Usernames are incorrect',
+      answer   : `
+        <p>
+        Try reconnecting to the server or rejoin the game.
+        </p>
+        <p>
+        If you're a hider you cannot see other people's usernames and other people can't see yours. 
+        If you're a seeker you can only see the usernames of other seekers.
+        </p>
+      `,
+    },
+    {
+      id       : 115,
+      question : '<b-icon icon="moon-stars"/> Galaxy Gravity doesn\'t work',
+      answer   : `
+        <p>
+        Try reconnecting to the server.
+        If that doesn't work that means there's over 10 people on the server. 10 is the max amount of players you can see.
+        </p>
+      `,
+    },
+    {
+      id       : 116,
+      question : '<b-icon icon="arrow-repeat"/> The game is stuck on “connecting to server”',
+      answer   : `
+        <p>
+        You probably got the ip wrong so you'll have to change that. To do that you'll either have to reinstall the mod or navigate the menu blindly.
+        If you want to navigate the menu blindly then it's important to note that during “connecting to server” the game doesn't pause or stop so you can still move around.
+        </p>
+      `,
+    },
+    {
+      id       : 117,
+      question : '<b-icon icon="slash-circle"/> Why aren\'t my amiibo working?',
+      answer   : `
+        <p>
+        Scanning amiibo is disabled.
+        </p>
+      `,
+    },
+    {
+      id       : 118,
+      question : '<b-icon icon="x-circle"/> Why does the game crash after Topper in cap Kingdom?',
+      answer   : `
+        <p>
+        Skipping the second cutscene after Topper sometimes crashes the game however it doesn't always happen
+        </p>
+      `,
+    },
+    {
+      id       : 119,
+      question : '<b-icon icon="x-circle"/> Why does the game crash when you talk to the Shiverian Elder?',
+      answer   : `
+        <p>
+        Loading the race crashes the game so you can't achieve peace in that Kingdom.
+        </p>
+        <p>
+        This was fixed in the dev build.
+        </p>
+      `,
+    },
+    {
+      id       : 120,
+      question : '<b-icon icon="moon-fill/> Why aren\'t Toadette Moons syncing?',
+      answer   : `
+        <p>
+        The Toadette moons do not sync which means each player must collect their own Moons from her.
+        </p>
+      `,
+    },
+    {
       id       : 110,
       question : '<b-icon icon="question-circle"/> Something doesn\'t work / Where do I get help?',
       answer   : `
