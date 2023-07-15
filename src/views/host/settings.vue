@@ -165,7 +165,7 @@
             <b-tooltip target="server-settings-shines" triggers="hover">
               Disabling it might not work correctly with server version <code>1.0.3</code>.
               It prevents the server from saving them, but the collected moons are still send to all connected players.
-              Ths should be fixed with later versions.
+              This should be fixed with later versions.
             </b-tooltip>
           </li>
         </ul>

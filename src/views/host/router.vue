@@ -54,9 +54,9 @@
     </p>
     <p>
       On <font-awesome-icon icon="fa-brands fa-windows"/> Windows when starting a server application for the first time,
-      the Windows Firewall will inform you that it has blocked some features for the program and asks if access should be allowed.
+      the Windows firewall will inform you that it has blocked some features for the program and asks if access should be allowed.
       Make sure that you allow it to communicate with private and public networks,
-      otherwise you'll need to allow it manually in the advanced firewall settings of the sytem or via the command line.
+      otherwise you'll need to allow it manually in the advanced firewall settings of the system or via the command line.
     </p>
     <p>
       Manually adding a firewall rule to accept SMOO connections using the command line:
