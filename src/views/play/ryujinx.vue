@@ -62,24 +62,21 @@
       <b>Step 1</b>:
       Download the latest
       <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-      of the mod whose filename ends with <code>_for_Ryujinx.zip</code>.
+      of the mod whose filename ends with <code>_for_Emulators.zip</code>.
       The last asset in the list is the newest.
     </p>
     <p>
       <b>Step 2</b>:
-      Open Ryujinx and choose <code>File &gt; Open Ryujinx Folder</code>.
-      From the folder that opens, travel down into the <code>sdcard</code> folder.
-      <b-icon icon="info-circle-fill" id="play-ryujinx-sdcard-folder"/>
-      <b-tooltip target="play-ryujinx-sdcard-folder" triggers="hover">
-        On <font-awesome-icon icon="fa-brands fa-windows"/> Windows it should be located at <code>%appdata%\Ryujinx\sdcard</code>.
+      In Ryujinx right-click on Super Mario Odyssey and choose <code>Open Mods Directory</code> to open the mod directory.
+      <b-icon icon="info-circle-fill" id="play-ryujinx-mod-folder"/>
+      <b-tooltip target="play-ryujinx-mod-folder" triggers="hover">
+        On <font-awesome-icon icon="fa-brands fa-windows"/> Windows it should be located at <code>%appdata%\Ryujinx\mods\contents\0100000000010000</code>.
       </b-tooltip>
     </p>
     <p>
       <b>Step 3</b>:
-      Extract the <code>atmosphere</code> folder from the <code>.zip</code> file that you downloaded in step 1
-      into the <code>sdcard</code> folder from step 2.
-      If there already is an <code>atmosphere</code> folder (e.g. from other mods),
-      then accept all popups asking you to overwrite the existing directories and files.
+      Extract the <code>SMOO</code> folder from the <code>.zip</code> file that you downloaded in step 1
+      into the mod directory that was opened at step 2.
     </p>
 
     <!-- Test that it works -->

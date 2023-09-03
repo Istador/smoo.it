@@ -98,7 +98,7 @@
       <b>Step 1</b>:
       Download the latest
       <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-      of the mod whose filename ends with <code>_for_yuzu.zip</code>.
+      of the mod whose filename ends with <code>_for_Emulators.zip</code>.
       The last asset in the list is the newest.
     </p>
     <p>
