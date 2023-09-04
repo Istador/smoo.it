@@ -11,14 +11,27 @@ const linkTree = (branch: string, label?: string, repo?: string) =>
 
 export const servers: IServer[] = [
   {
-    name     : 'Piplup',
+    name     : 'Piplup (Main)',
     link     : 'https://piplup.smoo.it',
     server   : { host: 'piplup.smoo.it', ip: '51.178.136.142' },
     location : { flag: 'fr', name: 'France' },
     version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 10 },
-      Scenario      : { MergeEnabled: true },
+      Scenario      : { MergeEnabled: false },
+      Shines        : { Enabled: true },
+      PersistShines : { Enabled: true },
+    },
+  },
+  {
+    name     : 'Piplup (Capture Sync)',
+    link     : 'https://piplup.smoo.it',
+    server   : { host: 'piplup.smoo.it', ip: '51.178.136.142', port: 1028 },
+    location : { flag: 'fr', name: 'France' },
+    version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
+    settings : {
+      Server        : { MaxPlayers: 8 },
+      Scenario      : { MergeEnabled: false },
       Shines        : { Enabled: true },
       PersistShines : { Enabled: true },
     },
