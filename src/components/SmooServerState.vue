@@ -30,7 +30,7 @@
       @show="hasStages && stages.fetch()"
     >
       <template #modal-title>
-        Players on <code>{{ name }}</code>
+        Players on <code>{{ name }}</code> <b-icon icon="info-circle-fill" v-b-tooltip.html="() => title()"/>
       </template>
 
       <b-overlay :show="state == 'loading'" variant="transparent">
