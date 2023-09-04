@@ -2,6 +2,7 @@
 $servers = [
   'all',
   'piplup.smoo.it:1027',
+  'piplup.smoo.it:1028',
   'sanae.smoo.it:1027',
   'tmdog.smoo.it:1027',
   'f0c0s.smoo.it:1027',

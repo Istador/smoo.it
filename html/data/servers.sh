@@ -74,6 +74,7 @@ get_status() {
   local auths
   declare -A auths=(
     ["piplup.smoo.it:1027"]="PIPLUP"
+    ["piplup.smoo.it:1028"]="PIPLUP"
     ["rcl.smoo.it:1027"]="RCL_1"
     ["rcl.smoo.it:1028"]="RCL_2"
     ["rcl.smoo.it:1029"]="RCL_3"
@@ -110,6 +111,7 @@ scan_one() {
   declare -A times=(
     # refresh servers with JSON API more often:
     ["piplup.smoo.it:1027"]="3"
+    ["piplup.smoo.it:1028"]="3"
     ["rcl.smoo.it:1027"]="1"
     ["rcl.smoo.it:1028"]="1"
     ["rcl.smoo.it:1029"]="1"
@@ -151,6 +153,7 @@ scan_all() {
   local force="${1:-}"
   local servers=(
     piplup.smoo.it:
+    piplup.smoo.it:1028
     sanae.smoo.it:
     #tmdog.smoo.it:
     f0c0s.smoo.it:
