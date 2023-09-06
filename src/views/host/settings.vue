@@ -27,7 +27,8 @@
   <b>"BanList"</b>: {
     <b>"Enabled"</b>: <i>false</i>,
     <b>"Players"</b>: [],
-    <b>"IpAddresses"</b>: []
+    <b>"IpAddresses"</b>: [],
+    <b>"Stages"</b>: []
   },
   <b>"Discord"</b>: {
     <b>"Token"</b>: <i>null</i>,
@@ -127,6 +128,22 @@
           <li>
             <b>IpAddresses</b>:
             An array of IPv4 addresses that are prevented from joining the server.
+          </li>
+          <li>
+            <b>Stages</b>:
+            <b-badge variant="primary" v-b-tooltip.html="'This setting was added with server version <code>1.0.4</code>.'">1.0.4</b-badge>
+            An array of stage values that result in a kick
+            <b-icon icon="info-circle-fill" id="server-settings-kick"/>
+            from the server when a player joins one of them.
+            <b-tooltip target="server-settings-kick" triggers="hover">
+              <p>
+                A <code>kick</code> is not a <code>ban</code> from the server.
+              </p>
+              <p>
+                When entering a banned stage a packet that should crash the game is send to the client.
+                Until reconnecting again the server will not send or process any packets to or from the client.
+              </p>
+            </b-tooltip>
           </li>
         </ul>
       </li>
