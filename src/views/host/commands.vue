@@ -59,6 +59,7 @@
           <kbd>&lt;stage&gt;</kbd>
           <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
           <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-known>show known values</b-btn>
+          <br/>Invalid stage values (e.g. for custom kingdoms) can be send by appending a <kbd>!</kbd> to the end.
         </li>
       </ul>
     </div>
@@ -72,6 +73,7 @@
           <kbd>&lt;stage&gt;</kbd>
           <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
           <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-known>show known values</b-btn>
+          <br/>Invalid stage values (e.g. for custom kingdoms) can be send by appending a <kbd>!</kbd> to the end.
         </li>
         <li>
           <kbd>&lt;warp-id&gt;</kbd>
