@@ -198,6 +198,47 @@
     </div>
 
     <div>
+      <kbd>unban ...</kbd>
+      Commands to remove entries from the <code>banlists</code> (see <a-int name="host" id="settings">settings</a-int>).
+      <div class="sub-commands">
+
+        <div>
+          <kbd>unban profile &lt;profile-id&gt;</kbd>
+          Removes the profile ID from the <code>banlist</code>.
+          <br/>
+          <ul>
+            <li><kbd>&lt;profile-id&gt;</kbd> The unique profile ID of the player (not its name) that should no longer be banned from the server.</li>
+          </ul>
+        </div>
+
+        <div>
+          <kbd>unban ip &lt;ipv4-address&gt;</kbd>
+          Removes the IPv4 address from the <code>banlist</code>.
+          <br/>
+          <ul>
+            <li><kbd>&lt;ipv4-address&gt;</kbd> The IPv4 address that should no longer be banned from the server.</li>
+          </ul>
+        </div>
+
+        <div>
+          <kbd>unban stage &lt;stage&gt;</kbd>
+          Removes the stage from the <code>banlist</code>.
+          <br/>
+          <ul>
+            <li>
+              <kbd>&lt;stage&gt;</kbd>
+              <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
+              <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-known>show known values</b-btn>
+              <br/>Using an alias will remove all known stages in that kingdom from the <code>banlist</code> individually.
+              <br/>Invalid stage values (e.g. for custom kingdoms) can be removed by appending a <kbd>!</kbd> to the end.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
       <kbd>tag ...</kbd>
       Hide &amp; Seek helper functions.
       <div class="sub-commands">
