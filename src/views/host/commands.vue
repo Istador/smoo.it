@@ -14,7 +14,7 @@
       attaching to the <a-int name="host" id="docker">docker</a-int> container,
       or using the <a-int name="host" id="discord">Discord</a-int> integration,
       you can send it commands to control and interact with it.
-      Following are all the commands that the server version <code>1.0.3</code> understands.
+      Following are all the commands that the server version <code>1.0.4</code> understands.
     </div>
 
     <div>
@@ -240,7 +240,7 @@
 
     <div>
       <kbd>tag ...</kbd>
-      Hide &amp; Seek helper functions.
+      Hide &amp; Seek helper commands.
       <div class="sub-commands">
 
         <div>
