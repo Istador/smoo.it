@@ -127,19 +127,74 @@
     </div>
 
     <div>
-      <kbd>ban &lt;player-name&gt;...</kbd>
-      Sends the player(s) to an invalid stage that will crash the game,
-      adds their profile IDs and IPv4 addresses to the <code>banlist</code> (see <a-int name="host" id="settings">settings</a-int>),
-      and then closes the connection to the client of the player(s).
-      <br/>
-      <ul>
-        <li>
-          <kbd>&lt;player-name&gt;...</kbd>
-          A list of player names to ban (separated by spaces).
-          <kbd>*</kbd> is also a valid value for all connected players.
-          If you start the list with <kbd>!*</kbd>, it will ban all but the following players.
-        </li>
-      </ul>
+      <kbd>ban ...</kbd>
+      Commands to control who or what is banned on this server by adding it to the <code>banlists</code> (see <a-int name="host" id="settings">settings</a-int>).
+      <div class="sub-commands">
+
+        <div>
+          <kbd>ban list</kbd>
+          Shows all entries on the <code>banlists</code> and whether they are enabled or not.
+        </div>
+
+        <div>
+          <kbd>ban {enable|disable}</kbd>
+          Enables or disables all <code>banlists</code> at once.
+        </div>
+
+        <div>
+          <kbd>ban player &lt;player-name&gt;...</kbd>
+          Sends the connected player(s) to an invalid stage that will crash the game,
+          adds their profile IDs and IPv4 addresses to the <code>banlists</code>,
+          and then ignores the connection to the client of the player(s).
+          <br/>
+          <ul>
+            <li>
+              <kbd>&lt;player-name&gt;...</kbd>
+              A list of player names to ban (separated by spaces).
+              <kbd>*</kbd> is also a valid value for all connected players.
+              If you start the list with <kbd>!*</kbd>, it will ban all but the following players.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <kbd>ban profile &lt;profile-id&gt;</kbd>
+          Adds the profile ID to the <code>banlist</code>.
+          If a player with that profile ID is connected, then it sends them to an invalid stage that will crash the game,
+          and then ignores the connection to the client of the player.
+          <br/>
+          <ul>
+            <li><kbd>&lt;profile-id&gt;</kbd> The unique profile ID of the player (not its name) that should be banned from the server.</li>
+          </ul>
+        </div>
+
+        <div>
+          <kbd>ban ip &lt;ipv4-address&gt;</kbd>
+          Adds the IPv4 address to the <code>banlist</code>.
+          If a player with that IPv4 address is connected, then it sends them to an invalid stage that will crash the game,
+          and then ignores the connection to the client of the player.
+          <br/>
+          <ul>
+            <li><kbd>&lt;ipv4-address&gt;</kbd> The IPv4 address that should be banned from the server.</li>
+          </ul>
+        </div>
+
+        <div>
+          <kbd>ban stage &lt;stage&gt;</kbd>
+          Adds the stage to the <code>banlist</code>.
+          <br/>
+          <ul>
+            <li>
+              <kbd>&lt;stage&gt;</kbd>
+              <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-alias>show alias values</b-btn>
+              <b-btn variant="info" size="sm" class="ml-2" style="padding: 0 0.4em;" v-b-modal.host-commands-stage-known>show known values</b-btn>
+              <br/>Using an alias will add all known stages in that kingdom to the <code>banlist</code> individually.
+              <br/>Invalid stage values (e.g. for custom kingdoms) can be added by appending a <kbd>!</kbd> to the end.
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
     <div>
