@@ -43,5 +43,20 @@
       for which to build for (e.g. <kbd>-r linux-x64</kbd>, <kbd>-r linux-arm</kbd>, <kbd>-r linux-arm64</kbd> or <kbd>-r win-x64</kbd>).
       If you're providing the runtime anyway consider also using <kbd>-p:publishSingleFile=true</kbd> to bundle everything into one single binary file.
     </p>
+    <hr/>
+    <p>
+      An easier alternative to building it directly is to use <a-ext href="https://docs.docker.com/get-docker/">Docker</a-ext>.
+      That way the only required software you need to install on your system is Docker.
+      All other dependencies will not be installed on your system directly but are only downloaded and used sandboxed.
+      The source code of the server comes with an <code>docker-build.sh</code> script to easily trigger building the server:
+      <ul>
+        <li><kbd>./docker-build.sh x64</kbd> to build a <code>Server</code> binary for <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux x64</li>
+        <li><kbd>./docker-build.sh arm</kbd> to build a <code>Server.arm</code> binary for <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux ARM</li>
+        <li><kbd>./docker-build.sh arm64</kbd> to build a <code>Server.arm64</code> binary for <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux ARM64</li>
+        <li><kbd>./docker-build.sh win64</kbd> to build a <code>Server.exe</code> binary for <font-awesome-icon icon="fa-brands fa-windows"/> Windows</li>
+        <li><kbd>./docker-build.sh all</kbd> to build the binaries for all systems</li>
+      </ul>
+      The builded server artifacts should be in the <code>bin</code> directory afterwards.
+    </p>
   </smoo-card>
 </template>

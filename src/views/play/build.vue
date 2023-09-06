@@ -20,7 +20,7 @@
       An easier alternative is to use <a-ext href="https://docs.docker.com/get-docker/">Docker</a-ext>.
       That way the only required software you need to install on your system is Docker.
       All other dependencies will not be installed on your system directly but are only downloaded and used sandboxed.
-      The mod comes with an <code>docker-build.sh</code> script to easily trigger building the mod: <kbd>./docker-build.sh</kbd>.
+      The source code of the mod comes with an <code>docker-build.sh</code> script to easily trigger building the mod: <kbd>./docker-build.sh</kbd>.
       The builded mod artifacts should be in the <code>starlight_patch_100</code> directory afterwards.
     </p>
     <p>
