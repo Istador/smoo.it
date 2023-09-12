@@ -102,7 +102,7 @@ export const servers: IServer[] = [
     version: {
       html    : linkTree('udp-json-api', 'rust/udp', 'Istador/smo-multi-rs'),
       details : `
-        <p>Connecting requires the latest ${linkRelease('latest-dev', 'dev-build', 'CraftyBoss/SuperMarioOdysseyOnline')} from <code>2023-09-02</code> or later.</p>
+        <p>Connecting requires the latest ${linkRelease('latest-dev', 'dev-build', 'CraftyBoss/SuperMarioOdysseyOnline')} from <code>2023-09-11</code> or later.</p>
       `,
     },
   },
