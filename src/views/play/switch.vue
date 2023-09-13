@@ -85,10 +85,10 @@
     <h5>Install the Super Mario Odyssey Online mod</h5>
     <p>
       <b>Step 1</b>:
-      Download the latest
-      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-      of the mod whose filename ends with <code>_for_Switch.zip</code>.
-      The last asset in the list is the newest.
+      Download the
+      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/latest">latest release</a-ext>
+      of the mod from the assets list.
+      The filename you need ends with <code>_for_Switch.zip</code>.
     </p>
     <p>
       <b>Step 2</b>:

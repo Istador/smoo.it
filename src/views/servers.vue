@@ -23,7 +23,7 @@
           <p>
             Entering the hostname instead of an IPv4 address or changing the port is only possible
             with mod version <code>v1.1.0</code> or
-            <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">later</a-ext>.
+            <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/latest">later</a-ext>.
           </p>
           <p>
             Entering hostnames doesn't work with the <a-int name="play" id="yuzu">yuzu</a-int> emulator.
