@@ -94,6 +94,7 @@
       <b>Step 2</b>:
       Extract the downloaded <code>.zip</code> file to receive an <code>atmosphere</code> folder,
       which you need to copy to the root directory of the SD card.
+      Ignore the <code>subsdk1.elf</code> file.
     </p>
     <p>
       Please notice, that there should already be an <code>atmosphere</code> folder on the SD card.

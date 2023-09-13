@@ -113,6 +113,7 @@
       <b>Step 3</b>:
       Extract the <code>SMOO</code> folder from the <code>.zip</code> file that you downloaded in step 1
       into the mod directory that was opened at step 2.
+      Ignore the <code>subsdk1.elf</code> file.
     </p>
 
     <!-- Test that it works -->
