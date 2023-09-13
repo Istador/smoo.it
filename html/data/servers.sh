@@ -87,7 +87,7 @@ get_status() {
   fi
 
   # get state by stealth tcp check
-  local res=`sudo nmap -sS -Pn -T2 -oG - $host -p $port | grep -P '/[^/]+/tcp/'`
+  local res=`sudo nmap -sS -Pn -T2 -oG - "$host." -p $port | grep -P '/[^/]+/tcp/'`
   local ipv4=`echo "$res" | grep -oP '^Host: [0-9]+(\.[0-9]+){3}' | grep -oP '[0-9\.]+'`
   local state=`echo "$res" | grep -oP '/[^/]+/tcp/' | grep -oP '^/[^/]+/' | grep -oP '[^/]+'`
   local online=`[ "$state" == 'open' ] && echo 'true' || echo 'false'`
