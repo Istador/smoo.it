@@ -9,15 +9,17 @@
       <b-tooltip :target="'play-test-hostname-' + _uid" triggers="hover">
         <p>
           The <code>Host</code> entry in the server list is a convenient alternative to entering the IPv4 address.
-          But it is currently only possible with a
-          <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
-          of the mod.
+        </p>
+        <p>
+          It is not possible with the <code>v1.0.0</code> version of the mod,
+          but requires mod version <code>v1.1.0</code> or
+          <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">later</a-ext>.
         </p>
         <p>
           Entering hostnames doesn't work with the <a-int name="play" id="yuzu">yuzu</a-int> emulator.
         </p>
       </b-tooltip>
-      On newer versions of the mod the game will also ask for the port.
+      On version <code>v1.1.0</code> or later of the mod the game will also ask for the server port.
     </p>
     <p>
       If it can't connect to the server it'll briefly show the text <code>Failed to Connect!</code> before it continues to the main menu.

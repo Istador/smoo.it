@@ -77,11 +77,11 @@ export default class FAQ extends Vue {
             <b-icon icon="info-circle-fill" id="faq-change-ip"/>
             <b-tooltip target="faq-change-ip" triggers="hover">
               <p>
-                Newer versions of the mod will automatically save the game after changing the IP or port.
-                Just wait a moment until you gain the control back before quitting.
+                With mod version <code>v1.0.0</code> you'll need to manually save the game.
               </p>
               <p>
-                In the <code>v1.0.0</code> release version you'll need to manually save the game.
+                Newer versions of the mod will automatically save the game after changing the IP or port.
+                Just wait a moment until you gain the control back before quitting.
               </p>
             </b-tooltip>
           </li>

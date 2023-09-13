@@ -10,7 +10,8 @@
     <p>
       You usually shouldn't need to do that, unless you want to take part in developing the mod.
       The GitHub project of the mod should offer automatic builds for the
-      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">latest development versions</a-ext>.
+      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/latest">latest release</a-ext> and the
+      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">development branch</a-ext>.
     </p>
     <p>
       Building it natively requires you to install development software on your computer.

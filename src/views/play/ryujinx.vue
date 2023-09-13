@@ -21,7 +21,7 @@
       first.
     </p>
     <p>
-      The currently latest release build <code>v1.0.0</code> of the mod doesn't work well with emulators.
+      Version <code>v1.0.0</code> of the mod doesn't work with emulators.
       Use the latest
       <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/tag/latest-dev">dev build</a-ext>
       instead.
