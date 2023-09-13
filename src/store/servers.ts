@@ -146,6 +146,18 @@ export const servers: IServer[] = [
       PersistShines : { Enabled: false },
     },
   },
+  {
+    name     : 'Radiated',
+    server   : { host: 'radiated.smoo.it', ip: '15.204.234.96' },
+    location : { flag: 'us', name: 'US-East' },
+    version  : linkRelease('1.0.4'),
+    settings : {
+      Server        : { MaxPlayers: 6 },
+      Scenario      : { MergeEnabled: false },
+      Shines        : { Enabled: false },
+      PersistShines : { Enabled: false },
+    },
+  },
 ].map((s: IServer) => {
   s.server.state = null
   return s
