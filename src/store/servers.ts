@@ -150,7 +150,7 @@ export const servers: IServer[] = [
     name     : 'Radiated',
     server   : { host: 'radiated.smoo.it', ip: '15.204.234.96' },
     location : { flag: 'us', name: 'US-East' },
-    version  : linkRelease('1.0.4'),
+    version  : linkRelease('1.0.4-rcl.9', 'rcl/1.0.4', 'Istador/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 6 },
       Scenario      : { MergeEnabled: false },
