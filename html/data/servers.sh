@@ -78,6 +78,7 @@ get_status() {
     ["rcl.smoo.it:1027"]="RCL_1"
     ["rcl.smoo.it:1028"]="RCL_2"
     ["rcl.smoo.it:1029"]="RCL_3"
+    ["radiated.smoo.it:1027"]="RADIATED"
   )
 
   # get secret token
@@ -115,6 +116,7 @@ scan_one() {
     ["rcl.smoo.it:1027"]="1"
     ["rcl.smoo.it:1028"]="1"
     ["rcl.smoo.it:1029"]="1"
+    ["radiated.smoo.it:1027"]="3"
     # refresh dead servers less often:
     ["f0c0s.smoo.it:1027"]="30"
     ["parknich.smoo.it:1027"]="30"
