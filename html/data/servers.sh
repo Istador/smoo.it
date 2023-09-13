@@ -165,6 +165,7 @@ scan_all() {
     krokilex.smoo.it:
     jeff.smoo.it:
     ninunity.smoo.it:62102
+    radiated.smoo.it:
   )
   local IFS=$'\n'
   local output=(`parallel  --colsep=:  -j 4  -k  --nice 19  scan_one_line  :::  "${servers[@]}"  :::  "$force"`)

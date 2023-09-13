@@ -14,6 +14,7 @@ $servers = [
   'krokilex.smoo.it:1027',
   'jeff.smoo.it:1027',
   'ninunity.smoo.it:62102',
+  'radiated.smoo.it:1027',
 ];
 
 $file = basename($_SERVER['REQUEST_URI'] ?? '');
