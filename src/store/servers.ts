@@ -135,14 +135,14 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : 'Ninunity Online',
-    server   : { host: 'ninunity.smoo.it', ip: '209.25.141.180', port: 62102 },
+    name     : 'Snafty',
+    server   : { host: 'snafty.smoo.it', ip: '209.25.141.180', port: 62102 },
     location : { flag: 'de', name: 'Germany' },
     version  : linkRelease('1.0.3'),
     settings : {
       Server        : { MaxPlayers: 16 },
-      Scenario      : { MergeEnabled: false },
-      Shines        : { Enabled: false },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true },
       PersistShines : { Enabled: false },
     },
   },
