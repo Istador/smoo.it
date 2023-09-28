@@ -166,7 +166,7 @@ scan_all() {
     rcl.smoo.it:1029
     krokilex.smoo.it:
     jeff.smoo.it:
-    ninunity.smoo.it:62102
+    snafty.smoo.it:62102
     radiated.smoo.it:
   )
   local IFS=$'\n'
