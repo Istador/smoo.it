@@ -4,7 +4,7 @@
     <h5>Test that it works</h5>
     <p>
       When starting the game with the mod for the first time a keyboard dialog should pop up before the main menu asking for a server IP.
-      Choose one of the <a-int name="servers">public servers</a-int> and type in its IPv4 address.
+      Choose one of the <a-int name="servers">public servers</a-int> and type in its hostname.
       <b-icon icon="info-circle-fill" :id="'play-test-hostname-' + _uid"/>
       <b-tooltip :target="'play-test-hostname-' + _uid" triggers="hover">
         <p>
@@ -16,7 +16,7 @@
           <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/latest">later</a-ext>.
         </p>
         <p>
-          Entering hostnames doesn't work with the <a-int name="play" id="yuzu">yuzu</a-int> emulator.
+          Entering hostnames doesn't work with <a-int name="play" id="yuzu">yuzu</a-int> versions below <code>1499</code>.
         </p>
       </b-tooltip>
       On version <code>v1.1.0</code> or later of the mod the game will also ask for the server port.

@@ -25,15 +25,11 @@
         }
         @media (min-width: 576px) {
           .host::before { content: 'Host: '; }
-          .ip::before   { content: 'IPv4: '; }
           .port.default { display: block !important; }
         }
         .port::before { content: 'Port: '; }
-        .ip.dynamic::before { content: 'IPv4: '; }
 
         .port.default { opacity: 0.5; display: none; &::before { opacity: 0.5; } }
-        .host + .ip { opacity: 0.5; &::before { opacity: 0.5; } }
-        .ip.dynamic > span { user-select: none; cursor: help; }
       }
 
       .td-location {

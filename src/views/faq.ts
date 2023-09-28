@@ -271,10 +271,6 @@ export default class FAQ extends Vue {
           </li>
           <li>
             <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            Using DNS hostnames instead of IPv4 addresses to connect to a SMOO server doesn't work.
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
             You have to select a network adapter in the settings and might chose the wrong one.
             <b-icon icon="info-circle-fill" id="faq-yuzu-network-adapter"/>
             <b-tooltip target="faq-yuzu-network-adapter" triggers="hover">

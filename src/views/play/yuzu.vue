@@ -18,8 +18,15 @@
       yuzu version.
       <b-icon icon="info-circle-fill" id="play-yuzu-version"/>
       <b-tooltip target="play-yuzu-version" triggers="hover">
-        yuzu should be at version <code>1114</code> or later.
-        The version is shown in the title of the window.
+        <p>
+          yuzu should be at least at version <code>1114</code> or later for the mod to work.
+        </p>
+        <p>
+          To use DNS hostnames as a server IP yuzu should be at version <code>1499</code> or later.
+        </p>
+        <p>
+          The version is shown in the title of the window.
+        </p>
       </b-tooltip>
       If you haven't, then please consult the yuzu
       <a-ext href="https://yuzu-emu.org/help/quickstart/">Quickstart Guide</a-ext>

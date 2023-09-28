@@ -26,7 +26,7 @@
             <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/latest">later</a-ext>.
           </p>
           <p>
-            Entering hostnames doesn't work with the <a-int name="play" id="yuzu">yuzu</a-int> emulator.
+            Entering hostnames doesn't work with <a-int name="play" id="yuzu">yuzu</a-int> versions below <code>1499</code>.
           </p>
         </b-tooltip>
       </template>
@@ -34,23 +34,16 @@
       <template #cell(server)="{ item: { name, server: { host, ip, port }, link } }">
         <div class="name"><b>{{ name }}</b></div>
         <div class="host" v-if="host">
-          <a-ext v-if="link" :href="link">{{ host }}</a-ext>
-          <span v-else>{{ host }}</span>
-        </div>
-        <div class="ip" v-if="ip">{{ ip }}</div>
-        <div class="ip dynamic" v-if="!ip">
-          <b-badge
-            variant="secondary"
-            :id="'dynamic-ip-badge-' + host + '-' + port"
-          >
-            dynamic
-          </b-badge>
+          <span :id="'servers-ip-' + host + '-' + port">
+            <a-ext v-if="link" :href="link">{{ host }}</a-ext>
+            <span v-else>{{ host }}</span>
+          </span>
           <b-tooltip
-            :target="'dynamic-ip-badge-' + host + '-' + port"
+            :target="'servers-ip-' + host + '-' + port"
             placement="top"
             boundary="viewport"
           >
-            <span v-html="getIPv4({ host, port })"/>
+            <span v-html="getIPv4({ host, port, ip })"/>
           </b-tooltip>
         </div>
         <div class="port" :class="{ 'default': (port || defaultPort) === defaultPort }">{{ port || defaultPort }}</div>
