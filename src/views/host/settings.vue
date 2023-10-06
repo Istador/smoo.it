@@ -48,7 +48,7 @@
 </code>
     <p>
       The <code>settings.json</code> file is automatically created when the server starts.
-      At the right or above you can see the default values for server version <code>1.0.3</code>.
+      At the right or above you can see the default values for server version <code>1.0.4</code>.
     </p>
     <ul>
       <li><b>Server</b>:
