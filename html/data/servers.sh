@@ -159,6 +159,7 @@ scan_all() {
     sanae.smoo.it:
     #tmdog.smoo.it:
     f0c0s.smoo.it:
+    sleepyy.smoo.it:
     parknich.smoo.it:
     yann.smoo.it:
     rcl.smoo.it:

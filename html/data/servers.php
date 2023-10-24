@@ -6,6 +6,7 @@ $servers = [
   'sanae.smoo.it:1027',
   'tmdog.smoo.it:1027',
   'f0c0s.smoo.it:1027',
+  'sleepyy.smoo.it:1027',
   'parknich.smoo.it:1027',
   'yann.smoo.it:1027',
   'rcl.smoo.it:1027',
