@@ -51,6 +51,14 @@ export const servers: IServer[] = [
     location : { flag: 'de', name: 'Germany' },
   },
   {
+    name     : 'Sleepyy',
+    server   : { host: 'sleepyy.smoo.it', ip: '51.210.241.107' },
+    location : { flag: 'fr', name: 'France' },
+    settings : {
+      Server: { MaxPlayers: 6 },
+    },
+  },
+  {
     dead     : true,
     name     : 'Parknich',
     server   : { host: 'parknich.smoo.it', ip: '51.81.86.202' },
