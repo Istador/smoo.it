@@ -294,7 +294,7 @@ export default class FAQ extends Vue {
       answer   : `
         <p>
           When the game is downgraded using the
-          <a-ext href="https://github.com/Istador/odyssey-downgrade/releases">Odyssey Downgrade</a-ext>
+          <a-ext href="https://github.com/Istador/odyssey-downgrade/releases/latest">Odyssey Downgrade</a-ext>
           tool on the Nintendo Switch, the system and the main menu will show the game as being on version <code>1.3.0</code>.
           This is correct, because technically that is still the installed version.
         </p>

@@ -48,8 +48,9 @@
     <p>
       <ul>
         <li>
-          Go to the <a-ext href="https://github.com/Istador/odyssey-downgrade/releases">releases page</a-ext>
-          and download the latest <code>odyssey_downgrade.nro</code> file.
+          Download the <code>odyssey_downgrade.nro</code> file from the
+          <a-ext href="https://github.com/Istador/odyssey-downgrade/releases/latest">latest release</a-ext>
+          of the downgrader in the assets list.
         </li>
         <li>
           Put the file onto your SD card into the <code>/switch/</code> directory.
