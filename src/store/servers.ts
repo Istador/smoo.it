@@ -52,7 +52,7 @@ export const servers: IServer[] = [
   },
   {
     name     : 'Sleepyy',
-    server   : { host: 'sleepyy.smoo.it', ip: '51.210.241.107' },
+    server   : { host: 'sleepyy.smoo.it', ip: '141.94.109.19' },
     location : { flag: 'fr', name: 'France' },
     settings : {
       Server: { MaxPlayers: 6 },
