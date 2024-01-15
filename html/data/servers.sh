@@ -21,7 +21,8 @@ get_details() {
             MergeEnabled: .MergeEnabled | del(select(type | . != "boolean")),
           } | with_entries(select(.value != null)),
           Shines: .Shines | {
-            Enabled: .Enabled | del(select(type | . != "boolean")),
+            Enabled         : .Enabled         | del(select(type | . != "boolean")),
+            ClearOnNewSaves : .ClearOnNewSaves | del(select(type | . != "boolean")),
           } | with_entries(select(.value != null)),
           PersistShines: .PersistShines | {
             Enabled: .Enabled | del(select(type | . != "boolean")),
