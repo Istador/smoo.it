@@ -99,6 +99,7 @@ export default class SmooServerState extends Vue {
       bool('ScenarioMerge', 'Scenario', 'MergeEnabled')
       bool('ShineSync', 'Shines', 'Enabled')
       bool('PersistShines', 'PersistShines', 'Enabled')
+      bool('ClearShines', 'Shines', 'ClearOnNewSaves')
     }
     const stateColor = (state === 'online' ? 'text-success' : (state === 'offline' ? 'text-danger' : ''))
     return '<p>'

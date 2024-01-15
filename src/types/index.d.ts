@@ -22,7 +22,7 @@ export interface IPlayer {
 export interface ISettings {
   Server?        : { MaxPlayers?   : number }
   Scenario?      : { MergeEnabled? : boolean }
-  Shines?        : { Enabled?      : boolean }
+  Shines?        : { Enabled?      : boolean, ClearOnNewSaves? : boolean }
   PersistShines? : { Enabled?      : boolean }
 }
 
