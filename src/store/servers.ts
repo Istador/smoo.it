@@ -74,10 +74,10 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : 'RCL 1',
+    name     : 'RCL 1 (H&S)',
     server   : { host: 'rcl.smoo.it' },
     location : { flag: 'de', name: 'Germany' },
-    version  : linkRelease('1.0.4-rcl.9', 'rcl/1.0.4', 'Istador/SmoOnlineServer'),
+    version  : linkRelease('1.0.5-rcl.1', 'rcl/1.0.5', 'Istador/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 6 },
       Scenario      : { MergeEnabled: true },
@@ -86,10 +86,10 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : 'RCL 2',
+    name     : 'RCL 2 (100%)',
     server   : { host: 'rcl.smoo.it', port: 1028 },
     location : { flag: 'de', name: 'Germany' },
-    version  : linkRelease('1.0.4-rcl.9', 'rcl/1.0.4', 'Istador/SmoOnlineServer'),
+    version  : linkRelease('1.0.5-rcl.1', 'rcl/1.0.5', 'Istador/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 6 },
       Scenario      : { MergeEnabled: true },
@@ -98,8 +98,20 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : 'RCL 3 (UDP)',
+    name     : 'RCL 3 (Co-Op)',
     server   : { host: 'rcl.smoo.it', port: 1029 },
+    location : { flag: 'de', name: 'Germany' },
+    version  : linkRelease('1.0.5-rcl.1', 'rcl/1.0.5', 'Istador/SmoOnlineServer'),
+    settings : {
+      Server        : { MaxPlayers: 6 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true, ClearOnNewSaves: true },
+      PersistShines : { Enabled: true },
+    },
+  },
+  {
+    name     : 'RCL 4 (UDP)',
+    server   : { host: 'rcl.smoo.it', port: 1030 },
     location : { flag: 'de', name: 'Germany' },
     settings : {
       Server        : { MaxPlayers: 8 },
