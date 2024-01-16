@@ -79,6 +79,7 @@ get_status() {
     ["rcl.smoo.it:1027"]="RCL_1"
     ["rcl.smoo.it:1028"]="RCL_2"
     ["rcl.smoo.it:1029"]="RCL_3"
+    ["rcl.smoo.it:1030"]="RCL_4"
     ["radiated.smoo.it:1027"]="RADIATED"
   )
 
@@ -117,6 +118,7 @@ scan_one() {
     ["rcl.smoo.it:1027"]="1"
     ["rcl.smoo.it:1028"]="1"
     ["rcl.smoo.it:1029"]="1"
+    ["rcl.smoo.it:1030"]="1"
     ["radiated.smoo.it:1027"]="3"
     # refresh dead servers less often:
     ["f0c0s.smoo.it:1027"]="30"
@@ -166,6 +168,7 @@ scan_all() {
     rcl.smoo.it:
     rcl.smoo.it:1028
     rcl.smoo.it:1029
+    rcl.smoo.it:1030
     krokilex.smoo.it:
     jeff.smoo.it:
     snafty.smoo.it:62102
