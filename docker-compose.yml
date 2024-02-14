@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+  smoo-api:
+    build: .
+    user: "33:33"
+    restart: unless-stopped
+    ports:
+    - 8080:80
+    volumes:
+    - ./html/data/.env:/var/www/html/data/.env:ro
+    environment:
+      # public servers (from Discord)
+      SMOO_SERVER_DC_01: piplup.smoo.it:1027
+      SMOO_SERVER_DC_02: piplup.smoo.it:1028
+      SMOO_SERVER_DC_03: sanae.smoo.it:1027
+      #SMOO_SERVER_DC_04: tmdog.smoo.it:1027
+      SMOO_SERVER_DC_05: f0c0s.smoo.it:1027
+      SMOO_SERVER_DC_06: sleepyy.smoo.it:1027
+      SMOO_SERVER_DC_07: parknich.smoo.it:1027
+      SMOO_SERVER_DC_08: yann.smoo.it:1027
+
+      # public servers (website only)
+      SMOO_SERVER_WWW_01: rcl.smoo.it:1027
+      SMOO_SERVER_WWW_02: rcl.smoo.it:1028
+      SMOO_SERVER_WWW_03: rcl.smoo.it:1029
+      SMOO_SERVER_WWW_04: rcl.smoo.it:1030
+      SMOO_SERVER_WWW_05: krokilex.smoo.it:1027
+      SMOO_SERVER_WWW_06: jeff.smoo.it:1027
+      SMOO_SERVER_WWW_07: snafty.smoo.it:62102
+
+      # default refresh rate
+      SMOO_EXPIRE: 10
+
+      # refresh servers with JSON API more often
+      SMOO_EXPIRE_JSON_01: piplup.smoo.it:1027:3
+      SMOO_EXPIRE_JSON_02: piplup.smoo.it:1028:3
+      SMOO_EXPIRE_JSON_03: rcl.smoo.it:1027:1
+      SMOO_EXPIRE_JSON_04: rcl.smoo.it:1028:1
+      SMOO_EXPIRE_JSON_05: rcl.smoo.it:1029:1
+      SMOO_EXPIRE_JSON_06: rcl.smoo.it:1030:1
+      SMOO_EXPIRE_JSON_07: radiated.smoo.it:1027:3
+
+      # refresh dead servers less often:
+      SMOO_EXPIRE_DEAD_01: f0c0s.smoo.it:1027:30
+      SMOO_EXPIRE_DEAD_02: parknich.smoo.it:1027:30
+      SMOO_EXPIRE_DEAD_03: yann.smoo.it:1027:30
+      SMOO_EXPIRE_DEAD_04: jeff.smoo.it:1027:30

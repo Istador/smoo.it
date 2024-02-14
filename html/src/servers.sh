@@ -2,9 +2,14 @@
 
 
 export LC_ALL="en_US.UTF-8"
-export DIR=$(realpath `dirname "$0"`)
+export HOME="/tmp"
+
+SRC=$(realpath `dirname "$0"`)
+HTM=$(dirname "$SRC")
+export DIR="$HTM/data"
 
 
+# fetch detailed server information via the JSON API
 get_details() {
   local host="$1"
   local port="$2"
@@ -58,6 +63,7 @@ get_details() {
       }'  2>/dev/null
   )
   if [ "$json" == "" ] ; then
+    # JSON API failed, fallback to normal online status
     echo "true"
   else
     echo "$json"
@@ -66,27 +72,28 @@ get_details() {
 export -f get_details
 
 
+# get the live status of one server
 get_status() {
   local host="$1"
   local port="$2"
-  local token=""
 
-  # environment variable names which contain the secret token
-  local auths
-  declare -A auths=(
-    ["piplup.smoo.it:1027"]="PIPLUP"
-    ["piplup.smoo.it:1028"]="PIPLUP"
-    ["rcl.smoo.it:1027"]="RCL_1"
-    ["rcl.smoo.it:1028"]="RCL_2"
-    ["rcl.smoo.it:1029"]="RCL_3"
-    ["rcl.smoo.it:1030"]="RCL_4"
-    ["radiated.smoo.it:1027"]="RADIATED"
-  )
+  [ -f "$DIR/.env" ] && source "$DIR/.env"
+
+  # load all secret tokens for the JSON API
+  local tokens
+  declare -A tokens=()
+  local key
+  for key in "${!SMOO_TOKEN_@}" ; do
+    local h="${!key%:*:*}"
+    local p="${!key#*:}"
+    p="${p%:*}"
+    tokens["$h:$p"]="${!key#*:*:}"
+  done
 
   # get secret token
-  if [[ "${auths[$host:$port]}" != "" ]]; then
-    [ -f "$DIR/secrets.env" ] && source "$DIR/secrets.env"
-    token="${!auths[$host:$port]}"
+  local token=""
+  if [[ "${tokens[$host:$port]}" != "" ]]; then
+    token="${tokens[$host:$port]}"
   fi
 
   # get state by stealth tcp check
@@ -104,29 +111,27 @@ get_status() {
 export -f get_status
 
 
+# get the status for one server, but only update it every X minutes
 scan_one() {
   local host="$1"
   local port="${2:-1027}"
   local force="${3:-}"
 
+  [ -f "$DIR/.env" ] && source "$DIR/.env"
+
   # custom status refresh rate per server
   local times
-  declare -A times=(
-    # refresh servers with JSON API more often:
-    ["piplup.smoo.it:1027"]="3"
-    ["piplup.smoo.it:1028"]="3"
-    ["rcl.smoo.it:1027"]="1"
-    ["rcl.smoo.it:1028"]="1"
-    ["rcl.smoo.it:1029"]="1"
-    ["rcl.smoo.it:1030"]="1"
-    ["radiated.smoo.it:1027"]="3"
-    # refresh dead servers less often:
-    ["f0c0s.smoo.it:1027"]="30"
-    ["parknich.smoo.it:1027"]="30"
-    ["yann.smoo.it:1027"]="30"
-    ["jeff.smoo.it:1027"]="30"
-  )
-  local timex="${times[$host:$port]:-10}"
+  declare -A times=()
+  local key
+  for key in "${!SMOO_EXPIRE_@}" ; do
+    local h="${!key%:*:*}"
+    local p="${!key#*:}"
+    p="${p%:*}"
+    times["$h:$p"]="${!key#*:*:}"
+  done
+
+  # refresh rate to use
+  local timex="${times[$host:$port]:-${SMOO_EXPIRE:-10}}"
 
   local file="$DIR/$host:$port.json"
   local ftmp="$file.tmp"
@@ -143,6 +148,7 @@ scan_one() {
 export -f scan_one
 
 
+# generate the output for one server (when the output contains multiple servers)
 scan_one_line() {
   local host="$1"
   local port="${2:-1027}"
@@ -154,29 +160,24 @@ scan_one_line() {
 export -f scan_one_line
 
 
+# generate the output for all servers
 scan_all() {
   local force="${1:-}"
-  local servers=(
-    piplup.smoo.it:
-    piplup.smoo.it:1028
-    sanae.smoo.it:
-    #tmdog.smoo.it:
-    f0c0s.smoo.it:
-    sleepyy.smoo.it:
-    parknich.smoo.it:
-    yann.smoo.it:
-    rcl.smoo.it:
-    rcl.smoo.it:1028
-    rcl.smoo.it:1029
-    rcl.smoo.it:1030
-    krokilex.smoo.it:
-    jeff.smoo.it:
-    snafty.smoo.it:62102
-    radiated.smoo.it:
-  )
+
+  # load servers from environment
+  [ -f "$DIR/.env" ] && source "$DIR/.env"
+  local servers=()
+  local key
+  for key in "${!SMOO_SERVER_@}" ; do
+    servers+=("${!key}")
+  done
+
+  # get the status for each server in parallel
   local IFS=$'\n'
   local output=(`parallel  --colsep=:  -j 4  -k  --nice 19  scan_one_line  :::  "${servers[@]}"  :::  "$force"`)
   local stamp=`date --iso-8601=seconds`
+
+  # output
   echo -n "{\"stamp\":\"${stamp}\",\"servers\":{"
   local first=1
   local line
@@ -191,6 +192,7 @@ scan_all() {
 }
 
 
+# only output the status of one server
 display_one() {
   local server="$1"
   local force="$2"
@@ -198,6 +200,7 @@ display_one() {
 }
 
 
+# output all servers, but only update it once per minute
 display_all() {
   local file="$DIR/all.json"
   local ftmp="$file.tmp"

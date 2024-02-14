@@ -1,23 +1,23 @@
-Options -Indexes
+Options  -Indexes
 
 <IfModule mod_rewrite.c>
   RewriteEngine  On
-  RewriteRule  ^servers.json                              data/servers.php [L]
-  RewriteRule  ^servers/all\.json                         data/servers.php [L]
-  RewriteRule  ^servers/[a-z0-9]+\.smoo\.it:[0-9]+\.json  data/servers.php [L]
+  RewriteRule  ^data/                                     -                [L,F]
+  RewriteRule  ^servers.json                              src/servers.php  [L]
+  RewriteRule  ^servers/all\.json                         src/servers.php  [L]
+  RewriteRule  ^servers/[a-z0-9]+\.smoo\.it:[0-9]+\.json  src/servers.php  [L]
 </IfModule>
 
 <IfModule mod_headers.c>
   # public domain
-  SetEnvIf Origin "^http(s)?://smoo\.it$" AccessControlAllowOrigin=$0
+  SetEnvIf  Origin  "^http(s)?://([a-z0-9]+\.)?smoo\.it$"  AccessControlAllowOrigin=$0
 
   # local/private development
-  SetEnvIf Origin "^http(s)?://(localhost|(10\.[0-9]+|172\.(1[6-9]|2[0-9]|3[0-1])|192\.168)\.[0-9]+\.[0-9]+):8080$" AccessControlAllowOrigin=$0
+  SetEnvIf  Origin  "^http(s)?://(localhost|(10\.[0-9]+|172\.(1[6-9]|2[0-9]|3[0-1])|192\.168)\.[0-9]+\.[0-9]+):8080$"  AccessControlAllowOrigin=$0
 
   # build artifacts using file://
-  SetEnvIf Origin "^null$" AccessControlAllowOrigin=$0
+  SetEnvIf  Origin  "^null$" AccessControlAllowOrigin=$0
 
-  Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
-  Header merge Vary Origin
+  Header  add  Access-Control-Allow-Origin  %{AccessControlAllowOrigin}e  env=AccessControlAllowOrigin
+  Header  merge  Vary  Origin
 </IfModule>
-

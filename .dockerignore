@@ -1,0 +1,6 @@
+/.git/
+/html/data/
+
+/.dockerignore
+/.gitignore
+/docker-compose.yml
