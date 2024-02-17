@@ -47,14 +47,16 @@ RUN  sed  -i  -e  's/# en_US.UTF-8/en_US.UTF-8/'  /etc/locale.gen  \
 ;
 
 # apache modules
-RUN  a2enmod  headers  \
- &&  a2enmod  rewrite  \
- &&  a2dismod  status  \
+RUN  a2enmod  headers   \
+ &&  a2enmod  remoteip  \
+ &&  a2enmod  rewrite   \
+ &&  a2dismod  status   \
 ;
 
 VOLUME   /var/www/html/data/
 
-COPY  ./sudoers      /etc/sudoers.d/smoo
-COPY  ./apache.conf  /etc/apache2/sites-enabled/000-default.conf
+COPY  ./sudoers        /etc/sudoers.d/smoo
+COPY  ./apache.conf    /etc/apache2/sites-enabled/000-default.conf
+COPY  ./remoteip.conf  /etc/apache2/conf-enabled/remoteip.conf
 
 COPY  --from=html  --chown=www-data:www-data  /  /var/www/html/
