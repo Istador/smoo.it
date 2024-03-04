@@ -37,7 +37,7 @@
       <ul>
         <li>
           Open the <code>Options &gt; Settings</code> in Ryujinx,
-          go to the <code>System</code> tab and check <code>Enable Guest Internet Access</code>
+          go to the <code>Network</code> section and check <code>Guest Internet Access/LAN Mode</code>
           to allow outgoing connections to the internet by the emulator.
         </li>
         <li>
@@ -50,8 +50,9 @@
             Public servers usually block this profile ID for that reason.
           </b-tooltip>
           Open the <code>Options &gt; Manage User Profiles</code> window in Ryujinx and click on the
-          <code>Add New Profile</code> button. It'll ask you for the name of the new profile, which will be shown to other players.
-          Once the profile is created, simply double-click on it to select it.
+          <code>+</code> button to create a new user profile.
+          It'll ask you for the name of the new profile, which will be shown to other players.
+          Once the profile is created, simply click on it to select it.
         </li>
       </ul>
     </p>
