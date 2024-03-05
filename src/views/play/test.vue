@@ -15,9 +15,6 @@
           but requires mod version <code>v1.1.0</code> or
           <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/latest">later</a-ext>.
         </p>
-        <p>
-          Entering hostnames doesn't work with <a-int name="play" id="yuzu">yuzu</a-int> versions below <code>1499</code>.
-        </p>
       </b-tooltip>
       On version <code>v1.1.0</code> or later of the mod the game will also ask for the server port.
     </p>

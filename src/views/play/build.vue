@@ -29,10 +29,5 @@
       With the docker script just call it with an additional parameter instead: <kbd>./docker-build.sh 1</kbd>.
       When switching between emulator and Switch builds, you should delete the temporary <code>build100</code> directory inbetween.
     </p>
-    <p>
-      An emulator build for <a-int name="play" id="yuzu">yuzu</a-int>
-      will require the build artifacts to be
-      <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/blob/4339847da55fa232f22f2f81c77aff4119ed7180/.github/actions/build/action.yml#L69-L74">moved around a bit</a-ext>.
-    </p>
   </smoo-card>
 </template>

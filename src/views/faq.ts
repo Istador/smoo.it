@@ -97,7 +97,7 @@ export default class FAQ extends Vue {
             <b-icon icon="info-circle-fill" id="faq-save-dir"/>
             <b-tooltip target="faq-save-dir" triggers="hover">
               <p>
-                Inside the <a-int name="play" id="yuzu">yuzu</a-int> or
+                Inside the
                 <a-int name="play" id="ryujinx">Ryujinx</a-int> emulator you can
                 right click on the game to get to its save directory.
               </p>
@@ -168,11 +168,7 @@ export default class FAQ extends Vue {
         </p>
         <hr/>
         <p>
-          The yuzu <a-ext href="https://yuzu-emu.org/help/quickstart/#dumping-cartridge-games">Quickstart Guide</a-ext>
-          has a good section on how to do that.
-        </p>
-        <p>
-          The short summary of it is, that you download the latest
+          The short version is that you download the latest
           <a-ext href="https://github.com/DarkMatterCore/nxdumptool/releases">nxdumptool</a-ext>
           <b-icon icon="info-circle-fill" id="faq-nxdumptool-keys"/>
           <b-tooltip target="faq-nxdumptool-keys" triggers="hover">
@@ -222,70 +218,7 @@ export default class FAQ extends Vue {
       id       : 111,
       question : '<b-icon icon="laptop"/> Which emulator should I use?',
       answer   : `
-        <h5><a-int name="play" id="ryujinx">Ryujinx</a-int></h5>
-        <ul class="ul-icons">
-          <li>
-            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
-            Accurate emulation that technically behaves more like a real Switch (less bugs).
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
-            Build-in update process for the emulator itself.
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            Might run slightly worse on older hardware.
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            Additional network lag and therefore potential packet loss.
-            (Might already be <a-ext href="https://github.com/Ryujinx/Ryujinx/pull/3647">fixed</a-ext>.)
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            Requires a <a-int name="faq" id="104">SMO 1.0.0 ROM</a-int>.
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            Requires a <a-ext href="https://github.com/Ryujinx/Ryujinx/wiki/Firmware-Dumping-Guide-(TegraExplorer-or-hbmenu-&amp;-Goldleaf)">firmware dump</a-ext>.
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            You have to manually create a new user profile (and enable internet access).
-          </li>
-        </ul>
-        <hr/>
-        <h5><a-int name="play" id="yuzu">yuzu</a-int></h5>
-        <ul class="ul-icons">
-          <li>
-            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
-            Might run slightly smoother on older hardware.
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-up" class="text-success"/>
-            Easy to remove a patch to downgrade SMO to <code>1.0.0</code>.
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            Inaccurate emulation might cause graphical glitches and bugs.
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            You have to select a network adapter in the settings and might chose the wrong one.
-            <b-icon icon="info-circle-fill" id="faq-yuzu-network-adapter"/>
-            <b-tooltip target="faq-yuzu-network-adapter" triggers="hover">
-              <p>Or you need to switch between different adapters depending on which server you want to connect to.</p>
-              <p>E.g. a VPN network adapter for a private server and another adapter for the internet connection to public servers.</p>
-            </b-tooltip>
-          </li>
-          <li>
-            <b-icon flip-h icon="hand-thumbs-down" class="text-danger"/>
-            <a-ext href="https://github.com/yuzu-emu/yuzu/issues/8666">Might not work</a-ext> on <font-awesome-icon icon="fa-brands fa-linux"/> GNU/Linux at all.
-          </li>
-        </ul>
-        <hr/>
-        Opinion: <code>Ryujinx</code> is the better emulator and you should try it out first.
-        If it doesn't work or the performance is bad on your hardware, you can try out <code>yuzu</code> to see if it helps or not.
+        <a-int name="play" id="ryujinx">Ryujinx</a-int>
       `,
     },
     {

@@ -20,6 +20,12 @@ const routes: Array<RouteConfig> = [
     meta      : {
       title: 'Playing the SMOO Mod',
     },
+    children: [
+      {
+        path     : 'yuzu',
+        redirect : { name: 'play', params: { id: 'ryujinx' } },
+      },
+    ],
   },
   {
     name      : 'host',

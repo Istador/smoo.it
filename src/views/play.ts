@@ -3,7 +3,6 @@ import { Vue, Component } from 'vue-property-decorator'
 import PlayHideAndSeek from './play/hide-and-seek.vue'
 import PlaySwitch from './play/switch.vue'
 import PlayRyujinx from './play/ryujinx.vue'
-import PlayYuzu from './play/yuzu.vue'
 import PlayBuild from './play/build.vue'
 
 @Component({
@@ -11,7 +10,6 @@ import PlayBuild from './play/build.vue'
     PlayHideAndSeek,
     PlaySwitch,
     PlayRyujinx,
-    PlayYuzu,
     PlayBuild,
   },
 })

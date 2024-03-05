@@ -52,8 +52,6 @@
       The other computers connected to the VPN will be able to connect to the server using the
       <a-int name="faq" id="107">private</a-int> VPN IPv4 address
       of the computer running the server.
-      When playing with <a-int name="play" id="yuzu">yuzu</a-int>, then the VPN network adapter needs to be selected in the yuzu settings.
-      Remember to change this back before trying to connect to non-VPN servers again.
     </p>
 
     <h5><b-icon icon="controller"/> Playing with a Nintendo Switch</h5>

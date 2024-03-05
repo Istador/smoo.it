@@ -24,7 +24,6 @@
             <b-dd-item :to="{ name: 'play', params: { id: 'hide-and-seek'} }">Hide &amp; Seek rules</b-dd-item>
             <b-dd-item :to="{ name: 'play', params: { id: 'switch'} }">Play on Switch</b-dd-item>
             <b-dd-item :to="{ name: 'play', params: { id: 'ryujinx'} }">Play with Ryujinx</b-dd-item>
-            <b-dd-item :to="{ name: 'play', params: { id: 'yuzu'} }">Play with yuzu</b-dd-item>
             <b-dd-item :to="{ name: 'play', params: { id: 'build'} }">Build the mod</b-dd-item>
           </b-nav-dd>
           <b-nav-dd right>
