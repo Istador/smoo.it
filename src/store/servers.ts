@@ -37,6 +37,7 @@ export const servers: IServer[] = [
     },
   },
   {
+    dead     : true,
     name     : 'Sanae',
     server   : { host: 'sanae.smoo.it', ip: '64.201.219.20' },
     location : { flag: 'ca', name: 'Canada' },
