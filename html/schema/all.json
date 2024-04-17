@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/schema/all.json",
+  "title": "SMOO Servers Status",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "stamp",
+    "servers"
+  ],
+  "properties": {
+    "stamp": {
+      "description": "When this document was created (note that this is cached).",
+      "type": "string",
+      "format": "date-time"
+    },
+    "servers": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[a-z0-9]+\\.smoo\\.it:[0-9]+$": {
+          "$ref": "server.json#/$defs/Server"
+        }
+      }
+    }
+  }
+}

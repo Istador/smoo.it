@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/schema/server.json",
+  "title": "SMOO Server Status",
+  "$ref": "#/$defs/Server",
+  "$defs": {
+    "Server": {
+      "description": "Entry for one server.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stamp",
+        "host",
+        "ipv4",
+        "port",
+        "state"
+      ],
+      "properties": {
+        "stamp": {
+          "description": "When this server was last checked (update times are individual per server).",
+          "type": "string",
+          "format": "date-time"
+        },
+        "host": {
+          "description": "Hostname of the server, that can be inserted in-game.",
+          "type": "string",
+          "format": "hostname",
+          "pattern": "\\.smoo\\.it$"
+        },
+        "ipv4": {
+          "description": "IPv4 address that the hostname resolved to.",
+          "type": "string",
+          "anyOf": [
+            {
+              "format": "ipv4"
+            },
+            {
+              "enum": [ "" ]
+            }
+          ]
+        },
+        "port": {
+          "description": "Port of the server.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 1027,
+          "maximum": 65535
+        },
+        "state": {
+          "$ref": "#/$defs/State"
+        }
+      }
+    },
+    "State": {
+      "description": "Status of the server.",
+      "anyOf": [
+        {
+          "description": "Online or offline.",
+          "type": "boolean"
+        },
+        {
+          "$ref": "#/$defs/ExtendedState"
+        }
+      ]
+    },
+    "ExtendedState": {
+      "description": "Server is online and offers an extended status.",
+      "type": "object",
+      "properties": {
+        "Settings": {
+          "$ref": "#/$defs/Settings"
+        },
+        "Players": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Player"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "type": "object",
+      "properties": {
+        "Server": {
+          "type": "object",
+          "properties": {
+            "MaxPlayers": {
+              "description": "The maximum amount of players that can be connected.",
+              "type": "integer",
+              "minimum": 1,
+              "default": 8
+            }
+          }
+        },
+        "Scenario": {
+          "type": "object",
+          "properties": {
+            "MergeEnabled": {
+              "description": "Other players are always reported as being in the same scenario if they are in the same stage.",
+              "type": "boolean",
+              "default": false
+            }
+          }
+        },
+        "Shines": {
+          "type": "object",
+          "properties": {
+            "Enabled": {
+              "description": "Collected moons reported to the server are send to other players.",
+              "type": "boolean",
+              "default": true
+            },
+            "ClearOnNewSaves": {
+              "description": "Using a new save file will clear the collected moons in the servers memory.",
+              "type": "boolean",
+              "default": false
+            }
+          }
+        },
+        "PersistShines": {
+          "type": "object",
+          "properties": {
+            "Enabled": {
+              "description": "Collected moons are saved to a local file and therefore survive server restarts.",
+              "type": "boolean",
+              "default": false
+            }
+          }
+        }
+      }
+    },
+    "Player": {
+      "description": "One player connected to the server (no property is required, so this could even be an empty object, only indicating the amount of connected players).",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "description": "Profile ID of the player.",
+          "type": "string"
+        },
+        "Name": {
+          "description": "Profile name of the player shown in-game.",
+          "type": "string"
+        },
+        "Kingdom": {
+          "description": "Human-readable kingdom name the player is in.",
+          "type": "string"
+        },
+        "Stage": {
+          "description": "Game-internal level name the player is in.",
+          "type": "string"
+        },
+        "Scenario": {
+          "description": "Game-internal modifier for the stage representing the story progression in the kingdom.",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 127
+        },
+        "Position": {
+          "description": "In-game coordinates of the player.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "X": { "type": "number" },
+            "Y": { "type": "number" },
+            "Z": { "type": "number" }
+          }
+        },
+        "Rotation": {
+          "description": "In-game rotation of the player.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "W": { "type": "number" },
+            "X": { "type": "number" },
+            "Y": { "type": "number" },
+            "Z": { "type": "number" }
+          }
+        },
+        "Tagged": {
+          "description": "In Hide & Seek this represents if the player is it (seeker) or not (hider).",
+          "type": "boolean"
+        },
+        "Costume": {
+          "description": "Costume the player is wearing in-game (game-internal names).",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "Cap": {
+              "type": "string"
+            },
+            "Body": {
+              "type": "string"
+            }
+          }
+        },
+        "Capture": {
+          "description": "Game-internal name of the capture the player is posessing with Cappy.",
+          "type": "string"
+        },
+        "Is2D": {
+          "description": "If the player is currently in an 2D area and therefore flat.",
+          "type": "boolean"
+        },
+        "IPv4": {
+          "description": "IPv4 address of the player.",
+          "type": "string",
+          "format": "ipv4"
+        }
+      }
+    }
+  }
+}
