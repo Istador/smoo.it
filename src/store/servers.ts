@@ -167,6 +167,18 @@ export const servers: IServer[] = [
       PersistShines : { Enabled: false },
     },
   },
+  {
+    name     : 'Rocket',
+    server   : { host: 'rocket.smoo.it', ip: '71.34.227.68', port: 1027 },
+    location : { flag: 'us', name: 'US-Central' },
+    version  : linkRelease('1.0.4'),
+    settings : {
+      Server        : { MaxPlayers: 8 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true },
+      PersistShines : { Enabled: false },
+    },
+  },
 ].map((s: IServer) => {
   s.server.state = null
   return s
