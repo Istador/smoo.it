@@ -9,6 +9,21 @@ HTM=$(dirname "$SRC")
 export DIR="$HTM/data"
 
 
+# backwards compatible way to dynamically trim binary before the first '{' character
+function trim_start () {
+  local IFS
+  local LC_ALL
+  local c
+  while IFS= LC_ALL=C read -rd '' -n1 c ; do
+    [ "$c" == "{" ] && echo -n "$c" && break
+  done
+  while IFS= LC_ALL=C read -rd '' -n1 c ; do
+    echo -n "$c"
+  done
+}
+export -f trim_start
+
+
 # fetch detailed server information via the JSON API
 get_details() {
   local host="$1"
@@ -16,7 +31,7 @@ get_details() {
   local token="$3"
   local json=$(echo -n "{\"API_JSON_REQUEST\":{\"Token\":\"${token}\",\"Type\":\"Status\"}}" \
     | timeout 5.0 nc $host $port 2>/dev/null \
-    | tail -c+23 \
+    | trim_start \
     | jq -c '{
         Settings: .Settings | {
           Server: .Server | {
