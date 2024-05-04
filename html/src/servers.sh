@@ -42,6 +42,7 @@ get_details() {
           } | with_entries(select(.value != null)),
           Shines: .Shines | {
             Enabled         : .Enabled         | del(select(type | . != "boolean")),
+            Excluded        : .Excluded        | (if type == "array" then del(.[] | select(type | . != "number")) else null end),
             ClearOnNewSaves : .ClearOnNewSaves | del(select(type | . != "boolean")),
           } | with_entries(select(.value != null)),
           PersistShines: .PersistShines | {

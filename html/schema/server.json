@@ -110,6 +110,14 @@
               "type": "boolean",
               "default": true
             },
+            "Excluded": {
+              "description": "Moons that the server prevents from being synced between players.",
+              "type": "array",
+              "default": [ 496 ],
+              "minItems": 0,
+              "uniqueItems": true,
+              "items": { "type": "integer", "minimum": 0 }
+            },
             "ClearOnNewSaves": {
               "description": "Using a new save file will clear the collected moons in the servers memory.",
               "type": "boolean",
