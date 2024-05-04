@@ -117,11 +117,11 @@ export const servers: IServer[] = [
     settings : {
       Server        : { MaxPlayers: 8 },
       Scenario      : { MergeEnabled: true },
-      Shines        : { Enabled: false },
+      Shines        : { Enabled: false, ClearOnNewSaves: false },
       PersistShines : { Enabled: false },
     },
     version: {
-      html    : linkTree('udp-json-api', 'rust/udp', 'Istador/smo-multi-rs'),
+      html    : linkRelease('1.0.5-rcl.1', 'udp/1.0.5', 'Istador/smo-multi-rs'),
       details : `
         <p>Connecting requires mod version ${linkRelease('v1.4.0', 'v1.4.0', 'CraftyBoss/SuperMarioOdysseyOnline')} or later.</p>
       `,
