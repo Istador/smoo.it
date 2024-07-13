@@ -18,7 +18,7 @@ services:
       SMOO_SERVER_DC_05: f0c0s.smoo.it:1027
       SMOO_SERVER_DC_06: sleepyy.smoo.it:1027
       SMOO_SERVER_DC_07: parknich.smoo.it:1027
-      SMOO_SERVER_DC_08: yann.smoo.it:1027
+      SMOO_SERVER_DC_08: rocket.smoo.it:1027
 
       # public servers (website only)
       SMOO_SERVER_WWW_01: rcl.smoo.it:1027
@@ -46,3 +46,4 @@ services:
       SMOO_EXPIRE_DEAD_02: parknich.smoo.it:1027:30
       SMOO_EXPIRE_DEAD_03: yann.smoo.it:1027:30
       SMOO_EXPIRE_DEAD_04: jeff.smoo.it:1027:30
+      SMOO_EXPIRE_DEAD_05: rocket.smoo.it:1027:30
