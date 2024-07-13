@@ -66,6 +66,7 @@ export const servers: IServer[] = [
     location : { flag: 'us', name: 'US-East' },
   },
   {
+    dead     : true,
     name     : 'Rocket',
     server   : { host: 'rocket.smoo.it', ip: '71.34.227.68', port: 1027 },
     location : { flag: 'us', name: 'US-Central' },
