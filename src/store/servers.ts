@@ -66,6 +66,18 @@ export const servers: IServer[] = [
     location : { flag: 'us', name: 'US-East' },
   },
   {
+    name     : 'Rocket',
+    server   : { host: 'rocket.smoo.it', ip: '71.34.227.68', port: 1027 },
+    location : { flag: 'us', name: 'US-Central' },
+    version  : linkRelease('1.0.4'),
+    settings : {
+      Server        : { MaxPlayers: 8 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true },
+      PersistShines : { Enabled: false },
+    },
+  },
+  {
     name     : 'RCL 1 (H&S)',
     server   : { host: 'rcl.smoo.it' },
     location : { flag: 'de', name: 'Germany' },
@@ -153,18 +165,6 @@ export const servers: IServer[] = [
     version  : linkRelease('1.0.3'),
     settings : {
       Server        : { MaxPlayers: 16 },
-      Scenario      : { MergeEnabled: true },
-      Shines        : { Enabled: true },
-      PersistShines : { Enabled: false },
-    },
-  },
-  {
-    name     : 'Rocket',
-    server   : { host: 'rocket.smoo.it', ip: '71.34.227.68', port: 1027 },
-    location : { flag: 'us', name: 'US-Central' },
-    version  : linkRelease('1.0.4'),
-    settings : {
-      Server        : { MaxPlayers: 8 },
       Scenario      : { MergeEnabled: true },
       Shines        : { Enabled: true },
       PersistShines : { Enabled: false },
