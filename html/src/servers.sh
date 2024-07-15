@@ -69,6 +69,7 @@ get_details() {
             Y : .Y | del(select(type | . != "number")),
             Z : .Z | del(select(type | . != "number")),
           } | with_entries(select(.value != null)),
+          Capture : .Capture | del(select(type | . != "string")),
           Costume : .Costume | {
             Cap  : .Cap  | del(select(type | . != "string")),
             Body : .Body | del(select(type | . != "string")),
