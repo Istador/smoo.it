@@ -17,7 +17,8 @@ export interface TKingdomMoon {
   changeStageTo? : number
 
   extra?         : boolean
-  toadette?      : boolean
+  hintart?       : boolean
+  toadette?      : string
 }
 
 export type TKingdomMoons = { [key: string]: TKingdomMoon }

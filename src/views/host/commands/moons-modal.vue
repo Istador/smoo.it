@@ -34,7 +34,23 @@
               <tr v-for="(moon, nr) in kmoons" :key="'x' + nr">
                 <td>{{ nr < 10 ? '0' + nr : nr }}</td>
                 <td>
-                  <kbd v-if="moon.id">{{ moon.id }}</kbd>
+                  <kbd v-if="moon.id && !moon.hintart">{{ moon.id }}</kbd>
+                  <kbd
+                    v-else-if="moon.id && moon.hintart"
+                    class="text-warning"
+                    v-b-tooltip.html="{boundary:'viewport'}"
+                    title="Hint art moons are not automatically synced between players yet. But they can be send with the <kbd>shine send</kbd> server command."
+                  >
+                    {{ moon.id }}
+                  </kbd>
+                  <kbd
+                    v-else-if="moon.toadette"
+                    class="text-danger"
+                    v-b-tooltip.html="{boundary:'viewport'}"
+                    title="Toadette moons are not synced between players yet."
+                  >
+                    {{ moon.toadette }}
+                  </kbd>
                   <span
                     v-else
                     class="text-warning"
