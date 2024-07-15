@@ -16,6 +16,7 @@ export interface IPlayer {
   Name?    : string
   Kingdom? : string
   Stage?   : string
+  Capture? : string
   Costume? : ICostume
 }
 

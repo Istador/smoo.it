@@ -40,6 +40,7 @@
               <th>Player</th>
               <th v-if="hasLocations">Location</th>
               <th v-if="hasCostumes">Costume</th>
+              <th v-else-if="hasCaptures">Capture</th>
             </tr>
           </thead>
           <tbody>
@@ -57,14 +58,14 @@
                   </div>
                 </b-overlay>
               </td>
-              <td v-if="hasCostumes" class="costume">
+              <td v-if="hasCostumes || hasCaptures" class="costume">
                 <div
                   v-if="player.Costume && player.Costume.Cap"
                   class="costume-cap"
                   :title="player.Costume.Cap"
                   v-b-tooltip="{boundary:'viewport',placement:'top'}"
                 >
-                  {{ costumes.Cap[player.Costume.Cap] || 'Unknown'  }}
+                  {{ costumes.Cap[player.Costume.Cap] || 'Unknown' }}
                 </div>
                 <div
                   v-if="player.Costume && player.Costume.Body"
@@ -73,6 +74,14 @@
                   v-b-tooltip="{boundary:'viewport',placement:'bottom'}"
                 >
                   {{ costumes.Body[player.Costume.Body] || 'Unknown' }}
+                </div>
+                <div
+                  v-if="player.Capture"
+                  class="capture"
+                  :title="player.Capture"
+                  v-b-tooltip="{boundary:'viewport',placement:'bottom'}"
+                >
+                  {{ captures[player.Capture] || 'Unknown' }}
                 </div>
               </td>
             </tr>
@@ -93,6 +102,7 @@
   &.dead { color: grey; }
 }
 .smoo-server-players {
+  .capture::before { content: 'Capture: '; opacity: 0.5; }
   .costume-cap::before { content: 'Cap: '; opacity: 0.5; }
   .costume-body::before { content: 'Body: '; opacity: 0.5; }
   .location-kingdom + .location-stage { opacity: 0.5; }

@@ -5,6 +5,7 @@ import moment from 'moment'
 import { IHost, ISettings, IPlayer } from '@/types'
 import { getResult, getStamp, getState } from '@/store/xservers'
 
+import { captures } from '@/store/captures'
 import { costumes } from '@/store/costumes'
 import { kingdom2name, TKingdom } from '@/store/kingdoms'
 import { Stages } from '@/store/xstages'
@@ -25,6 +26,7 @@ export default class SmooServerState extends Vue {
 
   kingdoms = kingdom2name
   stages = Stages
+  captures = captures
   costumes = costumes
 
   get state () { return getState(this.server, this.canBeDead) }
@@ -142,6 +144,10 @@ export default class SmooServerState extends Vue {
 
   get hasCostumes () : boolean {
     return !!(this.players && this.players.some(p => p.Costume))
+  }
+
+  get hasCaptures () : boolean {
+    return !!(this.players && this.players.some(p => p.Capture))
   }
 
   get hasStages () : boolean {
