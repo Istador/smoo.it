@@ -170,10 +170,10 @@ export const servers: IServer[] = [
       Shines        : { Enabled: true },
       PersistShines : { Enabled: false },
     },
-    {
+ },	
+ {
     name     : 'Luwuna (H&S)',
-    link     : '5.180.182.219',
-    server   : { ip: '5.180.182.219', port:1027 },
+    server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port:1027 },
     location : { flag: 'nl', name: 'Netherlands' },
     settings : {
       Server        : { MaxPlayers: 8 },
@@ -181,24 +181,22 @@ export const servers: IServer[] = [
       Shines        : { Enabled: true },
       PersistShines : { Enabled: false },
     },
-    {
-    name     : 'Luwuna (Manhunt 01)',
-    link     : '5.180.182.219',
-    server   : { ip: '5.180.182.219', port:1028 },
+ },
+ {
+    name     : 'Luwuna (Versus 01)',
+    server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port:1028 },
     location : { flag: 'nl', name: 'Netherlands' },
-    version : externLink("https://gamebanana.com/mods/536910", "This server is meant to be used with Secret Dev's Manhunt mod"),
     settings : {
       Server        : { MaxPlayers: 4 },
       Scenario      : { MergeEnabled: false },
       Shines        : { Enabled: false },
       PersistShines : { Enabled: false },
     },
-    {
-    name     : 'Luwuna (Manhunt 02)',
-    link     : '5.180.182.219',
-    server   : { ip: '5.180.182.219', port:1029 },
+  },
+  {
+    name     : 'Luwuna (Versus 02)',
+    server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port:1029 },
     location : { flag: 'nl', name: 'Netherlands' },
-    version : externLink("https://gamebanana.com/mods/536910", "This server is meant to be used with Secret Dev's Manhunt mod"),
     settings : {
       Server        : { MaxPlayers: 4 },
       Scenario      : { MergeEnabled: false },
