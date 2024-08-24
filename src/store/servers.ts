@@ -170,10 +170,10 @@ export const servers: IServer[] = [
       Shines        : { Enabled: true },
       PersistShines : { Enabled: false },
     },
- },	
- {
+  },
+  {
     name     : 'Luwuna (H&S)',
-    server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port:1027 },
+    server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port: 1027 },
     location : { flag: 'nl', name: 'Netherlands' },
     settings : {
       Server        : { MaxPlayers: 8 },
@@ -181,10 +181,10 @@ export const servers: IServer[] = [
       Shines        : { Enabled: true },
       PersistShines : { Enabled: false },
     },
- },
- {
+  },
+  {
     name     : 'Luwuna (Versus 01)',
-    server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port:1028 },
+    server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port: 1028 },
     location : { flag: 'nl', name: 'Netherlands' },
     settings : {
       Server        : { MaxPlayers: 4 },
@@ -195,7 +195,7 @@ export const servers: IServer[] = [
   },
   {
     name     : 'Luwuna (Versus 02)',
-    server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port:1029 },
+    server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port: 1029 },
     location : { flag: 'nl', name: 'Netherlands' },
     settings : {
       Server        : { MaxPlayers: 4 },
