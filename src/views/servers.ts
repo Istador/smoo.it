@@ -85,7 +85,7 @@ export default class Servers extends Vue {
 
   getIPv4 ({ host, port, ip }: IHost) {
     const ipv4 = getIPv4({ host, port })
-    return (ipv4 ? 'IPv4: <code>' + (ip || ipv4) + '</code>' + (ip ? '' : ' (dynamic)') : '')
-      + (ip && ip !== ipv4 ? '<br/>Changed to <code>' + ipv4 + '</code>?' : '')
+    return (ip || ipv4 ? 'IPv4: <code>' + (ip || ipv4) + '</code>' + (ip ? '' : ' (dynamic)') : '')
+      + (ip && ipv4 && ip !== ipv4 ? '<br/>Changed to <code>' + ipv4 + '</code>?' : '')
   }
 }
