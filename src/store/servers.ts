@@ -175,7 +175,7 @@ export const servers: IServer[] = [
     name     : 'Luwuna (H&S)',
     server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port: 1027 },
     location : { flag: 'nl', name: 'Netherlands' },
-    version  : linkTree('main', 'LunaBroeke/SmoOnlineServer', 'LunaBroeke/SmoOnlineServer'),
+    version  : linkTree('main', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 8 },
       Scenario      : { MergeEnabled: true },
@@ -187,7 +187,7 @@ export const servers: IServer[] = [
     name     : 'Luwuna (Versus 01)',
     server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port: 1028 },
     location : { flag: 'nl', name: 'Netherlands' },
-    version  : linkTree('main', 'LunaBroeke/SmoOnlineServer', 'LunaBroeke/SmoOnlineServer'),
+    version  : linkTree('main', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 4 },
       Scenario      : { MergeEnabled: false },
@@ -199,7 +199,7 @@ export const servers: IServer[] = [
     name     : 'Luwuna (Versus 02)',
     server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port: 1029 },
     location : { flag: 'nl', name: 'Netherlands' },
-    version  : linkTree('main', 'LunaBroeke/SmoOnlineServer', 'LunaBroeke/SmoOnlineServer'),
+    version  : linkTree('main', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 4 },
       Scenario      : { MergeEnabled: false },
