@@ -254,6 +254,99 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 112,
+      question : '<b-icon icon="building"/> How do I host my own server?',
+      answer   : `
+        <ol>
+          <li>
+            Run the server by one of these options:
+            <ul>
+              <li>
+                <b-badge variant="success">easy</b-badge>
+                run a <a-int name="host" id="binary">binary file</a-int> that you download.
+              </li>
+              <li>
+                <b-badge variant="warning">advanced</b-badge>
+                run a <a-int name="host" id="docker">docker image</a-int> that is already build for you.
+              </li>
+              <li>
+                <b-badge variant="danger">hard</b-badge>
+                build the binary file or docker image yourself from the source code.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Allow people to connect to your server.
+            <ul>
+              <li>
+                This is difficult to understand for regular people.
+                Generally speaking there needs to be a connection path between your server and its players that is not blocked
+                (e.g. for security reasons by a router or firewall).
+              </li>
+              <li>
+                It depends on where you run your server and how people can/should connect to it:
+                <ul>
+                  <li>
+                    <b-badge variant="success">easy</b-badge>
+                    It runs on your PC and only computers within your home network connect to it.
+                  </li>
+                  <li>
+                    <b-badge variant="warning">advanced</b-badge>
+                    It runs on your PC behind a <a-int name="host" id="router">router</a-int> with others connecting to your <a-int name="faq" id="107">public IP address</a-int>.
+                  </li>
+                  <li>
+                    <b-badge variant="warning">advanced</b-badge>
+                    It runs on your PC which connects to its players via a shared <a-int name="host" id="vpn">VPN</a-int> network.
+                  </li>
+                  <li>
+                    <b-badge variant="primary">todo</b-badge>
+                    <b-badge variant="warning">advanced</b-badge>
+                     It runs on your PC which is connected to a <a-int name="host" id="remote">proxy</a-int> server or service to which players connect to.
+                  </li>
+                  <li>
+                    <b-badge variant="primary">todo</b-badge>
+                    <b-badge variant="danger">hard</b-badge>
+                    It runs on a <a-int name="host" id="remote">remote server</a-int> somewhere else on the internet.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Information you might also need:
+                <ul>
+                  <li><a-int name="faq" id="107">FAQ: What is a public/private IPv4 address?</a-int></li>
+                  <li><a-int name="faq" id="109">FAQ: How do I port forward?</a-int></li>
+                  <li><a-int name="host" id="router">Firewall settings</a-int>.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Configure and control your server:
+            <ul>
+              <li>
+                <b-badge variant="success">easy</b-badge>
+                by modifying the <a-int name="host" id="settings">settings.json</a-int> file that is automatically created when running the server.
+              </li>
+              <li>
+                <b-badge variant="success">easy</b-badge>
+                by typing <a-int name="host" id="commands">server commands</a-int> into the server window that opens up (command line interface).
+              </li>
+              <li>
+                <b-badge variant="warning">advanced</b-badge>
+                by messaging <a-int name="host" id="commands">server commands</a-int> to the <a-int name="host" id="discord">discord bot</a-int> of your server.
+              </li>
+              <li>
+                <b-badge variant="danger">hard</b-badge>
+                by sending <a-int name="host" id="commands">server commands</a-int> to the
+                <a-ext href="https://github.com/Istador/SmoOnlineServer/blob/json-api/Server/JsonApi/README.md">JSON API</a-ext>
+                of your non-official server.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      `,
+    },
+    {
       id       : 107,
       question : '<b-icon icon="broadcast"/> What is a public/private IPv4 address?',
       answer   : `
