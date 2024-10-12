@@ -56,6 +56,7 @@ get_details() {
         } | with_entries(select(.value != null and .value != {})),
         Players: (if .Players == null then null else .Players | map(. | {
           Name     : .Name     | del(select(type | . != "string")),
+          GameMode : .GameMode | del(select(type | . != "number")),
           Kingdom  : .Kingdom  | del(select(type | . != "string")),
           Stage    : .Stage    | del(select(type | . != "string")),
           Position : .Position | {

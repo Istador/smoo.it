@@ -149,6 +149,12 @@
           "description": "Profile name of the player shown in-game.",
           "type": "string"
         },
+        "GameMode": {
+          "description": "Game mode that the player is in. None (-1), Legacy (0), Hide&Seek (1), Sardines (2), Freeze-Tag (3).",
+          "type": "integer",
+          "minimum": -1,
+          "maximum": 14
+        },
         "Kingdom": {
           "description": "Human-readable kingdom name the player is in.",
           "type": "string"
