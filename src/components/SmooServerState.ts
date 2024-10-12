@@ -95,7 +95,7 @@ export default class SmooServerState extends Vue {
       if (!(players === null && this.MaxPlayers === null)) {
         const playersKey = (players ? 'Players' : 'MaxPlayers')
         const playersColor = (players ? (players.length !== this.MaxPlayers ? 'text-success' : 'text-danger') : 'text-info')
-        const playersValue = (players ? players.length : '') + (players && this.MaxPlayers ? ' / ' : '') + (this.MaxPlayers ?? '')
+        const playersValue = (players ? players.length : '') + (players && this.MaxPlayers != null ? ' / ' : '') + (this.MaxPlayers ?? '')
         settings.push(playersKey + ': <span class="' + playersColor + '">' + playersValue + '</span>')
       }
       bool('ScenarioMerge', 'Scenario', 'MergeEnabled')
