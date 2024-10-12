@@ -45,8 +45,20 @@
           </thead>
           <tbody>
             <tr v-for="(player, idx) of players" :key="name + ';' + idx + ';' + player.Name">
-              <td>{{ player.Name || '#' + (idx + 1) }}</td>
-              <td v-if="hasLocations">
+              <td class="name">
+                {{ (tagicon = player2tagicon(player), null) }}
+                {{ (tagtitle = tagicon && player2tagtitle(player), null) }}
+                <img
+                  v-if="tagicon"
+                  class="tag-icon"
+                  :src="require('@/assets/tag/' + tagicon + '.png')"
+                  :alt="tagtitle"
+                  :title="tagtitle"
+                  v-b-tooltip="{boundary:'viewport',placement:'bottom'}"
+                />
+                <span>{{ player.Name || '#' + (idx + 1) }}</span>
+              </td>
+              <td class="location" v-if="hasLocations">
                 <b-overlay :show="!!player.Stage && stages.loading" variant="transparent">
                   <div class="location-kingdom" v-if="player.Kingdom || (player.Stage && stages.initialized)">
                     {{ player2kingdom(player) }}
@@ -102,10 +114,18 @@
   &.dead { color: grey; }
 }
 .smoo-server-players {
+  td { vertical-align: middle; }
   .capture::before { content: 'Capture: '; opacity: 0.5; }
   .costume-cap::before { content: 'Cap: '; opacity: 0.5; }
   .costume-body::before { content: 'Body: '; opacity: 0.5; }
   .location-kingdom + .location-stage { opacity: 0.5; }
+
+  .name img.tag-icon {
+    width: 2em;
+    height: 2em;
+    margin-right: 0.3em;
+    filter: brightness(0.15);
+  }
 }
 </style>
 

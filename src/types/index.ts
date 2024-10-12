@@ -12,12 +12,22 @@ export interface ICostume {
   Body : string
 }
 
+export const enum GameMode {
+  None = -1,
+  Legacy = 0,
+  HideAndSeek = 1,
+  Sardines = 2,
+  FreezeTag = 3,
+}
+
 export interface IPlayer {
-  Name?    : string
-  Kingdom? : string
-  Stage?   : string
-  Capture? : string
-  Costume? : ICostume
+  Name?     : string
+  GameMode? : GameMode | number
+  Kingdom?  : string
+  Stage?    : string
+  Capture?  : string
+  Costume?  : ICostume
+  Tagged?   : boolean
 }
 
 export interface ISettings {

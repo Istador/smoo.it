@@ -102,6 +102,9 @@ body.smoo-dark-mode {
   .state-component.unknown {
     color: $text-2;
   }
+  .smoo-server-players {
+    .name img.tag-icon { filter: brightness(0.65); }
+  }
 
   .smoo-view-host-commands {
     .card-body > div, .card-body .sub-commands > div {

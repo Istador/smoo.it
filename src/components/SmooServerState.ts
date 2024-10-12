@@ -2,7 +2,7 @@ import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 
 import moment from 'moment'
 
-import { IHost, ISettings, IPlayer } from '@/types'
+import { GameMode, IHost, ISettings, IPlayer } from '@/types'
 import { getResult, getStamp, getState } from '@/store/xservers'
 
 import { captures } from '@/store/captures'
@@ -118,6 +118,42 @@ export default class SmooServerState extends Vue {
       if (stage in stages[k as TKingdom]) {
         return k as TKingdom
       }
+    }
+    return null
+  }
+
+  player2tagicon (player: IPlayer) : string | null {
+    if (!player.GameMode) { return null }
+    if (player.GameMode === GameMode.HideAndSeek) {
+      if (player.Tagged === true) { return 'seek' }
+      if (player.Tagged === false) { return 'hide' }
+      return 'seek'
+    }
+    if (player.GameMode === GameMode.Sardines) {
+      if (player.Tagged === true) { return 'pack' }
+      if (player.Tagged === false) { return 'sardine' }
+      return 'sardine'
+    }
+    if (player.GameMode === GameMode.FreezeTag) {
+      return 'freeze'
+    }
+    return null
+  }
+
+  player2tagtitle (player: IPlayer) : string | null {
+    if (!player.GameMode) { return null }
+    if (player.GameMode === GameMode.HideAndSeek) {
+      if (player.Tagged === true) { return 'Hide & Seek - Seeking' }
+      if (player.Tagged === false) { return 'Hide & Seek - Hiding' }
+      return 'Hide & Seek'
+    }
+    if (player.GameMode === GameMode.Sardines) {
+      if (player.Tagged === true) { return 'Sardines - Hiding' }
+      if (player.Tagged === false) { return 'Sardines - Seeking' }
+      return 'Sardines'
+    }
+    if (player.GameMode === GameMode.FreezeTag) {
+      return 'Freeze-Tag'
     }
     return null
   }
