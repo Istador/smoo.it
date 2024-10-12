@@ -347,6 +347,23 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 113,
+      question : '<b-icon icon="list-ul"/> How do I get my server listed as a public server?',
+      answer   : `
+        <p>
+          To get listed on the <a-int name="servers">server list</a-int> of this website you can:
+          <ul>
+            <li><a-ext href="https://github.com/Istador/smoo.it/blob/public/src/store/servers.ts" icon="github">Edit the file</a-ext> yourself and submit a GitHub pull request.</li>
+            <li><a-ext href="https://rcl.smoo.it/contact" icon="envelope">Contact</a-ext> its developer.</li>
+          </ul>
+        </p>
+        <p>
+          To get listed on the official <a-ext href="https://discord.gg/w3TnB899ww" icon="discord">Discord</a-ext> server
+          with channels for your server contact a Discord server admin, e.g. <code>Sanae</code>.
+        </p>
+      `,
+    },
+    {
       id       : 107,
       question : '<b-icon icon="broadcast"/> What is a public/private IPv4 address?',
       answer   : `
