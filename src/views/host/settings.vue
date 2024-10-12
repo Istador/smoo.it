@@ -132,7 +132,9 @@
           <li>
             <b>Stages</b>:
             <b-badge variant="primary" v-b-tooltip.html="'This setting was added with server version <code>1.0.4</code>.'">1.0.4</b-badge>
-            An array of stage values that result in a kick
+            An array of
+            <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-settings-stage-known>&lt;stage&gt;</b-btn>
+            values that result in a kick
             <b-icon icon="info-circle-fill" id="server-settings-kick"/>
             from the server when a player joins one of them.
             <b-tooltip target="server-settings-kick" triggers="hover">
@@ -215,5 +217,8 @@
         </ul>
       </li>
     </ul>
+    <stages-known-modal id="host-settings-stage-known"/>
   </smoo-card>
 </template>
+
+<script lang="ts" src="./settings.ts"/>
