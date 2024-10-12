@@ -125,7 +125,7 @@ export const servers: IServer[] = [
       PersistShines : { Enabled: false },
     },
     version: {
-      html    : linkRelease('1.0.5-rcl.1', 'udp/1.0.5', 'Istador/smo-multi-rs'),
+      html    : linkRelease('1.0.5-rcl.2', 'udp/1.0.5', 'Istador/smo-multi-rs'),
       details : `
         <p>Connecting requires mod version ${linkRelease('v1.4.0', 'v1.4.0', 'CraftyBoss/SuperMarioOdysseyOnline')} or later.</p>
       `,
