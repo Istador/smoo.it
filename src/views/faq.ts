@@ -451,6 +451,19 @@ export default class FAQ extends Vue {
       `,
     },
     {
+      id       : 114,
+      question : '<b-icon icon="arrows-angle-contract"/> How do I join the game of my friend?',
+      answer   : `
+        <p>You don't.</p>
+        <p>The SMOO mod does not contain a component that could connect games directly.</p>
+        <p>Instead the mod needs to connect to a server, which is its own piece of software separate from the mod.</p>
+        <p>
+          You can <a-int name="faq" id="112">host your own private server</a-int> to which you and your friend(s) connect to (which might be a bit difficult).
+          Or y'all can connect to one of the <a-int name="servers">public servers</a-int> that are hosted voluntarily for everyone to use.
+        </p>
+      `,
+    },
+    {
       id       : 110,
       question : '<b-icon icon="question-circle"/> Something doesn\'t work / Where do I get help?',
       answer   : `
