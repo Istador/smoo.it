@@ -6,6 +6,30 @@
       sort-by="state"
       striped
     >
+      <template #head(state)>
+        State
+        <b-icon icon="info-circle-fill" id="servers-state" @click.stop.prevent/>
+        <b-tooltip target="servers-state" triggers="hover">
+          Settings:
+          <ul>
+            <li>
+              <code>ScenarioMerge</code>: the server forces all players to be in the same scenario to see each other.
+            </li>
+            <li>
+              <code>ShineSync</code>: the server synchronizes moons between players that were collected while connected.
+              Without <code>ClearShines</code> this means you'll likely get all moons at once.
+            </li>
+            <li>
+              <code>PersistShines</code>: the server remembers collected moons even when it is restarted.
+            </li>
+            <li>
+              <code>ClearShines</code>: the server forgets collected moons when a player joins with or switches to a new save file.
+              This indicates a good co-op or speedrun practice server.
+            </li>
+          </ul>
+        </b-tooltip>
+      </template>
+
       <template #cell(state)="{ item: { name, server, settings, dead } }">
         <smoo-server-state
           :name="name"
