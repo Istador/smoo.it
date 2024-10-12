@@ -13,7 +13,7 @@ export const servers: IServer[] = [
   {
     name     : 'Piplup (Main)',
     link     : 'https://piplup.smoo.it',
-    server   : { host: 'piplup.smoo.it', ip: 35.228.67.224 },
+    server   : { host: 'piplup.smoo.it', ip: '35.228.67.224' },
     location : { flag: 'fi', name: 'Finland' },
     version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
     settings : {
@@ -26,7 +26,7 @@ export const servers: IServer[] = [
   {
     name     : 'Piplup (Capture Sync)',
     link     : 'https://piplup.smoo.it',
-    server   : { host: 'piplup.smoo.it', ip: 35.228.67.22, port: 1028 },
+    server   : { host: 'piplup.smoo.it', ip: '35.228.67.22', port: 1028 },
     location : { flag: 'fi', name: 'Finland' },
     version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
     settings : {
@@ -39,7 +39,7 @@ export const servers: IServer[] = [
   {
     name     : 'Piplup (UDP)',
     link     : 'https://piplup.smoo.it',
-    server   : { host: 'us.smoo.raychu.xyz', ip: 34.29.243.224, port: 1029 },
+    server   : { host: 'us.smoo.raychu.xyz', ip: '34.29.243.224', port: 1029 },
     location : { flag: 'us', name: 'US-Central' },
     settings : {
       Server        : { MaxPlayers: 8 },
