@@ -37,7 +37,11 @@
     <b>"LogChannel"</b>: <i>null</i>
   },
   <b>"Shines"</b>: {
-    <b>"Enabled"</b>: <i>true</i>
+    <b>"Enabled"</b>: <i>true</i>,
+    <b>"Excluded"</b>: [
+      <i>496</i>
+    ],
+    <b>"ClearOnNewSaves"</b>: <i>false</i>
   },
   <b>"PersistShines"</b>: {
     <b>"Enabled"</b>: <i>false</i>,
@@ -48,7 +52,7 @@
 </code>
     <p>
       The <code>settings.json</code> file is automatically created when the server starts.
-      At the right or above you can see the default values for server version <code>1.0.4</code>.
+      At the right or above you can see the default values for server version <code>1.0.5</code>.
     </p>
     <ul>
       <li><b>Server</b>:
@@ -174,30 +178,46 @@
       </li>
       <li>
         <b>Shines</b>:
-        <b-badge variant="danger" id="settings-shines-1.0.3">1.0.3</b-badge>
-        <b-tooltip target="settings-shines-1.0.3" triggers="hover">
-          <p>
-            This setting was added with server version <code>1.0.3</code>.
-          </p>
-          <p>
-            Before server version <code>1.0.3</code> moon synchronization was always enabled.
-          </p>
-          <p>
-            Disabling it did not work correctly with server version <code>1.0.3</code>.
-            It prevented the server from saving them, but the collected moons were still send to all connected players.
-          </p>
-        </b-tooltip>
-        <b-badge variant="primary" class="ml-1" id="settings-shines-1.0.4">1.0.4</b-badge>
-        <b-tooltip target="settings-shines-1.0.4" triggers="hover">
-          <p>
-            Server version <code>1.0.4</code> fixed the issue that moons were still send to connected players even when this setting was disabled.
-          </p>
-        </b-tooltip>
         <ul>
           <li>
             <b>Enabled</b>:
+            <b-badge variant="danger" class="mr-1" id="settings-shines-1.0.3">1.0.3</b-badge>
+            <b-tooltip target="settings-shines-1.0.3" triggers="hover">
+              <p>
+                This setting was added with server version <code>1.0.3</code>.
+              </p>
+              <p>
+                Before server version <code>1.0.3</code> moon synchronization was always enabled.
+              </p>
+              <p>
+                Disabling it did not work correctly with server version <code>1.0.3</code>.
+                It prevented the server from saving them, but the collected moons were still send to all connected players.
+              </p>
+            </b-tooltip>
+            <b-badge variant="primary" class="mr-1" id="settings-shines-1.0.4">1.0.4</b-badge>
+            <b-tooltip target="settings-shines-1.0.4" triggers="hover">
+              <p>
+                Server version <code>1.0.4</code> fixed the issue that moons were still send to connected players even when this setting was disabled.
+              </p>
+            </b-tooltip>
             <code>true</code> or <code>false</code>.
             Can be used to disable moon synchronization between players.
+          </li>
+          <li>
+            <b>Excluded</b>:
+            <b-badge variant="warning" v-b-tooltip.html="'This setting will be added with server version <code>1.0.5</code>.'">1.0.5</b-badge>
+            An array of
+            <b-btn variant="info" size="sm" style="padding: 0 0.4em;" v-b-modal.host-settings-shine-id>&lt;shine-id&gt;</b-btn>
+            values that are excluded from being synchronized between players.
+            By default the moon <code>496</code> is excluded because receiving it causes a soft lock where the Inverted Pyramid doesn't open up.
+          </li>
+          <li>
+            <b>ClearOnNewSaves</b>:
+            <b-badge variant="warning" class="mr-1" v-b-tooltip.html="'This setting will be added with server version <code>1.0.5</code>.'">1.0.5</b-badge>
+            <code>true</code> or <code>false</code>.
+            Enabling this will forget the collected moons that the server remembers when a player enters Cap Kingdom in scenario 1
+            (this means a new save file before entering Cascade Kingdom).
+            This can be useful for co-op gameplay or speedruns.
           </li>
         </ul>
       </li>
@@ -217,6 +237,7 @@
         </ul>
       </li>
     </ul>
+    <moons-modal id="host-settings-shine-id"/>
     <stages-known-modal id="host-settings-stage-known"/>
   </smoo-card>
 </template>
