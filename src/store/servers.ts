@@ -29,6 +29,12 @@ export const servers: IServer[] = [
     server   : { host: 'piplup.smoo.it', ip: 35.228.67.22, port: 1028 },
     location : { flag: 'fi', name: 'Finland' },
     version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
+    settings : {
+      Server        : { MaxPlayers: 8 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true },
+      PersistShines : { Enabled: true },
+    },
   },
   {
     name     : 'Piplup (UDP)',
