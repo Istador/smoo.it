@@ -176,6 +176,7 @@ export const servers: IServer[] = [
     },
   },
   {
+    dead     : true,
     name     : 'Snafty',
     server   : { host: 'snafty.smoo.it', ip: '209.25.141.180', port: 62102 },
     location : { flag: 'de', name: 'Germany' },
