@@ -39,7 +39,7 @@ export const servers: IServer[] = [
   {
     name     : 'Piplup (UDP)',
     link     : 'https://piplup.smoo.it',
-    server   : { host: 'us.smoo.raychu.xyz', ip: '34.29.243.224', port: 1029 },
+    server   : { host: 'piplus.smoo.it', ip: '34.29.243.224', port: 1029 },
     location : { flag: 'us', name: 'US-Central' },
     settings : {
       Server        : { MaxPlayers: 8 },
