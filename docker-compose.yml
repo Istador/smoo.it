@@ -13,12 +13,13 @@ services:
       # public servers (from Discord)
       SMOO_SERVER_DC_01: piplup.smoo.it:1027
       SMOO_SERVER_DC_02: piplup.smoo.it:1028
-      SMOO_SERVER_DC_03: sanae.smoo.it:1027
-      #SMOO_SERVER_DC_04: tmdog.smoo.it:1027
-      SMOO_SERVER_DC_05: f0c0s.smoo.it:1027
-      SMOO_SERVER_DC_06: sleepyy.smoo.it:1027
-      SMOO_SERVER_DC_07: parknich.smoo.it:1027
-      SMOO_SERVER_DC_08: rocket.smoo.it:1027
+      SMOO_SERVER_DC_03: piplus.smoo.it:1029
+      SMOO_SERVER_DC_04: sanae.smoo.it:1027
+      #SMOO_SERVER_DC_05: tmdog.smoo.it:1027
+      SMOO_SERVER_DC_06: f0c0s.smoo.it:1027
+      SMOO_SERVER_DC_07: sleepyy.smoo.it:1027
+      SMOO_SERVER_DC_08: parknich.smoo.it:1027
+      SMOO_SERVER_DC_09: rocket.smoo.it:1027
 
       # public servers (website only)
       SMOO_SERVER_WWW_01: rcl.smoo.it:1027
@@ -28,6 +29,9 @@ services:
       SMOO_SERVER_WWW_05: krokilex.smoo.it:1027
       SMOO_SERVER_WWW_06: jeff.smoo.it:1027
       SMOO_SERVER_WWW_07: snafty.smoo.it:62102
+      SMOO_SERVER_WWW_08: luwuna.smoo.it:1027
+      SMOO_SERVER_WWW_09: luwuna.smoo.it:1028
+      SMOO_SERVER_WWW_10: luwuna.smoo.it:1029
 
       # default refresh rate
       SMOO_EXPIRE: 10
@@ -35,11 +39,15 @@ services:
       # refresh servers with JSON API more often
       SMOO_EXPIRE_JSON_01: piplup.smoo.it:1027:3
       SMOO_EXPIRE_JSON_02: piplup.smoo.it:1028:3
-      SMOO_EXPIRE_JSON_03: rcl.smoo.it:1027:1
-      SMOO_EXPIRE_JSON_04: rcl.smoo.it:1028:1
-      SMOO_EXPIRE_JSON_05: rcl.smoo.it:1029:1
-      SMOO_EXPIRE_JSON_06: rcl.smoo.it:1030:1
-      SMOO_EXPIRE_JSON_07: radiated.smoo.it:1027:3
+      SMOO_EXPIRE_JSON_03: piplus.smoo.it:1029:3
+      SMOO_EXPIRE_JSON_04: rcl.smoo.it:1027:1
+      SMOO_EXPIRE_JSON_05: rcl.smoo.it:1028:1
+      SMOO_EXPIRE_JSON_06: rcl.smoo.it:1029:1
+      SMOO_EXPIRE_JSON_07: rcl.smoo.it:1030:1
+      SMOO_EXPIRE_JSON_08: radiated.smoo.it:1027:3
+      SMOO_EXPIRE_JSON_09: luwuna.smoo.it:1027:3
+      SMOO_EXPIRE_JSON_10: luwuna.smoo.it:1028:3
+      SMOO_EXPIRE_JSON_11: luwuna.smoo.it:1029:3
 
       # refresh dead servers less often:
       SMOO_EXPIRE_DEAD_01: f0c0s.smoo.it:1027:30
@@ -47,3 +55,5 @@ services:
       SMOO_EXPIRE_DEAD_03: yann.smoo.it:1027:30
       SMOO_EXPIRE_DEAD_04: jeff.smoo.it:1027:30
       SMOO_EXPIRE_DEAD_05: rocket.smoo.it:1027:30
+      SMOO_EXPIRE_DEAD_06: sanae.smoo.it:1027:30
+      SMOO_EXPIRE_DEAD_07: snafty.smoo.it:62102:30

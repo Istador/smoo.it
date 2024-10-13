@@ -15,7 +15,7 @@
 ################################################################################
 
 
-FROM  scratch  as  html
+FROM  scratch  AS  html
 
 COPY  ./html/  /
 
@@ -25,7 +25,7 @@ WORKDIR  /data/
 ################################################################################
 
 
-FROM  php:8.3.2-apache-bookworm
+FROM  php:8.3-apache-bookworm
 
 # dependencies
 RUN  DEBIAN_FRONTEND=noninteractive  \
