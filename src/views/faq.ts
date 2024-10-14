@@ -129,8 +129,7 @@ export default class FAQ extends Vue {
           To make the RCM exploit safer and easier, it's advised to use a RCM jig.
         </p>
         <p>
-          Follow this <a-ext href="https://nh-server.github.io/switch-guide/">guide</a-ext>
-          or alternatively/additionally <a-ext href="https://switch.homebrew.guide/">this one</a-ext>.
+          Follow this <a-ext href="https://nh-server.github.io/switch-guide/">guide</a-ext>.
         </p>
         <hr/>
         <p>
@@ -143,17 +142,14 @@ export default class FAQ extends Vue {
           the game to version <code>1.0.0</code> and/or to
           <a-int name="faq" id="104">dump</a-int>
           the game ROM to be used for emulators,
-          make sure that you follow the guides regarding backing up the
-          <a-ext href="https://nh-server.github.io/switch-guide/user_guide/emummc/making_emummc/#getting-your-consoles-unique-keys">console keys</a-ext>
-          using <a-ext href="https://github.com/shchmue/Lockpick_RCM/releases">Lockpick_RCM</a-ext>.
+          make sure that you back up the console keys
+          using <a-ext href="https://google.com/search?q=Lockpick+RCM">Lockpick RCM</a-ext>.
         </p>
         <p>
           Because you need to connect the Nintendo Switch to the internet to play online, make sure that you properly
           <a-ext href="https://nh-server.github.io/switch-guide/extras/blocking_nintendo/">block Nintendo servers</a-ext>
           to
-          <a-ext href="https://nh-server.github.io/switch-guide/faq/#is-it-safe-to-use-homebrew-will-i-get-banned">not</a-ext>
-          get
-          <a-ext href="https://switch.homebrew.guide/faq.html#what-actions-can-get-me-banned">banned</a-ext>.
+          <a-ext href="https://nh-server.github.io/switch-guide/faq/#is-it-safe-to-use-homebrew-will-i-get-banned">not get banned</a-ext>.
         </p>
       `,
     },

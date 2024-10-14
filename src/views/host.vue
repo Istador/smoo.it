@@ -23,14 +23,9 @@
           ><b-icon icon="github"/> C# Server [Official]</b-btn>
           <b-btn
             variant="outline-secondary"
-            href="https://github.com/JulesGuesnon/smo-online-server"
+            href="https://github.com/speyejack/smo-multi-rs/tree/json-api"
             target="_blank"
-          ><b-icon icon="github"/> Rust Server 1</b-btn>
-          <b-btn
-            variant="outline-secondary"
-            href="https://github.com/speyejack/smo-multi-rs"
-            target="_blank"
-          ><b-icon icon="github"/> Rust Server 2</b-btn>
+          ><b-icon icon="github"/> Rust Server</b-btn>
         </b-btn-group>
       </b-card>
 

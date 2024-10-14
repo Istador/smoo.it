@@ -26,7 +26,7 @@
             variant="outline-secondary"
             href="https://gamebanana.com/mods/384214"
             target="_blank"
-          ><b-icon icon="joystick"/> Gamebanana</b-btn>
+          ><b-icon icon="joystick"/> Gamebanana [Outdated]</b-btn>
         </b-btn-group>
       </b-card>
 
