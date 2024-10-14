@@ -65,6 +65,32 @@
       <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/latest">latest release</a-ext>
       of the mod from the assets list.
       The filename you need ends with <code>_for_Emulators.zip</code>.
+      <b-alert variant="info" show>
+        <p>
+          <b-icon icon="info-square" class="text-primary" font-scale="1.5"/>
+          If you want to play with Ryujinx on a
+          <b><font-awesome-icon icon="fa-brands fa-apple"/> Mac</b>
+          there is a connectivity issue with the latest version. You should use version
+          <a-ext href="https://github.com/CraftyBoss/SuperMarioOdysseyOnline/releases/v1.3.0">1.3.0</a-ext>
+          of the mod for now instead.
+          Download the <code>_for_yuzu.zip</code> asset and <b>NOT</b> the <code>_for_Ryujinx.zip</code> asset.
+          <b-icon icon="info-circle-fill" id="play-ryujinx-mac-filestructure"/>
+          <b-tooltip target="play-ryujinx-mac-filestructure" triggers="hover">
+            <p>
+              Except for the file structure the <code>Ryujinx</code> and <code>yuzu</code> builds were identical.
+            </p>
+            <p>
+              The <code>1.3.0</code> file structure for <code>Ryujinx</code> would require more manual steps,
+              that were covered in an
+              <a-ext href="https://github.com/Istador/smoo.it/commit/c7ef5d2a262cc7597d8a33e26f50fc0455747395" icon="github">older version</a-ext>
+              of this guide.
+            </p>
+            <p>
+              It was changed to be identical to <code>yuzu</code> with <code>1.4.0</code>.
+            </p>
+          </b-tooltip>
+        </p>
+      </b-alert>
     </p>
     <p>
       <b>Step 2</b>:

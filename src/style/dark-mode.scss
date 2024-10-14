@@ -36,6 +36,12 @@ body.smoo-dark-mode {
     border-color: rgba(hsla(45deg, 100%, 16%), 1.0);
   }
 
+  .alert-info {
+    color: rgba(hsla(189deg, 20%, 45%), 1.0);
+    background-color: rgba(hsla(189deg, 53%, 12%), 1.0);
+    border-color: rgba(hsla(188deg, 53%, 17%), 1.0);
+  }
+
   .card {
     color: $text-2;
     background-color: $bg-2;
