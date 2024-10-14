@@ -76,10 +76,12 @@ export const servers: IServer[] = [
     },
   },
   {
-    dead     : true,
     name     : 'Parknich',
-    server   : { host: 'parknich.smoo.it', ip: '51.81.86.202' },
+    server   : { host: 'parknich.smoo.it', ip: '15.204.209.108' },
     location : { flag: 'us', name: 'US-East' },
+    settings : {
+      Server: { MaxPlayers: 8 },
+    },
   },
   {
     dead     : true,
