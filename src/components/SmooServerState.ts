@@ -97,6 +97,13 @@ export default class SmooServerState extends Vue {
         const playersColor = (players ? (players.length !== this.MaxPlayers ? 'text-success' : 'text-danger') : 'text-info')
         const playersValue = (players ? players.length : '') + (players && this.MaxPlayers != null ? ' / ' : '') + (this.MaxPlayers ?? '')
         settings.push(playersKey + ': <span class="' + playersColor + '">' + playersValue + '</span>')
+        if (8 < (this.MaxPlayers ?? 0)) {
+          settings.push('CaptureSync: <span class="text-danger">false</span>')
+        } else if (7 < (this.MaxPlayers ?? 0)) {
+          settings.push('CaptureSync: <span class="text-warning">not in Wooded</span>')
+        } else if (0 < (this.MaxPlayers ?? 0)) {
+          settings.push('CaptureSync: <span class="text-success">true</span>')
+        }
       }
       bool('ScenarioMerge', 'Scenario', 'MergeEnabled')
       bool('ShineSync', 'Shines', 'Enabled')

@@ -13,6 +13,9 @@
           Settings:
           <ul>
             <li>
+              <code>CaptureSync</code>: if captures are visible to other players.
+            </li>
+            <li>
               <code>ScenarioMerge</code>: the server forces all players to be in the same scenario to see each other.
             </li>
             <li>

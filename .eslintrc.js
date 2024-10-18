@@ -24,6 +24,7 @@ module.exports = {
     'operator-linebreak'             : [ 'error', 'before' ],
     'no-console'                     : [ (process.env.NODE_ENV === 'production' ? 'error' : 'warn'), { allow: [ 'warn', 'error' ] } ],
     'no-debugger'                    : process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'yoda'                           : 'off',
   },
 
   extends: [
