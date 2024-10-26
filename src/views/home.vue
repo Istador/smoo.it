@@ -40,6 +40,7 @@
         <ul>
           <li><smoo-role-icon type="seek"/> <a-int name="play" id="hide-and-seek">Hide &amp; Seek</a-int></li>
           <li><smoo-role-icon type="sardines"/> <a-int name="play" id="sardines">Sardines</a-int></li>
+          <li><smoo-role-icon type="freeze"/> <a-int name="play" id="freeze-tag">Freeze-Tag</a-int></li>
         </ul>
       </p>
     </b-card>

@@ -2,6 +2,7 @@ import { Vue, Component } from 'vue-property-decorator'
 
 import PlayHideAndSeek from './play/hide-and-seek.vue'
 import PlaySardines from './play/sardines.vue'
+import PlayFreezeTag from './play/freeze-tag.vue'
 import PlaySwitch from './play/switch.vue'
 import PlayRyujinx from './play/ryujinx.vue'
 import PlayBuild from './play/build.vue'
@@ -10,6 +11,7 @@ import PlayBuild from './play/build.vue'
   components: {
     PlayHideAndSeek,
     PlaySardines,
+    PlayFreezeTag,
     PlaySwitch,
     PlayRyujinx,
     PlayBuild,
