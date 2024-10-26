@@ -30,7 +30,7 @@
           <li>Full 2D and costume models syncing</li>
           <li>Moon collection is shared between all players</li>
           <li>Custom configuration menu</li>
-          <li>Support for custom game modes (WIP)</li>
+          <li>Support for custom game modes</li>
         </ul>
       </p>
 
@@ -39,6 +39,7 @@
         <br/>
         <ul>
           <li><smoo-role-icon type="seek"/> <a-int name="play" id="hide-and-seek">Hide &amp; Seek</a-int></li>
+          <li><smoo-role-icon type="sardines"/> <a-int name="play" id="sardines">Sardines</a-int></li>
         </ul>
       </p>
     </b-card>
