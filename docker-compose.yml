@@ -39,6 +39,9 @@ services:
       SMOO_SERVER_DC_07: sleepyy.smoo.it:1027
       SMOO_SERVER_DC_08: parknich.smoo.it:1027
       SMOO_SERVER_DC_09: rocket.smoo.it:1027
+      SMOO_SERVER_DC_10: larbe.org:1027
+      SMOO_SERVER_DC_11: 66.220.29.106:1027
+      
 
       # public servers (website only)
       SMOO_SERVER_WWW_01: krokilex.smoo.it:1027
