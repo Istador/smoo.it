@@ -39,6 +39,9 @@ services:
       SMOO_SERVER_DC_SLE_1: sleepyy.smoo.it:1027
       SMOO_SERVER_DC_PAR_1: parknich.smoo.it:1027
       SMOO_SERVER_DC_ROC_1: rocket.smoo.it:1027
+      SMOO_SERVER_DC_LUW_1: luwuna.smoo.it:1027
+      SMOO_SERVER_DC_LUW_2: luwuna.smoo.it:1028
+      SMOO_SERVER_DC_LUW_3: luwuna.smoo.it:1029
       SMOO_SERVER_DC_KAM_1: kamron.smoo.it:1027
       SMOO_SERVER_DC_MUZ_1: muz.smoo.it:1027
 
@@ -54,9 +57,6 @@ services:
       SMOO_SERVER_WWW_KRO_1: krokilex.smoo.it:1027
       SMOO_SERVER_WWW_JEF_1: jeff.smoo.it:1027
       SMOO_SERVER_WWW_SNA_1: snafty.smoo.it:62102
-      SMOO_SERVER_WWW_LUW_1: luwuna.smoo.it:1027
-      SMOO_SERVER_WWW_LUW_2: luwuna.smoo.it:1028
-      SMOO_SERVER_WWW_LUW_3: luwuna.smoo.it:1029
 
       # default refresh rate
       SMOO_EXPIRE: 10
