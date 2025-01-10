@@ -57,6 +57,7 @@ services:
       SMOO_SERVER_WWW_KRO_1: krokilex.smoo.it:1027
       SMOO_SERVER_WWW_JEF_1: jeff.smoo.it:1027
       SMOO_SERVER_WWW_SNA_1: snafty.smoo.it:62102
+      SMOO_SERVER_WWW_COL_1: colbster.smoo.it:1027
 
       # default refresh rate
       SMOO_EXPIRE: 10
