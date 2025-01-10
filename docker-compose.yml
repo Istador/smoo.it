@@ -11,43 +11,43 @@ services:
     - ./html/data/.env:/var/www/html/data/.env:ro
     environment:
       # public servers (from Discord)
-      SMOO_SERVER_DC_01: piplup.smoo.it:1027
-      SMOO_SERVER_DC_02: piplup.smoo.it:1028
-      SMOO_SERVER_DC_03: piplus.smoo.it:1029
-      SMOO_SERVER_DC_04: sanae.smoo.it:1027
-      #SMOO_SERVER_DC_05: tmdog.smoo.it:1027
-      SMOO_SERVER_DC_06: f0c0s.smoo.it:1027
-      SMOO_SERVER_DC_07: sleepyy.smoo.it:1027
-      SMOO_SERVER_DC_08: parknich.smoo.it:1027
-      SMOO_SERVER_DC_09: rocket.smoo.it:1027
+      SMOO_SERVER_DC_PIP_01: piplup.smoo.it:1027
+      SMOO_SERVER_DC_PIP_02: piplup.smoo.it:1028
+      SMOO_SERVER_DC_PIP_03: piplus.smoo.it:1029
+      SMOO_SERVER_DC_SAN_01: sanae.smoo.it:1027
+      #SMOO_SERVER_DC_TMD_01: tmdog.smoo.it:1027
+      SMOO_SERVER_DC_FOC_01: f0c0s.smoo.it:1027
+      SMOO_SERVER_DC_SLE_01: sleepyy.smoo.it:1027
+      SMOO_SERVER_DC_PAR_01: parknich.smoo.it:1027
+      SMOO_SERVER_DC_ROC_01: rocket.smoo.it:1027
 
       # public servers (website only)
-      SMOO_SERVER_WWW_R1: rcl.smoo.it:1027
-      SMOO_SERVER_WWW_R2: rcl.smoo.it:1028
-      SMOO_SERVER_WWW_R3: rcl.smoo.it:1029
-      SMOO_SERVER_WWW_R4: rcl.smoo.it:1030
-      SMOO_SERVER_WWW_K1: krokilex.smoo.it:1027
-      SMOO_SERVER_WWW_J1: jeff.smoo.it:1027
-      SMOO_SERVER_WWW_S1: snafty.smoo.it:62102
-      SMOO_SERVER_WWW_L1: luwuna.smoo.it:1027
-      SMOO_SERVER_WWW_L2: luwuna.smoo.it:1028
-      SMOO_SERVER_WWW_L3: luwuna.smoo.it:1029
+      SMOO_SERVER_WWW_RCL_1: rcl.smoo.it:1027
+      SMOO_SERVER_WWW_RCL_2: rcl.smoo.it:1028
+      SMOO_SERVER_WWW_RCL_3: rcl.smoo.it:1029
+      SMOO_SERVER_WWW_RCL_4: rcl.smoo.it:1030
+      SMOO_SERVER_WWW_KRO_1: krokilex.smoo.it:1027
+      SMOO_SERVER_WWW_JEF_1: jeff.smoo.it:1027
+      SMOO_SERVER_WWW_SNA_1: snafty.smoo.it:62102
+      SMOO_SERVER_WWW_LUW_1: luwuna.smoo.it:1027
+      SMOO_SERVER_WWW_LUW_2: luwuna.smoo.it:1028
+      SMOO_SERVER_WWW_LUW_3: luwuna.smoo.it:1029
 
       # default refresh rate
       SMOO_EXPIRE: 10
 
       # refresh servers with JSON API more often
-      SMOO_EXPIRE_JSON_R1: rcl.smoo.it:1027:1
-      SMOO_EXPIRE_JSON_R2: rcl.smoo.it:1028:1
-      SMOO_EXPIRE_JSON_R3: rcl.smoo.it:1029:1
-      SMOO_EXPIRE_JSON_R4: rcl.smoo.it:1030:1
-      SMOO_EXPIRE_JSON_P1: piplup.smoo.it:1027:3
-      SMOO_EXPIRE_JSON_P2: piplup.smoo.it:1028:3
-      SMOO_EXPIRE_JSON_P3: piplus.smoo.it:1029:3
-      SMOO_EXPIRE_JSON_A1: radiated.smoo.it:1027:3
-      SMOO_EXPIRE_JSON_L1: luwuna.smoo.it:1027:3
-      SMOO_EXPIRE_JSON_L2: luwuna.smoo.it:1028:3
-      SMOO_EXPIRE_JSON_L3: luwuna.smoo.it:1029:3
+      SMOO_EXPIRE_JSON_RCL_1: rcl.smoo.it:1027:1
+      SMOO_EXPIRE_JSON_RCL_2: rcl.smoo.it:1028:1
+      SMOO_EXPIRE_JSON_RCL_3: rcl.smoo.it:1029:1
+      SMOO_EXPIRE_JSON_RCL_4: rcl.smoo.it:1030:1
+      SMOO_EXPIRE_JSON_PIP_1: piplup.smoo.it:1027:3
+      SMOO_EXPIRE_JSON_PIP_2: piplup.smoo.it:1028:3
+      SMOO_EXPIRE_JSON_PIP_3: piplus.smoo.it:1029:3
+      SMOO_EXPIRE_JSON_RAD_1: radiated.smoo.it:1027:3
+      SMOO_EXPIRE_JSON_LUW_1: luwuna.smoo.it:1027:3
+      SMOO_EXPIRE_JSON_LUW_2: luwuna.smoo.it:1028:3
+      SMOO_EXPIRE_JSON_LUW_3: luwuna.smoo.it:1029:3
 
       # refresh dead servers less often:
       SMOO_EXPIRE_DEAD_01: f0c0s.smoo.it:1027:30
