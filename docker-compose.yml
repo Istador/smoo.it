@@ -47,6 +47,10 @@ services:
       SMOO_SERVER_DC_KAM_2: 66.220.29.106:1027
 
       # public servers (website only)
+      SMOO_SERVER_WWW_RCL_1: rcl.smoo.it:1027
+      SMOO_SERVER_WWW_RCL_2: rcl.smoo.it:1028
+      SMOO_SERVER_WWW_RCL_3: rcl.smoo.it:1029
+      SMOO_SERVER_WWW_RCL_4: rcl.smoo.it:1030
       SMOO_SERVER_WWW_KRO_1: krokilex.smoo.it:1027
       SMOO_SERVER_WWW_JEF_1: jeff.smoo.it:1027
       SMOO_SERVER_WWW_SNA_1: snafty.smoo.it:62102
@@ -58,6 +62,10 @@ services:
       SMOO_EXPIRE: 10
 
       # refresh servers with JSON API more often
+      SMOO_EXPIRE_JSON_RCL_1: rcl.smoo.it:1027:3
+      SMOO_EXPIRE_JSON_RCL_2: rcl.smoo.it:1028:3
+      SMOO_EXPIRE_JSON_RCL_3: rcl.smoo.it:1029:3
+      SMOO_EXPIRE_JSON_RCL_4: rcl.smoo.it:1030:3
       SMOO_EXPIRE_JSON_PIP_1: piplup.smoo.it:1027:3
       SMOO_EXPIRE_JSON_PIP_2: piplup.smoo.it:1028:3
       SMOO_EXPIRE_JSON_PIP_3: piplus.smoo.it:1029:3
