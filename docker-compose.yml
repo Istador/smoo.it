@@ -13,7 +13,6 @@ services:
       # public servers (from Discord)
       SMOO_SERVER_DC_PIP_01: piplup.smoo.it:1027
       SMOO_SERVER_DC_PIP_02: piplup.smoo.it:1028
-      SMOO_SERVER_DC_PIP_03: piplus.smoo.it:1029
       SMOO_SERVER_DC_SAN_01: sanae.smoo.it:1027
       #SMOO_SERVER_DC_TMD_01: tmdog.smoo.it:1027
       SMOO_SERVER_DC_FOC_01: f0c0s.smoo.it:1027
@@ -24,9 +23,7 @@ services:
       SMOO_SERVER_DC_LUW_02: luwuna.smoo.it:1028
       SMOO_SERVER_DC_LUW_03: luwuna.smoo.it:1029
       SMOO_SERVER_DC_KAM_01: kamron.smoo.it:1027
-      SMOO_SERVER_DC_KAM_02: 66.220.29.106:1027
       SMOO_SERVER_DC_MUZ_01: muz.smoo.it:1027
-      SMOO_SERVER_DC_MUZ_02: larbe.org:1027
 
       # public servers (website only)
       SMOO_SERVER_WWW_RCL_1: rcl.smoo.it:1027
