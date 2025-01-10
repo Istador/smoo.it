@@ -44,7 +44,7 @@ services:
       SMOO_EXPIRE_JSON_P1: piplup.smoo.it:1027:3
       SMOO_EXPIRE_JSON_P2: piplup.smoo.it:1028:3
       SMOO_EXPIRE_JSON_P3: piplus.smoo.it:1029:3
-      SMOO_EXPIRE_JSON_R1: radiated.smoo.it:1027:3
+      SMOO_EXPIRE_JSON_A1: radiated.smoo.it:1027:3
       SMOO_EXPIRE_JSON_L1: luwuna.smoo.it:1027:3
       SMOO_EXPIRE_JSON_L2: luwuna.smoo.it:1028:3
       SMOO_EXPIRE_JSON_L3: luwuna.smoo.it:1029:3
