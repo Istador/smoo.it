@@ -58,3 +58,5 @@ services:
       SMOO_EXPIRE_DEAD_04: rocket.smoo.it:1027:30
       SMOO_EXPIRE_DEAD_05: sanae.smoo.it:1027:30
       SMOO_EXPIRE_DEAD_06: snafty.smoo.it:62102:30
+      SMOO_EXPIRE_DEAD_07: sleepyy.smoo.it:1027:30
+      SMOO_EXPIRE_DEAD_08: parknich.smoo.it:1027:30
