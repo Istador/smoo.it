@@ -266,7 +266,7 @@ export const servers: IServer[] = [
     name     : 'SchweGELBin',
     server   : { host: 'schwegelbin.smoo.it', ip: '78.47.17.130', port: 1027 },
     location : { flag: 'de', name: 'Germany' },
-    version  : linkTree('main', 'smoos-cs', 'SchweGELBin/smoos'),
+    version  : linkTree('main', 'SchweGELBin/smoos-cs', 'SchweGELBin/smoos'),
     settings : {
       Server: { MaxPlayers: 8 },
     },
