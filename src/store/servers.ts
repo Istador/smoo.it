@@ -280,6 +280,30 @@ export const servers: IServer[] = [
       Server: { MaxPlayers: 8 },
     },
   },
+  {
+    name     : 'HyperWG 1',
+    server   : { host: 'hyperwg.smoo.it', ip: '145.223.121.236', port: 1027 },
+    location : { flag: 'us', name: 'US-East' },
+    version  : linkTree('main', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
+    settings : {
+      Server        : { MaxPlayers: 8 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true },
+      PersistShines : { Enabled: true },
+    },
+  },
+  {
+    name     : 'HyperWG 2',
+    server   : { host: 'hyperwg.smoo.it', ip: '145.223.121.236', port: 1028 },
+    location : { flag: 'us', name: 'US-East' },
+    version  : linkTree('main', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
+    settings : {
+      Server        : { MaxPlayers: 12 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true },
+      PersistShines : { Enabled: true },
+    },
+  },
 ].map((s: IServer) => {
   s.server.state = null
   return s
