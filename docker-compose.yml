@@ -55,6 +55,8 @@ services:
       SMOO_SERVER_WWW_COL_1: colbster.smoo.it:1027
       SMOO_SERVER_WWW_SCH_1: schwegelbin.smoo.it:1027
       SMOO_SERVER_WWW_SCH_2: schwegelbin.smoo.it:1028
+      SMOO_SERVER_WWW_HWG_1: hyperwg.smoo.it:1027
+      SMOO_SERVER_WWW_HWG_2: hyperwg.smoo.it:1028
 
       # default refresh rate
       SMOO_EXPIRE: 10
