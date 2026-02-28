@@ -264,7 +264,7 @@ export const servers: IServer[] = [
   },
   {
     name     : 'SchweGELBin',
-    server   : { host: 'schwegelbin.smoo.it', ip: '138.199.210.86', port: 1027 },
+    server   : { host: 'schwegelbin.smoo.it', ip: '79.76.110.71', port: 1027 },
     location : { flag: 'de', name: 'Germany' },
     version  : linkTree('main', 'SchweGELBin/smoos-cs', 'SchweGELBin/smoos'),
     settings : {
@@ -273,7 +273,7 @@ export const servers: IServer[] = [
   },
   {
     name     : 'SchweGELBin 2',
-    server   : { host: 'schwegelbin.smoo.it', ip: '138.199.210.86', port: 1028 },
+    server   : { host: 'schwegelbin.smoo.it', ip: '79.76.110.71', port: 1028 },
     location : { flag: 'de', name: 'Germany' },
     version  : linkTree('main', 'SchweGELBin/smoos-rs', 'SchweGELBin/smoos'),
     settings : {
