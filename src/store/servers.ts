@@ -272,6 +272,7 @@ export const servers: IServer[] = [
     },
   },
   {
+    dead     : true,
     name     : 'SchweGELBin 2',
     server   : { host: 'schwegelbin.smoo.it', ip: '79.76.110.71', port: 1028 },
     location : { flag: 'de', name: 'Germany' },
