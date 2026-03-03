@@ -37,52 +37,6 @@ export const servers: IServer[] = [
     },
   },
   {
-    dead     : true,
-    name     : 'Sanae',
-    server   : { host: 'sanae.smoo.it', ip: '64.201.219.20' },
-    location : { flag: 'ca', name: 'Canada' },
-    settings : {
-      Server: { MaxPlayers: 13 },
-    },
-  },
-  {
-    dead     : true,
-    name     : 'F0C0S',
-    server   : { host: 'f0c0s.smoo.it', ip: '94.130.25.137' },
-    location : { flag: 'de', name: 'Germany' },
-  },
-  {
-    dead     : true,
-    name     : 'Sleepyy',
-    server   : { host: 'sleepyy.smoo.it', ip: '141.94.109.19' },
-    location : { flag: 'fr', name: 'France' },
-    settings : {
-      Server: { MaxPlayers: 6 },
-    },
-  },
-  {
-    dead     : true,
-    name     : 'Parknich',
-    server   : { host: 'parknich.smoo.it', ip: '15.204.209.108' },
-    location : { flag: 'us', name: 'US-East' },
-    settings : {
-      Server: { MaxPlayers: 8 },
-    },
-  },
-  {
-    dead     : true,
-    name     : 'Rocket',
-    server   : { host: 'rocket.smoo.it', ip: '71.34.227.68', port: 1027 },
-    location : { flag: 'us', name: 'US-Central' },
-    version  : linkRelease('1.0.4'),
-    settings : {
-      Server        : { MaxPlayers: 8 },
-      Scenario      : { MergeEnabled: true },
-      Shines        : { Enabled: true },
-      PersistShines : { Enabled: false },
-    },
-  },
-  {
     name     : 'Luwuna (H&S)',
     link     : 'https://luwuna.smoo.it/ServerList',
     server   : { host: 'luwuna.smoo.it', ip: '5.180.182.219', port: 1027 },
@@ -152,38 +106,6 @@ export const servers: IServer[] = [
     version  : linkRelease('0.3.0', 'rust/0.3.0', 'JulesGuesnon/smo-online-server'),
     settings : {
       Server: { MaxPlayers: 8 },
-    },
-  },
-  {
-    dead     : true,
-    name     : 'Jeff',
-    server   : { host: 'jeff.smoo.it', ip: '172.105.137.146' },
-    location : { flag: 'us', name: 'US-East' },
-    version  : {
-      html    : linkTree('master', 'proximity/1.0.1', 'TheUbMunster/SmoOnlineServer'),
-      details : `
-        The Proximity Voice Chat (PVC) client requires additional settings:
-        <ul>
-          <li>PVC Port: <code>12000</code></li>
-          <li>Discord Application ID: <code>1011047390133899324</code></li>
-        </ul>
-      `,
-    },
-    settings: {
-      Server: { MaxPlayers: 6 },
-    },
-  },
-  {
-    dead     : true,
-    name     : 'Snafty',
-    server   : { host: 'snafty.smoo.it', ip: '209.25.141.180', port: 62102 },
-    location : { flag: 'de', name: 'Germany' },
-    version  : linkRelease('1.0.3'),
-    settings : {
-      Server        : { MaxPlayers: 16 },
-      Scenario      : { MergeEnabled: true },
-      Shines        : { Enabled: true },
-      PersistShines : { Enabled: false },
     },
   },
   {
