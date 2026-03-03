@@ -272,16 +272,6 @@ export const servers: IServer[] = [
     },
   },
   {
-    dead     : true,
-    name     : 'SchweGELBin 2',
-    server   : { host: 'schwegelbin.smoo.it', ip: '79.76.110.71', port: 1028 },
-    location : { flag: 'de', name: 'Germany' },
-    version  : linkTree('main', 'SchweGELBin/smoos-rs', 'SchweGELBin/smoos'),
-    settings : {
-      Server: { MaxPlayers: 8 },
-    },
-  },
-  {
     name     : 'HyperWG 1',
     server   : { host: 'hyperwg.smoo.it', ip: '145.223.121.236', port: 1027 },
     location : { flag: 'us', name: 'US-East' },
