@@ -126,8 +126,8 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : 'HyperWG 1',
-    server   : { host: 'hyperwg.smoo.it', ip: '145.223.121.236', port: 1027 },
+    name     : 'Hyper (Main)',
+    server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1027 },
     location : { flag: 'us', name: 'US-East' },
     version  : linkTree('main', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
     settings : {
@@ -138,8 +138,8 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : 'HyperWG 2',
-    server   : { host: 'hyperwg.smoo.it', ip: '145.223.121.236', port: 1028 },
+    name     : 'Hyper (alt)',
+    server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1028 },
     location : { flag: 'us', name: 'US-East' },
     version  : linkTree('main', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
     settings : {
