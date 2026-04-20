@@ -32,9 +32,6 @@ services:
       # public servers (from Discord)
       SMOO_SERVER_DC_PIP_1: piplup.smoo.it:1027
       SMOO_SERVER_DC_PIP_2: piplup.smoo.it:1028
-      SMOO_SERVER_DC_LUW_1: luwuna.smoo.it:1027
-      SMOO_SERVER_DC_LUW_2: luwuna.smoo.it:1028
-      SMOO_SERVER_DC_LUW_3: luwuna.smoo.it:1029
       SMOO_SERVER_DC_KAM_1: kamron.smoo.it:1027
       SMOO_SERVER_DC_MUZ_1: muz.smoo.it:1027
 
@@ -51,8 +48,5 @@ services:
       # refresh servers with JSON API more often
       SMOO_EXPIRE_JSON_PIP_1: piplup.smoo.it:1027:3
       SMOO_EXPIRE_JSON_PIP_2: piplup.smoo.it:1028:3
-      SMOO_EXPIRE_JSON_LUW_1: luwuna.smoo.it:1027:3
-      SMOO_EXPIRE_JSON_LUW_2: luwuna.smoo.it:1028:3
-      SMOO_EXPIRE_JSON_LUW_3: luwuna.smoo.it:1029:3
       SMOO_EXPIRE_JSON_MUZ_1: muz.smoo.it:1027:3
       SMOO_EXPIRE_JSON_SCH_1: schwegelbin.smoo.it:1027:3
