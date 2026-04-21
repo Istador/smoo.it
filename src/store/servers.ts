@@ -111,7 +111,7 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : 'Hyper (Versus)',
+    name     : 'Hyper (Co-op)',
     server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1029 },
     location : { flag: 'us', name: 'US-East' },
     version  : linkTree('master', 'GrafDimenzio/master', 'GrafDimenzio/DSMOO'),
