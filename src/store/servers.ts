@@ -118,7 +118,7 @@ export const servers: IServer[] = [
     settings : {
       Server        : { MaxPlayers: 12 },
       Scenario      : { MergeEnabled: true },
-      Shines        : { Enabled: true },
+      Shines        : { Enabled: true, ClearOnNewSaves: true },
       PersistShines : { Enabled: true },
     },
   },
