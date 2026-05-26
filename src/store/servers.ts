@@ -87,6 +87,18 @@ export const servers: IServer[] = [
     },
   },
   {
+    name     : 'Skylanderfree',
+    server   : { host: 'skylanderfree.smoo.it', ip: '159.223.184.153', port: 1027 },
+    location : { flag: 'us', name: 'US-Central' },
+    version  : linkTree('master', 'GrafDimenzio/master', 'GrafDimenzio/DSMOO'),
+    settings : {
+      Server        : { MaxPlayers: 10 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: false },
+      PersistShines : { Enabled: false },
+    },
+  },
+  {
     name     : 'Hyper (Main)',
     server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1027 },
     location : { flag: 'us', name: 'US-East' },
