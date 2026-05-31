@@ -102,7 +102,7 @@ export const servers: IServer[] = [
     name     : 'Hyper (Main)',
     server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1027 },
     location : { flag: 'us', name: 'US-East' },
-    version  : linkTree('main', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
+    version  : linkTree('json-api', 'Istador/json-api', 'Istador/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 8 },
       Scenario      : { MergeEnabled: true },
@@ -114,7 +114,7 @@ export const servers: IServer[] = [
     name     : 'Hyper (Alt)',
     server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1028 },
     location : { flag: 'us', name: 'US-East' },
-    version  : linkTree('master', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
+    version  : linkTree('json-api', 'Istador/json-api', 'Istador/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 12 },
       Scenario      : { MergeEnabled: true },
@@ -126,7 +126,7 @@ export const servers: IServer[] = [
     name     : 'Hyper (Co-op)',
     server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1029 },
     location : { flag: 'us', name: 'US-East' },
-    version  : linkTree('master', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer'),
+    version  : linkTree('json-api', 'Istador/json-api', 'Istador/SmoOnlineServer'),
     settings : {
       Server        : { MaxPlayers: 12 },
       Scenario      : { MergeEnabled: true },
