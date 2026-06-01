@@ -90,12 +90,24 @@ export const servers: IServer[] = [
     name     : 'Skylanderfree',
     server   : { host: 'skylanderfree.smoo.it', ip: '159.223.184.153', port: 1027 },
     location : { flag: 'us', name: 'US-Central' },
-    version  : linkTree('master', 'GrafDimenzio/master', 'GrafDimenzio/DSMOO'),
+    version  : linkTree('master', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer')
     settings : {
       Server        : { MaxPlayers: 10 },
       Scenario      : { MergeEnabled: true },
       Shines        : { Enabled: false },
       PersistShines : { Enabled: false },
+    },
+  },
+    {
+    name     : 'Skylanderfree (Co-Op)',
+    server   : { host: 'skylanderfree.smoo.it', ip: '159.223.184.153', port: 1028 },
+    location : { flag: 'us', name: 'US-Central' },
+    version  : linkTree('master', 'LunaBroeke/main', 'LunaBroeke/SmoOnlineServer')
+    settings : {
+      Server        : { MaxPlayers: 12 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true },
+      PersistShines : { Enabled: true },
     },
   },
   {
