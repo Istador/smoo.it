@@ -146,6 +146,30 @@ export const servers: IServer[] = [
       PersistShines : { Enabled: true },
     },
   },
+{
+  name     : '2Fast (Main)',
+  server   : { host: '2fast.smoo.it', ip: '74.208.191.249', port: 1027 },
+  location : { flag: 'us', name: 'US-Central' },
+  version  : linkTree('master', 'Sanae6/master', 'Sanae6/SmoOnlineServer'),
+  settings : {
+    Server        : { MaxPlayers: 10 },
+    Scenario      : { MergeEnabled: true },
+    Shines        : { Enabled: true },
+    PersistShines : { Enabled: true },
+  },
+},
+{
+  name     : '2Fast (Capture Sync)',
+  server   : { host: '2fast.smoo.it', ip: '74.208.191.249', port: 1028 },
+  location : { flag: 'us', name: 'US-Central' },
+  version  : linkTree('master', 'Sanae6/master', 'Sanae6/SmoOnlineServer'),
+  settings : {
+    Server        : { MaxPlayers: 8 },
+    Scenario      : { MergeEnabled: true },
+    Shines        : { Enabled: true },
+    PersistShines : { Enabled: true },
+  },
+}, 
 ].map((s: IServer) => {
   s.server.state = null
   return s
