@@ -35,6 +35,10 @@ jobs:
         SSH_USER : ${{ secrets.API2_SSH_USER }}
         SSH_KEY  : ${{ secrets.API2_SSH_KEY  }}
     -
+      name : Small clean
+      run  : |
+        ssh api2 'docker system prune --force'
+    -
       name : Git pull
       run  : |
         ssh api2 'cd api2.smoo.it/ && git restore docker-compose.yml && git pull'
@@ -50,3 +54,7 @@ jobs:
       name : Deploy
       run  : |
         ssh api2 'cd api2.smoo.it/ && docker compose up -d'
+    -
+      name : Full clean
+      run  : |
+        ssh api2 'docker system prune --all --volumes --force'
