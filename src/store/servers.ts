@@ -147,7 +147,7 @@ export const servers: IServer[] = [
     },
   },
   {
-    name     : '2Fast (Main)',
+    name     : '2Fast (H&S)',
     server   : { host: '2fast.smoo.it', ip: '74.208.191.249', port: 1027 },
     location : { flag: 'us', name: 'US-Central' },
     version  : linkTree('master', 'Sanae6/master', 'Sanae6/SmoOnlineServer'),
@@ -167,6 +167,18 @@ export const servers: IServer[] = [
       Server        : { MaxPlayers: 8 },
       Scenario      : { MergeEnabled: true },
       Shines        : { Enabled: true },
+      PersistShines : { Enabled: true },
+    },
+  },
+  {
+    name     : '2Fast (Co-op)',
+    server   : { host: '2fast.smoo.it', ip: '74.208.191.249', port: 1029 },
+    location : { flag: 'us', name: 'US-Central' },
+    version  : linkTree('master', 'Sanae6/master', 'Sanae6/SmoOnlineServer'),
+    settings : {
+      Server        : { MaxPlayers: 12 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true, ClearOnNewSaves: true },
       PersistShines : { Enabled: true },
     },
   },
