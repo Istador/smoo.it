@@ -46,6 +46,7 @@ services:
       SMOO_SERVER_WWW_SKY_2: skylanderfree.smoo.it:1028
       SMOO_SERVER_WWW_2FA_1: 2fast.smoo.it:1027
       SMOO_SERVER_WWW_2FA_2: 2fast.smoo.it:1028
+      SMOO_SERVER_WWW_2FA_3: 2fast.smoo.it:1029
 
       # default refresh rate
       SMOO_EXPIRE: 10
