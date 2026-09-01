@@ -182,6 +182,18 @@ export const servers: IServer[] = [
       PersistShines : { Enabled: true },
     },
   },
+  {
+    name     : 'Taranza',
+    server   : { host: 'Taranza.smoo.it', ip: '192.168.1.13', port: 2012 },
+    location : { flag: 'us', name: 'US-Central' },
+    version  : linkTree('master', 'Sanae6/master', 'Sanea6/SmoOnlineServer'),
+    settings : {
+      Server        : { MaxPlayers: 10 },
+      Scenario      : { MergeEnabled: true },
+      Shines        : { Enabled: true, ClearOnNewSaves: true },
+      PersistShines : { Enabled: true },
+    },
+  }, 
 ].map((s: IServer) => {
   s.server.state = null
   return s
