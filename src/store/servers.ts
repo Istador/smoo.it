@@ -13,7 +13,7 @@ export const servers: IServer[] = [
   {
     name     : 'Piplup (Main)',
     link     : 'https://piplup.smoo.it',
-    server   : { host: 'piplup.smoo.it', ip: '143.198.241.242' },
+    server   : { host: 'piplup.smoo.it', ip: '87.106.63.108' },
     location : { flag: 'gb', name: 'United Kingdom' },
     version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
     settings : {
@@ -26,7 +26,7 @@ export const servers: IServer[] = [
   {
     name     : 'Piplup (Capture Sync)',
     link     : 'https://piplup.smoo.it',
-    server   : { host: 'piplup.smoo.it', ip: '143.198.241.242', port: 1028 },
+    server   : { host: 'piplup.smoo.it', ip: '87.106.63.108', port: 1028 },
     location : { flag: 'gb', name: 'United Kingdom' },
     version  : linkTree('server', 'piplup/server', 'TeamPiplup/SmoOnlineServer'),
     settings : {
