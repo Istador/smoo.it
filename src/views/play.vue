@@ -33,6 +33,8 @@
     </b-card-group>
 
     <play-hide-and-seek class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'hide-and-seek'"/>
+    <play-sardines      class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'sardines'"/>
+    <play-freeze-tag    class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'freeze-tag'"/>
     <play-switch        class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'switch'"/>
     <play-ryujinx       class="mb-4" @show="show($event)" @hidden="hidden($event)" :visible="id === 'ryujinx'"/>
     <play-build                      @show="show($event)" @hidden="hidden($event)" :visible="id === 'build'"/>
