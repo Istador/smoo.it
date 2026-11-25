@@ -61,6 +61,15 @@ export const servers: IServer[] = [
     },
   },
   {
+    name     : 'liq',
+    server   : { host: 'liq.smoo.it', ip: '147.93.132.21' },
+    location : { flag: 'us', name: 'US-Central' },
+    version  : linkRelease('1.0.5-rcl.8', 'rcl/1.0.5', 'Istador/SmoOnlineServer'),
+    settings : {
+      Server        : { MaxPlayers: 8},
+    },
+  },
+  {
     name     : 'Krokilex',
     server   : { host: 'krokilex.smoo.it', ip: '37.16.29.245' },
     location : { flag: 'fr', name: 'France' },
