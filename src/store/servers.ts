@@ -1,4 +1,4 @@
-
+/* eslint key-spacing: off */
 import { IServer } from '@/types'
 
 const github = (repo = 'Sanae6/SmoOnlineServer') =>
