@@ -112,7 +112,7 @@ export const servers: IServer[] = [
   },
   {
     name     : 'Hyper (Main)',
-    server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1027 },
+    server   : { host: 'hyperwg.smoo.it', ip: '152.53.194.103', port: 1027 },
     location : { flag: 'us', name: 'US-East' },
     version  : linkRelease('1.0.5-rcl.10', 'rcl/1.0.5', 'Istador/SmoOnlineServer'),
     settings : {
@@ -124,7 +124,7 @@ export const servers: IServer[] = [
   },
   {
     name     : 'Hyper (Alt)',
-    server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1028 },
+    server   : { host: 'hyperwg.smoo.it', ip: '152.53.194.103', port: 1028 },
     location : { flag: 'us', name: 'US-East' },
     version  : linkRelease('1.0.5-rcl.10', 'rcl/1.0.5', 'Istador/SmoOnlineServer'),
     settings : {
@@ -136,7 +136,7 @@ export const servers: IServer[] = [
   },
   {
     name     : 'Hyper (Co-op)',
-    server   : { host: 'hyperwg.smoo.it', ip: '187.124.145.118', port: 1029 },
+    server   : { host: 'hyperwg.smoo.it', ip: '152.53.194.103', port: 1029 },
     location : { flag: 'us', name: 'US-East' },
     version  : linkRelease('1.0.5-rcl.10', 'rcl/1.0.5', 'Istador/SmoOnlineServer'),
     settings : {
