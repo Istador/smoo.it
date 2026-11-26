@@ -9,7 +9,6 @@ const linkRelease = (tag: string, label?: string, repo?: string) =>
   externLink(github(repo) + 'releases/tag/' + tag, label || tag)
 const linkTree = (branch: string, label?: string, repo?: string) =>
   externLink(github(repo) + 'tree/' + branch, label || branch)
-
 export const servers: IServer[] = [
   {
     name: 'Piplup (Main)',
